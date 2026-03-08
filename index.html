@@ -3,8 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AC Supply Co. | Wholesale Sourcing & Distribution</title>
-  <meta name="description" content="AC Supply Co. is a UK-based wholesale sourcing and supply business. We source commercial packaging and products from international manufacturers and supply UK businesses." />
+
+  <!-- Primary SEO -->
+  <title>Wholesale Packaging Supplier for UK Cafés &amp; Hospitality | AC Supply Co.</title>
+  <meta name="description" content="AC Supply Co. supplies wholesale coffee cups, takeaway packaging, paper bags and hospitality consumables to UK businesses. Request a trade quote today." />
+  <link rel="canonical" href="https://acsupplyco.co.uk/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://acsupplyco.co.uk/" />
+  <meta property="og:title" content="Wholesale Packaging Supplier for UK Cafés &amp; Hospitality | AC Supply Co." />
+  <meta property="og:description" content="AC Supply Co. supplies wholesale coffee cups, takeaway packaging, paper bags and hospitality consumables to UK businesses. Request a trade quote today." />
+  <meta property="og:image" content="https://acsupplyco.co.uk/assets/images/logo-ac-supply-co.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wholesale Packaging Supplier for UK Cafés &amp; Hospitality | AC Supply Co." />
+  <meta name="twitter:description" content="AC Supply Co. supplies wholesale coffee cups, takeaway packaging, paper bags and hospitality consumables to UK businesses." />
+
+  <!-- Schema: Organisation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AC Supply Co.",
+    "url": "https://acsupplyco.co.uk",
+    "email": "sales@acsupplyco.co.uk",
+    "telephone": "+447440386717",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "description": "Wholesale packaging supplier for UK cafés, takeaways and hospitality businesses. Supplying coffee cups, takeaway packaging, paper bags and branded packaging at trade prices."
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -31,9 +64,7 @@
       --font-body: 'DM Sans', sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--font-body);
@@ -70,11 +101,7 @@
       text-decoration: none;
     }
 
-    .logo-img {
-      height: 72px;
-      width: auto;
-      display: block;
-    }
+    .logo-img { height: 72px; width: auto; display: block; }
 
     .logo-tagline {
       font-size: 0.675rem;
@@ -86,17 +113,9 @@
       max-width: 140px;
     }
 
-    @media (max-width: 600px) {
-      .logo-tagline {
-        display: none;
-      }
-    }
+    @media (max-width: 600px) { .logo-tagline { display: none; } }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
+    nav { display: flex; align-items: center; gap: 32px; }
 
     nav a {
       text-decoration: none;
@@ -107,9 +126,7 @@
       transition: color 0.2s;
     }
 
-    nav a:hover {
-      color: var(--navy);
-    }
+    nav a:hover { color: var(--navy); }
 
     .nav-cta {
       background: var(--navy);
@@ -123,28 +140,7 @@
       transition: background 0.2s !important;
     }
 
-    .nav-cta:hover {
-      background: var(--navy-light) !important;
-      color: var(--white) !important;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .mobile-menu-btn span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--navy);
-      border-radius: 2px;
-    }
+    .nav-cta:hover { background: var(--navy-light) !important; color: var(--white) !important; }
 
     /* ── HERO ── */
     .hero {
@@ -160,17 +156,13 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: 
+      background:
         radial-gradient(ellipse 700px 400px at 20% 50%, rgba(46,125,82,0.12) 0%, transparent 70%),
         radial-gradient(ellipse 500px 300px at 80% 30%, rgba(46,125,82,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    .hero-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      position: relative;
-    }
+    .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
 
     .hero-badge {
       display: inline-block;
@@ -205,12 +197,7 @@
       line-height: 1.75;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
@@ -229,42 +216,16 @@
       border: none;
     }
 
-    .btn-primary {
-      background: var(--green);
-      color: var(--white);
-    }
+    .btn-primary { background: var(--green); color: var(--white); }
+    .btn-primary:hover { background: var(--green-light); }
+    .btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.06); }
 
-    .btn-primary:hover {
-      background: var(--green-light);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,0.4);
-    }
-
-    .btn-outline:hover {
-      border-color: rgba(255,255,255,0.75);
-      background: rgba(255,255,255,0.06);
-    }
-
-    /* WhatsApp icon inline SVG */
-    .whatsapp-icon {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
+    .whatsapp-icon { width: 18px; height: 18px; flex-shrink: 0; }
 
     /* ── SECTION SCAFFOLDING ── */
-    section {
-      padding: 88px 24px;
-    }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    section { padding: 88px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
 
     .section-label {
       font-size: 0.72rem;
@@ -285,27 +246,13 @@
       letter-spacing: -0.01em;
     }
 
-    .section-body {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      line-height: 1.75;
-    }
-
-    .section-header {
-      margin-bottom: 56px;
-    }
+    .section-body { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
+    .section-header { margin-bottom: 56px; }
 
     /* ── WHAT WE DO ── */
-    .what-we-do {
-      background: var(--off-white);
-    }
+    .what-we-do { background: var(--off-white); }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
 
     .feature-card {
       background: var(--white);
@@ -314,47 +261,27 @@
       transition: border-color 0.2s;
     }
 
-    .feature-card:hover {
-      border-top-color: var(--green);
-    }
+    .feature-card:hover { border-top-color: var(--green); }
 
     .feature-icon {
-      width: 44px;
-      height: 44px;
+      width: 44px; height: 44px;
       background: var(--green-pale);
       border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       margin-bottom: 24px;
     }
 
-    .feature-icon svg {
-      width: 22px;
-      height: 22px;
-      color: var(--green);
-    }
+    .feature-icon svg { width: 22px; height: 22px; color: var(--green); }
 
     .feature-card h3 {
       font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 12px;
+      font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 12px;
     }
 
-    .feature-card p {
-      font-size: 0.925rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-    }
+    .feature-card p { font-size: 0.925rem; color: var(--text-muted); line-height: 1.75; }
 
     /* ── CATEGORY CARDS ── */
-    .category-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+    .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
     .category-card {
       border: 1px solid var(--border);
@@ -363,392 +290,198 @@
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .category-card:hover {
-      border-color: var(--green);
-      box-shadow: 0 4px 20px rgba(46,125,82,0.08);
-    }
+    .category-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); }
+    .category-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
+    .category-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
 
-    .category-card h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 10px;
-      letter-spacing: 0.01em;
-    }
-
-    .category-card p {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .category-card--cta {
-      background: var(--green-pale);
-      border-color: rgba(46,125,82,0.2);
-    }
-
-    .category-card--cta h4 {
-      color: var(--green);
-    }
+    .category-card--cta { background: var(--green-pale); border-color: rgba(46,125,82,0.2); }
+    .category-card--cta h4 { color: var(--green); }
 
     .category-link {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--green);
-      text-decoration: none;
-      letter-spacing: 0.02em;
+      display: inline-block; margin-top: 14px;
+      font-size: 0.85rem; font-weight: 600; color: var(--green);
+      text-decoration: none; letter-spacing: 0.02em;
     }
 
-    .category-link:hover {
-      color: var(--green-light);
-      text-decoration: underline;
-    }
+    .category-link:hover { color: var(--green-light); text-decoration: underline; }
 
-    @media (max-width: 900px) {
-      .category-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+    @media (max-width: 900px) { .category-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .category-grid { grid-template-columns: 1fr; } }
 
-    @media (max-width: 600px) {
-      .category-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* ── PRODUCTS (legacy, kept for safety) ── */
-    .products {
-      background: var(--white);
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .product-tile {
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 28px 28px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .product-tile:hover {
-      border-color: var(--green);
-      box-shadow: 0 4px 20px rgba(46,125,82,0.08);
-    }
-
-    .product-dot {
-      width: 10px;
-      height: 10px;
-      background: var(--green);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .product-tile span {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--navy);
-      letter-spacing: 0.01em;
-    }
+    .products { background: var(--white); }
 
     /* ── WHO WE SERVE ── */
-    .who-we-serve {
-      background: var(--navy);
-      color: var(--white);
-    }
+    .who-we-serve { background: var(--navy); color: var(--white); }
+    .who-we-serve .section-label { color: #7dd4a8; }
+    .who-we-serve .section-title { color: var(--white); }
 
-    .who-we-serve .section-label {
-      color: #7dd4a8;
-    }
-
-    .who-we-serve .section-title {
-      color: var(--white);
-    }
-
-    .serve-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 2px;
-      margin-top: 48px;
-    }
+    .serve-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; margin-top: 48px; }
 
     .serve-item {
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.08);
-      padding: 28px 20px;
-      text-align: center;
-      border-radius: 4px;
+      padding: 28px 20px; text-align: center; border-radius: 4px;
     }
 
-    .serve-item p {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.85);
-      letter-spacing: 0.02em;
-    }
+    .serve-item p { font-size: 0.875rem; font-weight: 500; color: rgba(255,255,255,0.85); letter-spacing: 0.02em; }
 
     /* ── WHY CHOOSE ── */
-    .why-choose {
-      background: var(--off-white);
-    }
+    .why-choose { background: var(--off-white); }
 
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
     .trust-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 36px 32px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 4px; padding: 36px 32px;
     }
 
-    .trust-number {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 500;
-      color: var(--green);
-      margin-bottom: 16px;
-      line-height: 1;
-    }
-
-    .trust-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 10px;
-      letter-spacing: 0.01em;
-    }
-
-    .trust-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-    }
+    .trust-number { font-family: var(--font-display); font-size: 2rem; font-weight: 500; color: var(--green); margin-bottom: 16px; line-height: 1; }
+    .trust-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
+    .trust-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; }
 
     /* ── CONTACT ── */
-    .contact {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-    }
+    .contact { background: var(--white); border-top: 1px solid var(--border); }
 
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 
-    .contact-info h3 {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
+    .contact-info h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
+    .contact-info .role { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 32px; }
 
-    .contact-info .role {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 32px;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .contact-detail svg {
-      width: 18px;
-      height: 18px;
-      color: var(--green);
-      flex-shrink: 0;
-    }
-
-    .contact-detail a,
-    .contact-detail span {
-      font-size: 0.95rem;
-      color: var(--text-body);
-      text-decoration: none;
-      font-weight: 400;
-    }
-
-    .contact-detail a:hover {
-      color: var(--navy);
-      text-decoration: underline;
-    }
+    .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .contact-detail svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
+    .contact-detail a, .contact-detail span { font-size: 0.95rem; color: var(--text-body); text-decoration: none; font-weight: 400; }
+    .contact-detail a:hover { color: var(--navy); text-decoration: underline; }
 
     .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 28px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 13px 24px;
-      border-radius: 4px;
-      transition: background 0.2s;
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-top: 28px; background: #25D366; color: white;
+      text-decoration: none; font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 13px 24px; border-radius: 4px; transition: background 0.2s;
     }
 
-    .whatsapp-btn:hover {
-      background: #20b858;
-    }
-
-    .whatsapp-btn svg {
-      width: 18px;
-      height: 18px;
-    }
+    .whatsapp-btn:hover { background: #20b858; }
+    .whatsapp-btn svg { width: 18px; height: 18px; }
 
     .qr-block {
-      text-align: center;
-      padding: 36px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: var(--off-white);
+      text-align: center; padding: 36px;
+      border: 1px solid var(--border); border-radius: 6px; background: var(--off-white);
     }
 
-    .qr-block a {
-      display: inline-block;
-    }
-
-    .qr-block img {
-      width: 200px;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 4px;
-    }
-
-    .qr-label {
-      margin-top: 16px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    .qr-sub {
-      margin-top: 4px;
-      font-size: 0.775rem;
-      color: var(--text-light);
-    }
+    .qr-block a { display: inline-block; }
+    .qr-block img { width: 200px; max-width: 100%; height: auto; display: block; border-radius: 4px; }
+    .qr-label { margin-top: 16px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+    .qr-sub { margin-top: 4px; font-size: 0.775rem; color: var(--text-light); }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      padding: 28px 24px;
-    }
+    footer { background: var(--navy); padding: 28px 24px; }
 
     .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
     }
 
-    .footer-brand {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .footer-text {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.4);
-    }
-
-    /* ── DIVIDER ── */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--border);
-    }
+    .footer-brand { font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
+    .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav a:not(.nav-cta) {
-        display: none;
-      }
-
-      .feature-grid,
-      .trust-grid {
-        grid-template-columns: 1fr;
-        gap: 2px;
-      }
-
-      .product-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .serve-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .contact-layout {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .qr-block {
-        max-width: 280px;
-        margin: 0 auto;
-      }
+      nav a:not(.nav-cta) { display: none; }
+      .feature-grid, .trust-grid { grid-template-columns: 1fr; gap: 2px; }
+      .serve-grid { grid-template-columns: repeat(3, 1fr); }
+      .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+      .qr-block { max-width: 280px; margin: 0 auto; }
     }
 
     @media (max-width: 600px) {
-      section {
-        padding: 64px 20px;
-      }
+      section { padding: 64px 20px; }
+      .hero { padding: 72px 20px 64px; }
+      nav { display: none; }
+      .serve-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
 
-      .hero {
-        padding: 72px 20px 64px;
-      }
+    /* ── TRUST STRIP ── */
+    .trust-strip { background: var(--navy-light); border-top: 1px solid rgba(255,255,255,0.06); padding: 16px 24px; }
 
-      /* Hide nav entirely on mobile — clean landing page header */
-      nav {
-        display: none;
-      }
+    .trust-strip-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: 8px 0;
+    }
 
-      .mobile-menu-btn {
-        display: none;
-      }
+    .trust-item {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.82);
+      letter-spacing: 0.03em; padding: 4px 20px; white-space: nowrap;
+    }
 
-      .product-grid {
-        grid-template-columns: 1fr;
-      }
+    .trust-item svg { width: 13px; height: 13px; color: #7dd4a8; flex-shrink: 0; }
+    .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
 
-      .serve-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    @media (max-width: 600px) {
+      .trust-strip-inner { gap: 4px 0; }
+      .trust-divider { display: none; }
+      .trust-item { padding: 3px 12px; font-size: 0.75rem; }
+    }
 
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
+    /* ── QUOTE FORM ── */
+    .quote-form-wrap { background: var(--off-white); border: 1px solid var(--border); border-radius: 6px; padding: 40px 36px; }
+
+    .quote-form .form-row { display: flex; gap: 16px; margin-bottom: 16px; }
+    .quote-form .form-row--two .form-group { flex: 1; }
+    .quote-form .form-row:not(.form-row--two) .form-group { flex: 1; }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.8rem; font-weight: 600; color: var(--navy); letter-spacing: 0.03em; }
+    .req { color: var(--green); }
+
+    .form-group input, .form-group select, .form-group textarea {
+      font-family: var(--font-body); font-size: 0.9rem; color: var(--text-body);
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 4px; padding: 10px 14px; width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s; outline: none; -webkit-appearance: none;
+    }
+
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-light); }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--green); box-shadow: 0 0 0 3px rgba(46,125,82,0.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { margin-top: 20px; }
+
+    .btn-submit {
+      width: 100%; background: var(--navy); color: var(--white);
+      font-family: var(--font-body); font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 15px 28px; border: none; border-radius: 4px;
+      cursor: pointer; transition: background 0.2s;
+    }
+
+    .btn-submit:hover { background: var(--navy-light); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-success {
+      display: flex; align-items: center; gap: 10px; margin-top: 16px;
+      padding: 14px 16px; background: var(--green-pale);
+      border: 1px solid rgba(46,125,82,0.3); border-radius: 4px;
+      color: var(--green); font-size: 0.9rem; font-weight: 500;
+    }
+
+    .form-success svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    .form-error {
+      margin-top: 16px; padding: 14px 16px;
+      background: #fef2f2; border: 1px solid #fecaca;
+      border-radius: 4px; color: #b91c1c; font-size: 0.875rem;
+    }
+
+    @media (max-width: 600px) {
+      .quote-form-wrap { padding: 28px 20px; }
+      .quote-form .form-row--two { flex-direction: column; gap: 0; }
     }
   </style>
 </head>
@@ -758,8 +491,8 @@
   <header>
     <div class="header-inner">
       <a href="#" class="logo" aria-label="AC Supply Co. Home">
-        <img src="logo ACSupplyCo.png" alt="AC Supply Co." class="logo-img" />
-        <span class="logo-tagline">Wholesale Sourcing &amp; Distribution</span>
+        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" />
+        <span class="logo-tagline">Wholesale Packaging Supplier</span>
       </a>
       <nav aria-label="Main navigation">
         <a href="#what-we-do">What We Do</a>
@@ -775,9 +508,9 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-inner">
-        <div class="hero-badge">UK Wholesale Sourcing &amp; Distribution</div>
-        <h1 id="hero-heading">Wholesale Sourcing &amp; Distribution for UK Businesses</h1>
-        <p>We source and supply wholesale packaging and commercial consumables for cafés, takeaway businesses, hospitality operators, and other UK trade buyers.</p>
+        <div class="hero-badge">UK Wholesale Packaging Supplier</div>
+        <h1 id="hero-heading">Wholesale Packaging Supplier for UK Cafés, Takeaways &amp; Hospitality Businesses</h1>
+        <p>AC Supply Co. supplies coffee cups, takeaway packaging, paper bags, and hospitality consumables to UK trade buyers at wholesale prices. Source what you need — we handle the supply.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">Get a Quote</a>
           <a href="https://wa.me/447440386717" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
@@ -790,6 +523,21 @@
       </div>
     </section>
 
+    <!-- TRUST STRIP -->
+    <div class="trust-strip" aria-label="Key features">
+      <div class="trust-strip-inner">
+        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>UK Trade Buyers Only</span>
+        <span class="trust-divider" aria-hidden="true"></span>
+        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Wholesale Pricing</span>
+        <span class="trust-divider" aria-hidden="true"></span>
+        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custom Branding Available</span>
+        <span class="trust-divider" aria-hidden="true"></span>
+        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Coffee Cups &amp; Takeaway Packaging</span>
+        <span class="trust-divider" aria-hidden="true"></span>
+        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Responsive &amp; Direct</span>
+      </div>
+    </div>
+
     <!-- WHAT WE DO -->
     <section class="what-we-do" id="what-we-do" aria-labelledby="what-we-do-heading">
       <div class="section-inner">
@@ -799,7 +547,6 @@
           <p class="section-body">We manage the sourcing and supply process end to end — from finding and vetting manufacturers to coordinating import and delivery to UK buyers.</p>
         </div>
         <div class="feature-grid">
-
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -809,7 +556,6 @@
             <h3>Product Sourcing</h3>
             <p>We work directly with international manufacturers to source the products our buyers need. We handle supplier communication, confirm specifications, and manage pricing negotiations so buyers don't need to deal with overseas suppliers themselves.</p>
           </div>
-
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -819,7 +565,6 @@
             <h3>Wholesale Supply</h3>
             <p>We supply packaging and commercial consumables to UK trade buyers at wholesale prices. Orders are handled directly — no unnecessary layers, no inflated margins. We supply businesses that buy regularly and those placing one-off orders alike.</p>
           </div>
-
           <div class="feature-card">
             <div class="feature-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -829,7 +574,6 @@
             <h3>Import &amp; Distribution</h3>
             <p>We coordinate freight and import logistics from international suppliers through to UK delivery, working with established forwarding partners. We manage the process so our buyers receive their goods without needing to handle the import side themselves.</p>
           </div>
-
         </div>
       </div>
     </section>
@@ -844,38 +588,31 @@
           <p class="section-body" style="margin-top: 8px;">We work with businesses placing trade orders and bulk purchases.</p>
         </div>
         <div class="category-grid">
-
           <div class="category-card">
             <h4>Disposable Packaging</h4>
             <p>Cups, lids, sleeves, food boxes, containers, trays, and other single-use packaging for food and beverage service.</p>
           </div>
-
           <div class="category-card">
             <h4>Paper &amp; Bag Products</h4>
             <p>Paper bags, carrier bags, kraft bags, and flat-bottom bags for retail, takeaway, and food service use.</p>
           </div>
-
           <div class="category-card">
             <h4>Table &amp; Service Supplies</h4>
             <p>Napkins, serviettes, and everyday consumable supplies for hospitality and food service operations.</p>
           </div>
-
           <div class="category-card">
             <h4>Branded &amp; Custom Packaging</h4>
             <p>Custom-printed cups, bags, boxes, and packaging with your branding. Available on request — contact us to discuss print options and minimum quantities.</p>
           </div>
-
           <div class="category-card">
             <h4>Catering &amp; Takeaway Supplies</h4>
             <p>Food boxes, portion pots, cutlery, straws, and other operational supplies for takeaway and catering businesses.</p>
           </div>
-
           <div class="category-card category-card--cta">
             <h4>Don't see what you need?</h4>
             <p>We source to requirement. If you have a specific product in mind, contact us and we'll let you know if we can supply it.</p>
-            <a href="/cdn-cgi/l/email-protection#0675676a6375466765757376766a7f656928656928736d" class="category-link">Get in touch &rarr;</a>
+            <a href="mailto:sales@acsupplyco.co.uk" class="category-link">Get in touch &rarr;</a>
           </div>
-
         </div>
       </div>
     </section>
@@ -932,13 +669,14 @@
       <div class="section-inner">
         <div class="section-header">
           <p class="section-label">Get in Touch</p>
-          <h2 class="section-title" id="contact-heading">Contact Us</h2>
-          <p class="section-body">To request pricing, discuss a product requirement, or make a trade enquiry, contact us directly — we aim to respond the same day.</p>
+          <h2 class="section-title" id="contact-heading">Request a Quote</h2>
+          <p class="section-body">Tell us what you need and we'll come back to you with trade pricing — usually the same day.</p>
         </div>
         <div class="contact-layout">
+
           <div class="contact-info">
             <h3>AC Supply Co.</h3>
-            <p class="role">Wholesale Sourcing &amp; Distribution</p>
+            <p class="role">Wholesale Packaging Supplier</p>
 
             <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
               <p style="font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 2px;">Amir Cherifi</p>
@@ -949,7 +687,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
               </svg>
-              <a href="/cdn-cgi/l/email-protection#592a38353c2a19383a2a2c292935203a36773a36772c32"><span class="__cf_email__" data-cfemail="94e7f5f8f1e7d4f5f7e7e1e4e4f8edf7fbbaf7fbbae1ff">[email&#160;protected]</span></a>
+              <a href="mailto:sales@acsupplyco.co.uk">sales@acsupplyco.co.uk</a>
             </div>
 
             <div class="contact-detail">
@@ -965,27 +703,94 @@
               </svg>
               Chat on WhatsApp
             </a>
+
+            <div class="qr-block" style="margin-top: 32px;">
+              <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/images/qr-code-whatsapp.png" alt="QR code to open WhatsApp chat with AC Supply Co." width="160" height="160" />
+              </a>
+              <p class="qr-label">Scan to chat on WhatsApp</p>
+            </div>
           </div>
 
-          <div class="qr-block">
-            <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer">
-              <img
-                src="qr-code (1).png"
-                alt="QR code to open WhatsApp chat with AC Supply Co."
-                width="200"
-                height="200"
-              />
-            </a>
-            <p class="qr-label">Scan to chat on WhatsApp</p>
-            <p class="qr-sub">Opens WhatsApp — no account needed on desktop</p>
+          <div class="quote-form-wrap">
+            <form id="quote-form" class="quote-form">
+              <input type="hidden" name="access_key" value="2ef0136f-1971-4072-8c61-e9450526b3ad">
+              <input type="hidden" name="subject" value="New Quote Request — AC Supply Co.">
+              <input type="hidden" name="from_name" value="AC Supply Co. Website">
+              <input type="checkbox" name="botcheck" style="display:none">
+
+              <div class="form-row form-row--two">
+                <div class="form-group">
+                  <label for="f-name">Full Name <span class="req">*</span></label>
+                  <input type="text" id="f-name" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="f-business">Business Name <span class="req">*</span></label>
+                  <input type="text" id="f-business" name="business_name" placeholder="Your business name" required>
+                </div>
+              </div>
+
+              <div class="form-row form-row--two">
+                <div class="form-group">
+                  <label for="f-email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="f-email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="f-phone">Phone Number</label>
+                  <input type="tel" id="f-phone" name="phone" placeholder="+44 ...">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-product">Product Required <span class="req">*</span></label>
+                  <input type="text" id="f-product" name="product_required" placeholder="e.g. Coffee cups, paper bags, food boxes" required>
+                </div>
+              </div>
+
+              <div class="form-row form-row--two">
+                <div class="form-group">
+                  <label for="f-qty">Estimated Quantity <span class="req">*</span></label>
+                  <input type="text" id="f-qty" name="estimated_quantity" placeholder="e.g. 1,000 units/month" required>
+                </div>
+                <div class="form-group">
+                  <label for="f-branding">Custom Branding Needed?</label>
+                  <select id="f-branding" name="custom_branding">
+                    <option value="">Please select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Not sure">Not sure</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-message">Additional Details</label>
+                  <textarea id="f-message" name="message" rows="4" placeholder="Any other information about your requirements"></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn-submit" id="submit-btn">Send Quote Request</button>
+              </div>
+
+              <div id="form-success" class="form-success" style="display:none;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Thank you — we'll be in touch with pricing shortly.
+              </div>
+              <div id="form-error" class="form-error" style="display:none;">
+                Something went wrong. Please try again or email us directly at sales@acsupplyco.co.uk
+              </div>
+            </form>
           </div>
+
         </div>
       </div>
     </section>
 
   </main>
 
-      <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <span class="footer-brand">AC Supply Co.</span>
@@ -994,5 +799,42 @@
     </div>
   </footer>
 
+  <script>
+    const form = document.getElementById('quote-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: json
+        });
+        const result = await response.json();
+        if (result.success) {
+          window.location.href = '/thank-you/';
+        } else {
+          errorMsg.style.display = 'block';
+        }
+      } catch (error) {
+        errorMsg.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Quote Request';
+      }
+    });
+  </script>
 </body>
 </html>
