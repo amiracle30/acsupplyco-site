@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f1f3d'/><text y='.9em' font-size='80' x='10'>A</text></svg>">
+  <meta name="theme-color" content="#0f1f3d">
 
   <!-- Primary SEO -->
   <title>Wholesale Takeaway Packaging UK — Food Boxes &amp; Containers | AC Supply Co.</title>
@@ -15,6 +17,11 @@
   <meta property="og:title" content="Wholesale Takeaway Packaging UK — Food Boxes &amp; Containers | AC Supply Co." />
   <meta property="og:description" content="Wholesale takeaway packaging, food boxes and containers for UK takeaways and restaurants. Trade pricing, custom branding available." />
   <meta property="og:image" content="https://acsupplyco.co.uk/assets/images/logo-ac-supply-co.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wholesale Takeaway Packaging UK — Food Boxes &amp; Containers | AC Supply Co." />
+  <meta name="twitter:description" content="Wholesale takeaway packaging, food boxes and containers for UK takeaways and restaurants. Trade pricing, custom branding available." />
 
   <!-- Schema: Product page -->
   <script type="application/ld+json">
@@ -199,9 +206,9 @@
     }
     .variant-card {
       border: 1px solid var(--border); border-radius: 4px; padding: 28px 24px;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
     }
-    .variant-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); }
+    .variant-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); transform: translateY(-3px); }
     .variant-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
     .variant-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
 
@@ -249,8 +256,65 @@
     .footer-brand { font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
     .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
+    /* MOBILE NAV */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px 8px;
+      color: var(--navy);
+      font-size: 1.5rem;
+      line-height: 1;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .nav-hamburger:hover { background: var(--off-white); }
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 84px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 99;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .nav-mobile.open { max-height: 400px; }
+    .nav-mobile a {
+      display: block;
+      padding: 14px 24px;
+      text-decoration: none;
+      color: var(--text-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .nav-mobile a:hover { background: var(--off-white); color: var(--navy); }
+    .nav-mobile .nav-cta {
+      display: block;
+      margin: 12px 16px 16px;
+      text-align: center;
+      padding: 12px 16px;
+      background: var(--navy);
+      color: var(--white) !important;
+      border-radius: 4px;
+      font-size: 0.8rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase;
+      border-bottom: none;
+    }
+    .nav-mobile .nav-cta:hover { background: var(--navy-light) !important; }
+    .nav-active { color: var(--navy) !important; font-weight: 600 !important; }
+
     @media (max-width: 900px) {
       nav a:not(.nav-cta) { display: none; }
+      .nav-hamburger { display: block; }
+      .nav-mobile { display: block; }
       .detail-grid { grid-template-columns: 1fr; }
       .variant-grid { grid-template-columns: 1fr 1fr; }
       .custom-band-inner { grid-template-columns: 1fr; gap: 28px; }
@@ -273,16 +337,23 @@
   <header>
     <div class="header-inner">
       <a href="/" class="logo" aria-label="AC Supply Co. Home">
-        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" />
+        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
         <span class="logo-tagline">Wholesale Packaging Supplier</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="/#products">Products</a>
+        <a href="/#products" class="nav-active">Products</a>
         <a href="/custom-branded-packaging/">Custom Branding</a>
         <a href="/contact/">Contact</a>
         <a href="/#contact" class="nav-cta">Request a Quote</a>
       </nav>
+      <button class="nav-hamburger" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     </div>
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+      <a href="/#products" class="nav-active">Products</a>
+      <a href="/custom-branded-packaging/">Custom Branding</a>
+      <a href="/contact/">Contact</a>
+      <a href="/#contact" class="nav-cta">Request a Quote</a>
+    </nav>
   </header>
 
   <!-- BREADCRUMB -->
@@ -451,5 +522,14 @@
     </div>
   </footer>
 
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMobile = document.getElementById('nav-mobile');
+    navToggle.addEventListener('click', function() {
+      const isOpen = navMobile.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.textContent = isOpen ? '✕' : '☰';
+    });
+  </script>
 </body>
 </html>

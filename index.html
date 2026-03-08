@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f1f3d'/><text y='.9em' font-size='80' x='10'>A</text></svg>">
+  <meta name="theme-color" content="#0f1f3d">
 
   <!-- Primary SEO -->
   <title>Wholesale Packaging Supplier for UK Cafés &amp; Hospitality | AC Supply Co.</title>
@@ -287,13 +289,13 @@
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 28px 28px;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
       display: block;
       text-decoration: none;
       cursor: pointer;
     }
 
-    .category-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); }
+    .category-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); transform: translateY(-3px); }
     .category-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
     .category-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
     .category-card .card-arrow { display: block; margin-top: 14px; font-size: 0.85rem; font-weight: 600; color: var(--green); }
@@ -337,7 +339,9 @@
     .trust-card {
       background: var(--white); border: 1px solid var(--border);
       border-radius: 4px; padding: 36px 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+    .trust-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
 
     .trust-number { font-family: var(--font-display); font-size: 2rem; font-weight: 500; color: var(--green); margin-bottom: 16px; line-height: 1; }
     .trust-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
@@ -389,9 +393,65 @@
     .footer-brand { font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
     .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
+    /* MOBILE NAV */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px 8px;
+      color: var(--navy);
+      font-size: 1.5rem;
+      line-height: 1;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+    .nav-hamburger:hover { background: var(--off-white); }
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 84px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 99;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .nav-mobile.open { max-height: 400px; }
+    .nav-mobile a {
+      display: block;
+      padding: 14px 24px;
+      text-decoration: none;
+      color: var(--text-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .nav-mobile a:hover { background: var(--off-white); color: var(--navy); }
+    .nav-mobile .nav-cta {
+      display: block;
+      margin: 12px 16px 16px;
+      text-align: center;
+      padding: 12px 16px;
+      background: var(--navy);
+      color: var(--white) !important;
+      border-radius: 4px;
+      font-size: 0.8rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase;
+      border-bottom: none;
+    }
+    .nav-mobile .nav-cta:hover { background: var(--navy-light) !important; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav a:not(.nav-cta) { display: none; }
+      .nav-hamburger { display: block; }
+      .nav-mobile { display: block; }
       .feature-grid, .trust-grid { grid-template-columns: 1fr; gap: 2px; }
       .serve-grid { grid-template-columns: repeat(3, 1fr); }
       .contact-layout { grid-template-columns: 1fr; gap: 48px; }
@@ -487,6 +547,8 @@
       .quote-form-wrap { padding: 28px 20px; }
       .quote-form .form-row--two { flex-direction: column; gap: 0; }
     }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .btn-spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 6px; }
   </style>
 </head>
 <body>
@@ -495,7 +557,7 @@
   <header>
     <div class="header-inner">
       <a href="#" class="logo" aria-label="AC Supply Co. Home">
-        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" />
+        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
         <span class="logo-tagline">Wholesale Packaging Supplier</span>
       </a>
       <nav aria-label="Main navigation">
@@ -504,7 +566,14 @@
         <a href="#contact">Contact</a>
         <a href="#contact" class="nav-cta">Get in Touch</a>
       </nav>
+      <button class="nav-hamburger" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
     </div>
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+      <a href="#what-we-do">What We Do</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </nav>
   </header>
 
   <main>
@@ -715,7 +784,7 @@
 
             <div class="qr-block" style="margin-top: 32px;">
               <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/images/qr-code-whatsapp.png" alt="QR code to open WhatsApp chat with AC Supply Co." width="160" height="160" />
+                <img src="/assets/images/qr-code-whatsapp.png" alt="QR code to open WhatsApp chat with AC Supply Co." width="160" height="160" loading="lazy" />
               </a>
               <p class="qr-label">Scan to chat on WhatsApp</p>
             </div>
@@ -809,6 +878,16 @@
   </footer>
 
   <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMobile = document.getElementById('nav-mobile');
+    if (navToggle && navMobile) {
+      navToggle.addEventListener('click', function() {
+        const isOpen = navMobile.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.textContent = isOpen ? '✕' : '☰';
+      });
+    }
+
     const form = document.getElementById('quote-form');
     const submitBtn = document.getElementById('submit-btn');
     const successMsg = document.getElementById('form-success');
@@ -817,7 +896,7 @@
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      submitBtn.innerHTML = '<span class="btn-spinner"></span>Sending...';
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
 

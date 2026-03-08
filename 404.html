@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | AC Supply Co.</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230f1f3d'/><text y='.9em' font-size='80' x='10'>A</text></svg>">
+  <meta name="theme-color" content="#0f1f3d">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0f1f3d;
+      --navy-light: #1a3260;
+      --green: #2e7d52;
+      --green-light: #3a9966;
+      --white: #ffffff;
+      --off-white: #f7f8fa;
+      --border: #e2e6ec;
+      --text-body: #374151;
+      --text-muted: #6b7280;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background: var(--off-white);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1160px; margin: 0 auto;
+      padding: 0 24px; height: 84px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-img { height: 72px; width: auto; display: block; }
+    .logo-tagline {
+      font-size: 0.675rem; font-weight: 500; color: var(--green);
+      letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.3; max-width: 140px;
+    }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a { text-decoration: none; color: var(--text-body); font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy); color: var(--white) !important;
+      padding: 9px 20px; border-radius: 4px;
+      font-size: 0.8rem !important; font-weight: 600 !important;
+      letter-spacing: 0.04em !important; text-transform: uppercase;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--navy-light) !important; }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 24px;
+    }
+    .error-box {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: 72px 56px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .error-box::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 500px 300px at 50% 50%, rgba(46,125,82,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.15);
+      line-height: 1;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .error-box h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.25;
+      position: relative;
+    }
+    .error-box p {
+      font-size: 0.975rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      text-decoration: none; font-family: var(--font-body);
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 13px 26px; border-radius: 4px; transition: all 0.2s;
+      position: relative;
+    }
+    .btn-primary { background: var(--green); color: var(--white); }
+    .btn-primary:hover { background: var(--green-light); }
+    footer { background: var(--navy); padding: 28px 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-brand { font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
+    .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+    @media (max-width: 900px) {
+      nav a:not(.nav-cta) { display: none; }
+    }
+    @media (max-width: 600px) {
+      nav { display: none; }
+      .logo-tagline { display: none; }
+      .error-box { padding: 48px 28px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="AC Supply Co. Home">
+        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
+        <span class="logo-tagline">Wholesale Packaging Supplier</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/#products">Products</a>
+        <a href="/custom-branded-packaging/">Custom Branding</a>
+        <a href="/contact/">Contact</a>
+        <a href="/#contact" class="nav-cta">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="error-box">
+      <div class="error-code">404</div>
+      <h1>Page Not Found</h1>
+      <p>The page you're looking for doesn't exist. It may have moved, or the URL may be incorrect.</p>
+      <a href="/" class="btn btn-primary">Back to Homepage</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">AC Supply Co.</span>
+      <span class="footer-text">Wholesale sourcing and supply for UK trade buyers &nbsp;|&nbsp; United Kingdom</span>
+      <span class="footer-text">&copy; 2026 AC Supply Co.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
