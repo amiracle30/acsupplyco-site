@@ -288,11 +288,15 @@
       border-radius: 4px;
       padding: 28px 28px;
       transition: border-color 0.2s, box-shadow 0.2s;
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .category-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); }
     .category-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
     .category-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+    .category-card .card-arrow { display: block; margin-top: 14px; font-size: 0.85rem; font-weight: 600; color: var(--green); }
 
     .category-card--cta { background: var(--green-pale); border-color: rgba(46,125,82,0.2); }
     .category-card--cta h4 { color: var(--green); }
@@ -588,26 +592,31 @@
           <p class="section-body" style="margin-top: 8px;">We work with businesses placing trade orders and bulk purchases.</p>
         </div>
         <div class="category-grid">
-          <div class="category-card">
-            <h4>Disposable Packaging</h4>
+          <a href="/coffee-cups/" class="category-card">
+            <h4>Disposable Coffee Cups</h4>
             <p>Cups, lids, sleeves, food boxes, containers, trays, and other single-use packaging for food and beverage service.</p>
-          </div>
-          <div class="category-card">
+            <span class="card-arrow">View &rarr;</span>
+          </a>
+          <a href="/paper-bags/" class="category-card">
             <h4>Paper &amp; Bag Products</h4>
             <p>Paper bags, carrier bags, kraft bags, and flat-bottom bags for retail, takeaway, and food service use.</p>
-          </div>
-          <div class="category-card">
+            <span class="card-arrow">View &rarr;</span>
+          </a>
+          <a href="/contact/" class="category-card">
             <h4>Table &amp; Service Supplies</h4>
             <p>Napkins, serviettes, and everyday consumable supplies for hospitality and food service operations.</p>
-          </div>
-          <div class="category-card">
+            <span class="card-arrow">Enquire &rarr;</span>
+          </a>
+          <a href="/custom-branded-packaging/" class="category-card">
             <h4>Branded &amp; Custom Packaging</h4>
             <p>Custom-printed cups, bags, boxes, and packaging with your branding. Available on request — contact us to discuss print options and minimum quantities.</p>
-          </div>
-          <div class="category-card">
+            <span class="card-arrow">View &rarr;</span>
+          </a>
+          <a href="/takeaway-packaging/" class="category-card">
             <h4>Catering &amp; Takeaway Supplies</h4>
             <p>Food boxes, portion pots, cutlery, straws, and other operational supplies for takeaway and catering businesses.</p>
-          </div>
+            <span class="card-arrow">View &rarr;</span>
+          </a>
           <div class="category-card category-card--cta">
             <h4>Don't see what you need?</h4>
             <p>We source to requirement. If you have a specific product in mind, contact us and we'll let you know if we can supply it.</p>
