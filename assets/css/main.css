@@ -1,3 +1,14 @@
+/*
+   IMPORTANT: Add these two lines to the <head> of every HTML file
+   BEFORE the <link rel="stylesheet" href="/assets/css/main.css"> tag
+   if not already present:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
 /* =============================================================
    AC Supply Co. — Shared Stylesheet
    Extracted from all 9 HTML pages.
@@ -13,31 +24,32 @@
 
 /* ── VARIABLES ── */
 :root {
-  --navy: #0f1f3d;
-  --navy-light: #1a3260;
-  --green: #2e7d52;
-  --green-light: #3a9966;
-  --green-pale: #e8f5ee;
-  --white: #ffffff;
-  --off-white: #f7f8fa;
-  --border: #e2e6ec;
-  --text-body: #374151;
-  --text-muted: #6b7280;
-  --text-light: #9ca3af;
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', sans-serif;
+  --navy: #111827;
+  --navy-light: #1f2937;
+  --green: #FF3EA5;
+  --green-light: #E0348F;
+  --green-pale: #FFF0F7;
+  --white: #FFFFFF;
+  --off-white: #F8F9FA;
+  --border: #E5E7EB;
+  --text-body: #1F2937;
+  --text-muted: #6B7280;
+  --text-light: #9CA3AF;
+  --font-display: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
+  --font-body: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* ── BASE ── */
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-body);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   color: var(--text-body);
   background: var(--white);
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ── HEADER ──
@@ -47,7 +59,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--white);
+  background: #ffffff;
   border-bottom: 1px solid var(--border);
 }
 
@@ -102,7 +114,7 @@ nav a:hover { color: var(--navy); }
   padding: 9px 20px;
   border-radius: 4px;
   font-size: 0.8rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase;
   transition: background 0.2s !important;
@@ -165,7 +177,7 @@ nav a:hover { color: var(--navy); }
   color: var(--white) !important;
   border-radius: 4px;
   font-size: 0.8rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase;
   border-bottom: none;
@@ -186,7 +198,7 @@ footer { background: var(--navy); padding: 28px 24px; }
   gap: 12px;
 }
 
-.footer-brand { font-family: var(--font-display); font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
+.footer-brand { font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif; font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
 .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
 /* ── BUTTONS ──
@@ -197,22 +209,22 @@ footer { background: var(--navy); padding: 28px 24px; }
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  font-family: var(--font-body);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 13px 26px;
-  border-radius: 4px;
-  transition: all 0.2s;
+  border-radius: 100px;
+  transition: all 0.2s ease;
 }
 
-.btn-primary { background: var(--green); color: var(--white); }
-.btn-primary:hover { background: var(--green-light); }
-.btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); }
-.btn-outline:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.06); }
-.btn-navy { background: var(--navy); color: var(--white); }
-.btn-navy:hover { background: var(--navy-light); }
+.btn-primary { background: var(--green); border-color: var(--green); color: #ffffff; }
+.btn-primary:hover { background: var(--green-light); border-color: var(--green-light); }
+.btn-outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); font-weight: 600; }
+.btn-outline:hover { background: var(--navy); color: #ffffff; }
+.btn-navy { background: var(--navy); border-color: var(--navy); color: #ffffff; font-weight: 700; }
+.btn-navy:hover { background: var(--navy-light); border-color: var(--navy-light); }
 
 /* ── BREADCRUMB (all inner pages) ── */
 .breadcrumb { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 12px 24px; }
@@ -241,7 +253,7 @@ footer { background: var(--navy); padding: 28px 24px; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 700px 400px at 30% 50%, rgba(46,125,82,0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse 700px 400px at 30% 50%, rgba(255,62,165,0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -249,9 +261,9 @@ footer { background: var(--navy); padding: 28px 24px; }
 
 .page-label {
   display: inline-block;
-  background: rgba(46,125,82,0.2);
-  border: 1px solid rgba(46,125,82,0.4);
-  color: #7dd4a8;
+  background: rgba(255,62,165,0.2);
+  border: 1px solid rgba(255,62,165,0.4);
+  color: #FF3EA5;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -262,11 +274,12 @@ footer { background: var(--navy); padding: 28px 24px; }
 }
 
 .page-hero h1 {
-  font-family: var(--font-display);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: clamp(1.75rem, 4vw, 2.75rem);
-  font-weight: 500;
+  font-weight: 800;
   color: var(--white);
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
 
@@ -298,11 +311,12 @@ section { padding: 80px 24px; }
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 500;
+  font-weight: 800;
   color: var(--navy);
-  line-height: 1.25;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   margin-bottom: 16px;
 }
 
@@ -323,12 +337,13 @@ section { padding: 80px 24px; }
 }
 
 .detail-copy h2 {
-  font-family: var(--font-display);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: clamp(1.4rem, 3vw, 1.9rem);
-  font-weight: 500;
+  font-weight: 800;
   color: var(--navy);
   margin-bottom: 16px;
-  line-height: 1.3;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .detail-copy p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
@@ -369,7 +384,7 @@ section { padding: 80px 24px; }
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
-.variant-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); transform: translateY(-3px); }
+.variant-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(255,62,165,0.08); transform: translateY(-3px); }
 .variant-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .variant-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
 
@@ -385,15 +400,16 @@ section { padding: 80px 24px; }
   align-items: center;
 }
 
-.custom-band .section-label { color: #7dd4a8; }
+.custom-band .section-label { color: #FF3EA5; }
 
 .custom-band h2 {
-  font-family: var(--font-display);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 500;
+  font-weight: 800;
   color: var(--white);
   margin-bottom: 16px;
-  line-height: 1.3;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .custom-band p { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 520px; }
@@ -411,7 +427,7 @@ section { padding: 80px 24px; }
   margin: 0 auto;
 }
 
-.cta-box h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--navy); margin-bottom: 14px; }
+.cta-box h2 { font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.1; letter-spacing: -0.03em; }
 .cta-box p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 28px; line-height: 1.75; }
 
 .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -449,7 +465,7 @@ section { padding: 80px 24px; }
 /* ── CONTACT DETAILS (homepage + contact page) ── */
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 
-.contact-info h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
+.contact-info h3 { font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif; font-size: 1.4rem; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
 .contact-info .role { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 32px; }
 
 .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -502,7 +518,7 @@ section { padding: 80px 24px; }
 .req { color: var(--green); }
 
 .form-group input, .form-group select, .form-group textarea {
-  font-family: var(--font-body);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.9rem;
   color: var(--text-body);
   background: var(--white);
@@ -519,7 +535,7 @@ section { padding: 80px 24px; }
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(46,125,82,0.1);
+  box-shadow: 0 0 0 3px rgba(255,62,165,0.1);
 }
 
 .form-group textarea { resize: vertical; min-height: 100px; }
@@ -529,9 +545,9 @@ section { padding: 80px 24px; }
   width: 100%;
   background: var(--navy);
   color: var(--white);
-  font-family: var(--font-body);
+  font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 15px 28px;
@@ -551,7 +567,7 @@ section { padding: 80px 24px; }
   margin-top: 16px;
   padding: 14px 16px;
   background: var(--green-pale);
-  border: 1px solid rgba(46,125,82,0.3);
+  border: 1px solid rgba(255,62,165,0.3);
   border-radius: 4px;
   color: var(--green);
   font-size: 0.9rem;
