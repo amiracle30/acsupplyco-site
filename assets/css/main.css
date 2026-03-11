@@ -11,8 +11,6 @@
 
 /* =============================================================
    AC Supply Co. — Shared Stylesheet
-   Extracted from all 9 HTML pages.
-   Page-specific styles remain in each file's <style> block.
    ============================================================= */
 
 /* ── RESET ── */
@@ -52,138 +50,161 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── HEADER ──
-   thank-you and 404 override with: header { position: static; }
+/* ─── ANNOUNCEMENT BAR ─── */
+.announcement-bar {
+  background: var(--off-white);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 24px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.announcement-bar-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.announcement-bar a {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.announcement-bar a:hover {
+  text-decoration: underline;
+}
+
+/* ─── HEADER ───
+   thank-you and 404 override with: .header { position: static; }
 */
-header {
+.header {
   position: sticky;
   top: 0;
   z-index: 100;
   background: #ffffff;
   border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.2s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0 1px 16px rgba(0,0,0,0.06);
 }
 
 .header-inner {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 84px;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
 }
 
 /* ── LOGO ── */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-.logo-img { height: 72px; width: auto; display: block; }
+.logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
 
-.logo-tagline {
-  font-size: 0.675rem;
+/* ─── DESKTOP NAV ─── */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-desktop a {
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--green);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1.3;
-  max-width: 140px;
-}
-
-/* ── DESKTOP NAV ──
-   homepage adds: nav a { letter-spacing: 0.01em; }
-*/
-nav { display: flex; align-items: center; gap: 32px; }
-
-nav a {
-  text-decoration: none;
   color: var(--text-body);
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: color 0.2s;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
 }
 
-nav a:hover { color: var(--navy); }
-
-.nav-cta {
-  background: var(--navy);
-  color: var(--white) !important;
-  padding: 9px 20px;
-  border-radius: 4px;
-  font-size: 0.8rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase;
-  transition: background 0.2s !important;
+.nav-desktop a:hover {
+  background: var(--off-white);
+  color: var(--navy);
 }
 
-.nav-cta:hover { background: var(--navy-light) !important; color: var(--white) !important; }
+/* ─── HEADER RIGHT ─── */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
 
-.nav-active { color: var(--navy) !important; font-weight: 600 !important; }
-
-/* ── MOBILE NAV ── */
-.nav-hamburger {
+/* ─── MOBILE TOGGLE ─── */
+.nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px 8px;
+  font-size: 1.4rem;
   color: var(--navy);
-  font-size: 1.5rem;
+  padding: 6px;
   line-height: 1;
-  border-radius: 4px;
-  transition: background 0.15s;
 }
 
-.nav-hamburger:hover { background: var(--off-white); }
-
+/* ─── MOBILE NAV ─── */
 .nav-mobile {
-  display: none;
-  position: absolute;
-  top: 84px; left: 0; right: 0;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 24px;
 }
 
-.nav-mobile.open { max-height: 400px; }
+.nav-mobile.open {
+  max-height: 400px;
+  padding: 20px 24px 24px;
+}
 
 .nav-mobile a {
-  display: block;
-  padding: 14px 24px;
-  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-body);
-  font-size: 0.9rem;
-  font-weight: 500;
+  text-decoration: none;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
-  transition: background 0.15s;
+  transition: color 0.15s;
 }
 
-.nav-mobile a:hover { background: var(--off-white); color: var(--navy); }
+.nav-mobile a:hover { color: var(--green); }
 
-.nav-mobile .nav-cta {
-  display: block;
-  margin: 12px 16px 16px;
+.nav-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.nav-mobile-actions .btn {
   text-align: center;
-  padding: 12px 16px;
-  background: var(--navy);
-  color: var(--white) !important;
-  border-radius: 4px;
-  font-size: 0.8rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase;
-  border-bottom: none;
+  width: 100%;
 }
-
-.nav-mobile .nav-cta:hover { background: var(--navy-light) !important; }
 
 /* ── FOOTER ── */
 footer { background: var(--navy); padding: 28px 24px; }
@@ -201,9 +222,7 @@ footer { background: var(--navy); padding: 28px 24px; }
 .footer-brand { font-family: 'Outfit', -apple-system, system-ui, "Helvetica Neue", Helvetica, sans-serif; font-size: 1rem; font-weight: 500; color: rgba(255,255,255,0.9); }
 .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 
-/* ── BUTTONS ──
-   homepage overrides .btn with: padding: 14px 28px; cursor: pointer; border: none;
-*/
+/* ── BUTTONS ── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -226,6 +245,35 @@ footer { background: var(--navy); padding: 28px 24px; }
 .btn-navy { background: var(--navy); border-color: var(--navy); color: #ffffff; font-weight: 700; }
 .btn-navy:hover { background: var(--navy-light); border-color: var(--navy-light); }
 
+/* ─── SMALL BUTTON VARIANT ─── */
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.82rem;
+}
+
+/* ─── WHATSAPP BUTTON ─── */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  padding: 9px 18px;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn-whatsapp:hover {
+  background: #20b858;
+}
+
 /* ── BREADCRUMB (all inner pages) ── */
 .breadcrumb { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 12px 24px; }
 .breadcrumb-inner { max-width: 1100px; margin: 0 auto; font-size: 0.8rem; color: var(--text-muted); }
@@ -235,10 +283,9 @@ footer { background: var(--navy); padding: 28px 24px; }
 
 /* ── PAGE HERO (all inner pages) ──
    Each page defines its own .page-hero::before gradient position.
-   Default (used by coffee-cups, takeaway-packaging, paper-bags): at 30% 50%
+   Default (coffee-cups, takeaway-packaging, paper-bags): at 30% 50%
    contact and faq override to: at 50% 50%
    custom-branded-packaging overrides to: at 70% 50%
-
    contact and faq also override: .page-hero p { margin-bottom: 0; }
 */
 .page-hero {
@@ -433,11 +480,7 @@ section { padding: 80px 24px; }
 .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 /* ── RELATED SECTION (product pages) ──
-   faq overrides: .related-section { background: var(--off-white) }
-   faq overrides: .related-grid { grid-template-columns: repeat(4, 1fr) }
-   faq overrides: .related-card h4 { font-size: 0.9rem }
-   faq overrides: .related-card p { font-size: 0.8rem }
-   faq overrides: .related-card .arrow { margin-top: 10px }
+   faq overrides: background var(--off-white), 4-col grid, smaller card text, arrow margin
 */
 .related-section { background: var(--white); padding: 64px 24px; }
 
@@ -601,10 +644,13 @@ section { padding: 80px 24px; }
 }
 
 /* ── RESPONSIVE BREAKPOINTS ── */
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .nav-toggle { display: block; }
+  .btn-sm.btn-outline { display: none; }
+}
+
 @media (max-width: 900px) {
-  nav a:not(.nav-cta) { display: none; }
-  .nav-hamburger { display: block; }
-  .nav-mobile { display: block; }
   .detail-grid { grid-template-columns: 1fr; }
   .variant-grid { grid-template-columns: 1fr 1fr; }
   .custom-band-inner { grid-template-columns: 1fr; gap: 28px; }
@@ -614,12 +660,14 @@ section { padding: 80px 24px; }
 
 @media (max-width: 600px) {
   section { padding: 56px 20px; }
-  nav { display: none; }
-  .logo-tagline { display: none; }
   .variant-grid { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; }
   .cta-box { padding: 32px 20px; }
   .footer-inner { flex-direction: column; text-align: center; }
   .quote-form-wrap { padding: 28px 20px; }
   .quote-form .form-row--two { flex-direction: column; gap: 0; }
+}
+
+@media (max-width: 480px) {
+  .announcement-bar { display: none; }
 }
