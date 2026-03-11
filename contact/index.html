@@ -42,7 +42,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <style>
     /* Page-specific: centred gradient, no hero button so no margin-bottom on p */
@@ -73,26 +72,49 @@
 </head>
 <body>
 
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="announcement-bar-inner">
+      <span>Wholesale café packaging — fast UK delivery · <a href="/contact/">Request a trade quote</a></span>
+    </div>
+  </div>
+
   <!-- HEADER -->
-  <header>
+  <header class="header">
     <div class="header-inner">
-      <a href="/" class="logo" aria-label="AC Supply Co. Home">
-        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
-        <span class="logo-tagline">Wholesale Packaging Supplier</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="/#products">Products</a>
-        <a href="/custom-branded-packaging/">Custom Branding</a>
-        <a href="/contact/" class="nav-active">Contact</a>
-        <a href="/contact/" class="nav-cta">Request a Quote</a>
-      </nav>
-      <button class="nav-hamburger" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="header-left">
+        <a href="/" class="logo" aria-label="AC Supply Co home">
+          <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
+        </a>
+        <nav class="nav-desktop" aria-label="Main navigation">
+          <a href="/#products">Products</a>
+          <a href="/custom-branded-packaging/">Custom Branding</a>
+          <a href="/faq/">FAQ</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <a href="/contact/" class="btn btn-outline btn-sm" aria-current="page">Get a Quote</a>
+        <a href="https://wa.me/447440386717" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span class="hamburger-icon">☰</span>
+        </button>
+      </div>
     </div>
     <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
       <a href="/#products">Products</a>
       <a href="/custom-branded-packaging/">Custom Branding</a>
-      <a href="/contact/" class="nav-active">Contact</a>
-      <a href="/contact/" class="nav-cta">Request a Quote</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/contact/">Contact</a>
+      <div class="nav-mobile-actions">
+        <a href="/contact/" class="btn btn-primary">Get a Quote</a>
+        <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+      </div>
     </nav>
   </header>
 

@@ -56,13 +56,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <style>
-    /* Overrides: homepage uses slightly larger section padding and btn */
+    /* Overrides: homepage uses slightly larger section padding */
     section { padding: 88px 24px; }
-    nav a { letter-spacing: 0.01em; }
-    .btn { padding: 14px 28px; cursor: pointer; border: none; }
 
     /* Overrides: homepage section-title is larger with letter-spacing */
     .section-title { font-size: clamp(1.6rem, 3.5vw, 2.25rem); letter-spacing: -0.01em; }
@@ -71,112 +68,6 @@
     .section-body { max-width: 560px; margin-bottom: 0; }
     .section-header { margin-bottom: 56px; }
 
-    /* ── HERO ── */
-    .hero {
-      background: var(--navy);
-      color: var(--white);
-      padding: 96px 24px 88px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 700px 400px at 20% 50%, rgba(46,125,82,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 300px at 80% 30%, rgba(46,125,82,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(46,125,82,0.2);
-      border: 1px solid rgba(46,125,82,0.4);
-      color: #7dd4a8;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 2px;
-      margin-bottom: 32px;
-    }
-
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--white);
-      margin-bottom: 24px;
-      letter-spacing: -0.01em;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.72);
-      max-width: 560px;
-      margin: 0 auto 44px;
-      line-height: 1.75;
-    }
-
-    .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 14px 28px;
-      border-radius: 4px;
-      transition: all 0.2s;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary { background: var(--green); color: var(--white); }
-    .btn-primary:hover { background: var(--green-light); }
-    .btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.4); }
-    .btn-outline:hover { border-color: rgba(255,255,255,0.75); background: rgba(255,255,255,0.06); }
-
-    .whatsapp-icon { width: 18px; height: 18px; flex-shrink: 0; }
-
-    /* ── SECTION SCAFFOLDING ── */
-    section { padding: 88px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 3.5vw, 2.25rem);
-      font-weight: 500;
-      color: var(--navy);
-      line-height: 1.25;
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
-    }
-
-    .section-body { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.75; }
-    .section-header { margin-bottom: 56px; }
 
     /* ── WHAT WE DO ── */
     .what-we-do { background: var(--off-white); }
@@ -288,93 +179,107 @@
 
     @media (max-width: 600px) {
       section { padding: 64px 20px; }
-      .hero { padding: 72px 20px 64px; }
       .serve-grid { grid-template-columns: 1fr 1fr; }
     }
 
-    /* ── TRUST STRIP ── */
-    .trust-strip { background: var(--navy-light); border-top: 1px solid rgba(255,255,255,0.06); padding: 16px 24px; }
-
-    .trust-strip-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: center;
-      flex-wrap: wrap; gap: 8px 0;
-    }
-
-    .trust-item {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.82);
-      letter-spacing: 0.03em; padding: 4px 20px; white-space: nowrap;
-    }
-
-    .trust-item svg { width: 13px; height: 13px; color: #7dd4a8; flex-shrink: 0; }
-    .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
-
-    @media (max-width: 600px) {
-      .trust-strip-inner { gap: 4px 0; }
-      .trust-divider { display: none; }
-      .trust-item { padding: 3px 12px; font-size: 0.75rem; }
-    }
 
   </style>
 </head>
 <body>
 
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="announcement-bar-inner">
+      <span>Wholesale café packaging — fast UK delivery · <a href="/contact/">Request a trade quote</a></span>
+    </div>
+  </div>
+
   <!-- HEADER -->
-  <header>
+  <header class="header">
     <div class="header-inner">
-      <a href="#" class="logo" aria-label="AC Supply Co. Home">
-        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
-        <span class="logo-tagline">Wholesale Packaging Supplier</span>
-      </a>
-      <nav aria-label="Main navigation">
-        <a href="#what-we-do">What We Do</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="nav-cta">Get in Touch</a>
-      </nav>
-      <button class="nav-hamburger" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="header-left">
+        <a href="/" class="logo" aria-label="AC Supply Co home">
+          <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
+        </a>
+        <nav class="nav-desktop" aria-label="Main navigation">
+          <a href="/#products">Products</a>
+          <a href="/custom-branded-packaging/">Custom Branding</a>
+          <a href="/faq/">FAQ</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <a href="/contact/" class="btn btn-outline btn-sm">Get a Quote</a>
+        <a href="https://wa.me/447440386717" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span class="hamburger-icon">☰</span>
+        </button>
+      </div>
     </div>
     <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
-      <a href="#what-we-do">What We Do</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="nav-cta">Get in Touch</a>
+      <a href="/#products">Products</a>
+      <a href="/custom-branded-packaging/">Custom Branding</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/contact/">Contact</a>
+      <div class="nav-mobile-actions">
+        <a href="/contact/" class="btn btn-primary">Get a Quote</a>
+        <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+      </div>
     </nav>
   </header>
 
   <main>
 
     <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-inner">
-        <div class="hero-badge">UK Wholesale Packaging Supplier</div>
-        <h1 id="hero-heading">Wholesale Packaging Supplier for UK Cafés, Takeaways &amp; Hospitality Businesses</h1>
-        <p>AC Supply Co. supplies coffee cups, takeaway packaging, paper bags, and hospitality consumables to UK trade buyers at wholesale prices. Source what you need — we handle the supply.</p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get a Quote</a>
-          <a href="https://wa.me/447440386717" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Contact on WhatsApp
-          </a>
+    <section class="hero">
+
+      <!-- Left panel — Cups -->
+      <div class="hero-panel hero-panel-cups">
+        <div class="hero-panel-overlay"></div>
+        <div class="hero-content">
+          <h2 class="hero-category">Cups &amp; Lids</h2>
+          <div class="hero-subcats">
+            <a href="/coffee-cups/" class="hero-subcat">Single Wall</a>
+            <a href="/coffee-cups/" class="hero-subcat">Double Wall</a>
+            <a href="/coffee-cups/" class="hero-subcat">Lids &amp; Sleeves</a>
+            <a href="/coffee-cups/" class="hero-shop-now">Shop now →</a>
+          </div>
         </div>
       </div>
+
+      <!-- Right panel — Bags & Packaging -->
+      <div class="hero-panel hero-panel-bags">
+        <div class="hero-panel-overlay"></div>
+        <div class="hero-content">
+          <h2 class="hero-category">Bags &amp; Packaging</h2>
+          <div class="hero-subcats">
+            <a href="/paper-bags/" class="hero-subcat">Kraft Bags</a>
+            <a href="/takeaway-packaging/" class="hero-subcat">Takeaway Boxes</a>
+            <a href="/takeaway-packaging/" class="hero-subcat">Napkins</a>
+            <a href="/paper-bags/" class="hero-shop-now">Shop now →</a>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <!-- TRUST STRIP -->
-    <div class="trust-strip" aria-label="Key features">
-      <div class="trust-strip-inner">
-        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>UK Trade Buyers Only</span>
-        <span class="trust-divider" aria-hidden="true"></span>
-        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Wholesale Pricing</span>
-        <span class="trust-divider" aria-hidden="true"></span>
-        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custom Branding Available</span>
-        <span class="trust-divider" aria-hidden="true"></span>
-        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Coffee Cups &amp; Takeaway Packaging</span>
-        <span class="trust-divider" aria-hidden="true"></span>
-        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Responsive &amp; Direct</span>
+    <!-- BRAND STRIP -->
+    <div class="brand-strip">
+      <div class="brand-strip-inner">
+        <span class="brand-strip-item">Independent Cafés</span>
+        <span class="brand-strip-divider">·</span>
+        <span class="brand-strip-item">Coffee Shops</span>
+        <span class="brand-strip-divider">·</span>
+        <span class="brand-strip-item">Takeaway Operators</span>
+        <span class="brand-strip-divider">·</span>
+        <span class="brand-strip-item">Food Trucks</span>
+        <span class="brand-strip-divider">·</span>
+        <span class="brand-strip-item">Hospitality Businesses</span>
       </div>
     </div>
 
