@@ -15,7 +15,8 @@ Static HTML website for AC Supply Co. — a UK wholesale packaging supplier. Dep
 ## Stack
 
 - Pure static HTML — no npm, no build step, no compilation
-- All CSS is inline per-file (no external stylesheet yet)
+- Homepage (`index.html`) has self-contained inline CSS using new design tokens — does NOT use `/assets/css/main.css`
+- Inner product/contact pages use `/assets/css/main.css` (legacy navy/green system)
 - JavaScript is minimal and inline (only on pages with forms)
 - Deployed directly from this folder root via Cloudflare Pages
 
@@ -34,6 +35,7 @@ ac-supply-co/               ← Cloudflare Pages deploys from here
   paper-bags/index.html
   custom-branded-packaging/index.html
   contact/index.html
+  faq/index.html
   thank-you/index.html
   lp/                       ← reserved for future paid landing pages
 ```
@@ -47,7 +49,29 @@ All pages use clean directory URLs (no `.html` extensions):
 
 ## Design System
 
-All CSS is duplicated per page. The shared variables are:
+### Homepage (`index.html`) — new self-contained design system
+
+```css
+--bg: #FAFAF7
+--paper: #FFFFFF
+--cream: #F1ECE0
+--cream-deep: #E8E2D2
+--ink: #0F1F3D
+--ink-soft: #1F2D4D
+--muted: #5A6478
+--light: #8A92A3
+--border: #E5E1D8
+--border-strong: #C9C2B0
+--accent: #1F6B43
+--accent-deep: #164C30
+--accent-pale: #E8F0EA
+--whatsapp: #25D366
+--radius: 4px
+```
+
+Fonts: `Inter Tight` (all text, 300–800 weights) + `JetBrains Mono` (mono labels, tags) via Google Fonts.
+
+### Inner pages (via `/assets/css/main.css`) — legacy navy/green system
 
 ```css
 --navy: #0f1f3d
@@ -59,8 +83,6 @@ All CSS is duplicated per page. The shared variables are:
 --off-white: #f7f8fa
 --border: #e2e6ec
 ```
-
-Fonts: `Playfair Display` (headings) + `DM Sans` (body) via Google Fonts.
 
 ## Quote Forms
 
