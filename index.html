@@ -54,538 +54,1598 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <style>
-    /* Overrides: homepage uses slightly larger section padding */
-    section { padding: 88px 24px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* Overrides: homepage section-title is larger with letter-spacing */
-    .section-title { font-size: clamp(1.6rem, 3.5vw, 2.25rem); letter-spacing: -0.01em; }
+  :root {
+    --bg: #FAFAF7;
+    --paper: #FFFFFF;
+    --cream: #F1ECE0;
+    --cream-deep: #E8E2D2;
+    --ink: #0F1F3D;
+    --ink-soft: #1F2D4D;
+    --muted: #5A6478;
+    --light: #8A92A3;
+    --border: #E5E1D8;
+    --border-strong: #C9C2B0;
+    --accent: #1F6B43;
+    --accent-deep: #164C30;
+    --accent-pale: #E8F0EA;
+    --whatsapp: #25D366;
+    --radius: 4px;
+    --maxw: 1280px;
+    --gutter: 32px;
+    --section-pad: 120px;
+    --section-pad-y: 72px;
+  }
 
-    /* Overrides: homepage section-body has narrower max-width, no bottom margin */
-    .section-body { max-width: 560px; margin-bottom: 0; }
-    .section-header { margin-bottom: 56px; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 16px;
+    line-height: 1.5;
+    font-feature-settings: "ss01", "cv11";
+  }
 
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
 
-    /* ── WHAT WE DO ── */
-    .what-we-do { background: var(--off-white); }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: "calt" 0; }
 
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
-    .feature-card {
-      background: var(--white);
-      padding: 40px 36px;
-      border-top: 3px solid transparent;
-      transition: border-color 0.2s;
-    }
+  /* Mono section tag */
+  .tag {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .tag.no-dot::before { display: none; }
 
-    .feature-card:hover { border-top-color: var(--green); }
+  /* ====== ANNOUNCEMENT BAR ====== */
+  .announcement {
+    background: var(--ink);
+    color: rgba(255,255,255,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .announcement-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 10px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
+  .announcement .pulse {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
+    70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+    100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+  }
+  .announcement a { color: white; text-decoration: none; font-weight: 500; border-bottom: 1px dashed rgba(255,255,255,0.4); padding-bottom: 1px; }
 
-    .feature-icon {
-      width: 44px; height: 44px;
-      background: var(--green-pale);
-      border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 24px;
-    }
+  /* ====== HEADER ====== */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250,250,247,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    height: 72px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 48px;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo img { height: 40px; width: auto; }
+  .logo-text {
+    display: none;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .nav { display: flex; align-items: center; gap: 4px; justify-self: center; }
+  .nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav a:hover { background: var(--cream); color: var(--ink); }
+  .header-cta { display: flex; align-items: center; gap: 10px; }
 
-    .feature-icon svg { width: 22px; height: 22px; color: var(--green); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    padding: 11px 18px;
+    border-radius: var(--radius);
+    transition: all 0.15s;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--border-strong); }
+  .btn-ghost:hover { background: var(--ink); color: white; border-color: var(--ink); }
+  .btn-primary { background: var(--ink); color: white; border-color: var(--ink); }
+  .btn-primary:hover { background: var(--ink-soft); border-color: var(--ink-soft); }
+  .btn-accent { background: var(--accent); color: white; border-color: var(--accent); }
+  .btn-accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+  .btn-whatsapp { background: var(--whatsapp); color: white; border-color: var(--whatsapp); }
+  .btn-whatsapp:hover { background: #1eba56; border-color: #1eba56; }
+  .btn-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
+  }
+  .btn-arrow:hover { gap: 10px; }
 
-    .feature-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 12px;
-    }
+  /* ====== HERO ====== */
+  .hero {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 64px var(--gutter) 0;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: end;
+  }
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 5.4vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .hero-sub {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 480px;
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .hero-actions .btn { padding: 14px 22px; font-size: 14px; }
 
-    .feature-card p { font-size: 0.925rem; color: var(--text-muted); line-height: 1.75; }
+  /* Hero specs row */
+  .hero-specs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 28px 0 0;
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+  }
+  .hero-spec .num {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .hero-spec .lbl {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+  }
 
-    /* ── CATEGORY CARDS ── */
-    .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  /* Hero mosaic on right */
+  .hero-mosaic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 12px;
+    align-self: stretch;
+    padding-bottom: 72px;
+  }
+  .hero-tile {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .hero-tile:hover { transform: translateY(-3px); box-shadow: 0 12px 32px -12px rgba(15,31,61,0.18); }
+  .hero-tile-bg {
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(135deg,
+        transparent 0,
+        transparent 14px,
+        rgba(15,31,61,0.04) 14px,
+        rgba(15,31,61,0.04) 15px
+      );
+  }
+  .hero-tile-label {
+    position: relative;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--paper);
+    padding: 6px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+  }
+  .hero-tile-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+  }
+  .hero-tile-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+    font-size: 14px;
+  }
+  .hero-tile.span-2 { grid-column: span 2; }
 
-    .category-card {
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 28px 28px;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-      display: block;
-      text-decoration: none;
-      cursor: pointer;
-    }
+  .hero-tile.tile-1 { background: linear-gradient(135deg, #1F2D4D 0%, #0F1F3D 100%); border-color: var(--ink); }
+  .hero-tile.tile-1 .hero-tile-title,
+  .hero-tile.tile-1 .hero-tile-arrow { color: white; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); }
+  .hero-tile.tile-1 .hero-tile-title { background: transparent; border: none; padding: 0; }
+  .hero-tile.tile-1 .hero-tile-label { background: rgba(255,255,255,0.08); color: white; border-color: rgba(255,255,255,0.18); }
+  .hero-tile.tile-1 .hero-tile-bg {
+    background-image:
+      repeating-linear-gradient(135deg,
+        transparent 0,
+        transparent 14px,
+        rgba(255,255,255,0.06) 14px,
+        rgba(255,255,255,0.06) 15px
+      );
+  }
 
-    .category-card:hover { border-color: var(--green); box-shadow: 0 4px 20px rgba(46,125,82,0.08); transform: translateY(-3px); }
-    .category-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
-    .category-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
-    .category-card .card-arrow { display: block; margin-top: 14px; font-size: 0.85rem; font-weight: 600; color: var(--green); }
+  .hero-tile.tile-2 { background: var(--accent-pale); border-color: rgba(31,107,67,0.2); }
 
-    .category-card--cta { background: var(--green-pale); border-color: rgba(46,125,82,0.2); }
-    .category-card--cta h4 { color: var(--green); }
+  .hero-tile.tile-3 { background: var(--cream-deep); }
 
-    .category-link {
-      display: inline-block; margin-top: 14px;
-      font-size: 0.85rem; font-weight: 600; color: var(--green);
-      text-decoration: none; letter-spacing: 0.02em;
-    }
+  /* ====== SCROLLING MARQUEE ====== */
+  .marquee-band {
+    background: var(--ink);
+    color: rgba(255,255,255,0.55);
+    padding: 22px 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .marquee {
+    display: flex;
+    gap: 56px;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .marquee span { display: inline-flex; align-items: center; gap: 16px; }
+  .marquee span::after { content: '◆'; color: rgba(255,255,255,0.25); }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 
-    .category-link:hover { color: var(--green-light); text-decoration: underline; }
+  /* ====== SECTION SHELL ====== */
+  section.s {
+    padding: var(--section-pad-y) 0;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  section.s.paper { background: var(--paper); }
+  section.s.cream { background: var(--cream); }
+  section.s.ink { background: var(--ink); color: white; border-bottom-color: rgba(255,255,255,0.08); }
+  section.s.ink .tag { color: rgba(255,255,255,0.7); }
+  section.s.ink .tag::before { background: #4ade80; }
 
-    @media (max-width: 900px) { .category-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 600px) { .category-grid { grid-template-columns: 1fr; } }
+  .s-head {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: end;
+    margin-bottom: 48px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  section.s.ink .s-head { border-bottom-color: rgba(255,255,255,0.1); }
 
-    .products { background: var(--white); }
+  .s-head .left .tag { margin-bottom: 24px; }
+  .s-title {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: inherit;
+  }
+  .s-body {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 520px;
+  }
+  section.s.ink .s-body { color: rgba(255,255,255,0.65); }
 
-    /* ── WHO WE SERVE ── */
-    .who-we-serve { background: var(--navy); color: var(--white); }
-    .who-we-serve .section-label { color: #7dd4a8; }
-    .who-we-serve .section-title { color: var(--white); }
+  /* ====== SERVICES (3-up rows with rule) ====== */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border);
+  }
+  .service {
+    padding: 40px 32px 40px 0;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .service:last-child { border-right: none; padding-right: 0; }
+  .service:not(:first-child) { padding-left: 32px; }
+  .service-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+  }
+  .service h3 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+  .service p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
 
-    .serve-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; margin-top: 48px; }
+  /* ====== BADGES (trust signals) ====== */
+  .badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--paper);
+  }
+  .badge {
+    padding: 36px 28px;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .badge:last-child { border-right: none; }
+  .badge-icon {
+    width: 40px; height: 40px;
+    border-radius: 6px;
+    background: var(--accent-pale);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .badge h4 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .badge p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+  .badge .badge-num {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    color: var(--light);
+    letter-spacing: 0.06em;
+  }
 
-    .serve-item {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 28px 20px; text-align: center; border-radius: 4px;
-    }
+  /* ====== CATEGORIES (asymmetric grid) ====== */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(220px, auto);
+    gap: 16px;
+  }
+  .cat {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat:hover { border-color: var(--ink); transform: translateY(-2px); box-shadow: 0 16px 32px -16px rgba(15,31,61,0.12); }
+  .cat-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  .cat h4 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.018em;
+    margin: 16px 0 10px;
+    color: var(--ink);
+  }
+  .cat p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .cat-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  .cat-foot .arrow { color: var(--ink); font-weight: 700; }
+  /* asymmetric placement */
+  .cat.c1 { grid-column: span 3; }
+  .cat.c2 { grid-column: span 3; }
+  .cat.c3 { grid-column: span 2; }
+  .cat.c4 { grid-column: span 2; }
+  .cat.c5 { grid-column: span 2; }
+  .cat.cta {
+    grid-column: span 6;
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 40px;
+  }
+  .cat.cta:hover { background: var(--ink-soft); border-color: var(--ink-soft); transform: translateY(-2px); }
+  .cat.cta h4 { color: white; margin: 0 0 6px; font-size: 26px; }
+  .cat.cta p { color: rgba(255,255,255,0.7); margin: 0; max-width: 540px; }
+  .cat.cta .cat-cta-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+  .cat.cta .cat-num { color: rgba(255,255,255,0.55); }
 
-    .serve-item p { font-size: 0.875rem; font-weight: 500; color: rgba(255,255,255,0.85); letter-spacing: 0.02em; }
+  /* visual placeholder strip */
+  .cat-thumb {
+    height: 64px;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    background-image:
+      repeating-linear-gradient(135deg,
+        transparent 0,
+        transparent 12px,
+        rgba(15,31,61,0.06) 12px,
+        rgba(15,31,61,0.06) 13px
+      );
+    background-color: var(--cream);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
 
-    /* ── WHY CHOOSE ── */
-    .why-choose { background: var(--off-white); }
+  /* ====== SOURCING CALLOUT ====== */
+  .sourcing {
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    border: 1px solid var(--cream-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  .sourcing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(135deg,
+        transparent 0,
+        transparent 24px,
+        rgba(15,31,61,0.025) 24px,
+        rgba(15,31,61,0.025) 25px
+      );
+    pointer-events: none;
+  }
+  .sourcing > * { position: relative; }
+  .sourcing h3 {
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    margin: 16px 0 20px;
+  }
+  .sourcing p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .sourcing-process {
+    display: grid;
+    gap: 14px;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 16px;
+    align-items: start;
+    padding: 18px 20px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .step-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+  .step h5 {
+    font-size: 14.5px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .step p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+  .step-time {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    color: var(--light);
+    letter-spacing: 0.06em;
+    align-self: center;
+    white-space: nowrap;
+  }
 
-    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  /* ====== WHO WE SERVE ====== */
+  .serve-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .serve {
+    background: var(--ink);
+    padding: 36px 28px;
+    transition: background 0.2s;
+  }
+  .serve:hover { background: var(--ink-soft); }
+  .serve-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+  }
+  .serve h4 {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: white;
+    margin-bottom: 6px;
+  }
+  .serve p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
 
-    .trust-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 4px; padding: 36px 32px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .trust-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  /* ====== HOW WE WORK (numbered grid) ====== */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .why {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 32px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .why:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .why-num {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+  .why h4 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    margin-bottom: 12px;
+  }
+  .why p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    .trust-number { font-family: var(--font-display); font-size: 2rem; font-weight: 500; color: var(--green); margin-bottom: 16px; line-height: 1; }
-    .trust-card h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; letter-spacing: 0.01em; }
-    .trust-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; }
+  /* ====== CONTACT ====== */
+  .contact-shell {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .contact-form {
+    padding: 44px 44px 40px;
+    border-right: 1px solid var(--border);
+  }
+  .contact-form-head { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+  .contact-form-head h3 { font-size: 26px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .contact-form-head p { color: var(--muted); font-size: 14.5px; }
 
-    /* ── CONTACT (section wrapper — homepage only) ── */
-    .contact { background: var(--white); border-top: 1px solid var(--border); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-row.single { grid-template-columns: 1fr; }
+  .field label {
+    display: block;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .field label .req { color: var(--accent); }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 14.5px;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    outline: none;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(15,31,61,0.08);
+  }
+  .field textarea { resize: vertical; min-height: 90px; }
 
-    .qr-sub { margin-top: 4px; font-size: 0.775rem; color: var(--text-light); }
+  .form-submit { margin-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .form-submit .btn { padding: 14px 24px; font-size: 14px; }
+  .form-fineprint {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--light);
+    letter-spacing: 0.04em;
+  }
 
-    /* ── RESPONSIVE (homepage-specific) ── */
-    @media (max-width: 900px) {
-      .feature-grid, .trust-grid { grid-template-columns: 1fr; gap: 2px; }
-      .serve-grid { grid-template-columns: repeat(3, 1fr); }
-      .qr-block { max-width: 280px; margin: 0 auto; }
-    }
+  .contact-side {
+    padding: 44px 40px;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-side-head .tag { margin-bottom: 16px; }
+  .contact-side h4 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.018em;
+    margin-bottom: 4px;
+  }
+  .contact-side .role {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .contact-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .channel {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    padding: 14px 16px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .channel:hover { border-color: var(--ink); transform: translateX(2px); }
+  .channel-icon {
+    width: 36px; height: 36px;
+    border-radius: 6px;
+    background: var(--cream-deep);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+  }
+  .channel-icon.wa { background: #d4f5e0; color: #128c40; }
+  .channel-label {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .channel-value { font-size: 14.5px; font-weight: 500; letter-spacing: -0.005em; }
+  .channel-arrow { color: var(--light); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; }
 
-    @media (max-width: 600px) {
-      section { padding: 64px 20px; }
-      .serve-grid { grid-template-columns: 1fr 1fr; }
-    }
+  .qr-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 18px;
+    align-items: center;
+  }
+  .qr-card img { width: 96px; height: 96px; border-radius: 4px; }
+  .qr-card .qr-text { display: flex; flex-direction: column; gap: 4px; }
+  .qr-card .qr-text .label {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  .qr-card .qr-text strong { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+  .qr-card .qr-text small { font-size: 12px; color: var(--muted); }
 
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    padding: 80px 0 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand img { height: 56px; margin-bottom: 24px; filter: brightness(0) invert(1) opacity(0.95); }
+  .footer-brand p { font-size: 14px; max-width: 360px; line-height: 1.6; color: rgba(255,255,255,0.55); }
+  .footer-col h5 {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .footer-col a, .footer-col span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.15s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.04em;
+  }
+  .footer-bottom .right { display: flex; gap: 24px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: white; }
 
-  </style>
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 880px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-mosaic { grid-template-columns: 1fr 1fr; padding-bottom: 64px; }
+    .s-head { grid-template-columns: 1fr; gap: 24px; }
+    .services { grid-template-columns: 1fr; }
+    .service { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 0; }
+    .service:last-child { border-bottom: none; }
+    .service:not(:first-child) { padding-left: 0; }
+    .badges { grid-template-columns: 1fr 1fr; }
+    .badge { border-bottom: 1px solid var(--border); }
+    .badge:nth-child(odd) { border-right: 1px solid var(--border); }
+    .badge:nth-child(even) { border-right: none; }
+    .badge:nth-last-child(-n+2) { border-bottom: none; }
+    .cat-grid { grid-template-columns: 1fr 1fr; }
+    .cat.c1, .cat.c2, .cat.c3, .cat.c4, .cat.c5 { grid-column: span 1; }
+    .cat.cta { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 24px; }
+    .sourcing { grid-template-columns: 1fr; padding: 40px; }
+    .serve-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-form { border-right: none; border-bottom: 1px solid var(--border); padding: 40px; }
+    .contact-side { padding: 40px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  @media (max-width: 720px) {
+    :root { --gutter: 20px; }
+    .nav { display: none; }
+    .header-cta .btn-ghost { display: none; }
+    .hero-inner { padding-top: 56px; }
+    .hero-mosaic { grid-template-columns: 1fr; grid-auto-rows: 180px; }
+    .hero-tile.span-2 { grid-column: span 1; }
+    .hero-specs { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .cat-grid { grid-template-columns: 1fr; }
+    .cat.cta { grid-column: span 1; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="announcement-bar">
-    <div class="announcement-bar-inner">
-      <span>Wholesale café packaging — fast UK delivery · <a href="/contact/">Request a trade quote</a></span>
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+  <div class="announcement-inner">
+    <div class="left">
+      <span class="pulse"></span>
+      <span>UK trade supply · Send us your packaging list and we'll quote against it</span>
+    </div>
+    <a href="#contact">Request trade pricing →</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co.">
+    </a>
+    <nav class="nav">
+      <a href="#products">Products</a>
+      <a href="#ordering">How ordering works</a>
+      <a href="#how">Why AC Supply Co</a>
+      <a href="/faq/">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#contact" class="btn btn-primary">Request a quote →</a>
     </div>
   </div>
+</header>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="/" class="logo" aria-label="AC Supply Co home">
-          <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
-        </a>
-        <nav class="nav-desktop" aria-label="Main navigation">
-          <a href="/#products">Products</a>
-          <a href="/custom-branded-packaging/">Custom Branding</a>
-          <a href="/faq/">FAQ</a>
-        </nav>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-meta">
+        <span class="tag mono">[01] / Wholesale Trade Supply</span>
       </div>
-      <div class="header-right">
-        <a href="/contact/" class="btn btn-outline btn-sm">Get a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-          </svg>
-          WhatsApp
-        </a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
-          <span class="hamburger-icon">☰</span>
-        </button>
+      <h1>
+        Wholesale packaging for cafés, takeaways &amp; <em>hospitality businesses.</em>
+      </h1>
+      <p class="hero-sub">
+        Order cups, lids, bags, napkins, sleeves and custom packaging directly from AC Supply Co — trade pricing for UK businesses.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request trade pricing →</a>
+        <a href="#contact" class="btn btn-ghost">Send your product list</a>
       </div>
-    </div>
-    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
-      <a href="/#products">Products</a>
-      <a href="/custom-branded-packaging/">Custom Branding</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/contact/">Contact</a>
-      <div class="nav-mobile-actions">
-        <a href="/contact/" class="btn btn-primary">Get a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero">
-
-      <!-- Left panel — Cups -->
-      <div class="hero-panel hero-panel-cups">
-        <div class="hero-panel-overlay"></div>
-        <div class="hero-content">
-          <h2 class="hero-category">Cups &amp; Lids</h2>
-          <div class="hero-subcats">
-            <a href="/coffee-cups/" class="hero-subcat">Single Wall</a>
-            <a href="/coffee-cups/" class="hero-subcat">Double Wall</a>
-            <a href="/coffee-cups/" class="hero-subcat">Lids &amp; Sleeves</a>
-            <a href="/coffee-cups/" class="hero-shop-now">Shop now →</a>
-          </div>
+      <div class="hero-specs">
+        <div class="hero-spec">
+          <div class="num">B2B</div>
+          <div class="lbl">Direct trade supply</div>
         </div>
-      </div>
-
-      <!-- Right panel — Bags & Packaging -->
-      <div class="hero-panel hero-panel-bags">
-        <div class="hero-panel-overlay"></div>
-        <div class="hero-content">
-          <h2 class="hero-category">Bags &amp; Packaging</h2>
-          <div class="hero-subcats">
-            <a href="/paper-bags/" class="hero-subcat">Kraft Bags</a>
-            <a href="/takeaway-packaging/" class="hero-subcat">Takeaway Boxes</a>
-            <a href="/takeaway-packaging/" class="hero-subcat">Napkins</a>
-            <a href="/paper-bags/" class="hero-shop-now">Shop now →</a>
-          </div>
+        <div class="hero-spec">
+          <div class="num">UK</div>
+          <div class="lbl">Business support</div>
         </div>
-      </div>
-
-    </section>
-
-    <!-- BRAND STRIP -->
-    <div class="brand-strip">
-      <div class="brand-strip-inner">
-        <span class="brand-strip-item">Independent Cafés</span>
-        <span class="brand-strip-divider">·</span>
-        <span class="brand-strip-item">Coffee Shops</span>
-        <span class="brand-strip-divider">·</span>
-        <span class="brand-strip-item">Takeaway Operators</span>
-        <span class="brand-strip-divider">·</span>
-        <span class="brand-strip-item">Food Trucks</span>
-        <span class="brand-strip-divider">·</span>
-        <span class="brand-strip-item">Hospitality Businesses</span>
+        <div class="hero-spec">
+          <div class="num">Custom</div>
+          <div class="lbl">Branded packaging</div>
+        </div>
+        <div class="hero-spec">
+          <div class="num">Repeat</div>
+          <div class="lbl">Built for reorders</div>
+        </div>
       </div>
     </div>
+    <div class="hero-mosaic" aria-hidden="true">
+      <a href="#products" class="hero-tile tile-1 span-2">
+        <div class="hero-tile-bg"></div>
+        <div class="hero-tile-title">Single &amp; double-wall coffee cups</div>
+        <span class="hero-tile-label">CAT / 01</span>
+        <div class="hero-tile-arrow">↗</div>
+      </a>
+      <a href="#products" class="hero-tile tile-2">
+        <div class="hero-tile-bg"></div>
+        <div class="hero-tile-title">Kraft &amp; carrier bags</div>
+        <span class="hero-tile-label">CAT / 02</span>
+        <div class="hero-tile-arrow">↗</div>
+      </a>
+      <a href="#products" class="hero-tile tile-3">
+        <div class="hero-tile-bg"></div>
+        <div class="hero-tile-title">Takeaway boxes &amp; consumables</div>
+        <span class="hero-tile-label">CAT / 03</span>
+        <div class="hero-tile-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- WHAT WE DO -->
-    <section class="what-we-do" id="what-we-do" aria-labelledby="what-we-do-heading">
-      <div class="section-inner">
-        <div class="section-header">
-          <p class="section-label">Our Services</p>
-          <h2 class="section-title" id="what-we-do-heading">What We Do</h2>
-          <p class="section-body">We manage the sourcing and supply process end to end — from finding and vetting manufacturers to coordinating import and delivery to UK buyers.</p>
+<!-- MARQUEE -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee">
+    <span>DIRECT TRADE SUPPLY</span>
+    <span>STANDARD &amp; CUSTOM PACKAGING</span>
+    <span>ORDER DIRECTLY FROM AC SUPPLY CO</span>
+    <span>BUILT FOR REPEAT SUPPLY</span>
+    <span>CLEAR QUOTES — PRACTICAL PRODUCTS</span>
+    <span>UK BUSINESS SUPPORT</span>
+    <span>CUSTOM PRINT AVAILABLE</span>
+    <span>DIRECT TRADE SUPPLY</span>
+    <span>STANDARD &amp; CUSTOM PACKAGING</span>
+    <span>ORDER DIRECTLY FROM AC SUPPLY CO</span>
+    <span>BUILT FOR REPEAT SUPPLY</span>
+    <span>CLEAR QUOTES — PRACTICAL PRODUCTS</span>
+    <span>UK BUSINESS SUPPORT</span>
+    <span>CUSTOM PRINT AVAILABLE</span>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<section class="s paper">
+  <div class="container">
+    <div class="s-head">
+      <div class="left">
+        <span class="tag mono">[02] / Why AC Supply Co</span>
+        <h2 class="s-title">Built for trade buyers.<br>Not retail.</h2>
+      </div>
+      <div class="right">
+        <p class="s-body">A practical wholesale supplier built for the products cafés and takeaways actually reorder — with the flexibility to handle custom and one-off jobs too.</p>
+      </div>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <span class="badge-num">01</span>
+        <div class="badge-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-              </svg>
-            </div>
-            <h3>Product Sourcing</h3>
-            <p>We work directly with international manufacturers to source the products our buyers need. We handle supplier communication, confirm specifications, and manage pricing negotiations so buyers don't need to deal with overseas suppliers themselves.</p>
+        <h4>Direct trade supply</h4>
+        <p>You order from AC Supply Co. We quote, invoice and supply the goods directly — one contact, one relationship, start to finish.</p>
+      </div>
+      <div class="badge">
+        <span class="badge-num">02</span>
+        <div class="badge-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>
+        </div>
+        <h4>Standard &amp; custom packaging</h4>
+        <p>Everyday formats cafés reorder every month, plus branded print runs for businesses that want to stand out.</p>
+      </div>
+      <div class="badge">
+        <span class="badge-num">03</span>
+        <div class="badge-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+        </div>
+        <h4>Built for repeat supply</h4>
+        <p>Send your monthly packaging list once — we make reordering simple and consistent for repeat trade customers.</p>
+      </div>
+      <div class="badge">
+        <span class="badge-num">04</span>
+        <div class="badge-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 7v4l2 2"/></svg>
+        </div>
+        <h4>Flexible supply options</h4>
+        <p>Held stock for fast-moving lines, order-led supply for specifics, and custom branded runs all under one roof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="s">
+  <div class="container">
+    <div class="s-head">
+      <div class="left">
+        <span class="tag mono">[03] / How we supply</span>
+        <h2 class="s-title">A practical hybrid<br>wholesale model.</h2>
+      </div>
+      <div class="right">
+        <p class="s-body">AC Supply Co operates a flexible supply model — built around the products cafés and takeaways order every week, with room for the less-common requests too.</p>
+      </div>
+    </div>
+    <div class="services">
+      <div class="service">
+        <div class="service-num">01 / CORE STOCK</div>
+        <h3>Everyday packaging supply</h3>
+        <p>Fast-moving formats — cups, lids, kraft bags, napkins, sleeves, stirrers — supplied as part of regular trade orders. The everyday items cafés and takeaways reorder consistently.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">02 / ORDER-LED</div>
+        <h3>Specific &amp; bulk orders</h3>
+        <p>Larger volumes, less-common sizes, or product lines outside the everyday range — quoted on demand. You get access to a wider product range without us carrying every SKU.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">03 / CUSTOM</div>
+        <h3>Custom branded packaging</h3>
+        <p>Printed cups, bags, sleeves and stickers — run with agreed MOQs, lead times and deposit terms. Best for businesses planning ahead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="s paper" id="products">
+  <div class="container">
+    <div class="s-head">
+      <div class="left">
+        <span class="tag mono">[04] / Product range</span>
+        <h2 class="s-title">What you can order.</h2>
+      </div>
+      <div class="right">
+        <p class="s-body">Standard packaging supplied for everyday trade, with custom and bulk orders available by request. Send your product list and we'll quote against it.</p>
+      </div>
+    </div>
+    <div class="cat-grid">
+      <a href="/coffee-cups/" class="cat c1">
+        <div>
+          <div class="cat-num">CAT / 01</div>
+          <div class="cat-thumb">PRODUCT_SHOT &nbsp;·&nbsp; HOT CUPS &amp; LIDS</div>
+          <h4>Coffee cups &amp; lids</h4>
+          <p>Single-wall, double-wall &amp; ripple cups. Sugarcane / bagasse options. Dome and sip-through lids — sized for compatibility.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Standard &amp; eco</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
+      <a href="/takeaway-packaging/" class="cat c2">
+        <div>
+          <div class="cat-num">CAT / 02</div>
+          <div class="cat-thumb">PRODUCT_SHOT &nbsp;·&nbsp; COLD &amp; DRINK PACKAGING</div>
+          <h4>Cold cups &amp; drink packaging</h4>
+          <p>Plastic cold cups for iced drinks, matcha, smoothies and juices. Matching lids and straws available.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Standard sizes</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
+      <a href="/paper-bags/" class="cat c3">
+        <div>
+          <div class="cat-num">CAT / 03</div>
+          <h4>Kraft &amp; food bags</h4>
+          <p>Kraft takeaway bags, sandwich &amp; baguette bags, twist-handle and flat-handle carriers.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Plain or print-ready</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
+      <a href="/contact/" class="cat c4">
+        <div>
+          <div class="cat-num">CAT / 04</div>
+          <h4>Napkins, sleeves &amp; stirrers</h4>
+          <p>Cup sleeves, napkins, serviettes, wooden stirrers — everyday front-of-house consumables.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Bulk supply</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
+      <a href="/custom-branded-packaging/" class="cat c5">
+        <div>
+          <div class="cat-num">CAT / 05</div>
+          <h4>Custom branded packaging</h4>
+          <p>Your logo on cups, bags, sleeves &amp; stickers. Litho or flexo print — best for businesses planning ahead.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Higher MOQ</span>
+          <span class="arrow">Discuss →</span>
+        </div>
+      </a>
+      <a href="#contact" class="cat cta">
+        <div>
+          <div class="cat-num" style="margin-bottom:14px;">CAT / 06 — CUSTOM &amp; BULK ORDERS</div>
+          <h4>Need something specific? Send us the list.</h4>
+          <p>For larger volumes, less-common sizes, or items outside the everyday range — share your product list and quantities and we'll come back with itemised pricing.</p>
+        </div>
+        <div class="cat-cta-right">
+          <a href="#contact" class="btn btn-accent">Request a quote →</a>
+          <span class="cat-num">Custom &amp; bulk welcome</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCING ON REQUEST -->
+<section class="s" id="ordering">
+  <div class="container">
+    <div class="sourcing">
+      <div>
+        <span class="tag mono">[05] / How ordering works</span>
+        <h3>Order directly from AC Supply Co.</h3>
+        <p>Tell us what your business uses, in what quantities, and where it ships to. We quote, invoice and supply the order directly — and for repeat customers, we make reordering simple and consistent.</p>
+        <a href="#contact" class="btn btn-primary">Start an order →</a>
+      </div>
+      <div class="sourcing-process">
+        <div class="step">
+          <span class="step-num">01</span>
+          <div>
+            <h5>Send us what you need</h5>
+            <p>Products, sizes, quantities and delivery postcode. Paste your current supplier list, or send photos of the packaging you use.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
-              </svg>
-            </div>
-            <h3>Wholesale Supply</h3>
-            <p>We supply packaging and commercial consumables to UK trade buyers at wholesale prices. Orders are handled directly — no unnecessary layers, no inflated margins. We supply businesses that buy regularly and those placing one-off orders alike.</p>
+          <span class="step-time">STEP 1</span>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <div>
+            <h5>We quote your order</h5>
+            <p>We confirm availability, pricing, quantities, lead times and any custom branding requirements.</p>
           </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-              </svg>
-            </div>
-            <h3>Import &amp; Distribution</h3>
-            <p>We coordinate freight and import logistics from international suppliers through to UK delivery, working with established forwarding partners. We manage the process so our buyers receive their goods without needing to handle the import side themselves.</p>
+          <span class="step-time">STEP 2</span>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <div>
+            <h5>You order from AC Supply Co</h5>
+            <p>Once approved, your order is invoiced and supplied directly by AC Supply Co. One supplier, one invoice.</p>
           </div>
+          <span class="step-time">STEP 3</span>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <div>
+            <h5>Delivery or collection</h5>
+            <p>We arrange delivery based on order size, location and product availability. Repeat customers get consistent supply.</p>
+          </div>
+          <span class="step-time">STEP 4</span>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- PRODUCTS -->
-    <section class="products" id="products" aria-labelledby="products-heading">
-      <div class="section-inner">
-        <div class="section-header">
-          <p class="section-label">What We Supply</p>
-          <h2 class="section-title" id="products-heading">Product Categories</h2>
-          <p class="section-body">We supply across a broad range of commercial product categories. If you need something not listed here, get in touch — we source to requirement.</p>
-          <p class="section-body" style="margin-top: 8px;">We work with businesses placing trade orders and bulk purchases.</p>
-        </div>
-        <div class="category-grid">
-          <a href="/coffee-cups/" class="category-card">
-            <h4>Disposable Coffee Cups</h4>
-            <p>Cups, lids, sleeves, and single-use packaging for food and beverage service.</p>
-            <span class="card-arrow">View &rarr;</span>
-          </a>
-          <a href="/paper-bags/" class="category-card">
-            <h4>Paper &amp; Bag Products</h4>
-            <p>Paper bags, carrier bags, kraft bags, and flat-bottom bags for retail, takeaway, and food service use.</p>
-            <span class="card-arrow">View &rarr;</span>
-          </a>
-          <a href="/contact/" class="category-card">
-            <h4>Table &amp; Service Supplies</h4>
-            <p>Napkins, serviettes, and everyday consumable supplies for hospitality and food service operations.</p>
-            <span class="card-arrow">Enquire &rarr;</span>
-          </a>
-          <a href="/custom-branded-packaging/" class="category-card">
-            <h4>Branded &amp; Custom Packaging</h4>
-            <p>Custom-printed cups, bags, boxes, and packaging with your branding. Available on request — contact us to discuss print options and minimum quantities.</p>
-            <span class="card-arrow">View &rarr;</span>
-          </a>
-          <a href="/takeaway-packaging/" class="category-card">
-            <h4>Catering &amp; Takeaway Supplies</h4>
-            <p>Takeaway and catering packaging for food service operations. Contact us to discuss your requirements.</p>
-            <span class="card-arrow">View &rarr;</span>
-          </a>
-          <div class="category-card category-card--cta">
-            <h4>Don't see what you need?</h4>
-            <p>We source to requirement. If you have a specific product in mind, contact us and we'll let you know if we can supply it.</p>
-            <a href="mailto:sales@acsupplyco.co.uk" class="category-link">Get in touch &rarr;</a>
-          </div>
-        </div>
+<!-- WHO WE SERVE -->
+<section class="s ink">
+  <div class="container">
+    <div class="s-head">
+      <div class="left">
+        <span class="tag mono">[06] / Who we supply</span>
+        <h2 class="s-title" style="color:white;">Businesses we work with.</h2>
       </div>
-    </section>
-
-    <!-- WHO WE SERVE -->
-    <section class="who-we-serve" aria-labelledby="who-heading">
-      <div class="section-inner">
-        <div class="section-header">
-          <p class="section-label">Our Customers</p>
-          <h2 class="section-title" id="who-heading">Who We Serve</h2>
-          <p class="section-body" style="color: rgba(255,255,255,0.65);">AC Supply Co. works with UK trade buyers who require reliable sourcing and supply of everyday commercial products. We deal directly with businesses — no retail, no consumer orders.</p>
-        </div>
-        <div class="serve-grid">
-          <div class="serve-item"><p>Cafés</p></div>
-          <div class="serve-item"><p>Takeaway Businesses</p></div>
-          <div class="serve-item"><p>Hospitality Operators</p></div>
-          <div class="serve-item"><p>Retailers</p></div>
-          <div class="serve-item"><p>Commercial Buyers</p></div>
-        </div>
+      <div class="right">
+        <p class="s-body" style="color:rgba(255,255,255,0.65);">AC Supply Co supplies UK hospitality businesses with the packaging they use every day. Whether it's a single café reordering monthly or a multi-site group, the supply works the same way.</p>
       </div>
-    </section>
-
-    <!-- WHY CHOOSE -->
-    <section class="why-choose" aria-labelledby="why-heading">
-      <div class="section-inner">
-        <div class="section-header">
-          <p class="section-label">Our Approach</p>
-          <h2 class="section-title" id="why-heading">Why Choose AC Supply Co.</h2>
-          <p class="section-body">We are a straightforward trade supplier. No unnecessary complexity — just reliable sourcing, honest pricing, and direct communication.</p>
-          <p class="section-body" style="margin-top: 8px;">We work with established manufacturers and reliable freight partners to ensure consistent supply.</p>
-        </div>
-        <div class="trust-grid">
-          <div class="trust-card">
-            <div class="trust-number">01</div>
-            <h3>Competitive Wholesale Pricing</h3>
-            <p>Sourcing direct from manufacturers means we can offer genuine trade pricing. There are no unnecessary intermediaries in our supply chain, and we don't inflate margins beyond what's fair for the service we provide.</p>
-          </div>
-          <div class="trust-card">
-            <div class="trust-number">02</div>
-            <h3>Reliable Supplier Coordination</h3>
-            <p>We maintain working relationships with our manufacturers and manage the procurement process directly. Orders are placed accurately, followed up properly, and buyers are kept informed of progress without needing to chase.</p>
-          </div>
-          <div class="trust-card">
-            <div class="trust-number">03</div>
-            <h3>Clear and Responsive Communication</h3>
-            <p>We respond promptly and communicate plainly. If there's an issue with an order or a delay in supply, we flag it early. Buyers can reach us directly by phone, email, or WhatsApp.</p>
-          </div>
-        </div>
+    </div>
+    <div class="serve-grid">
+      <div class="serve">
+        <div class="serve-num">01</div>
+        <h4>Cafés &amp; coffee shops</h4>
+        <p>Independent &amp; small-chain operators</p>
       </div>
-    </section>
+      <div class="serve">
+        <div class="serve-num">02</div>
+        <h4>Takeaways &amp; bakeries</h4>
+        <p>Quick-service &amp; food-to-go</p>
+      </div>
+      <div class="serve">
+        <div class="serve-num">03</div>
+        <h4>Juice &amp; matcha bars</h4>
+        <p>Cold drinks &amp; dessert shops</p>
+      </div>
+      <div class="serve">
+        <div class="serve-num">04</div>
+        <h4>Restaurants &amp; hospitality</h4>
+        <p>Casual dining &amp; multi-site venues</p>
+      </div>
+      <div class="serve">
+        <div class="serve-num">05</div>
+        <h4>Markets &amp; mobile vendors</h4>
+        <p>Food stalls, trucks &amp; pop-ups</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
-      <div class="section-inner">
-        <div class="section-header">
-          <p class="section-label">Get in Touch</p>
-          <h2 class="section-title" id="contact-heading">Request a Quote</h2>
-          <p class="section-body">Tell us what you need and we'll come back to you with trade pricing — usually the same day.</p>
-        </div>
-        <div class="contact-layout">
+<!-- HOW WE WORK -->
+<section class="s" id="how">
+  <div class="container">
+    <div class="s-head">
+      <div class="left">
+        <span class="tag mono">[07] / How we work</span>
+        <h2 class="s-title">Straightforward,<br>by design.</h2>
+      </div>
+      <div class="right">
+        <p class="s-body">We're a trade supplier, not a marketplace. No quote-and-disappear. No layered margins. No surprise lead times.</p>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why">
+        <div class="why-num">01</div>
+        <h4>Clear quotes, practical products</h4>
+        <p>Itemised pricing on the formats your business actually uses — without bloated catalogues or sales-led upsell.</p>
+      </div>
+      <div class="why">
+        <div class="why-num">02</div>
+        <h4>Built for repeat business</h4>
+        <p>Cups, lids and bags are reorder-driven. We're set up to keep your regular packaging supply simple, consistent and easy to manage.</p>
+      </div>
+      <div class="why">
+        <div class="why-num">03</div>
+        <h4>Direct communication</h4>
+        <p>One supplier, one contact. Reach us by email, phone or WhatsApp — and you're speaking to the team handling your order.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="contact-info">
-            <h3>AC Supply Co.</h3>
-            <p class="role">Wholesale Packaging Supplier</p>
+<!-- CONTACT -->
+<section class="s cream" id="contact">
+  <div class="container">
+    <div class="s-head">
+      <div class="left">
+        <span class="tag mono">[08] / Get in touch</span>
+        <h2 class="s-title">Request a trade quote.</h2>
+      </div>
+      <div class="right">
+        <p class="s-body">Send us your current packaging list and we'll quote against it. Itemised pricing, no commitment — start with the basics or send the full spec.</p>
+      </div>
+    </div>
+    <div class="contact-shell">
+      <div class="contact-grid">
+        <!-- FORM -->
+        <div class="contact-form">
+          <div class="contact-form-head">
+            <h3>Request trade pricing</h3>
+            <p>Fields with <span style="color:var(--accent);">*</span> are required. Send us your current packaging list and we'll quote against it.</p>
+          </div>
+          <form id="quote-form" novalidate>
+            <input type="hidden" name="access_key" value="2ef0136f-1971-4072-8c61-e9450526b3ad">
+            <input type="hidden" name="subject" value="New Quote Request — AC Supply Co.">
+            <input type="hidden" name="from_name" value="AC Supply Co. Website">
+            <input type="checkbox" name="botcheck" style="display:none">
 
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
-              <p style="font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 2px;">Amir Cherifi</p>
-              <p style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green);">Managing Director</p>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-business">Business name <span class="req">*</span></label>
+                <input type="text" id="f-business" name="business_name" placeholder="e.g. Forge Coffee Ltd" required>
+              </div>
+              <div class="field">
+                <label for="f-name">Contact name <span class="req">*</span></label>
+                <input type="text" id="f-name" name="name" placeholder="Your name" required>
+              </div>
             </div>
 
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <a href="mailto:sales@acsupplyco.co.uk">sales@acsupplyco.co.uk</a>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-email">Email <span class="req">*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="you@business.com" required>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone / WhatsApp</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="+44 ...">
+              </div>
             </div>
 
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-              </svg>
-              <a href="tel:+447440386717">+44 7440 386717</a>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-bizType">Business type <span class="req">*</span></label>
+                <select id="f-bizType" name="business_type" required>
+                  <option value="">— Select —</option>
+                  <option>Café / coffee shop</option>
+                  <option>Bakery</option>
+                  <option>Takeaway</option>
+                  <option>Restaurant</option>
+                  <option>Juice / matcha / dessert</option>
+                  <option>Food market / mobile vendor</option>
+                  <option>Hospitality group</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-postcode">Delivery postcode</label>
+                <input type="text" id="f-postcode" name="delivery_postcode" placeholder="e.g. E1 6AN">
+              </div>
             </div>
 
-            <a href="https://wa.me/447440386717" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              Chat on WhatsApp
+            <div class="form-row single">
+              <div class="field">
+                <label for="f-product">Products needed <span class="req">*</span></label>
+                <input type="text" id="f-product" name="product_required" placeholder="e.g. 12oz double-wall cups, kraft bags, napkins" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="f-qty">Approx. monthly quantity <span class="req">*</span></label>
+                <input type="text" id="f-qty" name="estimated_quantity" placeholder="e.g. 5,000 cups + 2,000 bags / month" required>
+              </div>
+              <div class="field">
+                <label for="f-branding">Custom branding required?</label>
+                <select id="f-branding" name="custom_branding">
+                  <option value="">— Select —</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row single">
+              <div class="field">
+                <label for="f-message">Notes / current supplier list</label>
+                <textarea id="f-message" name="message" rows="3" placeholder="Paste your current packaging list, attach a spec, or share anything useful."></textarea>
+              </div>
+            </div>
+
+            <div class="form-submit">
+              <span class="form-fineprint">UK GDPR — your details stay with us</span>
+              <button type="submit" class="btn btn-primary" id="submit-btn">Request trade pricing →</button>
+            </div>
+            <div id="form-msg" style="margin-top:16px;display:none;"></div>
+          </form>
+        </div>
+
+        <!-- SIDE -->
+        <div class="contact-side">
+          <div class="contact-side-head">
+            <span class="tag mono">Direct line</span>
+            <h4>Amir Cherifi</h4>
+            <span class="role">Managing Director</span>
+          </div>
+
+          <div class="contact-channels">
+            <a href="mailto:sales@acsupplyco.co.uk" class="channel">
+              <div class="channel-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">Email</div>
+                <div class="channel-value">sales@acsupplyco.co.uk</div>
+              </div>
+              <span class="channel-arrow">↗</span>
             </a>
+            <a href="tel:+447440386717" class="channel">
+              <div class="channel-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">Phone</div>
+                <div class="channel-value">+44 7440 386717</div>
+              </div>
+              <span class="channel-arrow">↗</span>
+            </a>
+            <a href="https://wa.me/447440386717" class="channel" target="_blank" rel="noopener">
+              <div class="channel-icon wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.981 1.287 2.981.858 3.518.804.537-.054 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.075-.124-.272-.198-.57-.347z"/></svg>
+              </div>
+              <div>
+                <div class="channel-label">WhatsApp</div>
+                <div class="channel-value">Chat now — fastest reply</div>
+              </div>
+              <span class="channel-arrow">↗</span>
+            </a>
+          </div>
 
-            <div class="qr-block" style="margin-top: 32px;">
-              <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/images/qr-code-whatsapp.png" alt="QR code to open WhatsApp chat with AC Supply Co." width="160" height="160" loading="lazy" />
-              </a>
-              <p class="qr-label">Scan to chat on WhatsApp</p>
+          <div class="qr-card">
+            <a href="https://wa.me/447440386717" target="_blank" rel="noopener">
+              <img src="/assets/images/qr-code-whatsapp.png" alt="WhatsApp QR code">
+            </a>
+            <div class="qr-text">
+              <span class="label">Scan to chat</span>
+              <strong>Open WhatsApp</strong>
+              <small>+44 7440 386717</small>
             </div>
           </div>
-
-          <div class="quote-form-wrap">
-            <form id="quote-form" class="quote-form">
-              <input type="hidden" name="access_key" value="2ef0136f-1971-4072-8c61-e9450526b3ad">
-              <input type="hidden" name="subject" value="New Quote Request — AC Supply Co.">
-              <input type="hidden" name="from_name" value="AC Supply Co. Website">
-              <input type="checkbox" name="botcheck" style="display:none">
-
-              <div class="form-row form-row--two">
-                <div class="form-group">
-                  <label for="f-name">Full Name <span class="req">*</span></label>
-                  <input type="text" id="f-name" name="name" placeholder="Your full name" required>
-                </div>
-                <div class="form-group">
-                  <label for="f-business">Business Name <span class="req">*</span></label>
-                  <input type="text" id="f-business" name="business_name" placeholder="Your business name" required>
-                </div>
-              </div>
-
-              <div class="form-row form-row--two">
-                <div class="form-group">
-                  <label for="f-email">Email Address <span class="req">*</span></label>
-                  <input type="email" id="f-email" name="email" placeholder="your@email.com" required>
-                </div>
-                <div class="form-group">
-                  <label for="f-phone">Phone Number</label>
-                  <input type="tel" id="f-phone" name="phone" placeholder="+44 ...">
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="f-product">Product Required <span class="req">*</span></label>
-                  <input type="text" id="f-product" name="product_required" placeholder="e.g. Coffee cups, paper bags" required>
-                </div>
-              </div>
-
-              <div class="form-row form-row--two">
-                <div class="form-group">
-                  <label for="f-qty">Estimated Quantity <span class="req">*</span></label>
-                  <input type="text" id="f-qty" name="estimated_quantity" placeholder="e.g. 1,000 units/month" required>
-                </div>
-                <div class="form-group">
-                  <label for="f-branding">Custom Branding Needed?</label>
-                  <select id="f-branding" name="custom_branding">
-                    <option value="">Please select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                    <option value="Not sure">Not sure</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="f-message">Additional Details</label>
-                  <textarea id="f-message" name="message" rows="4" placeholder="Any other information about your requirements"></textarea>
-                </div>
-              </div>
-
-              <div class="form-submit">
-                <button type="submit" class="btn-submit" id="submit-btn">Send Quote Request</button>
-              </div>
-
-              <div id="form-success" class="form-success" style="display:none;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Thank you — we'll be in touch with pricing shortly.
-              </div>
-              <div id="form-error" class="form-error" style="display:none;">
-                Something went wrong. Please try again or email us directly at sales@acsupplyco.co.uk
-              </div>
-            </form>
-          </div>
-
         </div>
       </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-brand">AC Supply Co.</span>
-      <span class="footer-text">Wholesale sourcing and supply for UK trade buyers &nbsp;|&nbsp; United Kingdom</span>
-      <span class="footer-text">&copy; 2026 AC Supply Co.</span>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="/assets/js/main.js"></script>
-  <script>
-    const form = document.getElementById('quote-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const successMsg = document.getElementById('form-success');
-    const errorMsg = document.getElementById('form-error');
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co.">
+        <p>Wholesale packaging supplied directly to UK cafés, takeaways and hospitality businesses. Trade-only.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Catalogue</h5>
+        <a href="/coffee-cups/">Coffee cups &amp; lids</a>
+        <a href="/paper-bags/">Paper &amp; kraft bags</a>
+        <a href="/takeaway-packaging/">Takeaway boxes</a>
+        <a href="/custom-branded-packaging/">Custom &amp; branded</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#how">Why AC Supply Co</a>
+        <a href="#ordering">How ordering works</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Direct</h5>
+        <a href="mailto:sales@acsupplyco.co.uk">sales@acsupplyco.co.uk</a>
+        <a href="tel:+447440386717">+44 7440 386717</a>
+        <a href="https://wa.me/447440386717" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AC Supply Co. — United Kingdom</span>
+      <div class="right">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="btn-spinner"></span>Sending...';
-      successMsg.style.display = 'none';
-      errorMsg.style.display = 'none';
-
+<script>
+  const form = document.getElementById('quote-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const msg = document.getElementById('form-msg');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    try {
       const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-
-      try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: json
-        });
-        const result = await response.json();
-        if (result.success) {
-          window.location.href = '/thank-you/';
-        } else {
-          errorMsg.style.display = 'block';
-        }
-      } catch (error) {
-        errorMsg.style.display = 'block';
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Quote Request';
+      const obj = Object.fromEntries(formData);
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(obj)
+      });
+      const result = await r.json();
+      if (result.success) {
+        window.location.href = '/thank-you/';
+      } else {
+        throw new Error('failed');
       }
-    });
-  </script>
+    } catch (err) {
+      if (msg) {
+        msg.style.display = 'block';
+        msg.style.color = '#b91c1c';
+        msg.style.fontSize = '13px';
+        msg.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request trade pricing →';
+    }
+  });
+</script>
+
 </body>
 </html>
