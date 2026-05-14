@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#0F1F3D"/>
+  <rect x="0" y="48" width="64" height="16" rx="0" fill="#1F6B43" opacity="0.6"/>
+  <rect x="0" y="52" width="64" height="12" rx="0" fill="#1F6B43" opacity="0.4"/>
+  <text
+    x="32"
+    y="40"
+    font-family="'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif"
+    font-size="28"
+    font-weight="700"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="-1"
+  >AC</text>
+</svg>
