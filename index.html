@@ -111,14 +111,6 @@
     align-items: center;
     gap: 8px;
   }
-  .tag::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-  }
-  .tag.no-dot::before { display: none; }
 
   /* ====== ANNOUNCEMENT BAR ====== */
   .announcement {
@@ -235,7 +227,7 @@
   .hero-inner {
     max-width: var(--maxw);
     margin: 0 auto;
-    padding: 64px var(--gutter) 0;
+    padding: 64px var(--gutter) 72px;
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: 56px;
@@ -1035,7 +1027,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-cta">
-      <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.981 1.287 2.981.858 3.518.804.537-.054 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.075-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> WhatsApp</a>
       <a href="#contact" class="btn btn-primary">Request a quote →</a>
     </div>
   </div>
@@ -1046,7 +1038,7 @@
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-meta">
-        <span class="tag mono">[01] / Wholesale Trade Supply</span>
+        <span class="tag mono">Wholesale Trade Supply</span>
       </div>
       <h1>
         Wholesale packaging for cafés, takeaways &amp; <em>hospitality businesses.</em>
@@ -1107,14 +1099,14 @@
     <span>STANDARD &amp; CUSTOM PACKAGING</span>
     <span>ORDER DIRECTLY FROM AC SUPPLY CO</span>
     <span>BUILT FOR REPEAT SUPPLY</span>
-    <span>CLEAR QUOTES — PRACTICAL PRODUCTS</span>
+    <span>CLEAR QUOTES · PRACTICAL PRODUCTS</span>
     <span>UK BUSINESS SUPPORT</span>
     <span>CUSTOM PRINT AVAILABLE</span>
     <span>DIRECT TRADE SUPPLY</span>
     <span>STANDARD &amp; CUSTOM PACKAGING</span>
     <span>ORDER DIRECTLY FROM AC SUPPLY CO</span>
     <span>BUILT FOR REPEAT SUPPLY</span>
-    <span>CLEAR QUOTES — PRACTICAL PRODUCTS</span>
+    <span>CLEAR QUOTES · PRACTICAL PRODUCTS</span>
     <span>UK BUSINESS SUPPORT</span>
     <span>CUSTOM PRINT AVAILABLE</span>
   </div>
@@ -1125,7 +1117,7 @@
   <div class="container">
     <div class="s-head">
       <div class="left">
-        <span class="tag mono">[02] / Why AC Supply Co</span>
+        <span class="tag mono">Why AC Supply Co</span>
         <h2 class="s-title">Built for trade buyers.<br>Not retail.</h2>
       </div>
       <div class="right">
@@ -1174,7 +1166,7 @@
   <div class="container">
     <div class="s-head">
       <div class="left">
-        <span class="tag mono">[03] / How we supply</span>
+        <span class="tag mono">How we supply</span>
         <h2 class="s-title">A practical hybrid<br>wholesale model.</h2>
       </div>
       <div class="right">
@@ -1206,7 +1198,7 @@
   <div class="container">
     <div class="s-head">
       <div class="left">
-        <span class="tag mono">[04] / Product range</span>
+        <span class="tag mono">Product range</span>
         <h2 class="s-title">What you can order.</h2>
       </div>
       <div class="right">
@@ -1217,7 +1209,6 @@
       <a href="/coffee-cups/" class="cat c1">
         <div>
           <div class="cat-num">CAT / 01</div>
-          <div class="cat-thumb">PRODUCT_SHOT &nbsp;·&nbsp; HOT CUPS &amp; LIDS</div>
           <h4>Coffee cups &amp; lids</h4>
           <p>Single-wall, double-wall &amp; ripple cups. Sugarcane / bagasse options. Dome and sip-through lids — sized for compatibility.</p>
         </div>
@@ -1229,7 +1220,6 @@
       <a href="/takeaway-packaging/" class="cat c2">
         <div>
           <div class="cat-num">CAT / 02</div>
-          <div class="cat-thumb">PRODUCT_SHOT &nbsp;·&nbsp; COLD &amp; DRINK PACKAGING</div>
           <h4>Cold cups &amp; drink packaging</h4>
           <p>Plastic cold cups for iced drinks, matcha, smoothies and juices. Matching lids and straws available.</p>
         </div>
@@ -1271,17 +1261,16 @@
           <span class="arrow">Discuss →</span>
         </div>
       </a>
-      <a href="#contact" class="cat cta">
+      <div class="cat cta">
         <div>
-          <div class="cat-num" style="margin-bottom:14px;">CAT / 06 — CUSTOM &amp; BULK ORDERS</div>
+          <div class="cat-num" style="margin-bottom:14px;">CAT / 06 · CUSTOM &amp; BULK ORDERS</div>
           <h4>Need something specific? Send us the list.</h4>
           <p>For larger volumes, less-common sizes, or items outside the everyday range — share your product list and quantities and we'll come back with itemised pricing.</p>
         </div>
         <div class="cat-cta-right">
           <a href="#contact" class="btn btn-accent">Request a quote →</a>
-          <span class="cat-num">Custom &amp; bulk welcome</span>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1291,7 +1280,7 @@
   <div class="container">
     <div class="sourcing">
       <div>
-        <span class="tag mono">[05] / How ordering works</span>
+        <span class="tag mono">How ordering works</span>
         <h3>Order directly from AC Supply Co.</h3>
         <p>Tell us what your business uses, in what quantities, and where it ships to. We quote, invoice and supply the order directly — and for repeat customers, we make reordering simple and consistent.</p>
         <a href="#contact" class="btn btn-primary">Start an order →</a>
@@ -1339,7 +1328,7 @@
   <div class="container">
     <div class="s-head">
       <div class="left">
-        <span class="tag mono">[06] / Who we supply</span>
+        <span class="tag mono">Who we supply</span>
         <h2 class="s-title" style="color:white;">Businesses we work with.</h2>
       </div>
       <div class="right">
@@ -1381,7 +1370,7 @@
   <div class="container">
     <div class="s-head">
       <div class="left">
-        <span class="tag mono">[07] / How we work</span>
+        <span class="tag mono">How we work</span>
         <h2 class="s-title">Straightforward,<br>by design.</h2>
       </div>
       <div class="right">
@@ -1413,7 +1402,7 @@
   <div class="container">
     <div class="s-head">
       <div class="left">
-        <span class="tag mono">[08] / Get in touch</span>
+        <span class="tag mono">Get in touch</span>
         <h2 class="s-title">Request a trade quote.</h2>
       </div>
       <div class="right">
@@ -1598,11 +1587,11 @@
         <h5>Direct</h5>
         <a href="mailto:sales@acsupplyco.co.uk">sales@acsupplyco.co.uk</a>
         <a href="tel:+447440386717">+44 7440 386717</a>
-        <a href="https://wa.me/447440386717" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/447440386717" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;opacity:0.75"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.981 1.287 2.981.858 3.518.804.537-.054 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.075-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 AC Supply Co. — United Kingdom</span>
+      <span>© 2026 AC Supply Co. · United Kingdom</span>
       <div class="right">
         <a href="#">Privacy</a>
         <a href="#">Terms</a>
