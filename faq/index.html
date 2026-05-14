@@ -75,7 +75,7 @@
         "name": "What products do you supply?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We supply wholesale coffee cups (including lids and sleeves), takeaway and catering packaging, paper bags (kraft and white), and custom branded packaging. We also source other hospitality consumables — contact us if you need something not listed."
+          "text": "We supply wholesale packaging and hospitality consumables to UK businesses — coffee cups, lids and sleeves, takeaway packaging, paper bags, custom branded packaging, and more. If you need something specific, contact us and we'll advise on what's available."
         }
       },
       {
@@ -123,7 +123,7 @@
         "name": "What sizes of coffee cups do you supply?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We supply disposable coffee cups in standard sizes: 4oz, 8oz, 12oz, 16oz, and 20oz. Both single-wall and double-wall options are available. Lids and sleeves are also available to complement your order."
+          "text": "We supply disposable coffee cups in standard sizes: 8oz, 12oz, and 16oz. Both single-wall and double-wall options are available. Lids and sleeves are also available to complement your order."
         }
       },
       {
@@ -138,260 +138,639 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <style>
-    /* Page-specific: centred gradient, no hero button so no margin-bottom on p */
-    .page-hero::before {
-      background: radial-gradient(ellipse 700px 400px at 50% 50%, rgba(46,125,82,0.1) 0%, transparent 70%);
-    }
-    .page-hero p { margin-bottom: 0; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* section-title on this page has larger bottom margin than default 16px */
-    .section-title { margin-bottom: 40px; }
+  :root {
+    --bg: #FAFAF7;
+    --paper: #FFFFFF;
+    --cream: #F1ECE0;
+    --cream-deep: #E8E2D2;
+    --ink: #0F1F3D;
+    --ink-soft: #1F2D4D;
+    --muted: #5A6478;
+    --light: #8A92A3;
+    --border: #E5E1D8;
+    --border-strong: #C9C2B0;
+    --accent: #1F6B43;
+    --accent-deep: #164C30;
+    --accent-pale: #E8F0EA;
+    --whatsapp: #25D366;
+    --radius: 4px;
+    --maxw: 1280px;
+    --gutter: 32px;
+    --section-pad: 120px;
+    --section-pad-y: 72px;
+  }
 
-    /* FAQ GROUPS */
-    .faq-group { margin-bottom: 56px; }
-    .faq-group-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--green-pale); }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 16px;
+    line-height: 1.5;
+    font-feature-settings: "ss01", "cv11";
+  }
 
-    /* FAQ LIST (max-width: 760px, padding 22px — differs from custom-branded-packaging) */
-    .faq-list { display: flex; flex-direction: column; gap: 0; max-width: 760px; }
-    .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
-    .faq-item h4 { font-size: 0.975rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
-    .faq-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
 
-    /* CTA BAND (navy dark band, not the off-white cta-section used on product pages) */
-    .cta-band { background: var(--navy); padding: 72px 24px; }
-    .cta-band-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
-    .cta-band .section-label { color: #7dd4a8; }
-    .cta-band h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 500; color: var(--white); margin-bottom: 12px; line-height: 1.3; }
-    .cta-band p { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.8; max-width: 520px; }
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: "calt" 0; }
 
-    /* cta-buttons in band context: left-aligned, not centred */
-    .cta-buttons { justify-content: flex-start; }
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
-    /* Related section overrides (4-col, off-white bg, different card sizes) */
-    .related-section { background: var(--off-white); }
-    .related-grid { grid-template-columns: repeat(4, 1fr); }
-    .related-card { background: var(--white); }
-    .related-card h4 { font-size: 0.9rem; }
-    .related-card p { font-size: 0.8rem; line-height: 1.6; }
-    .related-card .arrow { margin-top: 10px; }
+  .tag {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
 
-    @media (max-width: 900px) {
-      .cta-band-inner { grid-template-columns: 1fr; gap: 28px; }
-      .related-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .related-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+  /* ====== ANNOUNCEMENT BAR ====== */
+  .announcement {
+    background: var(--ink);
+    color: rgba(255,255,255,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .announcement-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 10px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
+  .announcement .pulse {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
+    70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+    100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+  }
+  .announcement a { color: white; text-decoration: none; font-weight: 500; border-bottom: 1px dashed rgba(255,255,255,0.4); padding-bottom: 1px; }
+
+  /* ====== HEADER ====== */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250,250,247,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    height: 72px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 48px;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo img { height: 52px; width: auto; }
+  .nav { display: flex; align-items: center; gap: 4px; justify-self: center; }
+  .nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav a:hover, .nav a[aria-current="page"] { background: var(--cream); color: var(--ink); }
+  .header-cta { display: flex; align-items: center; gap: 10px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    padding: 11px 18px;
+    border-radius: var(--radius);
+    transition: all 0.15s;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--border-strong); }
+  .btn-ghost:hover { background: var(--ink); color: white; border-color: var(--ink); }
+  .btn-primary { background: var(--ink); color: white; border-color: var(--ink); }
+  .btn-primary:hover { background: var(--ink-soft); border-color: var(--ink-soft); }
+  .btn-accent { background: var(--accent); color: white; border-color: var(--accent); }
+  .btn-accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+  .btn-whatsapp { background: var(--whatsapp); color: white; border-color: var(--whatsapp); }
+  .btn-whatsapp:hover { background: #1eba56; border-color: #1eba56; }
+
+  /* ====== FOOTER ====== */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    padding: 80px 0 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand img { height: 56px; margin-bottom: 24px; filter: brightness(0) invert(1); opacity: 0.9; }
+  .footer-brand p { font-size: 14px; max-width: 360px; line-height: 1.6; color: rgba(255,255,255,0.55); }
+  .footer-col h5 {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .footer-col a, .footer-col span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.15s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.04em;
+  }
+  .footer-bottom .right { display: flex; gap: 24px; }
+  .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-bottom a:hover { color: white; }
+
+  /* ====== FAQ PAGE ====== */
+  .breadcrumb {
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.04em;
+  }
+  .breadcrumb-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink); }
+
+  .faq-hero {
+    padding: 80px 0 72px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .faq-hero-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: end;
+  }
+  .faq-hero .tag { margin-bottom: 20px; display: block; }
+  .faq-hero h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .faq-hero-right p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+  .faq-hero-right .btn { padding: 14px 22px; font-size: 14px; }
+
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 80px var(--gutter);
+    align-items: start;
+  }
+  .faq-nav {
+    position: sticky;
+    top: 96px;
+  }
+  .faq-nav h5 {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .faq-nav a {
+    display: block;
+    font-size: 13.5px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.15s;
+    font-weight: 500;
+  }
+  .faq-nav a:last-child { border-bottom: none; }
+  .faq-nav a:hover { color: var(--accent); }
+
+  .faq-content { min-width: 0; }
+  .faq-group { margin-bottom: 64px; }
+  .faq-group:last-child { margin-bottom: 0; }
+  .faq-group-title {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .faq-item:first-of-type { border-top: 1px solid var(--border); }
+  .faq-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+  .faq-item p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .faq-item a { color: var(--accent); text-decoration: underline; font-weight: 500; }
+
+  .faq-cta {
+    background: var(--ink);
+    padding: 80px 0;
+  }
+  .faq-cta-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: center;
+  }
+  .faq-cta .tag { color: rgba(255,255,255,0.55); margin-bottom: 16px; display: block; }
+  .faq-cta h2 {
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 12px;
+  }
+  .faq-cta p { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 480px; line-height: 1.6; }
+  .faq-cta-actions { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
+
+  .faq-related {
+    padding: 80px 0;
+    background: var(--paper);
+    border-top: 1px solid var(--border);
+  }
+  .faq-related-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+  .faq-related .tag { margin-bottom: 24px; display: block; }
+  .faq-related h2 {
+    font-size: clamp(28px, 3.5vw, 44px);
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .related-card {
+    background: var(--paper);
+    padding: 32px 28px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: background 0.15s;
+  }
+  .related-card:hover { background: var(--cream); }
+  .related-card-num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+  }
+  .related-card h4 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+  .related-card p { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .related-card .arrow { font-size: 13px; color: var(--light); margin-top: 4px; }
+
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 880px) {
+    .faq-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+    .faq-layout { grid-template-columns: 1fr; gap: 0; padding: 48px var(--gutter); }
+    .faq-nav { position: static; display: none; }
+    .faq-cta-inner { grid-template-columns: 1fr; gap: 28px; }
+    .faq-cta-actions { flex-direction: row; }
+    .related-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+  @media (max-width: 720px) {
+    :root { --gutter: 20px; }
+    .nav { display: none; }
+    .header-cta .btn-ghost { display: none; }
+    .related-grid { grid-template-columns: 1fr; }
+    .faq-cta-actions { flex-direction: column; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="announcement-bar">
-    <div class="announcement-bar-inner">
-      <span>Wholesale café packaging — fast UK delivery · <a href="/contact/">Request a trade quote</a></span>
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+  <div class="announcement-inner">
+    <div class="left">
+      <span class="pulse"></span>
+      <span>UK trade supply · Send us your packaging list and we'll quote against it</span>
     </div>
+    <a href="/#contact">Request trade pricing →</a>
   </div>
+</div>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="/" class="logo" aria-label="AC Supply Co home">
-          <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
-        </a>
-        <nav class="nav-desktop" aria-label="Main navigation">
-          <a href="/#products">Products</a>
-          <a href="/custom-branded-packaging/">Custom Branding</a>
-          <a href="/faq/" aria-current="page">FAQ</a>
-        </nav>
-      </div>
-      <div class="header-right">
-        <a href="/contact/" class="btn btn-outline btn-sm">Get a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-          </svg>
-          WhatsApp
-        </a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
-          <span class="hamburger-icon">☰</span>
-        </button>
-      </div>
-    </div>
-    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/images/acsupplycologotransparant.png" alt="AC Supply Co.">
+    </a>
+    <nav class="nav">
       <a href="/#products">Products</a>
-      <a href="/custom-branded-packaging/">Custom Branding</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/contact/">Contact</a>
-      <div class="nav-mobile-actions">
-        <a href="/contact/" class="btn btn-primary">Get a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-      </div>
+      <a href="/#ordering">How ordering works</a>
+      <a href="/#how">Why AC Supply Co</a>
+      <a href="/faq/" aria-current="page">FAQ</a>
+      <a href="/#contact">Contact</a>
     </nav>
-  </header>
-
-  <!-- BREADCRUMB -->
-  <div class="breadcrumb">
-    <div class="breadcrumb-inner">
-      <a href="/">Home</a>
-      <span>›</span>
-      <span>FAQ</span>
+    <div class="header-cta">
+      <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.981 1.287 2.981.858 3.518.804.537-.054 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.075-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> WhatsApp</a>
+      <a href="/#contact" class="btn btn-primary">Request a quote →</a>
     </div>
   </div>
+</header>
 
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <div class="page-label">Common Questions</div>
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a>
+    <span>›</span>
+    <span>FAQ</span>
+  </div>
+</div>
+
+<!-- FAQ HERO -->
+<div class="faq-hero">
+  <div class="faq-hero-inner">
+    <div class="faq-hero-left">
+      <span class="tag mono">Common Questions</span>
       <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="faq-hero-right">
       <p>Answers to common questions about ordering wholesale packaging, minimum quantities, custom branding, and lead times from AC Supply Co.</p>
+      <a href="/#contact" class="btn btn-primary">Request a trade quote →</a>
     </div>
   </div>
+</div>
 
-  <main>
+<!-- FAQ BODY -->
+<div class="faq-layout">
 
-    <!-- FAQ SECTIONS -->
-    <section>
-      <div class="section-inner">
+  <!-- LEFT NAV -->
+  <nav class="faq-nav" aria-label="FAQ sections">
+    <h5>On this page</h5>
+    <a href="#ordering-process">Ordering &amp; Process</a>
+    <a href="#products">Products</a>
+    <a href="#custom-branding">Custom Branding</a>
+  </nav>
 
-        <!-- Ordering & Process -->
-        <div class="faq-group">
-          <h2 class="faq-group-title">Ordering &amp; Process</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <h4>How do I get a trade price for wholesale packaging?</h4>
-              <p>Use the quote request form on our <a href="/contact/" style="color: var(--green); text-decoration: underline; font-weight: 500;">contact page</a> or message us on WhatsApp. Tell us the product you need, approximate quantity, and whether you need custom branding — we'll come back to you with trade pricing, usually the same day.</p>
-            </div>
-            <div class="faq-item">
-              <h4>Do you supply to small businesses and independent cafés?</h4>
-              <p>Yes. We work with businesses of all sizes, from single-site independent cafés to larger hospitality operators. If you're unsure whether your volume qualifies, get in touch and we'll advise honestly.</p>
-            </div>
-            <div class="faq-item">
-              <h4>Do you deliver across the UK?</h4>
-              <p>Yes. We supply UK trade buyers nationwide. Delivery is coordinated to your UK address as part of the order process.</p>
-            </div>
-            <div class="faq-item">
-              <h4>How quickly do you respond to enquiries?</h4>
-              <p>We aim to respond to all quote requests the same day. For faster responses, WhatsApp is often the quickest way to reach us.</p>
-            </div>
-          </div>
-        </div>
+  <!-- FAQ CONTENT -->
+  <div class="faq-content">
 
-        <!-- Products -->
-        <div class="faq-group">
-          <h2 class="faq-group-title">Products</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <h4>What products do you supply?</h4>
-              <p>We supply wholesale coffee cups (including lids and sleeves), takeaway and catering packaging, paper bags (kraft and white), and custom branded packaging. We also source other hospitality consumables — contact us if you need something not listed.</p>
-            </div>
-            <div class="faq-item">
-              <h4>What sizes of coffee cups do you supply?</h4>
-              <p>We supply disposable coffee cups in standard sizes: 4oz, 8oz, 12oz, 16oz, and 20oz. Both single-wall and double-wall options are available. Lids and sleeves are also available to complement your order.</p>
-            </div>
-            <div class="faq-item">
-              <h4>Do you supply paper bags for bakeries and cafés?</h4>
-              <p>Yes. We supply wholesale paper bags for UK cafés, bakeries, delis and retail businesses. Options include natural kraft bags, white paper bags, flat-bottom bags, and twisted handle bags. Custom printed bags with your logo are also available.</p>
-            </div>
-            <div class="faq-item">
-              <h4>What is the minimum order quantity for wholesale packaging?</h4>
-              <p>Minimum order quantities vary by product and are confirmed on request. Plain stock items can often be ordered in smaller quantities than custom printed products. Contact us with your requirements and we'll confirm what's achievable.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Custom Branding -->
-        <div class="faq-group">
-          <h2 class="faq-group-title">Custom Branding</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <h4>Do you supply custom printed coffee cups?</h4>
-              <p>Yes. We source custom printed coffee cups for UK businesses — single and double wall, in standard sizes. Minimum order quantities are confirmed on request. Contact us to discuss your requirements.</p>
-            </div>
-            <div class="faq-item">
-              <h4>What is the minimum order for custom branded packaging?</h4>
-              <p>Minimum order quantities vary by product and are confirmed on request. Contact us with your requirements and we'll advise on what's achievable for your product and budget.</p>
-            </div>
-            <div class="faq-item">
-              <h4>Do I need print-ready artwork for custom packaging?</h4>
-              <p>It helps if you have a logo file in a standard format (AI, EPS, PDF, or high-res PNG). If your artwork needs adjusting, we can advise on what's needed before production begins.</p>
-            </div>
-            <div class="faq-item">
-              <h4>How long does custom packaging take from order to delivery?</h4>
-              <p>Production and shipping timelines vary by product. As a general guide, allow several weeks from order confirmation to delivery. We'll give you a realistic timeline when we quote — we won't quote short lead times we can't meet.</p>
-            </div>
-            <div class="faq-item">
-              <h4>I'm a small independent café — is custom packaging viable for me?</h4>
-              <p>Yes. We work with businesses of all sizes, including single-site independents. Contact us with your volume and we'll advise honestly on whether custom packaging is viable at your scale.</p>
-            </div>
-          </div>
-        </div>
-
+    <!-- Ordering & Process -->
+    <div class="faq-group" id="ordering-process">
+      <p class="faq-group-title">Ordering &amp; Process</p>
+      <div class="faq-item">
+        <h4>How do I get a trade price for wholesale packaging?</h4>
+        <p>Use the quote request form on our <a href="/#contact">contact page</a> or message us on WhatsApp. Tell us the product you need, approximate quantity, and whether you need custom branding — we'll come back to you with trade pricing, usually the same day.</p>
       </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="cta-band">
-      <div class="cta-band-inner">
-        <div>
-          <p class="section-label">Ready to Order?</p>
-          <h2>Request a Trade Quote</h2>
-          <p>Tell us what you need and we'll come back to you with pricing — usually the same day. No obligation, no unnecessary complexity.</p>
-          <div class="cta-buttons" style="margin-top: 28px;">
-            <a href="/contact/" class="btn btn-primary">Request a Quote</a>
-            <a href="https://wa.me/447440386717" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
-          </div>
-        </div>
+      <div class="faq-item">
+        <h4>Do you supply to small businesses and independent cafés?</h4>
+        <p>Yes. We work with businesses of all sizes, from single-site independent cafés to larger hospitality operators. If you're unsure whether your volume qualifies, get in touch and we'll advise honestly.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you deliver across the UK?</h4>
+        <p>Yes. We supply UK trade buyers nationwide. Delivery is coordinated to your UK address as part of the order process.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How quickly do you respond to enquiries?</h4>
+        <p>We aim to respond to all quote requests the same day. For faster responses, WhatsApp is often the quickest way to reach us.</p>
       </div>
     </div>
 
-    <!-- RELATED PAGES -->
-    <div class="related-section">
-      <div class="section-inner">
-        <p class="section-label">Our Products</p>
-        <h2 class="section-title" style="margin-bottom: 0;">Browse What We Supply</h2>
-        <div class="related-grid">
-          <a href="/coffee-cups/" class="related-card">
-            <h4>Wholesale Coffee Cups</h4>
-            <p>Disposable cups, lids and sleeves at trade prices.</p>
-            <span class="arrow">View &rarr;</span>
-          </a>
-          <a href="/takeaway-packaging/" class="related-card">
-            <h4>Takeaway Packaging</h4>
-            <p>Takeaway and catering packaging for food service businesses.</p>
-            <span class="arrow">View &rarr;</span>
-          </a>
-          <a href="/paper-bags/" class="related-card">
-            <h4>Wholesale Paper Bags</h4>
-            <p>Kraft and printed bags for cafés and retail.</p>
-            <span class="arrow">View &rarr;</span>
-          </a>
-          <a href="/custom-branded-packaging/" class="related-card">
-            <h4>Custom Branded Packaging</h4>
-            <p>Cups, bags and boxes printed with your logo.</p>
-            <span class="arrow">View &rarr;</span>
-          </a>
-        </div>
+    <!-- Products -->
+    <div class="faq-group" id="products">
+      <p class="faq-group-title">Products</p>
+      <div class="faq-item">
+        <h4>What products do you supply?</h4>
+        <p>We supply wholesale packaging and hospitality consumables to UK businesses — coffee cups, lids and sleeves, takeaway packaging, paper bags, custom branded packaging, and more. If you need something specific, contact us and we'll advise on what's available.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What sizes of coffee cups do you supply?</h4>
+        <p>We supply disposable coffee cups in standard sizes: 8oz, 12oz, and 16oz. Both single-wall and double-wall options are available. Lids and sleeves are also available to complement your order.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do you supply paper bags for bakeries and cafés?</h4>
+        <p>Yes. We supply wholesale paper bags for UK cafés, bakeries, delis and retail businesses. Options include natural kraft bags, white paper bags, flat-bottom bags, and twisted handle bags. Custom printed bags with your logo are also available.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What is the minimum order quantity for wholesale packaging?</h4>
+        <p>Minimum order quantities vary by product and are confirmed on request. Plain stock items can often be ordered in smaller quantities than custom printed products. Contact us with your requirements and we'll confirm what's achievable.</p>
       </div>
     </div>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-brand">AC Supply Co.</span>
-      <span class="footer-text">Wholesale sourcing and supply for UK trade buyers &nbsp;|&nbsp; United Kingdom</span>
-      <span class="footer-text">&copy; 2026 AC Supply Co.</span>
+    <!-- Custom Branding -->
+    <div class="faq-group" id="custom-branding">
+      <p class="faq-group-title">Custom Branding</p>
+      <div class="faq-item">
+        <h4>Do you supply custom printed coffee cups?</h4>
+        <p>Yes. We source custom printed coffee cups for UK businesses — single and double wall, in standard sizes. Minimum order quantities are confirmed on request. Contact us to discuss your requirements.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What is the minimum order for custom branded packaging?</h4>
+        <p>Minimum order quantities vary by product and are confirmed on request. Contact us with your requirements and we'll advise on what's achievable for your product and budget.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I need print-ready artwork for custom packaging?</h4>
+        <p>It helps if you have a logo file in a standard format (AI, EPS, PDF, or high-res PNG). If your artwork needs adjusting, we can advise on what's needed before production begins.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How long does custom packaging take from order to delivery?</h4>
+        <p>Production and shipping timelines vary by product. As a general guide, allow several weeks from order confirmation to delivery. We'll give you a realistic timeline when we quote — we won't quote short lead times we can't meet.</p>
+      </div>
+      <div class="faq-item">
+        <h4>I'm a small independent café — is custom packaging viable for me?</h4>
+        <p>Yes. We work with businesses of all sizes, including single-site independents. Contact us with your volume and we'll advise honestly on whether custom packaging is viable at your scale.</p>
+      </div>
     </div>
-  </footer>
 
-  <script src="/assets/js/main.js"></script>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="faq-cta">
+  <div class="faq-cta-inner">
+    <div>
+      <span class="tag mono">Ready to Order?</span>
+      <h2>Request a Trade Quote</h2>
+      <p>Tell us what you need and we'll come back to you with pricing — usually the same day. No obligation, no unnecessary complexity.</p>
+    </div>
+    <div class="faq-cta-actions">
+      <a href="/#contact" class="btn btn-accent">Request a quote →</a>
+      <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.981 1.287 2.981.858 3.518.804.537-.054 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.075-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> Chat on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED PAGES -->
+<div class="faq-related">
+  <div class="faq-related-inner">
+    <span class="tag mono">Our Products</span>
+    <h2>Browse What We Supply</h2>
+    <div class="related-grid">
+      <a href="/coffee-cups/" class="related-card">
+        <span class="related-card-num">CAT / 01</span>
+        <h4>Wholesale Coffee Cups</h4>
+        <p>Disposable cups, lids and sleeves at trade prices.</p>
+        <span class="arrow">View →</span>
+      </a>
+      <a href="/takeaway-packaging/" class="related-card">
+        <span class="related-card-num">CAT / 02</span>
+        <h4>Takeaway Packaging</h4>
+        <p>Takeaway and catering packaging for food service businesses.</p>
+        <span class="arrow">View →</span>
+      </a>
+      <a href="/paper-bags/" class="related-card">
+        <span class="related-card-num">CAT / 03</span>
+        <h4>Wholesale Paper Bags</h4>
+        <p>Kraft and printed bags for cafés and retail.</p>
+        <span class="arrow">View →</span>
+      </a>
+      <a href="/custom-branded-packaging/" class="related-card">
+        <span class="related-card-num">CAT / 04</span>
+        <h4>Custom Branded Packaging</h4>
+        <p>Cups, bags and boxes printed with your logo.</p>
+        <span class="arrow">View →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/images/acsupplycologotransparant.png" alt="AC Supply Co.">
+        <p>Wholesale packaging supplied directly to UK cafés, takeaways and hospitality businesses. Trade-only.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Catalogue</h5>
+        <a href="/coffee-cups/">Coffee cups &amp; lids</a>
+        <a href="/paper-bags/">Paper &amp; kraft bags</a>
+        <a href="/takeaway-packaging/">Takeaway boxes</a>
+        <a href="/custom-branded-packaging/">Custom &amp; branded</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="/#how">Why AC Supply Co</a>
+        <a href="/#ordering">How ordering works</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Direct</h5>
+        <a href="mailto:sales@acsupplyco.co.uk">sales@acsupplyco.co.uk</a>
+        <a href="tel:+447440386717">+44 7440 386717</a>
+        <a href="https://wa.me/447440386717" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;opacity:0.75"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487 2.981 1.287 2.981.858 3.518.804.537-.054 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.075-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AC Supply Co. · United Kingdom</span>
+      <div class="right">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
