@@ -6,6 +6,26 @@
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#0f1f3d">
 
+  <!-- Google Consent Mode v2 — defaults MUST come before GTM -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MR747W4P');</script>
+  <!-- End Google Tag Manager -->
+
   <!-- Primary SEO -->
   <title>Contact AC Supply Co. — Wholesale Packaging Enquiries</title>
   <meta name="description" content="Contact AC Supply Co. for wholesale packaging enquiries. Request a trade quote for coffee cups, takeaway packaging, paper bags and custom branded packaging." />
@@ -187,6 +207,9 @@
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR747W4P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ANNOUNCEMENT -->
 <div class="announcement">
@@ -462,7 +485,7 @@
     <div class="footer-bottom">
       <span>© 2026 AC Supply Co. · United Kingdom</span>
       <div class="right">
-        <a href="#">Privacy</a>
+        <a href="/privacy/">Privacy</a>
         <a href="#">Terms</a>
       </div>
     </div>
@@ -487,7 +510,15 @@
       });
       const result = await r.json();
       if (result.success) {
-        window.location.href = '/thank-you/';
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_id: 'contact',
+          lead_type: 'quote_request',
+          user_email: (obj.email || '').trim().toLowerCase(),
+          user_phone: (obj.phone || '').replace(/[^\d+]/g, '')
+        });
+        setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
       } else {
         msg.style.display = 'block';
         msg.style.color = 'var(--accent)';
@@ -504,5 +535,6 @@
   });
 </script>
 
+<script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>
