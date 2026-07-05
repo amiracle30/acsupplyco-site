@@ -74,6 +74,46 @@
   }
   </script>
 
+  <!-- Schema: LocalBusiness (service-area, no storefront) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AC Supply Co.",
+    "url": "https://acsupplyco.co.uk/",
+    "image": "https://acsupplyco.co.uk/assets/images/logo-ac-supply-co.png",
+    "email": "sales@acsupplyco.co.uk",
+    "telephone": "+447440386717",
+    "priceRange": "££",
+    "areaServed": { "@type": "Country", "name": "United Kingdom" },
+    "address": { "@type": "PostalAddress", "addressCountry": "GB" }
+  }
+  </script>
+
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AC Supply Co.",
+    "url": "https://acsupplyco.co.uk/"
+  }
+  </script>
+
+  <!-- Schema: ItemList (product categories) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Wholesale Coffee Cups", "url": "https://acsupplyco.co.uk/coffee-cups/" },
+      { "@type": "ListItem", "position": 2, "name": "Takeaway Packaging", "url": "https://acsupplyco.co.uk/takeaway-packaging/" },
+      { "@type": "ListItem", "position": 3, "name": "Paper Bags", "url": "https://acsupplyco.co.uk/paper-bags/" },
+      { "@type": "ListItem", "position": 4, "name": "Custom Branded Packaging", "url": "https://acsupplyco.co.uk/custom-branded-packaging/" }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
