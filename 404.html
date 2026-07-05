@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page Not Found | AC Supply Co.</title>
-  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#0f1f3d">
 
@@ -27,114 +25,301 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MR747W4P');</script>
   <!-- End Google Tag Manager -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <style>
-    /* Override: no sticky header, full-height flex layout */
-    .header { position: static; }
-    body { min-height: 100vh; display: flex; flex-direction: column; background: var(--off-white); }
-    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 64px 24px; }
 
-    /* btn needs position:relative for the radial overlay stacking context */
-    .btn { position: relative; }
+  <title>Page Not Found | AC Supply Co.</title>
+  <meta name="robots" content="noindex, nofollow" />
 
-    .error-box {
-      background: var(--navy);
-      border-radius: 8px;
-      padding: 72px 56px;
-      max-width: 560px;
-      width: 100%;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .error-box::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 500px 300px at 50% 50%, rgba(46,125,82,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .error-code { font-family: var(--font-display); font-size: 5rem; font-weight: 500; color: rgba(255,255,255,0.15); line-height: 1; margin-bottom: 24px; position: relative; }
-    .error-box h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 500; color: var(--white); margin-bottom: 16px; line-height: 1.25; position: relative; }
-    .error-box p { font-size: 0.975rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 36px; position: relative; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* 404 footer has an extra border-top that the shared footer style omits */
-    footer { border-top: 1px solid rgba(255,255,255,0.06); }
+  :root {
+    --bg: #FAFAF7;
+    --paper: #FFFFFF;
+    --cream: #F1ECE0;
+    --cream-deep: #E8E2D2;
+    --ink: #0F1F3D;
+    --ink-soft: #1F2D4D;
+    --muted: #5A6478;
+    --light: #8A92A3;
+    --border: #E5E1D8;
+    --border-strong: #C9C2B0;
+    --accent: #1F6B43;
+    --accent-deep: #164C30;
+    --accent-pale: #E8F0EA;
+    --whatsapp: #25D366;
+    --radius: 4px;
+    --maxw: 1280px;
+    --gutter: 32px;
+  }
 
-    @media (max-width: 600px) {
-      .error-box { padding: 48px 28px; }
-    }
-  </style>
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 16px;
+    line-height: 1.5;
+    font-feature-settings: "ss01", "cv11";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; font-feature-settings: "calt" 0; }
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* ANNOUNCEMENT */
+  .announcement {
+    background: var(--ink);
+    color: rgba(255,255,255,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .announcement-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 10px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
+  .announcement .pulse {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
+    70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
+    100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
+  }
+  .announcement a { color: white; text-decoration: none; font-weight: 500; border-bottom: 1px dashed rgba(255,255,255,0.4); padding-bottom: 1px; }
+
+  /* HEADER */
+  .header {
+    background: rgba(250,250,247,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    height: 72px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 48px;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo img { height: 52px; width: auto; }
+  .nav { display: flex; align-items: center; gap: 4px; justify-self: center; }
+  .nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav a:hover { background: var(--cream); color: var(--ink); }
+  .header-cta { display: flex; align-items: center; gap: 10px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    padding: 11px 18px;
+    border-radius: var(--radius);
+    transition: all 0.15s;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--border-strong); }
+  .btn-ghost:hover { background: var(--ink); color: white; border-color: var(--ink); }
+  .btn-primary { background: var(--ink); color: white; border-color: var(--ink); }
+  .btn-primary:hover { background: var(--ink-soft); border-color: var(--ink-soft); }
+  .btn-accent { background: var(--accent); color: white; border-color: var(--accent); }
+  .btn-accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+  .btn-lg { padding: 14px 22px; font-size: 14px; }
+
+  /* 404 CARD */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px var(--gutter);
+  }
+  .error-box {
+    background: var(--ink);
+    border-radius: var(--radius);
+    padding: 72px 56px;
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .error-box::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 500px 300px at 50% 50%, rgba(31,107,67,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .error-code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .error-box h1 {
+    font-size: clamp(28px, 3.6vw, 36px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .error-box p {
+    font-size: 15.5px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.65;
+    margin: 0 auto 32px;
+    max-width: 420px;
+    position: relative;
+  }
+  .error-box .btn { position: relative; }
+  .error-box-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .error-box .btn-ghost { color: white; border-color: rgba(255,255,255,0.4); }
+  .error-box .btn-ghost:hover { background: white; color: var(--ink); border-color: white; }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    padding: 56px 0 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+  }
+  .footer-inner a { color: rgba(255,255,255,0.75); text-decoration: none; }
+  .footer-inner a:hover { color: white; }
+  .footer-links { display: flex; gap: 22px; }
+
+  @media (max-width: 720px) {
+    .header-inner { grid-template-columns: auto 1fr; gap: 16px; }
+    .nav { display: none; }
+    .error-box { padding: 56px 28px; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 480px) {
+    .announcement-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .error-box-actions { flex-direction: column; }
+    .error-box-actions .btn { width: 100%; }
+  }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR747W4P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ANNOUNCEMENT BAR -->
-  <div class="announcement-bar">
-    <div class="announcement-bar-inner">
-      <span>Wholesale café packaging — fast UK delivery · <a href="/contact/">Request a trade quote</a></span>
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+  <div class="announcement-inner">
+    <div class="left">
+      <span class="pulse"></span>
+      <span>UK trade supply · Send us your packaging list and we'll quote against it</span>
+    </div>
+    <a href="/#contact">Request trade pricing →</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="/assets/images/acsupplycologotransparant.png" alt="AC Supply Co.">
+    </a>
+    <nav class="nav">
+      <a href="/#products">Products</a>
+      <a href="/#ordering">How ordering works</a>
+      <a href="/#how">Why AC Supply Co</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="/#contact" class="btn btn-primary">Request a quote →</a>
     </div>
   </div>
+</header>
 
-  <header class="header">
-    <div class="header-inner">
-      <div class="header-left">
-        <a href="/" class="logo" aria-label="AC Supply Co home">
-          <img src="/assets/images/logo-ac-supply-co.png" alt="AC Supply Co." class="logo-img" height="72" fetchpriority="high" />
-        </a>
-        <nav class="nav-desktop" aria-label="Main navigation">
-          <a href="/#products">Products</a>
-          <a href="/custom-branded-packaging/">Custom Branding</a>
-          <a href="/faq/">FAQ</a>
-        </nav>
-      </div>
-      <div class="header-right">
-        <a href="/contact/" class="btn btn-outline btn-sm">Get a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.054 23.446a.75.75 0 0 0 .916.919l5.699-1.479A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.709 9.709 0 0 1-4.953-1.355l-.355-.212-3.683.955.974-3.578-.232-.368A9.709 9.709 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-          </svg>
-          WhatsApp
-        </a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
-          <span class="hamburger-icon">☰</span>
-        </button>
-      </div>
+<main>
+  <div class="error-box">
+    <div class="error-code">Error / 404</div>
+    <h1>Page not found</h1>
+    <p>The page you're looking for doesn't exist. It may have moved, or the URL may be incorrect.</p>
+    <div class="error-box-actions">
+      <a href="/" class="btn btn-accent btn-lg">Back to homepage</a>
+      <a href="/#products" class="btn btn-ghost btn-lg">Browse products</a>
     </div>
-    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
-      <a href="/#products">Products</a>
-      <a href="/custom-branded-packaging/">Custom Branding</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 AC Supply Co. · United Kingdom</span>
+    <div class="footer-links">
+      <a href="/privacy/">Privacy</a>
       <a href="/faq/">FAQ</a>
-      <a href="/contact/">Contact</a>
-      <div class="nav-mobile-actions">
-        <a href="/contact/" class="btn btn-primary">Get a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="error-box">
-      <div class="error-code">404</div>
-      <h1>Page Not Found</h1>
-      <p>The page you're looking for doesn't exist. It may have moved, or the URL may be incorrect.</p>
-      <a href="/" class="btn btn-primary">Back to Homepage</a>
+      <a href="/#contact">Contact</a>
     </div>
-  </main>
+  </div>
+</footer>
 
-  <footer>
-    <div class="footer-inner">
-      <span class="footer-brand">AC Supply Co.</span>
-      <span class="footer-text">Wholesale sourcing and supply for UK trade buyers &nbsp;|&nbsp; United Kingdom</span>
-      <span class="footer-text">&copy; 2026 AC Supply Co.</span>
-    </div>
-  </footer>
-
-  <script src="/assets/js/main.js"></script>
 <script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>
