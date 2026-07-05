@@ -128,6 +128,7 @@ The nav CTA on `contact/index.html` points to `/contact/` rather than `/#contact
 Client-side tracking is centralised through one Google Tag Manager container. Site pages **never** contain direct `gtag`, `fbq`, or Ads snippets — all tags live inside the GTM container and are fired by dataLayer events.
 
 - **GTM container:** `GTM-MR747W4P` (hardcoded in every page's head + noscript block)
+- **GA4 property:** Measurement ID `G-8CHHWEDWWK`. The Google Tag inside GTM references this ID; the site itself never mentions it directly. Four GA4 event tags (`generate_lead`, `contact_whatsapp`, `contact_phone`, `contact_email`) fire on the corresponding custom-event triggers.
 - **Consent Mode v2:** all four ad/analytics signals default to `denied`. The banner in `tracking.js` calls `gtag('consent', 'update', ...)` when the user accepts or rejects, and persists the choice in `localStorage` under `ac_consent`.
 - **Privacy notice:** `/privacy/` documents what runs before/after consent — update it when adding a new pixel or processor.
 
