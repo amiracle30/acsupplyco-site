@@ -7,3 +7,7 @@ _seo/
 
 # Agent scratch — task briefs, reports, progress ledger
 .superpowers/
+
+# Design specs & implementation plans — deploy from repo root, so tracking
+# these would publish keyword data and business constraints at /docs/
+docs/
