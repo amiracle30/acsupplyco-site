@@ -78,6 +78,7 @@
     if (href.indexOf('wa.me/') > -1 || href.toLowerCase().indexOf('whatsapp') > -1) evt = 'contact_whatsapp';
     else if (href.indexOf('tel:') === 0) evt = 'contact_phone';
     else if (href.indexOf('mailto:') === 0) evt = 'contact_email';
+    else if (a.hasAttribute('data-gform') || href.indexOf('docs.google.com/forms') > -1) evt = 'google_form_click';
     if (!evt) return;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({ event: evt, link_url: href, page_path: location.pathname });

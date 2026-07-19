@@ -140,6 +140,7 @@ Client-side tracking is centralised through one Google Tag Manager container. Si
 | `contact_whatsapp` | Delegated click on any `wa.me/…` link (all pages) | `link_url`, `page_path` |
 | `contact_phone` | Delegated click on any `tel:` link (all pages) | `link_url`, `page_path` |
 | `contact_email` | Delegated click on any `mailto:` link (all pages) | `link_url`, `page_path` |
+| `google_form_click` | Delegated click on any `[data-gform]` link or `docs.google.com/forms` URL — the "full packaging requirements" Google Form links on `index.html`, `contact/index.html`, `thank-you/index.html` | `link_url`, `page_path` |
 | `cookie_consent_update` | Banner accept/reject | `consent_action` (`accept` \| `reject`) |
 
 ### Rules when adding tracking
