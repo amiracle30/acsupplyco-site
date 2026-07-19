@@ -231,21 +231,17 @@
   }
   .thank-you-box p:last-of-type { margin-bottom: 32px; }
 
-  .next-step {
-    display: block;
-    text-align: left;
-    text-decoration: none;
+  /* Full requirements form (Google Form) CTA card — matches the contact-page fullform-card */
+  .fullform-card {
     max-width: 460px;
     margin: 0 auto 28px;
     padding: 22px 24px;
-    border: 1px solid var(--border-strong);
+    text-align: left;
+    background: var(--accent-pale);
+    border: 1px solid rgba(31,107,67,0.2);
     border-radius: var(--radius);
-    background: var(--cream);
-    color: var(--ink);
-    transition: border-color .18s ease, background .18s ease;
   }
-  .next-step:hover { border-color: var(--accent); background: var(--accent-pale); }
-  .next-step .next-step-eyebrow {
+  .fullform-card .fullform-eyebrow {
     display: block;
     font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 10.5px;
@@ -254,8 +250,10 @@
     color: var(--accent);
     margin-bottom: 8px;
   }
-  .next-step strong { display: block; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 6px; }
-  .next-step .next-step-sub { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+  .fullform-card .fullform-title { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 4px; color: var(--ink); }
+  .fullform-card .fullform-body { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; margin-bottom: 16px; }
+  .fullform-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: transparent; border: 1.5px solid var(--ink); border-radius: var(--radius); font-size: 13.5px; font-weight: 600; color: var(--ink); text-decoration: none; transition: background 0.15s, color 0.15s; }
+  .fullform-btn:hover { background: var(--ink); color: white; }
 
   .cta-buttons {
     display: flex;
@@ -348,11 +346,12 @@
     <h1>Thanks — we're on it</h1>
     <p>Thank you for getting in touch. We've received your request and will come back to you with trade pricing as soon as possible — usually the same day.</p>
     <p>If you'd prefer a faster response, message us on WhatsApp.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCx5zBC5EYnlYP7K4_822lmHAvjuJov8AAoq1pY2W4zbPKuA/viewform" class="next-step" target="_blank" rel="noopener" data-gform>
-      <span class="next-step-eyebrow">Speed things up</span>
-      <strong>Fill out your full packaging requirements →</strong>
-      <span class="next-step-sub">A couple of minutes now — business, sizes and quantities — and I'll have everything I need to quote precisely, with no back-and-forth.</span>
-    </a>
+    <div class="fullform-card">
+      <span class="fullform-eyebrow">Speed things up</span>
+      <p class="fullform-title">Fill out your full packaging requirements</p>
+      <p class="fullform-body">A couple of minutes now — business, sizes and quantities — and I'll have everything I need to quote precisely, with no back-and-forth.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCx5zBC5EYnlYP7K4_822lmHAvjuJov8AAoq1pY2W4zbPKuA/viewform" target="_blank" rel="noopener" class="fullform-btn" data-gform>Open full requirements form →</a>
+    </div>
     <div class="cta-buttons">
       <a href="/" class="btn btn-primary btn-lg">Back to homepage</a>
       <a href="https://wa.me/447440386717" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">Message on WhatsApp</a>
