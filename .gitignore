@@ -1,3 +1,9 @@
 node_modules/
 .DS_Store
 package-lock.json
+
+# Private SEO working files + GSC data — never deploy publicly
+_seo/
+
+# Agent scratch — task briefs, reports, progress ledger
+.superpowers/

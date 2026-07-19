@@ -24,7 +24,9 @@ Every task's requirements implicitly include this section.
 
 ### Validation baseline (read before writing any verification step)
 
-`npx html-validate` with default config reports **19 pre-existing errors on every page in this repo**, spanning exactly four rules:
+> **Corrected 2026-07-19 during execution.** This section originally claimed the baseline was "exactly four rules on every page." That was derived from a single page (`catering-supplies/index.html`) and is wrong. A fifth rule, `long-title` (>70 chars), is also pre-existing: `coffee-cups/` is 76 chars and `paper-bags/` is 73. Verify a baseline across several pages before asserting one.
+
+`npx html-validate` with default config reports **19 pre-existing errors on `catering-supplies/index.html`**, spanning four rules — plus `long-title` on some other pages:
 
 | Rule | Cause | Expected? |
 |---|---|---|
@@ -32,8 +34,11 @@ Every task's requirements implicitly include this section.
 | `element-required-attributes` | GTM `<noscript><iframe>` has no `title` | Yes — GTM boilerplate |
 | `no-inline-style` | Same GTM iframe's `style="display:none…"` | Yes — GTM boilerplate |
 | `tel-non-breaking` | Spaces inside the phone number | Yes — house style |
+| `long-title` | Title >70 chars — pre-existing on `coffee-cups/` (76) and `paper-bags/` (73) | Yes — but see below |
 
-**Do not "fix" these and do not assert that validation passes.** The gate is: *the new page reports no error from any rule outside those four.* A fifth rule name appearing means a real bug (unclosed tag, bad nesting, missing alt).
+**Do not "fix" these and do not assert that validation passes.** The gate is: *the new page reports no error from any rule outside those five.* A sixth rule name appearing means a real bug (unclosed tag, bad nesting, missing alt).
+
+**`long-title` does not apply to this page.** The bakery title was shortened during execution to `Bakery Packaging Wholesale UK &mdash; Cake Boxes | AC Supply Co.` (58 chars) — it clears the rule, fits inside Google's ~60-char display limit, and drops "Bakery Bags", the term the spec defers to `/paper-bags/`. So `/bakery-packaging/` should report the original four rules only. Fixing the two over-length titles on the existing live pages is deliberately out of scope — see "Known gap".
 
 ---
 
@@ -673,6 +678,8 @@ This matters beyond tidiness: the homepage is the strongest internal-link source
 Task 4 Step 3 mitigates it for bakery only, via the footer and `ItemList` — the two places that take a new entry without a CSS change. Full grid placement for all three pages is a separate piece of work: it needs a `.c6` (and possibly `.c7`) rule at `index.html:645-649` and a decision about whether the `.cat cta` tile stays last, whether the grid grows past six tiles, and whether `CAT / 04` should still point at `/contact/` now that real category pages exist for some of that content.
 
 **Recommendation:** do that as its own change once bakery ships, covering all three orphaned pages together rather than piecemeal.
+
+**Also deferred: two over-length page titles.** `coffee-cups/index.html` (76 chars) and `paper-bags/index.html` (73 chars) both exceed the 70-char `long-title` threshold and are truncated in Google results. Both are live and indexed, so retitling them affects existing rankings and deserves a deliberate pass rather than a drive-by edit during a different page's build. Bundle with the orphan fix above.
 
 ## Post-implementation (manual, not automatable)
 
