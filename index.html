@@ -891,27 +891,14 @@
     letter-spacing: 0.04em;
   }
 
-  /* Fast-lane: link to the full Google requirements form */
-  .alt-path { margin-top: 28px; padding-top: 24px; border-top: 1px dashed var(--border-strong); }
-  .alt-path-or {
-    display: flex; align-items: center; gap: 14px;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--light); margin-bottom: 16px;
-  }
-  .alt-path-or::before, .alt-path-or::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-  .alt-path-link {
-    display: flex; align-items: center; gap: 16px;
-    padding: 18px 20px; border: 1px solid var(--border-strong); border-radius: var(--radius);
-    background: var(--cream); text-decoration: none; color: var(--ink);
-    transition: border-color .18s ease, background .18s ease, transform .18s ease;
-  }
-  .alt-path-link:hover { border-color: var(--accent); background: var(--accent-pale); transform: translateY(-1px); }
-  .alt-path-text { display: flex; flex-direction: column; gap: 3px; }
-  .alt-path-text strong { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
-  .alt-path-text span { font-size: 13px; color: var(--muted); line-height: 1.5; }
-  .alt-path-arrow { margin-left: auto; font-size: 18px; color: var(--accent); transition: transform .18s ease; }
-  .alt-path-link:hover .alt-path-arrow { transform: translateX(3px); }
+  /* Full requirements form (Google Form) CTA card — sits in the contact side panel */
+  .fullform-card { margin-top: 16px; padding: 18px; background: var(--accent-pale); border: 1px solid rgba(31,107,67,0.2); border-radius: var(--radius); }
+  .fullform-card .tag { color: var(--accent); margin-bottom: 8px; }
+  .fullform-card .tag::before { display: none; }
+  .fullform-title { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 4px; color: var(--ink); }
+  .fullform-body { font-size: 13px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 14px; }
+  .fullform-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: transparent; border: 1.5px solid var(--ink); border-radius: var(--radius); font-size: 13.5px; font-weight: 600; color: var(--ink); text-decoration: none; transition: background 0.15s, color 0.15s; }
+  .fullform-btn:hover { background: var(--ink); color: white; }
 
   .contact-side {
     padding: 44px 40px;
@@ -1587,17 +1574,6 @@
             </div>
             <div id="form-msg" style="margin-top:16px;display:none;"></div>
           </form>
-
-          <div class="alt-path">
-            <div class="alt-path-or">or, if you know exactly what you need</div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCx5zBC5EYnlYP7K4_822lmHAvjuJov8AAoq1pY2W4zbPKuA/viewform" class="alt-path-link" target="_blank" rel="noopener" data-gform>
-              <div class="alt-path-text">
-                <strong>Send your full packaging requirements</strong>
-                <span>A short guided form — business, sizes and quantities — so I can quote the exact spec first time.</span>
-              </div>
-              <span class="alt-path-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
         </div>
 
         <!-- SIDE -->
@@ -1650,6 +1626,13 @@
               <strong>Open WhatsApp</strong>
               <small>+44 7440 386717</small>
             </div>
+          </div>
+
+          <div class="fullform-card">
+            <span class="tag mono">Most accurate pricing</span>
+            <p class="fullform-title">Know exactly what you need?</p>
+            <p class="fullform-body">List exact sizes, cases and quantities in our guided form — 3 minutes, and I'll quote the precise spec first time.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCx5zBC5EYnlYP7K4_822lmHAvjuJov8AAoq1pY2W4zbPKuA/viewform" target="_blank" rel="noopener" class="fullform-btn" data-gform>Open full requirements form →</a>
           </div>
         </div>
       </div>
