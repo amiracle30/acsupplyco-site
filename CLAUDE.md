@@ -82,7 +82,7 @@ Shared component classes across pages: `.announcement`, `.header` / `.header-inn
 
 ## Quote Forms
 
-Both `index.html` and `contact/index.html` contain a quote form using Web3Forms:
+`index.html`, `contact/index.html`, and `custom-branded-packaging/index.html` each contain a quote form using Web3Forms:
 - Access key: `2ef0136f-1971-4072-8c61-e9450526b3ad` — do not change
 - POSTs to `https://api.web3forms.com/submit` via JavaScript fetch
 - On success, redirects to `/thank-you/`
@@ -136,7 +136,7 @@ Client-side tracking is centralised through one Google Tag Manager container. Si
 
 | Event | Where | Parameters |
 |---|---|---|
-| `generate_lead` | Quote-form success on `index.html` and `contact/index.html` | `form_id` (`home` \| `contact`), `lead_type: 'quote_request'`, `user_email`, `user_phone` |
+| `generate_lead` | Quote-form success on `index.html`, `contact/index.html`, and `custom-branded-packaging/index.html` | `form_id` (`home` \| `contact` \| `custom`), `lead_type: 'quote_request'`, `user_email`, `user_phone` |
 | `contact_whatsapp` | Delegated click on any `wa.me/…` link (all pages) | `link_url`, `page_path` |
 | `contact_phone` | Delegated click on any `tel:` link (all pages) | `link_url`, `page_path` |
 | `contact_email` | Delegated click on any `mailto:` link (all pages) | `link_url`, `page_path` |

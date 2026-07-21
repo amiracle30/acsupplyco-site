@@ -200,6 +200,7 @@
   .page-hero-right p { font-size: 17px; line-height: 1.55; color: var(--muted); margin-bottom: 28px; }
   .page-hero-right .btn { padding: 14px 22px; font-size: 14px; }
   .page-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero-reassure { font-size: 12px; letter-spacing: 0.04em; color: var(--accent-deep); background: var(--accent-pale); border: 1px solid rgba(31,107,67,0.2); border-radius: var(--radius); padding: 8px 12px; display: inline-block; margin-bottom: 24px !important; }
 
   .detail-section { padding: 80px 0; border-bottom: 1px solid var(--border); background: var(--bg); }
   .detail-grid { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
@@ -285,6 +286,7 @@
     :root { --gutter: 20px; }
     .nav { display: none; }
     .header-cta .btn-ghost { display: none; }
+    .page-hero { padding: 36px 0 40px; }
   }
   @media (max-width: 600px) {
     .variant-grid { grid-template-columns: 1fr; }
@@ -304,6 +306,26 @@
   .cluster-inner p { font-size: 15px; color: var(--ink-soft); line-height: 1.75; margin: 0 0 12px; }
   .cluster-inner a { color: var(--accent); text-decoration: underline; font-weight: 500; }
   @media (max-width: 640px) { .cluster-section { padding: 56px 0; } }
+
+  /* ====== EMBEDDED QUOTE FORM ====== */
+  .contact-section { padding: 80px 0; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .contact-shell { max-width: 720px; margin: 0 auto; background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .contact-form { padding: 44px 44px 40px; }
+  .contact-form-head { margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+  .contact-form-head .tag { margin-bottom: 16px; display: block; }
+  .contact-form-head h3 { font-size: 26px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .contact-form-head p { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-row.single { grid-template-columns: 1fr; }
+  .field label { display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .field label .req { color: var(--accent); }
+  .field input, .field select, .field textarea { width: 100%; font-family: 'Inter Tight', sans-serif; font-size: 14.5px; color: var(--ink); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; transition: border-color 0.15s, box-shadow 0.15s; outline: none; }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(15,31,61,0.08); }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .form-submit { margin-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .form-submit .btn { padding: 14px 24px; font-size: 14px; }
+  .form-fineprint { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--light); letter-spacing: 0.04em; }
+  @media (max-width: 720px) { .contact-form { padding: 36px 24px 32px; } .form-row { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -360,8 +382,9 @@
     </div>
     <div class="page-hero-right">
       <p>Personalised coffee cups, custom printed paper bags, branded napkins and branded food packaging — your logo on every touchpoint. Bulk trade orders, UK-wide supply.</p>
+      <p class="hero-reassure mono">Same-day quotes · Low minimums · UK-wide delivery</p>
       <div class="page-hero-actions">
-        <a href="/#contact" class="btn btn-primary">Request a Quote</a>
+        <a href="#contact" class="btn btn-primary">Request a Quote</a>
         <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
       </div>
     </div>
@@ -375,7 +398,7 @@
       <h2>Personalised &amp; Branded Packaging for UK Businesses</h2>
       <p>Personalised coffee cups and custom branded packaging turn every cup, bag and box you hand to a customer into a brand touchpoint. For cafés, takeaways and hospitality businesses, it signals professionalism and builds recognition at every customer handover.</p>
       <p>AC Supply Co. sources personalised coffee cups and custom printed packaging for UK businesses of every size — from single-site independents through to small chains and multi-outlet groups. We advise on minimum quantities, print options and turnaround times up front, so you know what a printed run actually commits you to before you order.</p>
-      <p>If you have a logo and want to see it on your packaging, <a href="/#contact">get in touch and we'll take it from there</a>.</p>
+      <p>If you have a logo and want to see it on your packaging, <a href="#contact">get in touch and we'll take it from there</a>.</p>
     </div>
     <div>
       <p class="detail-list-head">What We Can Brand</p>
@@ -459,7 +482,7 @@
     <p>Branded napkins are the lowest-cost custom-print entry point — a subtle brand touch across every cover, and consumable enough that the print cost per touchpoint is negligible. We supply branded napkins in single- and multi-ply, with logo or full-print designs, at trade prices.</p>
 
     <h2>Branded Packaging UK — Trade Buyers Nationwide</h2>
-    <p>We supply branded packaging UK-wide — no storefront, no counter, just direct trade supply. If you're anywhere in the UK and want custom branded packaging without the friction of a full brand-printer relationship, this is what we do. <a href="/#contact">Send us your requirements</a> and we'll come back with a quote, usually the same day.</p>
+    <p>We supply branded packaging UK-wide — no storefront, no counter, just direct trade supply. If you're anywhere in the UK and want custom branded packaging without the friction of a full brand-printer relationship, this is what we do. <a href="#contact">Send us your requirements</a> and we'll come back with a quote, usually the same day.</p>
   </div>
 </div>
 
@@ -522,17 +545,102 @@
   </div>
 </div>
 
-<!-- CTA BAND -->
-<div class="cta-band">
-  <div class="cta-band-inner">
-    <div>
-      <span class="tag">Request a Quote</span>
-      <h2>Request a Custom Packaging Quote</h2>
-      <p>Tell us what you want branded, your approximate quantity, and we'll come back to you with pricing and options.</p>
-    </div>
-    <div class="cta-band-actions">
-      <a href="/#contact" class="btn btn-accent">Request a Quote</a>
-      <a href="https://wa.me/447440386717" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+<!-- CONTACT / QUOTE FORM -->
+<div class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-shell">
+      <div class="contact-form">
+        <div class="contact-form-head">
+          <span class="tag mono">Request a Quote</span>
+          <h3>Request a Custom Packaging Quote</h3>
+          <p>Tell us what you want branded and your approximate quantity — we'll come back with pricing and options, usually the same day. Prefer WhatsApp? <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:underline;font-weight:500;">Message us here</a>.</p>
+        </div>
+        <form id="quote-form" novalidate>
+          <input type="hidden" name="access_key" value="2ef0136f-1971-4072-8c61-e9450526b3ad">
+          <input type="hidden" name="subject" value="New Custom Packaging Quote — AC Supply Co.">
+          <input type="hidden" name="from_name" value="AC Supply Co. Website">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-business">Business name <span class="req">*</span></label>
+              <input type="text" id="f-business" name="business_name" placeholder="e.g. Forge Coffee Ltd" required>
+            </div>
+            <div class="field">
+              <label for="f-name">Contact name <span class="req">*</span></label>
+              <input type="text" id="f-name" name="name" placeholder="Your name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-email">Email <span class="req">*</span></label>
+              <input type="email" id="f-email" name="email" placeholder="you@business.com" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone / WhatsApp</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+44 ...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-bizType">Business type</label>
+              <select id="f-bizType" name="business_type">
+                <option value="">— Select —</option>
+                <option>Café / coffee shop</option>
+                <option>Bakery</option>
+                <option>Takeaway</option>
+                <option>Restaurant</option>
+                <option>Juice / matcha / dessert</option>
+                <option>Food market / mobile vendor</option>
+                <option>Hospitality group</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-postcode">Delivery postcode</label>
+              <input type="text" id="f-postcode" name="delivery_postcode" placeholder="e.g. E1 6AN">
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div class="field">
+              <label for="f-product">Products to brand <span class="req">*</span></label>
+              <input type="text" id="f-product" name="product_required" placeholder="e.g. printed 12oz cups, kraft bags, napkins" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="f-qty">Approx. monthly quantity</label>
+              <input type="text" id="f-qty" name="estimated_quantity" placeholder="e.g. 5,000 cups + 2,000 bags / month">
+            </div>
+            <div class="field">
+              <label for="f-branding">Custom branding required?</label>
+              <select id="f-branding" name="custom_branding">
+                <option value="">— Select —</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Not sure">Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div class="field">
+              <label for="f-message">Notes / artwork details</label>
+              <textarea id="f-message" name="message" rows="3" placeholder="Share your artwork format, any deadlines, or anything else useful."></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <span class="form-fineprint">UK GDPR — your details stay with us</span>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Request a Quote →</button>
+          </div>
+          <div id="form-msg" style="margin-top:16px;display:none;"></div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
@@ -610,6 +718,49 @@
   </div>
 </footer>
 
+<script>
+  const form = document.getElementById('quote-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const msg = document.getElementById('form-msg');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    try {
+      const formData = new FormData(form);
+      const obj = Object.fromEntries(formData);
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(obj)
+      });
+      const result = await r.json();
+      if (result.success) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_id: 'custom',
+          lead_type: 'quote_request',
+          user_email: (obj.email || '').trim().toLowerCase(),
+          user_phone: (obj.phone || '').replace(/[^\d+]/g, '')
+        });
+        setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
+      } else {
+        throw new Error('failed');
+      }
+    } catch (err) {
+      if (msg) {
+        msg.style.display = 'block';
+        msg.style.color = '#b91c1c';
+        msg.style.fontSize = '13px';
+        msg.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request a Quote →';
+    }
+  });
+</script>
 <script src="/assets/js/tracking.js" defer></script>
 </body>
 </html>
