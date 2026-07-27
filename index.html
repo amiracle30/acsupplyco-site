@@ -292,8 +292,19 @@
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: 56px;
-    align-items: end;
+    align-items: start;
   }
+
+  /* Hero quote-form card */
+  .hero-form-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+  .hero-form-title { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+  .hero-form-sub { font-size: 14px; line-height: 1.5; color: var(--muted); margin-bottom: 22px !important; }
+  .hero-form-card .form-row { grid-template-columns: 1fr; margin-bottom: 14px; }
+  .hero-form-card .btn-accent { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14.5px; margin-top: 4px; }
+  .hero-form-fine { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: var(--light); letter-spacing: 0.04em; text-align: center; margin: 12px 0 0 !important; }
+  .hero-form-alt { text-align: center; font-size: 13px; color: var(--muted); margin: 16px 0 0 !important; padding-top: 16px; border-top: 1px solid var(--border); }
+  .hero-form-alt a { color: var(--whatsapp); font-weight: 600; text-decoration: none; }
+  .hero-form-alt a:hover { text-decoration: underline; }
   .hero-meta {
     display: flex;
     align-items: center;
@@ -648,6 +659,9 @@
   .cat.c3 { grid-column: span 2; }
   .cat.c4 { grid-column: span 2; }
   .cat.c5 { grid-column: span 2; }
+  .cat.c6 { grid-column: span 2; }
+  .cat.c7 { grid-column: span 2; }
+  .cat.c8 { grid-column: span 2; }
   .cat.cta {
     grid-column: span 6;
     background: var(--ink);
@@ -1031,8 +1045,14 @@
 
   /* ====== RESPONSIVE ====== */
   @media (max-width: 880px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-    .hero-mosaic { grid-template-columns: 1fr 1fr; padding-bottom: 64px; }
+    /* Hero collapses to one column and the quote card jumps above the CTAs */
+    .hero-inner { display: flex; flex-direction: column; gap: 32px; }
+    .hero-left { display: contents; }
+    .hero h1 { order: 1; margin-bottom: 0; }
+    .hero-sub { order: 2; margin-bottom: 0 !important; }
+    .hero-right { order: 3; }
+    .hero-actions { order: 4; margin-bottom: 0 !important; }
+    .hero-specs { order: 5; }
     .s-head { grid-template-columns: 1fr; gap: 24px; }
     .services { grid-template-columns: 1fr; }
     .service { border-right: none; border-bottom: 1px solid var(--border); padding: 32px 0; }
@@ -1044,7 +1064,8 @@
     .badge:nth-child(even) { border-right: none; }
     .badge:nth-last-child(-n+2) { border-bottom: none; }
     .cat-grid { grid-template-columns: 1fr 1fr; }
-    .cat.c1, .cat.c2, .cat.c3, .cat.c4, .cat.c5 { grid-column: span 1; }
+    .cat.c1, .cat.c2, .cat.c3, .cat.c4, .cat.c5,
+    .cat.c6, .cat.c7, .cat.c8 { grid-column: span 1; }
     .cat.cta { grid-column: span 2; flex-direction: column; align-items: flex-start; gap: 24px; }
     .sourcing { grid-template-columns: 1fr; padding: 40px; }
     .serve-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1110,8 +1131,6 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-meta">
-      </div>
       <h1>
         Wholesale packaging supplier for UK cafés, takeaways &amp; <em>food businesses.</em>
       </h1>
@@ -1141,25 +1160,50 @@
         </div>
       </div>
     </div>
-    <div class="hero-mosaic" aria-hidden="true">
-      <a href="#products" class="hero-tile tile-1 span-2">
-        <div class="hero-tile-bg"></div>
-        <div class="hero-tile-title">Single &amp; double-wall coffee cups</div>
-        <span class="hero-tile-label">CAT / 01</span>
-        <div class="hero-tile-arrow">↗</div>
-      </a>
-      <a href="#products" class="hero-tile tile-2">
-        <div class="hero-tile-bg"></div>
-        <div class="hero-tile-title">Kraft &amp; carrier bags</div>
-        <span class="hero-tile-label">CAT / 02</span>
-        <div class="hero-tile-arrow">↗</div>
-      </a>
-      <a href="#products" class="hero-tile tile-3">
-        <div class="hero-tile-bg"></div>
-        <div class="hero-tile-title">Takeaway boxes &amp; consumables</div>
-        <span class="hero-tile-label">CAT / 03</span>
-        <div class="hero-tile-arrow">↗</div>
-      </a>
+    <div class="hero-right">
+      <div class="hero-form-card">
+        <div class="hero-form-title">Get a quote today</div>
+        <p class="hero-form-sub">Tell us what you need — we'll come back with pricing the same day. No obligation.</p>
+        <form id="quote-form-hero">
+          <input type="hidden" name="access_key" value="2ef0136f-1971-4072-8c61-e9450526b3ad">
+          <input type="hidden" name="subject" value="New Quote Request (Hero) — AC Supply Co.">
+          <input type="hidden" name="from_name" value="AC Supply Co. Website">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-name">Contact name <span class="req">*</span></label>
+              <input type="text" id="fh-name" name="name" placeholder="Your name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-email">Email <span class="req">*</span></label>
+              <input type="email" id="fh-email" name="email" placeholder="you@business.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-phone">Phone / WhatsApp</label>
+              <input type="tel" id="fh-phone" name="phone" placeholder="+44 ...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-product">What do you need? <span class="req">*</span></label>
+              <input type="text" id="fh-product" name="product_required" placeholder="e.g. 12oz cups, kraft bags, napkins" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent" id="submit-btn-hero">Get my quote →</button>
+          <p class="hero-form-fine">Same-day quote · No obligation · UK GDPR</p>
+          <div id="form-msg-hero" style="margin-top:14px;display:none;"></div>
+          <p class="hero-form-alt">Prefer to message? <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -1271,7 +1315,7 @@
         <h2 class="s-title">What you can order.</h2>
       </div>
       <div class="right">
-        <p class="s-body">Standard packaging supplied for everyday trade, with custom and bulk orders available by request. Send your product list and we'll quote against it.</p>
+        <p class="s-body">Standard packaging supplied for everyday trade, with custom and bulk orders available by request. Send your product list and we'll quote against it. Not sure which spec you need? Read our <a href="/guides/" style="color:var(--accent);text-decoration:underline;font-weight:500;">trade buying guides</a>.</p>
       </div>
     </div>
     <div class="cat-grid">
@@ -1330,9 +1374,42 @@
           <span class="arrow">Discuss →</span>
         </div>
       </a>
+      <a href="/bakery-packaging/" class="cat c6">
+        <div>
+          <div class="cat-num">CAT / 06</div>
+          <h4>Bakery packaging</h4>
+          <p>Cake boxes, cupcake and pastry boxes, donut boxes, bakery bags and cake drums for bakeries and patisseries.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Spec-sensitive</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
+      <a href="/catering-supplies/" class="cat c7">
+        <div>
+          <div class="cat-num">CAT / 07</div>
+          <h4>Catering supplies</h4>
+          <p>The wider trade range for caterers, canteens and delivery kitchens — disposables, cutlery, napkins and cups.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Full range</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
+      <a href="/custom-pizza-boxes/" class="cat c8">
+        <div>
+          <div class="cat-num">CAT / 08</div>
+          <h4>Custom pizza boxes</h4>
+          <p>Printed pizza boxes for pizzerias, delivery kitchens and food trucks — plain stock or full-wrap artwork.</p>
+        </div>
+        <div class="cat-foot">
+          <span>Plain or printed</span>
+          <span class="arrow">Request pricing →</span>
+        </div>
+      </a>
       <div class="cat cta">
         <div>
-          <div class="cat-num" style="margin-bottom:14px;">CAT / 06 · CUSTOM &amp; BULK ORDERS</div>
+          <div class="cat-num" style="margin-bottom:14px;">CAT / 09 · CUSTOM &amp; BULK ORDERS</div>
           <h4>Need something specific? Send us the list.</h4>
           <p>For larger volumes, less-common sizes, or items outside the everyday range — share your product list and quantities and we'll come back with itemised pricing.</p>
         </div>
@@ -1711,6 +1788,48 @@
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Request trade pricing →';
+    }
+  });
+
+  const heroForm = document.getElementById('quote-form-hero');
+  const heroBtn = document.getElementById('submit-btn-hero');
+  const heroMsg = document.getElementById('form-msg-hero');
+  heroForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    heroBtn.disabled = true;
+    heroBtn.textContent = 'Sending...';
+    try {
+      const formData = new FormData(heroForm);
+      const obj = Object.fromEntries(formData);
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(obj)
+      });
+      const result = await r.json();
+      if (result.success) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_id: 'home',
+          lead_type: 'quote_request',
+          user_email: (obj.email || '').trim().toLowerCase(),
+          user_phone: (obj.phone || '').replace(/[^\d+]/g, '')
+        });
+        setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
+      } else {
+        throw new Error('failed');
+      }
+    } catch (err) {
+      if (heroMsg) {
+        heroMsg.style.display = 'block';
+        heroMsg.style.color = '#b91c1c';
+        heroMsg.style.fontSize = '13px';
+        heroMsg.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
+      }
+    } finally {
+      heroBtn.disabled = false;
+      heroBtn.textContent = 'Get my quote →';
     }
   });
 </script>
