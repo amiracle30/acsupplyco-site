@@ -193,14 +193,26 @@
   .breadcrumb a { color: var(--muted); text-decoration: none; }
   .breadcrumb a:hover { color: var(--ink); }
 
-  .page-hero { padding: 80px 0 72px; border-bottom: 1px solid var(--border); background: var(--bg); }
-  .page-hero-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; }
+  .page-hero { padding: 56px 0 56px; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .page-hero-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
   .page-hero .tag { margin-bottom: 20px; display: block; }
-  .page-hero h1 { font-size: clamp(34px, 4.5vw, 58px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 600; color: var(--ink); }
+  .page-hero h1 { font-size: clamp(32px, 4vw, 50px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 600; color: var(--ink); margin-bottom: 20px; }
+  .page-hero-left p { font-size: 16.5px; line-height: 1.55; color: var(--muted); margin-bottom: 20px; }
   .page-hero-right p { font-size: 17px; line-height: 1.55; color: var(--muted); margin-bottom: 28px; }
   .page-hero-right .btn { padding: 14px 22px; font-size: 14px; }
   .page-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  .hero-reassure { font-size: 12px; letter-spacing: 0.04em; color: var(--accent-deep); background: var(--accent-pale); border: 1px solid rgba(31,107,67,0.2); border-radius: var(--radius); padding: 8px 12px; display: inline-block; margin-bottom: 24px !important; }
+  .hero-reassure { font-size: 12px; letter-spacing: 0.04em; color: var(--accent-deep); background: var(--accent-pale); border: 1px solid rgba(31,107,67,0.2); border-radius: var(--radius); padding: 8px 12px; display: inline-block; margin-bottom: 0 !important; }
+
+  /* Hero quote-form card */
+  .hero-form-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+  .hero-form-title { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; line-height: 1.2; }
+  .hero-form-sub { font-size: 14px; line-height: 1.5; color: var(--muted); margin-bottom: 22px !important; }
+  .hero-form-card .form-row { grid-template-columns: 1fr; margin-bottom: 14px; }
+  .hero-form-card .btn-accent { width: 100%; justify-content: center; padding: 14px 24px; font-size: 14.5px; margin-top: 4px; }
+  .hero-form-fine { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: var(--light); letter-spacing: 0.04em; text-align: center; margin: 12px 0 0 !important; }
+  .hero-form-alt { text-align: center; font-size: 13px; color: var(--muted); margin: 16px 0 0 !important; padding-top: 16px; border-top: 1px solid var(--border); }
+  .hero-form-alt a { color: var(--whatsapp); font-weight: 600; text-decoration: none; }
+  .hero-form-alt a:hover { text-decoration: underline; }
 
   .detail-section { padding: 80px 0; border-bottom: 1px solid var(--border); background: var(--bg); }
   .detail-grid { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
@@ -272,7 +284,13 @@
   .related-card .arrow { font-size: 13px; color: var(--light); margin-top: 4px; }
 
   @media (max-width: 880px) {
-    .page-hero-inner { grid-template-columns: 1fr; gap: 32px; }
+    /* Hero collapses to one column and the quote card jumps above the lede */
+    .page-hero-inner { display: flex; flex-direction: column; gap: 20px; }
+    .page-hero-left { display: contents; }
+    .page-hero-left .tag { order: 1; margin-bottom: 0; }
+    .page-hero h1 { order: 2; margin-bottom: 0; }
+    .page-hero-right { order: 3; }
+    .page-hero-left p { order: 4; margin-bottom: 0; }
     .detail-grid { grid-template-columns: 1fr; gap: 48px; }
     .variants-head { grid-template-columns: 1fr; gap: 24px; }
     .variant-grid { grid-template-columns: 1fr 1fr; }
@@ -379,13 +397,52 @@
     <div class="page-hero-left">
       <span class="tag mono">Personalised &amp; Custom Branded Packaging UK</span>
       <h1>Personalised Coffee Cups &amp; Custom Branded Packaging for UK Businesses</h1>
-    </div>
-    <div class="page-hero-right">
       <p>Personalised coffee cups, custom printed paper bags, branded napkins and branded food packaging — your logo on every touchpoint. Bulk trade orders, UK-wide supply.</p>
       <p class="hero-reassure mono">Same-day quotes · Low minimums · UK-wide delivery</p>
-      <div class="page-hero-actions">
-        <a href="#contact" class="btn btn-primary">Request a Quote</a>
-        <a href="https://wa.me/447440386717" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+    </div>
+    <div class="page-hero-right">
+      <div class="hero-form-card">
+        <div class="hero-form-title">Get a quote today</div>
+        <p class="hero-form-sub">Tell us what you need — we'll come back with pricing the same day. No obligation.</p>
+        <form id="quote-form-hero">
+          <input type="hidden" name="access_key" value="2ef0136f-1971-4072-8c61-e9450526b3ad">
+          <input type="hidden" name="subject" value="New Custom Packaging Quote (Hero) — AC Supply Co.">
+          <input type="hidden" name="from_name" value="AC Supply Co. Website">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-name">Contact name <span class="req">*</span></label>
+              <input type="text" id="fh-name" name="name" placeholder="Your name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-email">Email <span class="req">*</span></label>
+              <input type="email" id="fh-email" name="email" placeholder="you@business.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-phone">Phone / WhatsApp</label>
+              <input type="tel" id="fh-phone" name="phone" placeholder="+44 ...">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fh-product">What do you need? <span class="req">*</span></label>
+              <input type="text" id="fh-product" name="product_required" placeholder="e.g. printed 12oz cups, kraft bags" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent" id="submit-btn-hero">Get my quote →</button>
+          <p class="hero-form-fine">Same-day quote · No obligation · UK GDPR</p>
+          <div id="form-msg-hero" style="margin-top:14px;display:none;"></div>
+          <p class="hero-form-alt">Prefer to message? <a href="https://wa.me/447440386717" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
+        </form>
       </div>
     </div>
   </div>
@@ -563,8 +620,8 @@
 
           <div class="form-row">
             <div class="field">
-              <label for="f-business">Business name <span class="req">*</span></label>
-              <input type="text" id="f-business" name="business_name" placeholder="e.g. Forge Coffee Ltd" required>
+              <label for="f-business">Business name</label>
+              <input type="text" id="f-business" name="business_name" placeholder="e.g. Forge Coffee Ltd">
             </div>
             <div class="field">
               <label for="f-name">Contact name <span class="req">*</span></label>
@@ -758,6 +815,48 @@
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Request a Quote →';
+    }
+  });
+
+  const heroForm = document.getElementById('quote-form-hero');
+  const heroBtn = document.getElementById('submit-btn-hero');
+  const heroMsg = document.getElementById('form-msg-hero');
+  heroForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    heroBtn.disabled = true;
+    heroBtn.textContent = 'Sending...';
+    try {
+      const formData = new FormData(heroForm);
+      const obj = Object.fromEntries(formData);
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(obj)
+      });
+      const result = await r.json();
+      if (result.success) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_id: 'custom',
+          lead_type: 'quote_request',
+          user_email: (obj.email || '').trim().toLowerCase(),
+          user_phone: (obj.phone || '').replace(/[^\d+]/g, '')
+        });
+        setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
+      } else {
+        throw new Error('failed');
+      }
+    } catch (err) {
+      if (heroMsg) {
+        heroMsg.style.display = 'block';
+        heroMsg.style.color = '#b91c1c';
+        heroMsg.style.fontSize = '13px';
+        heroMsg.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
+      }
+    } finally {
+      heroBtn.disabled = false;
+      heroBtn.textContent = 'Get my quote →';
     }
   });
 </script>
