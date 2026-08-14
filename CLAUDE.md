@@ -129,7 +129,9 @@ Client-side tracking is centralised through one Google Tag Manager container. Si
 
 - **GTM container:** `GTM-MR747W4P` (hardcoded in every page's head + noscript block)
 - **GA4 property:** Measurement ID `G-8CHHWEDWWK`. The Google Tag inside GTM references this ID; the site itself never mentions it directly. Four GA4 event tags (`generate_lead`, `contact_whatsapp`, `contact_phone`, `contact_email`) fire on the corresponding custom-event triggers.
+- **Meta Pixel:** ID `1069048138932330`. Lives entirely inside GTM as two Custom HTML tags — a base `fbq('init'/'track','PageView')` tag on All Pages, and a `Lead` tag on the `generate_lead` custom-event trigger (re-inits with hashed email/phone for advanced matching). Both carry GTM Consent Settings requiring `ad_storage`, because Consent Mode does not govern non-Google tags automatically. No `fbq` snippet belongs in page HTML.
 - **Consent Mode v2:** all four ad/analytics signals default to `denied`. The banner in `tracking.js` calls `gtag('consent', 'update', ...)` when the user accepts or rejects, and persists the choice in `localStorage` under `ac_consent`.
+- **Consent restore runs in the head, not in `tracking.js`.** The inline head block reads `localStorage.ac_consent` and pushes the `consent update` immediately after the defaults and *before* the GTM snippet. This is required: `tracking.js` is `defer`red, so its update lands in the dataLayer queue *after* the `gtm.js` event, and GTM has already evaluated (and permanently dropped) consent-gated tags by then — which is what silently killed the Meta Pixel. Keep this block in the head of every page; never move consent restoration into a deferred script.
 - **Privacy notice:** `/privacy/` documents what runs before/after consent — update it when adding a new pixel or processor.
 
 ### dataLayer events pushed by site code

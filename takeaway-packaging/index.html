@@ -17,6 +17,20 @@
       analytics_storage: 'denied',
       wait_for_update: 500
     });
+    // Restore a previously saved consent choice BEFORE GTM loads.
+    // tracking.js is deferred, so its update lands in the dataLayer queue
+    // after the gtm.js event and is too late for consent-gated tags.
+    try {
+      var acConsent = localStorage.getItem('ac_consent');
+      if (acConsent === 'granted' || acConsent === 'denied') {
+        gtag('consent', 'update', {
+          ad_storage: acConsent,
+          ad_user_data: acConsent,
+          ad_personalization: acConsent,
+          analytics_storage: acConsent
+        });
+      }
+    } catch (e) {}
   </script>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
