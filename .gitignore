@@ -11,3 +11,11 @@ _seo/
 # Design specs & implementation plans — deploy from repo root, so tracking
 # these would publish keyword data and business constraints at /docs/
 docs/
+
+# AI mockup PNG masters (~2MB each) — only the WebP versions deploy
+assets/images/mockups/*.png
+
+# Audit & CRO working docs — deploy from repo root, so tracking these
+# would publish GSC data and competitive analysis at /AUDIT-*.md
+AUDIT-*.md
+CRO-PLAN-*.md
