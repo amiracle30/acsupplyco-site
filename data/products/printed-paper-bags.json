@@ -1,0 +1,1129 @@
+{
+  "id": "printed-paper-bags",
+  "slug": "printed-paper-bags",
+  "title": "Custom printed paper bags",
+  "category": "paper-bags",
+  "status": "preview",
+  "short_description": "Your bag, carried through town. Kraft and white paper bags printed with your logo — handled carriers and grab bags, in one to four colours.",
+  "description": "A printed bag keeps working after the sale: it walks down the high street, sits on the office desk and gets reused. Choose the bag style, the number of print colours, one or two printed sides and the paper, then make it yours.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1 to 4 colour print",
+    "Single or double-sided",
+    "Kraft or white paper"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen bag, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Which bag style should I choose?",
+      "a": "Twisted-handle takeaway bags suit hot food and meal orders. Flat-handle carriers are the classic retail and bakery bag, with the wide-gusset version for larger or boxed items. SOS grab bags have no handles and suit pastries, sandwiches and counter service. If you are unsure, tell us what goes in the bag and we will advise."
+    },
+    {
+      "q": "Do you print other bag sizes?",
+      "a": "Yes — small and large versions of most styles are available. Use “Request a custom quantity”, tell us the size you need, and we will quote it."
+    },
+    {
+      "q": "When will my bags arrive?",
+      "a": "As a general guide, allow several weeks from order confirmation to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Paper bags",
+    "unit": {
+      "one": "bag",
+      "many": "bags"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every bag."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next bag looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your bag.",
+          "text": "Select your style, print colours, sides, paper and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, carry.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Styles",
+      "value": "Twisted-handle takeaway, flat-handle carrier (medium and wide gusset), SOS grab bag"
+    },
+    {
+      "label": "Dimensions",
+      "value": "260 × 160 × 320 mm",
+      "applies_to": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "300 × 250 × 140 mm",
+      "applies_to": {
+        "style": "carrier"
+      }
+    },
+    {
+      "label": "Handles",
+      "value": "Twisted paper handles",
+      "applies_to": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "label": "Handles",
+      "value": "Flat paper handles",
+      "applies_to": {
+        "style": "carrier"
+      }
+    },
+    {
+      "label": "Handles",
+      "value": "Flat paper handles, wide gusset",
+      "applies_to": {
+        "style": "wide-gusset"
+      }
+    },
+    {
+      "label": "Handles",
+      "value": "None — self-opening square bottom",
+      "applies_to": {
+        "style": "grab"
+      }
+    },
+    {
+      "label": "Paper",
+      "value": "Kraft",
+      "applies_to": {
+        "paper": "kraft"
+      }
+    },
+    {
+      "label": "Paper",
+      "value": "White",
+      "applies_to": {
+        "paper": "white"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "3 colours",
+      "applies_to": {
+        "colours": "3"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "4 colours",
+      "applies_to": {
+        "colours": "4"
+      }
+    },
+    {
+      "label": "Print",
+      "value": "Single-sided",
+      "applies_to": {
+        "sides": "single"
+      }
+    },
+    {
+      "label": "Print",
+      "value": "Double-sided",
+      "applies_to": {
+        "sides": "double"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "style",
+      "label": "Bag style",
+      "values": [
+        {
+          "value": "takeaway",
+          "label": "Twisted handle takeaway bag",
+          "default": true
+        },
+        {
+          "value": "carrier",
+          "label": "Flat handle carrier, medium"
+        },
+        {
+          "value": "wide-gusset",
+          "label": "Flat handle carrier, wide gusset"
+        },
+        {
+          "value": "grab",
+          "label": "Grab bag (SOS), small"
+        }
+      ]
+    },
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.028"
+        },
+        {
+          "value": "3",
+          "label": "3 colours",
+          "mult": "1.13"
+        },
+        {
+          "value": "4",
+          "label": "4 colours",
+          "mult": "1.159"
+        }
+      ]
+    },
+    {
+      "key": "sides",
+      "label": "Print sides",
+      "values": [
+        {
+          "value": "single",
+          "label": "Single-sided",
+          "default": true
+        },
+        {
+          "value": "double",
+          "label": "Double-sided",
+          "mult": "1.172"
+        }
+      ]
+    },
+    {
+      "key": "paper",
+      "label": "Paper",
+      "values": [
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "default": true
+        },
+        {
+          "value": "white",
+          "label": "White",
+          "mult": "1.034"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "PBG-TWL-1C-SS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "1",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-2C-SS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "2",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-3C-SS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "3",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-4C-SS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "4",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-1C-SS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "1",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-2C-SS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "2",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-3C-SS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "3",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-4C-SS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "4",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-1C-DS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "1",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-2C-DS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "2",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-3C-DS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "3",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-4C-DS-KFT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "4",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-1C-DS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "1",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-2C-DS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "2",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-3C-DS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "3",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-TWL-4C-DS-WHT",
+      "selection": {
+        "style": "takeaway",
+        "colours": "4",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-takeaway"
+    },
+    {
+      "sku": "PBG-FHM-1C-SS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "1",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-2C-SS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "2",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-3C-SS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "3",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-4C-SS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "4",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-1C-SS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "1",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-2C-SS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "2",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-3C-SS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "3",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-4C-SS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "4",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-1C-DS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "1",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-2C-DS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "2",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-3C-DS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "3",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-4C-DS-KFT",
+      "selection": {
+        "style": "carrier",
+        "colours": "4",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-1C-DS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "1",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-2C-DS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "2",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-3C-DS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "3",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHM-4C-DS-WHT",
+      "selection": {
+        "style": "carrier",
+        "colours": "4",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-carrier"
+    },
+    {
+      "sku": "PBG-FHW-1C-SS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "1",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-2C-SS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "2",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-3C-SS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "3",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-4C-SS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "4",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-1C-SS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "1",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-2C-SS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "2",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-3C-SS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "3",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-4C-SS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "4",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-1C-DS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "1",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-2C-DS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "2",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-3C-DS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "3",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-4C-DS-KFT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "4",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-1C-DS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "1",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-2C-DS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "2",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-3C-DS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "3",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-FHW-4C-DS-WHT",
+      "selection": {
+        "style": "wide-gusset",
+        "colours": "4",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-wide-gusset"
+    },
+    {
+      "sku": "PBG-SOS-1C-SS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "1",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-2C-SS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "2",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-3C-SS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "3",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-4C-SS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "4",
+        "sides": "single",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-1C-SS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "1",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-2C-SS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "2",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-3C-SS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "3",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-4C-SS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "4",
+        "sides": "single",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-1C-DS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "1",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-2C-DS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "2",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-3C-DS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "3",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-4C-DS-KFT",
+      "selection": {
+        "style": "grab",
+        "colours": "4",
+        "sides": "double",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-1C-DS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "1",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-2C-DS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "2",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-3C-DS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "3",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-SOS-4C-DS-WHT",
+      "selection": {
+        "style": "grab",
+        "colours": "4",
+        "sides": "double",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "pbg-grab"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "pbg-takeaway",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.405"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.337"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.321"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.245"
+        }
+      ]
+    },
+    {
+      "ref": "pbg-carrier",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.359"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.299"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.285"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.185"
+        }
+      ]
+    },
+    {
+      "ref": "pbg-wide-gusset",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.387"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.322"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.307"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.231"
+        }
+      ]
+    },
+    {
+      "ref": "pbg-grab",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.232"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.181"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.171"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.155"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from order confirmation",
+    "starts": "order confirmation"
+  },
+  "images": [
+    {
+      "file": "02-branded/05-bags/aegea__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "Kraft twisted-handle takeaway bag printed in one colour with an olive-branch illustration and the “Aegea” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/kraft-takeaway-bag-260x160x320.png",
+      "alt": "Kraft twisted-handle takeaway bag printed in one colour with the “HEARTH” bakery design",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/side-street__carrier-bag-medium-flat-handle.png",
+      "alt": "Flat-handle paper carrier bag printed with a hand-drawn checkerboard pattern and the “Side Street” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "carrier"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/halo__flat-handle-carrier-bag-wide-gusset.png",
+      "alt": "Wide-gusset kraft carrier bag printed with the retro “HALO” bagels design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "wide-gusset"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/halo__sos-grab-bag-small.png",
+      "alt": "Small kraft SOS grab bag printed with the retro “HALO” bagel design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "grab"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Paper Bags — Prices | AC Supply Co.",
+    "description": "Price up custom printed paper bags online: twisted-handle takeaway bags, flat-handle carriers and SOS grab bags, 1–4 colour print on kraft or white. Request a quote.",
+    "canonical": "/paper-bags/printed-paper-bags/"
+  }
+}
