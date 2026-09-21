@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Private companion to a product record",
+  "description": "data/private/<slug>.json — gitignored, so it is never deployed. Holds everything commercially sensitive about a product family. Merged into the record in memory by productlib.load_records(); never rendered.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "internal",
+    "pricing"
+  ],
+  "properties": {
+    "internal": {
+      "description": "Never rendered.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pricing_source",
+        "review_date",
+        "notes"
+      ],
+      "properties": {
+        "pricing_source": {
+          "$ref": "#/$defs/text"
+        },
+        "review_date": {
+          "$ref": "#/$defs/date"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "catalogue": {
+          "description": "Links this record to the master catalogue for scripts/import-catalogue.py.",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "group",
+            "items",
+            "options"
+          ],
+          "properties": {
+            "group": {
+              "$ref": "#/$defs/text"
+            },
+            "items": {
+              "type": "object",
+              "description": "pricing ref → Price List item name",
+              "additionalProperties": {
+                "$ref": "#/$defs/text"
+              }
+            },
+            "options": {
+              "type": "object",
+              "description": "option key → Options tab type and value names",
+              "additionalProperties": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "values"
+                ],
+                "properties": {
+                  "type": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "values": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/$defs/text"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pricing": {
+      "description": "Keyed by pricing ref.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "min_qty",
+          "increment",
+          "source",
+          "review_date"
+        ],
+        "properties": {
+          "min_qty": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "increment": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "source": {
+            "$ref": "#/$defs/text"
+          },
+          "review_date": {
+            "$ref": "#/$defs/date"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  }
+}

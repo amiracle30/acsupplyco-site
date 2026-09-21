@@ -19,3 +19,17 @@ assets/images/mockups/*.png
 # would publish GSC data and competitive analysis at /AUDIT-*.md
 AUDIT-*.md
 CRO-PLAN-*.md
+
+# Image-generation working files, competitor price research and PNG masters —
+# deploy is from repo root, so tracking these would publish them. Only the
+# processed images in assets/images/products/<slug>/ deploy.
+output/
+outputs/
+assets/images/products/*.png
+
+__pycache__/
+
+# Supplier quotes, pricing sources, minimums and internal notes for the product
+# records — deploy is from repo root, so tracking these would publish them.
+# Back this folder up yourself: it is NOT in git.
+data/private/

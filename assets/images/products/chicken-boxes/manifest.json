@@ -1,0 +1,98 @@
+{
+  "chicken-box-large-kraft": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-large-white-board": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-medium-kraft": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-medium-white-board": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-small-kraft": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-small-white-board": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-square-kraft": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-box-square-white-board": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "chicken-bucket-with-handle-white-board": {
+    "height": 848,
+    "thumb_height": 268,
+    "thumb_width": 400,
+    "width": 1264
+  },
+  "coop-chicken-box-large": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "peck-chicken-box-large": {
+    "height": 1129,
+    "thumb_height": 324,
+    "thumb_width": 400,
+    "width": 1393
+  },
+  "peck-chicken-box-medium": {
+    "height": 1129,
+    "thumb_height": 324,
+    "thumb_width": 400,
+    "width": 1393
+  },
+  "peck-chicken-box-small": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "peck-chicken-box-square": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "peck-chicken-bucket-with-handle": {
+    "height": 1129,
+    "thumb_height": 324,
+    "thumb_width": 400,
+    "width": 1393
+  },
+  "roost-chicken-box-large": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  }
+}

@@ -1,0 +1,914 @@
+{
+  "id": "double-wall-cups",
+  "slug": "double-wall-cups",
+  "title": "Double wall paper cups",
+  "category": "coffee-cups",
+  "status": "preview",
+  "short_description": "Your coffee. Your character. A double wall cup that keeps drinks warm and puts your brand in every hand.",
+  "description": "A second paper wall adds insulation around your drink. Choose the size, lining and finish that suit your menu, then make the outside your own.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "Full-colour printing",
+    "Four cup sizes",
+    "Your own artwork"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen cup, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Are lids included?",
+      "a": "The prices cover cups only. Tell us if you need matching lids and we will include them in your quote."
+    },
+    {
+      "q": "When will my cups arrive?",
+      "a": "Printed cups are delivered in under a month from artwork approval. We will confirm current availability and delivery timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Hot drinks",
+    "unit": {
+      "one": "cup",
+      "many": "cups"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every cup."
+    },
+    "process": {
+      "eyebrow": "From idea to first pour",
+      "heading": "Your next coffee looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your cup.",
+          "text": "Select your size, lining, finish and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, pour.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "6 oz, 8 oz, 12 oz and 16 oz"
+    },
+    {
+      "label": "Capacity",
+      "value": "6 oz",
+      "applies_to": {
+        "size": "6oz"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "8 oz",
+      "applies_to": {
+        "size": "8oz"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "12 oz",
+      "applies_to": {
+        "size": "12oz"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "16 oz",
+      "applies_to": {
+        "size": "16oz"
+      }
+    },
+    {
+      "label": "Construction",
+      "value": "Double wall paper cup"
+    },
+    {
+      "label": "Board",
+      "value": "White board",
+      "applies_to": {
+        "board": "white"
+      }
+    },
+    {
+      "label": "Board",
+      "value": "Kraft board — quoted on request",
+      "applies_to": {
+        "board": "kraft"
+      }
+    },
+    {
+      "label": "Lining",
+      "value": "Recyclable PE lining",
+      "applies_to": {
+        "lining": "pe"
+      }
+    },
+    {
+      "label": "Lining",
+      "value": "Compostable PLA lining",
+      "applies_to": {
+        "lining": "pla"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "Full-colour wrap"
+    },
+    {
+      "label": "Finish",
+      "value": "Gloss or matte, same price"
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    },
+    {
+      "label": "Lids",
+      "value": "Quoted separately"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "6oz",
+          "label": "6 oz"
+        },
+        {
+          "value": "8oz",
+          "label": "8 oz",
+          "default": true
+        },
+        {
+          "value": "12oz",
+          "label": "12 oz"
+        },
+        {
+          "value": "16oz",
+          "label": "16 oz"
+        }
+      ]
+    },
+    {
+      "key": "lining",
+      "label": "Lining",
+      "values": [
+        {
+          "value": "pe",
+          "label": "Recyclable PE",
+          "default": true
+        },
+        {
+          "value": "pla",
+          "label": "Compostable PLA",
+          "mult": "1.171"
+        }
+      ]
+    },
+    {
+      "key": "finish",
+      "label": "Finish",
+      "values": [
+        {
+          "value": "gloss",
+          "label": "Gloss",
+          "default": true
+        },
+        {
+          "value": "matte",
+          "label": "Matte"
+        }
+      ]
+    },
+    {
+      "key": "board",
+      "label": "Board",
+      "values": [
+        {
+          "value": "white",
+          "label": "White",
+          "default": true
+        },
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "note": "Kraft board is quoted on request."
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "DWC-6OZ-PE-GLS-WHT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-6oz"
+    },
+    {
+      "sku": "DWC-6OZ-PE-MAT-WHT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-6oz"
+    },
+    {
+      "sku": "DWC-6OZ-PLA-GLS-WHT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-6oz"
+    },
+    {
+      "sku": "DWC-6OZ-PLA-MAT-WHT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-6oz"
+    },
+    {
+      "sku": "DWC-8OZ-PE-GLS-WHT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-8oz"
+    },
+    {
+      "sku": "DWC-8OZ-PE-MAT-WHT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-8oz"
+    },
+    {
+      "sku": "DWC-8OZ-PLA-GLS-WHT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-8oz"
+    },
+    {
+      "sku": "DWC-8OZ-PLA-MAT-WHT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-8oz"
+    },
+    {
+      "sku": "DWC-12OZ-PE-GLS-WHT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-12oz"
+    },
+    {
+      "sku": "DWC-12OZ-PE-MAT-WHT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-12oz"
+    },
+    {
+      "sku": "DWC-12OZ-PLA-GLS-WHT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-12oz"
+    },
+    {
+      "sku": "DWC-12OZ-PLA-MAT-WHT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-12oz"
+    },
+    {
+      "sku": "DWC-16OZ-PE-GLS-WHT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-16oz"
+    },
+    {
+      "sku": "DWC-16OZ-PE-MAT-WHT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-16oz"
+    },
+    {
+      "sku": "DWC-16OZ-PLA-GLS-WHT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-16oz"
+    },
+    {
+      "sku": "DWC-16OZ-PLA-MAT-WHT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "dwc-16oz"
+    },
+    {
+      "sku": "DWC-6OZ-PE-GLS-KFT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-6OZ-PE-MAT-KFT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-6OZ-PLA-GLS-KFT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-6OZ-PLA-MAT-KFT",
+      "selection": {
+        "size": "6oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-8OZ-PE-GLS-KFT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-8OZ-PE-MAT-KFT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-8OZ-PLA-GLS-KFT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-8OZ-PLA-MAT-KFT",
+      "selection": {
+        "size": "8oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-12OZ-PE-GLS-KFT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-12OZ-PE-MAT-KFT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-12OZ-PLA-GLS-KFT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-12OZ-PLA-MAT-KFT",
+      "selection": {
+        "size": "12oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-16OZ-PE-GLS-KFT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pe",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-16OZ-PE-MAT-KFT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pe",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-16OZ-PLA-GLS-KFT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pla",
+        "finish": "gloss",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "DWC-16OZ-PLA-MAT-KFT",
+      "selection": {
+        "size": "16oz",
+        "lining": "pla",
+        "finish": "matte",
+        "board": "kraft"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "dwc-6oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.190"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.126"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.116"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.103"
+        }
+      ]
+    },
+    {
+      "ref": "dwc-8oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.202"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.134"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.119"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.103"
+        }
+      ]
+    },
+    {
+      "ref": "dwc-12oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.224"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.156"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.129"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.118"
+        }
+      ]
+    },
+    {
+      "ref": "dwc-16oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.246"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.174"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.148"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.135"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Under a month from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/01-hot-cups/kettle__custom-6oz-double-wall-cup.png",
+      "alt": "White 6 oz double wall paper cup printed with a minimalist “kettle” brand design",
+      "label": "6 oz · kettle",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "6oz"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/coffee-cup-8oz-v2.png",
+      "alt": "8 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
+      "label": "8 oz · FERN",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "8oz"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/coffee-cup-12oz-v2.png",
+      "alt": "12 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
+      "label": "12 oz · FERN",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "12oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/M Coffee Roasters 12oz.png",
+      "alt": "White 12 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
+      "label": "12 oz · M Coffee Roasters",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "12oz"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/coffee-cup-16oz-v2.png",
+      "alt": "16 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
+      "label": "16 oz · FERN",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "16oz"
+      }
+    },
+    {
+      "file": "repo:assets/images/products/coffee-cup-16oz-rosa.png",
+      "alt": "White 16 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
+      "label": "16 oz · ROSA",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "16oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/orbit__custom-16oz-double-wall-cup.png",
+      "alt": "16 oz double wall paper cup printed with the ORBIT brand design",
+      "label": "16 oz · ORBIT",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "16oz"
+      },
+      "optional": true
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-6oz-double-wall-cup__white-board.png",
+      "alt": "Unprinted 6 oz double wall paper cup in white board",
+      "label": "6 oz · White board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "6oz",
+        "board": "white"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-6oz-double-wall-cup__kraft-board.png",
+      "alt": "Unprinted 6 oz double wall paper cup in kraft board",
+      "label": "6 oz · Kraft board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "6oz",
+        "board": "kraft"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-8oz-double-wall-cup__white-board.png",
+      "alt": "Unprinted 8 oz double wall paper cup in white board",
+      "label": "8 oz · White board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "8oz",
+        "board": "white"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-8oz-double-wall-cup__kraft-board.png",
+      "alt": "Unprinted 8 oz double wall paper cup in kraft board",
+      "label": "8 oz · Kraft board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "8oz",
+        "board": "kraft"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-12oz-double-wall-cup__white-board.png",
+      "alt": "Unprinted 12 oz double wall paper cup in white board",
+      "label": "12 oz · White board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "12oz",
+        "board": "white"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-12oz-double-wall-cup__kraft-board.png",
+      "alt": "Unprinted 12 oz double wall paper cup in kraft board",
+      "label": "12 oz · Kraft board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "12oz",
+        "board": "kraft"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-16oz-double-wall-cup__white-board.png",
+      "alt": "Unprinted 16 oz double wall paper cup in white board",
+      "label": "16 oz · White board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "16oz",
+        "board": "white"
+      }
+    },
+    {
+      "file": "01-plates/01-hot-cups/custom-16oz-double-wall-cup__kraft-board.png",
+      "alt": "Unprinted 16 oz double wall paper cup in kraft board",
+      "label": "16 oz · Kraft board, ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "16oz",
+        "board": "kraft"
+      }
+    },
+    {
+      "file": "repo:assets/images/products/coffee-cups.png",
+      "alt": "Five double wall paper cups in a row, each printed with a different brand design: botanical, monogram, colour block, pattern and navy",
+      "label": "Print inspiration · five styles",
+      "order": 10,
+      "role": "inspiration",
+      "match": {}
+    },
+    {
+      "file": "02-branded/01-hot-cups/kettle__custom-6oz-double-wall-cup.png",
+      "alt": "White 6 oz double wall paper cup printed with a minimalist “kettle” brand design",
+      "label": "Print inspiration · kettle",
+      "order": 11,
+      "role": "inspiration",
+      "match": {}
+    },
+    {
+      "file": "02-branded/01-hot-cups/M Coffee Roasters 12oz.png",
+      "alt": "White 12 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
+      "label": "Print inspiration · M Coffee Roasters",
+      "order": 12,
+      "role": "inspiration",
+      "match": {}
+    },
+    {
+      "file": "repo:assets/images/products/coffee-cup-16oz-rosa.png",
+      "alt": "White 16 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
+      "label": "Print inspiration · ROSA",
+      "order": 13,
+      "role": "inspiration",
+      "match": {}
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Double Wall Paper Cups | AC Supply Co.",
+    "description": "Custom printed double wall paper cups in 6, 8, 12 and 16 oz. Full-colour wrap, recyclable or compostable lining, gloss or matte. Indicative trade prices online — request a quote.",
+    "canonical": "/coffee-cups/double-wall-cups/"
+  }
+}

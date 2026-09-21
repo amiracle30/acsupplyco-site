@@ -123,6 +123,30 @@ All inner pages share the same structure:
 
 The nav CTA on `contact/index.html` points to `/contact/` rather than `/#contact`.
 
+## Product Pages (catalogue-driven)
+
+Configurable product pages are **generated** — never hand-edit their HTML, and never fork the template per product.
+
+```
+data/products/<slug>.json        one record per product family — the source of truth for every word, option, variant and price
+data/private/<slug>.json         GITIGNORED companion: internal notes, pricing source, review dates, minimums, catalogue map — back it up yourself
+data/schema/product.schema.json  record schema (draft 2020-12); product-private.schema.json covers the companion
+templates/product.html           the one shared Jinja2 template (approved design; its CSS block is frozen — additions go in the marked block below it)
+assets/js/product-page.js        the one shared interaction script (gallery, option availability, exact-decimal pricing, quote form)
+assets/images/products/<slug>/   build output from process-images.py (webp + jpg + thumb + manifest.json)
+scripts/process-images.py        copies/normalises photography from ~/Downloads/Product Images (or repo: masters)
+scripts/build-products.py        validate → render → write pages → sitemap + category blocks   (--check writes nothing)
+scripts/import-catalogue.py      pulls tiers + multipliers from the master catalogue; prints a diff, writes only with --apply
+scripts/test-product-pages.py    Playwright checks (local only)
+```
+
+- Cloudflare has no build step: run `process-images.py`, then `build-products.py`, then **commit the generated HTML**. Needs Python 3 + jinja2 + Pillow (openpyxl only for the .xlsx import; Playwright only for the tests).
+- `status` decides output: `draft` renders nowhere; `preview` → `preview/<slug>/` (noindex, not in sitemap); `published` → `<category>/<slug>/`, added to `sitemap.xml` and to the category page.
+- The build owns everything between `<!-- products:start -->` and `<!-- products:end -->` in `sitemap.xml` and the six category pages. Don't edit inside those markers.
+- **`data/products/*.json` is publicly served** (deploy is from repo root). Anything commercially sensitive — `internal`, pricing `source`, `review_date`, `min_qty`, `increment` — goes in `data/private/<slug>.json`, which is gitignored and merged in memory by `productlib.load_records()`. The public schema rejects those keys, and the build also greps rendered HTML for them (plus catalogue `floor`/`notes`) and fails. Only confirmed multipliers are priced; anything the catalogue marks ESTIMATE is `available:false` + `quote_only`.
+- Prices are decimal strings, never floats. Python (`Decimal`) and the browser (`BigInt`) must agree to the penny — `test-product-pages.py` checks every tier card.
+- Blank "plate" photos are a preview of the canvas, not a purchasable plain product: label them "ready for your artwork".
+
 ## Tracking & Analytics
 
 Client-side tracking is centralised through one Google Tag Manager container. Site pages **never** contain direct `gtag`, `fbq`, or Ads snippets — all tags live inside the GTM container and are fired by dataLayer events.
@@ -138,7 +162,7 @@ Client-side tracking is centralised through one Google Tag Manager container. Si
 
 | Event | Where | Parameters |
 |---|---|---|
-| `generate_lead` | Quote-form success on `index.html`, `contact/index.html`, and `custom-branded-packaging/index.html` | `form_id` (`home` \| `contact` \| `custom`), `lead_type: 'quote_request'`, `user_email`, `user_phone` |
+| `generate_lead` | Quote-form success on `index.html`, `contact/index.html`, `custom-branded-packaging/index.html`, and the quote dialog on every generated product page (`assets/js/product-page.js`) | `form_id` (`home` \| `contact` \| `custom` \| `product`), `lead_type: 'quote_request'`, `user_email`, `user_phone`; product pages add `product_id` |
 | `contact_whatsapp` | Delegated click on any `wa.me/…` link (all pages) | `link_url`, `page_path` |
 | `contact_phone` | Delegated click on any `tel:` link (all pages) | `link_url`, `page_path` |
 | `contact_email` | Delegated click on any `mailto:` link (all pages) | `link_url`, `page_path` |

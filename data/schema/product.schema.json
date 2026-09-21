@@ -1,0 +1,522 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://acsupplyco.co.uk/data/schema/product.schema.json",
+  "title": "AC Supply Co. product family record",
+  "description": "One record per product family. The template owns presentation; the record owns every word of product content. Commercially sensitive fields (sources, review dates, minimums, notes) live in the gitignored companion data/private/<slug>.json, never here — this file is publicly served. Cross-field rules (SKU uniqueness, tier ordering, image files, leak checks) are asserted by scripts/build-products.py --check.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "slug",
+    "title",
+    "category",
+    "status",
+    "short_description",
+    "description",
+    "benefits",
+    "faqs",
+    "copy",
+    "specs",
+    "options",
+    "variants",
+    "pricing",
+    "charges",
+    "lead_time",
+    "images",
+    "enquiry",
+    "seo"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/slug",
+      "description": "Stable identifier; never changes once published."
+    },
+    "slug": {
+      "$ref": "#/$defs/slug"
+    },
+    "title": {
+      "$ref": "#/$defs/text"
+    },
+    "category": {
+      "enum": [
+        "coffee-cups",
+        "takeaway-packaging",
+        "paper-bags",
+        "bakery-packaging",
+        "custom-pizza-boxes",
+        "catering-supplies"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "preview",
+        "published"
+      ]
+    },
+    "short_description": {
+      "$ref": "#/$defs/text"
+    },
+    "description": {
+      "$ref": "#/$defs/text",
+      "description": "Markdown: paragraphs, **bold**, *italic*, [links](/path/)."
+    },
+    "benefits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/text"
+      }
+    },
+    "faqs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "q",
+          "a"
+        ],
+        "properties": {
+          "q": {
+            "$ref": "#/$defs/text"
+          },
+          "a": {
+            "$ref": "#/$defs/text"
+          }
+        }
+      }
+    },
+    "copy": {
+      "description": "Family-specific wording for the template's fixed slots, so the template itself carries no product words.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "unit",
+        "image_label",
+        "gallery_caption",
+        "details",
+        "process",
+        "faq"
+      ],
+      "properties": {
+        "eyebrow": {
+          "$ref": "#/$defs/text"
+        },
+        "unit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "one",
+            "many"
+          ],
+          "properties": {
+            "one": {
+              "$ref": "#/$defs/text"
+            },
+            "many": {
+              "$ref": "#/$defs/text"
+            }
+          }
+        },
+        "image_label": {
+          "$ref": "#/$defs/text"
+        },
+        "gallery_caption": {
+          "$ref": "#/$defs/text"
+        },
+        "details": {
+          "$ref": "#/$defs/heading"
+        },
+        "process": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "eyebrow",
+            "heading",
+            "steps"
+          ],
+          "properties": {
+            "eyebrow": {
+              "$ref": "#/$defs/text"
+            },
+            "heading": {
+              "$ref": "#/$defs/text"
+            },
+            "steps": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "eyebrow",
+                  "title",
+                  "text"
+                ],
+                "properties": {
+                  "eyebrow": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "title": {
+                    "$ref": "#/$defs/text"
+                  },
+                  "text": {
+                    "$ref": "#/$defs/text"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "faq": {
+          "$ref": "#/$defs/heading"
+        }
+      }
+    },
+    "specs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "value"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "value": {
+            "$ref": "#/$defs/text"
+          },
+          "applies_to": {
+            "$ref": "#/$defs/selection",
+            "description": "Partial selection; the spec shows only while every key matches."
+          }
+        }
+      }
+    },
+    "options": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "label",
+          "values"
+        ],
+        "properties": {
+          "key": {
+            "$ref": "#/$defs/key"
+          },
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "values": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "value",
+                "label"
+              ],
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/key"
+                },
+                "label": {
+                  "$ref": "#/$defs/text"
+                },
+                "note": {
+                  "$ref": "#/$defs/text"
+                },
+                "default": {
+                  "type": "boolean"
+                },
+                "mult": {
+                  "$ref": "#/$defs/decimal",
+                  "description": "Price multiplier applied to the tier unit price. Omit for ×1. Only confirmed multipliers — estimates are never priced."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "variants": {
+      "description": "Explicit valid combinations only — never the generated cartesian product.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sku",
+          "selection",
+          "available"
+        ],
+        "properties": {
+          "sku": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+(-[A-Z0-9]+)*$"
+          },
+          "selection": {
+            "$ref": "#/$defs/selection"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "lead_time": {
+            "$ref": "#/$defs/lead_time"
+          },
+          "pricing_ref": {
+            "$ref": "#/$defs/key"
+          },
+          "enquiry": {
+            "$ref": "#/$defs/enquiry"
+          }
+        }
+      }
+    },
+    "pricing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ref",
+          "currency",
+          "vat",
+          "tiers"
+        ],
+        "properties": {
+          "ref": {
+            "$ref": "#/$defs/key"
+          },
+          "currency": {
+            "const": "GBP"
+          },
+          "vat": {
+            "const": "ex"
+          },
+          "tiers": {
+            "description": "Any number of rungs, strictly increasing in qty. unit null = price on application.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "qty",
+                "unit"
+              ],
+              "properties": {
+                "qty": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^\\d+\\.\\d{3,}$"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "charges": {
+      "description": "Confirmed charges only. Usually empty: proof and tooling are included, delivery is free.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "amount",
+          "applies",
+          "vat"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "amount": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d{2}$"
+          },
+          "applies": {
+            "enum": [
+              "always",
+              "custom_print"
+            ]
+          },
+          "vat": {
+            "const": "ex"
+          }
+        }
+      }
+    },
+    "lead_time": {
+      "$ref": "#/$defs/lead_time"
+    },
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "file",
+          "alt",
+          "label",
+          "order",
+          "role",
+          "match"
+        ],
+        "properties": {
+          "file": {
+            "type": "string",
+            "pattern": "^[^/].*\\.(png|jpg|jpeg|webp)$",
+            "description": "Path relative to ~/Downloads/Product Images/, or repo:<path> for a master image kept in this repo."
+          },
+          "alt": {
+            "$ref": "#/$defs/text"
+          },
+          "label": {
+            "$ref": "#/$defs/text"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "role": {
+            "enum": [
+              "hero",
+              "gallery",
+              "inspiration"
+            ]
+          },
+          "match": {
+            "$ref": "#/$defs/selection"
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Shot not delivered yet: skipped with a warning while the source file is missing, picked up automatically once it lands."
+          }
+        }
+      }
+    },
+    "enquiry": {
+      "$ref": "#/$defs/enquiry"
+    },
+    "seo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "description",
+        "canonical"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/$defs/text"
+        },
+        "description": {
+          "$ref": "#/$defs/text"
+        },
+        "canonical": {
+          "type": "string",
+          "pattern": "^/([a-z0-9-]+/)+$"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "key": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+([_-][a-z0-9]+)*$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "decimal": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d{1,4}$"
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/key"
+      }
+    },
+    "heading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "heading"
+      ],
+      "properties": {
+        "eyebrow": {
+          "$ref": "#/$defs/text"
+        },
+        "heading": {
+          "$ref": "#/$defs/text"
+        }
+      }
+    },
+    "lead_time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "starts"
+      ],
+      "properties": {
+        "text": {
+          "$ref": "#/$defs/text"
+        },
+        "starts": {
+          "enum": [
+            "artwork approval",
+            "order confirmation"
+          ]
+        }
+      }
+    },
+    "enquiry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "priced",
+            "quote_only"
+          ]
+        }
+      }
+    }
+  }
+}
