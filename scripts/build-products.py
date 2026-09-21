@@ -222,6 +222,8 @@ def priced_tiers(record, variant, selection):
         return []
     entry = next(p for p in record['pricing'] if p['ref'] == variant['pricing_ref'])
     mults = [v['mult'] for o in record['options'] for v in o['values'] if v['value'] == selection[o['key']] and v.get('mult')]
+    if entry.get('apply_multipliers') is False:
+        mults = []
     return [(t['qty'], unit_price(t['unit'], mults)) for t in entry['tiers']]
 
 
@@ -260,6 +262,7 @@ def page_data(record, images, defaults):
                       **({'lead_time': v['lead_time']['text']} if v.get('lead_time') else {})}
                      for v in record['variants']],
         'pricing': {p['ref']: [[t['qty'], t['unit']] for t in p['tiers']] for p in record['pricing']},
+        'flat': [p['ref'] for p in record['pricing'] if p.get('apply_multipliers') is False],
         'charges': [{'label': c['label'], 'amount': c['amount']} for c in record['charges']],
         'lead_time': record['lead_time']['text'],
         'images': images,

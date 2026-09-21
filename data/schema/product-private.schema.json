@@ -72,6 +72,10 @@
               }
             }
           }
+        },
+        "express_costing": {
+          "type": "object",
+          "description": "Supplier cost workings behind non-catalogue price ladders. Free-form; never rendered."
         }
       }
     },

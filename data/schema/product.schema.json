@@ -330,6 +330,10 @@
                 }
               }
             }
+          },
+          "apply_multipliers": {
+            "type": "boolean",
+            "description": "Default true. Set false when the tiers are already the final price for the variants that use this entry (e.g. a supplier who prices each colour count as its own ladder), so option multipliers are not applied on top."
           }
         }
       }

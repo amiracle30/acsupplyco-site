@@ -43,7 +43,8 @@
   const isPriced = variant => Boolean(variant && variant.available && variant.mode === 'priced' && data.pricing[variant.pricing_ref]);
   function tiersFor(variant) {
     if (!isPriced(variant)) return [];
-    const mults = data.options.map(valueOf).filter(v => v && v.mult).map(v => v.mult);
+    // "flat" pricing entries are already final prices — option multipliers are not applied on top.
+    const mults = data.flat.includes(variant.pricing_ref) ? [] : data.options.map(valueOf).filter(v => v && v.mult).map(v => v.mult);
     return data.pricing[variant.pricing_ref].map(([qty, unit]) => ({ qty, unit: unitMilli(unit, mults) }));
   }
 
@@ -120,6 +121,7 @@
       button.setAttribute('aria-pressed', String(selected[option] === value));
       // Disabled when no variant exists for this value with the other choices left exactly as they are.
       button.disabled = selected[option] !== value && !variantFor({ ...selected, [option]: value });
+      button.title = button.disabled ? 'Not available with your other choices' : '';
     });
     document.querySelectorAll('[data-selection]').forEach(el => {
       const option = data.options.find(o => o.key === el.dataset.selection);

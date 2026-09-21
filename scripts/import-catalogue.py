@@ -70,7 +70,9 @@ def plan(record, items, options):
     if not mapping:
         return changes, [f'{record["slug"]}: no internal.catalogue map in data/private/{record["slug"]}.json — cannot import']
     for entry in record['pricing']:
-        name = mapping['items'].get(entry['ref'])
+        if entry['ref'] not in mapping['items']:
+            continue  # priced from a supplier cost sheet, not the catalogue (see the private file's notes)
+        name = mapping['items'][entry['ref']]
         if name not in items:
             problems.append(f'{record["slug"]}: pricing "{entry["ref"]}" → catalogue item {name!r} not found')
             continue

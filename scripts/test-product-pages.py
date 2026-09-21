@@ -69,6 +69,17 @@ def choose(page, option, value):
     page.click(f'[data-option="{option}"][data-value="{value}"]')
 
 
+def go_to(page, target):
+    """Reach a selection one click at a time, taking whichever needed button is currently enabled —
+    some routes pass through combinations that don't exist, and those buttons are disabled."""
+    for _ in range(len(target) + 1):
+        pending = [(k, v) for k, v in target.items() if not pressed(page, k, v)]
+        if not pending:
+            return
+        key, value = next(((k, v) for k, v in pending if page.is_enabled(f'[data-option="{k}"][data-value="{v}"]')), pending[0])
+        choose(page, key, value)
+
+
 def selection(page, record):
     return {o['key']: next(v['value'] for v in o['values'] if pressed(page, o['key'], v['value'])) for o in record['options']}
 
@@ -100,11 +111,9 @@ def test_record(browser, base, record):
     # -- every priced variant: each tier card updates unit / subtotal / total exactly
     mismatches, cards = [], 0
     for variant in [v for v in record['variants'] if v['available'] and v.get('pricing_ref')]:
-        for key, value in variant['selection'].items():
-            if not pressed(page, key, value):
-                choose(page, key, value)
+        go_to(page, variant['selection'])
         entry = next(p for p in record['pricing'] if p['ref'] == variant['pricing_ref'])
-        mults = [v['mult'] for o in options for v in o['values'] if v['value'] == variant['selection'][o['key']] and v.get('mult')]
+        mults = [] if entry.get('apply_multipliers') is False else [v['mult'] for o in options for v in o['values'] if v['value'] == variant['selection'][o['key']] and v.get('mult')]
         shown = [int(b.get_attribute('data-quantity')) for b in page.locator('#tiers .tier').all()]
         if shown != [t['qty'] for t in entry['tiers']]:
             mismatches.append(f'{variant["sku"]}: tiers {shown}')
@@ -122,9 +131,7 @@ def test_record(browser, base, record):
     # -- quote-only state
     quote_only = next((v for v in record['variants'] if not v['available']), None)
     if quote_only:
-        for key, value in quote_only['selection'].items():
-            if not pressed(page, key, value):
-                choose(page, key, value)
+        go_to(page, quote_only['selection'])
         check('quote-only variant: no tier cards, "Price on request", never £0',
               page.locator('#tiers .tier').count() == 0 and page.inner_text('#total') == 'Price on request'
               and '£0' not in page.inner_text('.configurator .order') and not page.is_hidden('#selection-note'))
@@ -202,7 +209,7 @@ def test_record(browser, base, record):
     page.click('#quote-submit')
     page.wait_for_url('**/thank-you/', timeout=5000)
     entry = next(p for p in record['pricing'] if p['ref'] == variant['pricing_ref'])
-    mults = [v['mult'] for o in options for v in o['values'] if v['value'] == current[o['key']] and v.get('mult')]
+    mults = [] if entry.get('apply_multipliers') is False else [v['mult'] for o in options for v in o['values'] if v['value'] == current[o['key']] and v.get('mult')]
     unit = unit_price(next(t['unit'] for t in entry['tiers'] if t['qty'] == qty), mults)
     labels = [next(v['label'] for v in o['values'] if v['value'] == current[o['key']]) for o in options]
     check('enquiry payload: product_id, variant_sku, options, qty, estimates, indicative note',
