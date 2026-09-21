@@ -20,7 +20,7 @@ SITE = 'https://acsupplyco.co.uk'
 
 # Existing site sections a product can belong to, with the breadcrumb label.
 CATEGORIES = {
-    'coffee-cups': 'Paper cups',
+    'coffee-cups': 'Cups',
     'takeaway-packaging': 'Takeaway packaging',
     'paper-bags': 'Paper bags',
     'bakery-packaging': 'Bakery packaging',

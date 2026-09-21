@@ -1,0 +1,2423 @@
+{
+  "id": "cold-cups",
+  "slug": "cold-cups",
+  "title": "Custom printed cold cups",
+  "category": "coffee-cups",
+  "status": "preview",
+  "short_description": "Your iced coffee, smoothie or juice — with your brand on show. Clear PET cold cups printed with your logo, in four sizes.",
+  "description": "A clear cup shows off the drink, and the print shows off you. Choose the size, the number of print colours and whether you want lids, then send us your artwork.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1, 2 or 3 colour print",
+    "Four cup sizes",
+    "With or without lids"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen cup, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Which lids can I have?",
+      "a": "Choose “With lid” and the price includes a lid for every cup. Dome, flat and sip-through styles are available — tell us which you want in the enquiry and we will confirm it with your quote."
+    },
+    {
+      "q": "Can I have recycled or compostable cups?",
+      "a": "Recycled PET (rPET) and compostable PLA cups are available and are quoted on request. Select the material you want and send us the configuration."
+    },
+    {
+      "q": "Can the cup be printed on both sides?",
+      "a": "Yes. Double-sided print is quoted on request — select it and send us the configuration with the quantity you need."
+    },
+    {
+      "q": "When will my cups arrive?",
+      "a": "As a general guide, allow several weeks from order confirmation to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Cold drinks",
+    "unit": {
+      "one": "cup",
+      "many": "cups"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every cup."
+    },
+    "process": {
+      "eyebrow": "From idea to first pour",
+      "heading": "Your next iced drink looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your cup.",
+          "text": "Select your size, print, material, lid and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, pour.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "10 oz, 12 oz, 16 oz and 20 oz"
+    },
+    {
+      "label": "Capacity",
+      "value": "10 oz",
+      "applies_to": {
+        "size": "10oz"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "12 oz",
+      "applies_to": {
+        "size": "12oz"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "16 oz",
+      "applies_to": {
+        "size": "16oz"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "20 oz",
+      "applies_to": {
+        "size": "20oz"
+      }
+    },
+    {
+      "label": "Material",
+      "value": "Clear PET",
+      "applies_to": {
+        "material": "pet"
+      }
+    },
+    {
+      "label": "Material",
+      "value": "Recycled PET (rPET) — quoted on request",
+      "applies_to": {
+        "material": "rpet"
+      }
+    },
+    {
+      "label": "Material",
+      "value": "Compostable PLA — quoted on request",
+      "applies_to": {
+        "material": "pla"
+      }
+    },
+    {
+      "label": "Print",
+      "value": "Single-sided",
+      "applies_to": {
+        "sides": "single"
+      }
+    },
+    {
+      "label": "Print",
+      "value": "Double-sided — quoted on request",
+      "applies_to": {
+        "sides": "double"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Print colours",
+      "value": "3 colours",
+      "applies_to": {
+        "colours": "3"
+      }
+    },
+    {
+      "label": "Lid",
+      "value": "Not included",
+      "applies_to": {
+        "lid": "none"
+      }
+    },
+    {
+      "label": "Lid",
+      "value": "Included — dome, flat or sip-through",
+      "applies_to": {
+        "lid": "lid"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "10oz",
+          "label": "10 oz"
+        },
+        {
+          "value": "12oz",
+          "label": "12 oz",
+          "default": true
+        },
+        {
+          "value": "16oz",
+          "label": "16 oz"
+        },
+        {
+          "value": "20oz",
+          "label": "20 oz"
+        }
+      ]
+    },
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.413"
+        },
+        {
+          "value": "3",
+          "label": "3 colours",
+          "mult": "1.825"
+        }
+      ]
+    },
+    {
+      "key": "sides",
+      "label": "Print sides",
+      "values": [
+        {
+          "value": "single",
+          "label": "Single-sided",
+          "default": true
+        },
+        {
+          "value": "double",
+          "label": "Double-sided",
+          "note": "Double-sided print is quoted on request."
+        }
+      ]
+    },
+    {
+      "key": "material",
+      "label": "Material",
+      "values": [
+        {
+          "value": "pet",
+          "label": "PET",
+          "default": true
+        },
+        {
+          "value": "rpet",
+          "label": "Recycled rPET",
+          "note": "Recycled rPET is quoted on request."
+        },
+        {
+          "value": "pla",
+          "label": "Compostable PLA",
+          "note": "Compostable PLA is quoted on request."
+        }
+      ]
+    },
+    {
+      "key": "lid",
+      "label": "Lid",
+      "values": [
+        {
+          "value": "none",
+          "label": "No lid",
+          "default": true
+        },
+        {
+          "value": "lid",
+          "label": "With lid",
+          "mult": "1.285"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "CLC-10OZ-SS-1C-PET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-10oz"
+    },
+    {
+      "sku": "CLC-10OZ-SS-2C-PET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-10oz"
+    },
+    {
+      "sku": "CLC-10OZ-SS-3C-PET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-10oz"
+    },
+    {
+      "sku": "CLC-10OZ-SS-1C-PET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-10oz"
+    },
+    {
+      "sku": "CLC-10OZ-SS-2C-PET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-10oz"
+    },
+    {
+      "sku": "CLC-10OZ-SS-3C-PET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-10oz"
+    },
+    {
+      "sku": "CLC-10OZ-SS-1C-RPET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-2C-RPET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-3C-RPET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-1C-RPET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-2C-RPET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-3C-RPET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-1C-PLA-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-2C-PLA-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-3C-PLA-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-1C-PLA-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-2C-PLA-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-SS-3C-PLA-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-1C-PET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-2C-PET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-3C-PET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-1C-PET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-2C-PET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-3C-PET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-1C-RPET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-2C-RPET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-3C-RPET-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-1C-RPET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-2C-RPET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-3C-RPET-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-1C-PLA-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-2C-PLA-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-3C-PLA-NL",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-1C-PLA-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-2C-PLA-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-10OZ-DS-3C-PLA-LID",
+      "selection": {
+        "size": "10oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-1C-PET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-12oz"
+    },
+    {
+      "sku": "CLC-12OZ-SS-2C-PET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-12oz"
+    },
+    {
+      "sku": "CLC-12OZ-SS-3C-PET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-12oz"
+    },
+    {
+      "sku": "CLC-12OZ-SS-1C-PET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-12oz"
+    },
+    {
+      "sku": "CLC-12OZ-SS-2C-PET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-12oz"
+    },
+    {
+      "sku": "CLC-12OZ-SS-3C-PET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-12oz"
+    },
+    {
+      "sku": "CLC-12OZ-SS-1C-RPET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-2C-RPET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-3C-RPET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-1C-RPET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-2C-RPET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-3C-RPET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-1C-PLA-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-2C-PLA-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-3C-PLA-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-1C-PLA-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-2C-PLA-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-SS-3C-PLA-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-1C-PET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-2C-PET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-3C-PET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-1C-PET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-2C-PET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-3C-PET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-1C-RPET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-2C-RPET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-3C-RPET-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-1C-RPET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-2C-RPET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-3C-RPET-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-1C-PLA-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-2C-PLA-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-3C-PLA-NL",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-1C-PLA-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-2C-PLA-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-12OZ-DS-3C-PLA-LID",
+      "selection": {
+        "size": "12oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-1C-PET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-16oz"
+    },
+    {
+      "sku": "CLC-16OZ-SS-2C-PET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-16oz"
+    },
+    {
+      "sku": "CLC-16OZ-SS-3C-PET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-16oz"
+    },
+    {
+      "sku": "CLC-16OZ-SS-1C-PET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-16oz"
+    },
+    {
+      "sku": "CLC-16OZ-SS-2C-PET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-16oz"
+    },
+    {
+      "sku": "CLC-16OZ-SS-3C-PET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-16oz"
+    },
+    {
+      "sku": "CLC-16OZ-SS-1C-RPET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-2C-RPET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-3C-RPET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-1C-RPET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-2C-RPET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-3C-RPET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-1C-PLA-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-2C-PLA-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-3C-PLA-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-1C-PLA-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-2C-PLA-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-SS-3C-PLA-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-1C-PET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-2C-PET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-3C-PET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-1C-PET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-2C-PET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-3C-PET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-1C-RPET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-2C-RPET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-3C-RPET-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-1C-RPET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-2C-RPET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-3C-RPET-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-1C-PLA-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-2C-PLA-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-3C-PLA-NL",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-1C-PLA-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-2C-PLA-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-16OZ-DS-3C-PLA-LID",
+      "selection": {
+        "size": "16oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-1C-PET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-20oz"
+    },
+    {
+      "sku": "CLC-20OZ-SS-2C-PET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-20oz"
+    },
+    {
+      "sku": "CLC-20OZ-SS-3C-PET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "clc-20oz"
+    },
+    {
+      "sku": "CLC-20OZ-SS-1C-PET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-20oz"
+    },
+    {
+      "sku": "CLC-20OZ-SS-2C-PET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-20oz"
+    },
+    {
+      "sku": "CLC-20OZ-SS-3C-PET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": true,
+      "pricing_ref": "clc-20oz"
+    },
+    {
+      "sku": "CLC-20OZ-SS-1C-RPET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-2C-RPET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-3C-RPET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-1C-RPET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-2C-RPET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-3C-RPET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-1C-PLA-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-2C-PLA-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-3C-PLA-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-1C-PLA-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-2C-PLA-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-SS-3C-PLA-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "single",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-1C-PET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-2C-PET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-3C-PET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-1C-PET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-2C-PET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-3C-PET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-1C-RPET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-2C-RPET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-3C-RPET-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-1C-RPET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-2C-RPET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-3C-RPET-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "rpet",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-1C-PLA-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-2C-PLA-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-3C-PLA-NL",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "none"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-1C-PLA-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "1",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-2C-PLA-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "2",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "CLC-20OZ-DS-3C-PLA-LID",
+      "selection": {
+        "size": "20oz",
+        "sides": "double",
+        "colours": "3",
+        "material": "pla",
+        "lid": "lid"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "clc-10oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.245"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.215"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.187"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.159"
+        }
+      ]
+    },
+    {
+      "ref": "clc-12oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.246"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.216"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.188"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.161"
+        }
+      ]
+    },
+    {
+      "ref": "clc-16oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.251"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.224"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.200"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.178"
+        }
+      ]
+    },
+    {
+      "ref": "clc-20oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.284"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.252"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.222"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.192"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from order confirmation",
+    "starts": "order confirmation"
+  },
+  "images": [
+    {
+      "file": "02-branded/02-cold-cups/ripe__10oz-pet-cold-cup.png",
+      "alt": "10 oz clear PET cold cup printed with a berry pattern and the “Ripe” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "10oz"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/cold-cup-12oz.png",
+      "alt": "12 oz clear PET cold cup printed in one colour with a green mint-leaf illustration and the “VERDE” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "12oz"
+      }
+    },
+    {
+      "file": "02-branded/02-cold-cups/pulp__12oz-pet-cold-cup.png",
+      "alt": "12 oz clear PET cold cup printed with an orange citrus-slice graphic and the “PULP” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "12oz"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/cold-cup-16oz.png",
+      "alt": "16 oz clear PET cold cup printed in one colour with a green mint-leaf illustration and the “VERDE” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "16oz"
+      }
+    },
+    {
+      "file": "02-branded/02-cold-cups/pulp__16oz-pet-cold-cup.png",
+      "alt": "16 oz clear PET cold cup printed with an orange citrus-slice graphic and the “PULP” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "16oz"
+      },
+      "optional": true
+    },
+    {
+      "file": "02-branded/02-cold-cups/bolt__20oz-pet-cold-cup.png",
+      "alt": "20 oz clear PET cold cup printed with a diagonal black and lime “BOLT” band",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "20oz"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Cold Cups — Clear PET | AC Supply Co.",
+    "description": "Custom printed clear PET cold cups in 10, 12, 16 and 20 oz. 1–3 colour print, with or without lids. Indicative trade prices online — request a quote.",
+    "canonical": "/coffee-cups/cold-cups/"
+  }
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Browser checks for the generated product pages (local only — not part of the deploy).
 
-    python3 scripts/build-products.py && python3 scripts/test-product-pages.py
+    python3 scripts/build-products.py && python3 scripts/test-product-pages.py [slug ...]
 
 Needs the Python Playwright package with Chromium installed. Serves the repo on
 a free local port itself. States the real catalogue doesn't contain (a missing
@@ -225,7 +225,8 @@ def test_record(browser, base, record):
 
 
 def main():
-    records = [r for _, r in load_records() if r['status'] == 'preview']
+    only = set(sys.argv[1:])  # optional slugs: test-product-pages.py cold-cups pizza-boxes
+    records = [r for _, r in load_records() if r['status'] == 'preview' and (not only or r['slug'] in only)]
     server = serve()
     base = f'http://127.0.0.1:{server.server_address[1]}'
     with sync_playwright() as p:

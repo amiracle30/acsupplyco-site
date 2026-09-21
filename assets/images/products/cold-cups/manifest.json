@@ -1,0 +1,32 @@
+{
+  "bolt-20oz-pet-cold-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "cold-cup-12oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "cold-cup-16oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "pulp-12oz-pet-cold-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "ripe-10oz-pet-cold-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  }
+}
