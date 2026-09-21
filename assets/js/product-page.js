@@ -69,8 +69,10 @@
     const matched = data.images.filter(i => i.role !== 'inspiration' && matches(i.match, selected))
       .sort((a, b) => (a.role === 'hero' ? 0 : 1) - (b.role === 'hero' ? 0 : 1) || specificity(b) - specificity(a) || a.order - b.order);
     const inspiration = data.images.filter(i => i.role === 'inspiration' && matches(i.match, selected)).sort((a, b) => a.order - b.order);
+    // Fallback: no shot for this exact selection yet — show the family's hero shots rather than an empty stage.
+    const pool = matched.length ? matched : data.images.filter(i => i.role === 'hero').sort((a, b) => a.order - b.order);
     const seen = new Set();
-    const next = [...matched, ...inspiration].filter(i => !seen.has(i.src) && seen.add(i.src));
+    const next = [...pool, ...inspiration].filter(i => !seen.has(i.src) && seen.add(i.src));
     const key = next.map(i => i.src).join('|');
     if (key === galleryKey) return;
     galleryKey = key;

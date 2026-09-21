@@ -204,6 +204,8 @@ def gallery_for(images, selection):
                      key=lambda i: (i['role'] != 'hero', -len(i['match']), i['order']))
     inspiration = sorted((i for i in images if i['role'] == 'inspiration' and matches(i['match'], selection)),
                          key=lambda i: i['order'])
+    if not matched:  # same fallback as renderGallery() in product-page.js
+        matched = sorted((i for i in images if i['role'] == 'hero'), key=lambda i: i['order'])
     seen, gallery = set(), []
     for image in matched + inspiration:
         if image['src'] not in seen:

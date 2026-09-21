@@ -18,7 +18,7 @@ from decimal import Decimal
 
 from playwright.sync_api import sync_playwright
 
-from productlib import ROOT, gbp, load_records, subtotal, unit_price
+from productlib import ROOT, gbp, load_records, subtotal, unit_price, web_name
 
 failures = []
 
@@ -104,7 +104,13 @@ def test_record(browser, base, record):
     before = page.get_attribute('#hero-image', 'src')
     other = next(v['value'] for v in first['values'] if not v.get('default'))
     choose(page, first['key'], other)
-    check('switching the first option changes the hero image', page.get_attribute('#hero-image', 'src') != before)
+    manifest = json.loads((ROOT / 'assets/images/products' / slug / 'manifest.json').read_text())
+    has_own_shot = any(i['match'].get(first['key']) == other and web_name(i['file']) in manifest for i in record['images'])
+    if has_own_shot:
+        check('switching the first option changes the hero image', page.get_attribute('#hero-image', 'src') != before)
+    else:
+        check('no shot for that option yet: hero falls back to a family image instead of going blank',
+              page.get_attribute('#hero-image', 'src') and page.evaluate("document.getElementById('hero-image').naturalWidth > 0"))
     check('hero image actually loads', page.evaluate("() => { const i = document.getElementById('hero-image'); return i.complete && i.naturalWidth > 0; }")
           or page.wait_for_function("document.getElementById('hero-image').naturalWidth > 0", timeout=5000) is not None)
 

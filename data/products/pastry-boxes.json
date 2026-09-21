@@ -1,0 +1,1028 @@
+{
+  "id": "pastry-boxes",
+  "slug": "pastry-boxes",
+  "title": "Custom printed cake and pastry boxes",
+  "category": "bakery-packaging",
+  "status": "preview",
+  "short_description": "Your bakes, boxed in your brand. Printed cake and pastry boxes in three sizes, on kraft or white board.",
+  "description": "The box goes home with the customer and opens on a kitchen table in front of other people — the best advert a bakery gets. Choose the size, the number of print colours and the board, then put your name on the lid.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1, 2 or 3 colour print",
+    "Three box sizes",
+    "Your own artwork"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen box, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Which size do I need?",
+      "a": "Small (8 × 8 × 4 in) suits doughnuts, cupcakes and a small cake. Medium (10 × 6 × 3.5 in) suits pastries, tarts and traybakes. Large suits full-size cakes and larger mixed boxes. Tell us what you bake and we will advise."
+    },
+    {
+      "q": "Can I have a window in the lid?",
+      "a": "Windowed lids are available on request. Mention it in your enquiry and we will include it in your quote."
+    },
+    {
+      "q": "Can the boxes be laminated?",
+      "a": "Gloss and matte lamination are available and are quoted on request. Select the finish you want and send us the configuration."
+    },
+    {
+      "q": "When will my boxes arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Bakery",
+    "unit": {
+      "one": "box",
+      "many": "boxes"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every box."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next box looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your box.",
+          "text": "Select your size, print colours, board and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, bake.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "Small, Medium and Large"
+    },
+    {
+      "label": "Dimensions",
+      "value": "8 × 8 × 4 in (203 × 203 × 102 mm)",
+      "applies_to": {
+        "size": "small"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "10 × 6 × 3.5 in (254 × 152 × 89 mm)",
+      "applies_to": {
+        "size": "medium"
+      }
+    },
+    {
+      "label": "Board",
+      "value": "Kraft",
+      "applies_to": {
+        "material": "kraft"
+      }
+    },
+    {
+      "label": "Board",
+      "value": "White",
+      "applies_to": {
+        "material": "white"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "3 colours",
+      "applies_to": {
+        "colours": "3"
+      }
+    },
+    {
+      "label": "Lamination",
+      "value": "Unlaminated",
+      "applies_to": {
+        "lamination": "none"
+      }
+    },
+    {
+      "label": "Lamination",
+      "value": "Gloss — quoted on request",
+      "applies_to": {
+        "lamination": "gloss"
+      }
+    },
+    {
+      "label": "Lamination",
+      "value": "Matte — quoted on request",
+      "applies_to": {
+        "lamination": "matte"
+      }
+    },
+    {
+      "label": "Window",
+      "value": "Available on request"
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "small",
+          "label": "Small",
+          "default": true
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.138"
+        },
+        {
+          "value": "3",
+          "label": "3 colours",
+          "mult": "1.207"
+        }
+      ]
+    },
+    {
+      "key": "material",
+      "label": "Board",
+      "values": [
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "default": true
+        },
+        {
+          "value": "white",
+          "label": "White",
+          "mult": "1.047"
+        }
+      ]
+    },
+    {
+      "key": "lamination",
+      "label": "Lamination",
+      "values": [
+        {
+          "value": "none",
+          "label": "None",
+          "default": true
+        },
+        {
+          "value": "gloss",
+          "label": "Gloss",
+          "note": "Gloss lamination is quoted on request."
+        },
+        {
+          "value": "matte",
+          "label": "Matte",
+          "note": "Matte lamination is quoted on request."
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "PSB-SML-1C-KFT-NL",
+      "selection": {
+        "size": "small",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-small"
+    },
+    {
+      "sku": "PSB-SML-2C-KFT-NL",
+      "selection": {
+        "size": "small",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-small"
+    },
+    {
+      "sku": "PSB-SML-3C-KFT-NL",
+      "selection": {
+        "size": "small",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-small"
+    },
+    {
+      "sku": "PSB-SML-1C-WHT-NL",
+      "selection": {
+        "size": "small",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-small"
+    },
+    {
+      "sku": "PSB-SML-2C-WHT-NL",
+      "selection": {
+        "size": "small",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-small"
+    },
+    {
+      "sku": "PSB-SML-3C-WHT-NL",
+      "selection": {
+        "size": "small",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-small"
+    },
+    {
+      "sku": "PSB-SML-1C-KFT-GL",
+      "selection": {
+        "size": "small",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-2C-KFT-GL",
+      "selection": {
+        "size": "small",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-3C-KFT-GL",
+      "selection": {
+        "size": "small",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-1C-WHT-GL",
+      "selection": {
+        "size": "small",
+        "colours": "1",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-2C-WHT-GL",
+      "selection": {
+        "size": "small",
+        "colours": "2",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-3C-WHT-GL",
+      "selection": {
+        "size": "small",
+        "colours": "3",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-1C-KFT-ML",
+      "selection": {
+        "size": "small",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-2C-KFT-ML",
+      "selection": {
+        "size": "small",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-3C-KFT-ML",
+      "selection": {
+        "size": "small",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-1C-WHT-ML",
+      "selection": {
+        "size": "small",
+        "colours": "1",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-2C-WHT-ML",
+      "selection": {
+        "size": "small",
+        "colours": "2",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-SML-3C-WHT-ML",
+      "selection": {
+        "size": "small",
+        "colours": "3",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-1C-KFT-NL",
+      "selection": {
+        "size": "medium",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-medium"
+    },
+    {
+      "sku": "PSB-MED-2C-KFT-NL",
+      "selection": {
+        "size": "medium",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-medium"
+    },
+    {
+      "sku": "PSB-MED-3C-KFT-NL",
+      "selection": {
+        "size": "medium",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-medium"
+    },
+    {
+      "sku": "PSB-MED-1C-WHT-NL",
+      "selection": {
+        "size": "medium",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-medium"
+    },
+    {
+      "sku": "PSB-MED-2C-WHT-NL",
+      "selection": {
+        "size": "medium",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-medium"
+    },
+    {
+      "sku": "PSB-MED-3C-WHT-NL",
+      "selection": {
+        "size": "medium",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-medium"
+    },
+    {
+      "sku": "PSB-MED-1C-KFT-GL",
+      "selection": {
+        "size": "medium",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-2C-KFT-GL",
+      "selection": {
+        "size": "medium",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-3C-KFT-GL",
+      "selection": {
+        "size": "medium",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-1C-WHT-GL",
+      "selection": {
+        "size": "medium",
+        "colours": "1",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-2C-WHT-GL",
+      "selection": {
+        "size": "medium",
+        "colours": "2",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-3C-WHT-GL",
+      "selection": {
+        "size": "medium",
+        "colours": "3",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-1C-KFT-ML",
+      "selection": {
+        "size": "medium",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-2C-KFT-ML",
+      "selection": {
+        "size": "medium",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-3C-KFT-ML",
+      "selection": {
+        "size": "medium",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-1C-WHT-ML",
+      "selection": {
+        "size": "medium",
+        "colours": "1",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-2C-WHT-ML",
+      "selection": {
+        "size": "medium",
+        "colours": "2",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-MED-3C-WHT-ML",
+      "selection": {
+        "size": "medium",
+        "colours": "3",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-1C-KFT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-large"
+    },
+    {
+      "sku": "PSB-LRG-2C-KFT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-large"
+    },
+    {
+      "sku": "PSB-LRG-3C-KFT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-large"
+    },
+    {
+      "sku": "PSB-LRG-1C-WHT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-large"
+    },
+    {
+      "sku": "PSB-LRG-2C-WHT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-large"
+    },
+    {
+      "sku": "PSB-LRG-3C-WHT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "psb-large"
+    },
+    {
+      "sku": "PSB-LRG-1C-KFT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-2C-KFT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-3C-KFT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-1C-WHT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-2C-WHT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-3C-WHT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-1C-KFT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-2C-KFT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-3C-KFT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-1C-WHT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-2C-WHT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "PSB-LRG-3C-WHT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "psb-small",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.620"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.424"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.294"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.233"
+        }
+      ]
+    },
+    {
+      "ref": "psb-medium",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.694"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.514"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.447"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.410"
+        }
+      ]
+    },
+    {
+      "ref": "psb-large",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.716"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.525"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.455"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.430"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/04-food-boxes/dot__cake-pastry-box-small.png",
+      "alt": "Small kraft cake and pastry box printed with a retro polka-dot pattern and the “DOT” doughnut brand",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "small"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/miel__patisserie-box-medium.png",
+      "alt": "Medium patisserie box printed with the “Miel” brand design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "medium"
+      },
+      "optional": true
+    },
+    {
+      "file": "02-branded/04-food-boxes/miel__pastry-box-large.png",
+      "alt": "Large pastry box printed with the “Miel” brand design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "large"
+      },
+      "optional": true
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Cake & Pastry Boxes | AC Supply Co.",
+    "description": "Price up custom printed cake and pastry boxes online: three sizes, 1–3 colour print on kraft or white board. Indicative trade prices — request a quote.",
+    "canonical": "/bakery-packaging/pastry-boxes/"
+  }
+}
