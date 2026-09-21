@@ -97,11 +97,12 @@
   });
 
   /* ---------- render ---------- */
+  let firstQty = null;
   function tierMarkup(tier, first, unitWord) {
     const head = `<strong>${count(tier.qty)} ${unitWord}</strong>`;
     if (tier.unit === null) return `${head}<span class="price">POA</span><small>Price on request</small><span class="save"></span>`;
     const saving = first && first > tier.unit ? divRound(100n * (first - tier.unit), first) : 0n;
-    return `${head}<span class="price">${money(tier.unit, 3)}</span><small>${money(toPence(tier.qty, tier.unit), 2)} total</small><span class="save">${saving > 0n ? `Save ${saving}%` : 'Starting quantity'}</span>`;
+    return `${head}<span class="price">${money(tier.unit, 3)}</span><small>${money(toPence(tier.qty, tier.unit), 2)} total</small><span class="save">${saving > 0n ? `Save ${saving}%` : (tier.qty === firstQty ? 'Starting quantity' : '')}</span>`;
   }
   function selectionNote(variant) {
     if (!variant) return 'This combination isn’t available. Change one option, or request a quote and we’ll advise.';
@@ -137,6 +138,7 @@
 
     const priced = tiers.filter(t => t.unit !== null);
     const first = priced.length ? priced[0].unit : null;
+    firstQty = tiers.length ? tiers[0].qty : null;
     $('tiers').innerHTML = tiers.map(t => `<button type="button" class="tier" data-quantity="${t.qty}" aria-pressed="${t.qty === quantity}">${tierMarkup(t, first, data.unit.many)}</button>`).join('')
       || '<p>Pricing for this configuration is on request.</p>';
     $('from-price').textContent = priced.length ? money(priced.reduce((min, t) => (t.unit < min ? t.unit : min), priced[0].unit), 3) : 'Price on request';

@@ -290,7 +290,7 @@ def render(env, record):
         saving = int(((first - unit) * 100 / first).quantize(Decimal(1), rounding=ROUND_HALF_UP)) if first and first > unit else 0
         tier_cards.append({'qty': qty, 'qty_text': f'{qty:,}', 'unit_text': gbp(unit, 3),
                            'subtotal_text': f'{gbp(subtotal(qty, unit), 2)} total',
-                           'save_text': f'Save {saving}%' if saving > 0 else 'Starting quantity'})
+                           'save_text': f'Save {saving}%' if saving > 0 else ('Starting quantity' if qty == tiers[0][0] else '')})
     order_rows, total_text = [], 'Price on request'
     if tiers and tiers[0][1] is not None:
         qty, unit = tiers[0]

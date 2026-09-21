@@ -77,6 +77,8 @@ def plan(record, items, options):
             problems.append(f'{record["slug"]}: pricing "{entry["ref"]}" → catalogue item {name!r} not found')
             continue
         new = [{'qty': q, 'unit': None if u is None else decimal_text(u, 3)} for q, u in items[name]]
+        lowest = min(q for q, _ in items[name])
+        new = [t for t in entry['tiers'] if t['qty'] < lowest] + new  # quote-sourced rungs below the catalogue's first rung are kept
         if new != entry['tiers']:
             old = {t['qty']: t['unit'] for t in entry['tiers']}
             for tier in new:
