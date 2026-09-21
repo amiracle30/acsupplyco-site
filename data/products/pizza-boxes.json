@@ -1,0 +1,403 @@
+{
+  "id": "pizza-boxes",
+  "slug": "pizza-boxes",
+  "title": "Custom printed pizza boxes",
+  "category": "custom-pizza-boxes",
+  "status": "preview",
+  "short_description": "Your pizza. Your name on the lid. Printed pizza boxes in 9 and 12 inch, on kraft or white board.",
+  "description": "The box is the last thing your customer sees before the first slice — and it sits on their table for the whole meal. Choose the size, the number of print colours and the board, then make the lid yours.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1, 2 or 3 colour print",
+    "Kraft or white board",
+    "Your own artwork"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen box, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Do you print other sizes?",
+      "a": "This page prices our 9 and 12 inch boxes. If you need another size, use “Request a custom quantity” or contact us with the size and volume and we will quote it."
+    },
+    {
+      "q": "How many print colours do I need?",
+      "a": "A one-colour logo is the most cost-effective option and works well on kraft board. Two and three colour prints suit fuller designs. If you are unsure, send us your artwork and we will advise."
+    },
+    {
+      "q": "When will my boxes arrive?",
+      "a": "As a general guide, allow several weeks from order confirmation to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Pizza",
+    "unit": {
+      "one": "box",
+      "many": "boxes"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every box."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next box looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your box.",
+          "text": "Select your size, print colours, board and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, deliver.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "9 inch and 12 inch"
+    },
+    {
+      "label": "Dimensions",
+      "value": "230 × 230 × 40 mm",
+      "applies_to": {
+        "size": "9in"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "305 × 305 × 40 mm",
+      "applies_to": {
+        "size": "12in"
+      }
+    },
+    {
+      "label": "Board",
+      "value": "Kraft",
+      "applies_to": {
+        "board": "kraft"
+      }
+    },
+    {
+      "label": "Board",
+      "value": "White",
+      "applies_to": {
+        "board": "white"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "3 colours",
+      "applies_to": {
+        "colours": "3"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "9in",
+          "label": "9 inch",
+          "default": true
+        },
+        {
+          "value": "12in",
+          "label": "12 inch"
+        }
+      ]
+    },
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.138"
+        },
+        {
+          "value": "3",
+          "label": "3 colours",
+          "mult": "1.207"
+        }
+      ]
+    },
+    {
+      "key": "board",
+      "label": "Board",
+      "values": [
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "default": true
+        },
+        {
+          "value": "white",
+          "label": "White",
+          "mult": "1.118"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "PZB-09-1C-KFT",
+      "selection": {
+        "size": "9in",
+        "colours": "1",
+        "board": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pzb-9in"
+    },
+    {
+      "sku": "PZB-09-2C-KFT",
+      "selection": {
+        "size": "9in",
+        "colours": "2",
+        "board": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pzb-9in"
+    },
+    {
+      "sku": "PZB-09-3C-KFT",
+      "selection": {
+        "size": "9in",
+        "colours": "3",
+        "board": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pzb-9in"
+    },
+    {
+      "sku": "PZB-09-1C-WHT",
+      "selection": {
+        "size": "9in",
+        "colours": "1",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "pzb-9in"
+    },
+    {
+      "sku": "PZB-09-2C-WHT",
+      "selection": {
+        "size": "9in",
+        "colours": "2",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "pzb-9in"
+    },
+    {
+      "sku": "PZB-09-3C-WHT",
+      "selection": {
+        "size": "9in",
+        "colours": "3",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "pzb-9in"
+    },
+    {
+      "sku": "PZB-12-1C-KFT",
+      "selection": {
+        "size": "12in",
+        "colours": "1",
+        "board": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pzb-12in"
+    },
+    {
+      "sku": "PZB-12-2C-KFT",
+      "selection": {
+        "size": "12in",
+        "colours": "2",
+        "board": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pzb-12in"
+    },
+    {
+      "sku": "PZB-12-3C-KFT",
+      "selection": {
+        "size": "12in",
+        "colours": "3",
+        "board": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "pzb-12in"
+    },
+    {
+      "sku": "PZB-12-1C-WHT",
+      "selection": {
+        "size": "12in",
+        "colours": "1",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "pzb-12in"
+    },
+    {
+      "sku": "PZB-12-2C-WHT",
+      "selection": {
+        "size": "12in",
+        "colours": "2",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "pzb-12in"
+    },
+    {
+      "sku": "PZB-12-3C-WHT",
+      "selection": {
+        "size": "12in",
+        "colours": "3",
+        "board": "white"
+      },
+      "available": true,
+      "pricing_ref": "pzb-12in"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "pzb-9in",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.493"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.440"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.290"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.280"
+        }
+      ]
+    },
+    {
+      "ref": "pzb-12in",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.750"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.670"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.420"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.400"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from order confirmation",
+    "starts": "order confirmation"
+  },
+  "images": [
+    {
+      "file": "02-branded/04-food-boxes/slice__pizza-box-9in.png",
+      "alt": "9 inch kraft pizza box printed in one colour with large black “slice” lettering",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "9in"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/pizza-box-9in-230x230x40.png",
+      "alt": "9 inch white pizza box printed in one colour with a line-drawn pizza slice and the “FORNO” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "9in"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/pizza-box-12in-305x305x40.png",
+      "alt": "12 inch white pizza box printed in one colour with a line-drawn pizza slice and the “FORNO” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "12in"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Pizza Boxes — Prices | AC Supply Co.",
+    "description": "Price up custom printed pizza boxes online: 9 and 12 inch, 1–3 colour print on kraft or white board. Indicative trade prices — request a quote.",
+    "canonical": "/custom-pizza-boxes/pizza-boxes/"
+  }
+}

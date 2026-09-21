@@ -45,6 +45,8 @@ def check_record(record, name):
     for option in record['options']:
         if sum(1 for v in option['values'] if v.get('default')) != 1:
             err(f'option "{option["key"]}" needs exactly one default value')
+    if len(record['seo']['title']) > 60:
+        err(f'seo.title is {len(record["seo"]["title"])} characters — keep it to 60 so search results do not truncate it')
     if record['category'] not in CATEGORIES:
         err(f'unknown category "{record["category"]}"')
 
