@@ -34,7 +34,7 @@
     },
     {
       "q": "When will my boxes arrive?",
-      "a": "As a general guide, allow several weeks from order confirmation to delivery. We will confirm current timing with your quote."
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
     }
   ],
   "copy": {
@@ -1513,8 +1513,8 @@
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from order confirmation",
-    "starts": "order confirmation"
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
   },
   "images": [
     {
