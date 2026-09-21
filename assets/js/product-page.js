@@ -59,7 +59,6 @@
     hero.alt = image.alt;
     hero.width = image.w;
     hero.height = image.h;
-    $('image-label').textContent = image.label;
     $('image-counter').textContent = `${String(index + 1).padStart(2, '0')} / ${String(gallery.length).padStart(2, '0')}`;
     [...thumbnails.children].forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
   }
@@ -80,12 +79,13 @@
       button.type = 'button';
       button.className = 'thumbnail';
       button.dataset.image = index;
-      button.setAttribute('aria-label', image.label);
+      button.setAttribute('aria-label', `Show image ${index + 1} of ${gallery.length}`);
       const img = document.createElement('img');
       Object.assign(img, { src: image.thumb, alt: '', width: image.tw, height: image.th, loading: 'lazy' });
       button.append(img);
       return button;
     }));
+    thumbnails.hidden = $('image-counter').hidden = gallery.length < 2;
     showImage(0);
   }
   thumbnails.addEventListener('click', event => {

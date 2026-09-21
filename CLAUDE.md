@@ -145,7 +145,7 @@ scripts/test-product-pages.py    Playwright checks (local only)
 - The build owns everything between `<!-- products:start -->` and `<!-- products:end -->` in `sitemap.xml` and the six category pages. Don't edit inside those markers.
 - **`data/products/*.json` is publicly served** (deploy is from repo root). Anything commercially sensitive — `internal`, pricing `source`, `review_date`, `min_qty`, `increment` — goes in `data/private/<slug>.json`, which is gitignored and merged in memory by `productlib.load_records()`. The public schema rejects those keys, and the build also greps rendered HTML for them (plus catalogue `floor`/`notes`) and fails. Only confirmed multipliers are priced; anything the catalogue marks ESTIMATE is `available:false` + `quote_only`.
 - Prices are decimal strings, never floats. Python (`Decimal`) and the browser (`BigInt`) must agree to the penny — `test-product-pages.py` checks every tier card.
-- Blank "plate" photos are a preview of the canvas, not a purchasable plain product: label them "ready for your artwork".
+- **Galleries show custom-printed product shots only.** No blank/plain product photos, no generic "print inspiration" images, and no fictional brand names in visible labels — each image is a `role: "hero"` entry matched to the size it actually shows. A size with one image hides the thumbnail strip automatically.
 
 ## Tracking & Analytics
 

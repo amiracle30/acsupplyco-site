@@ -737,7 +737,6 @@
     {
       "file": "repo:output/product-variants-v1/burger-box-120x120x70.png",
       "alt": "Standard kraft clamshell burger box printed in one colour with the “FIELD” tomato-vine illustration",
-      "label": "Standard · FIELD",
       "order": 1,
       "role": "hero",
       "match": {
@@ -747,7 +746,6 @@
     {
       "file": "02-branded/04-food-boxes/stack__burger-box.png",
       "alt": "Standard white clamshell burger box printed with the bold blue “STACK” brand design",
-      "label": "Standard · STACK",
       "order": 2,
       "role": "hero",
       "match": {
@@ -756,19 +754,8 @@
       "optional": true
     },
     {
-      "file": "01-plates/04-food-boxes/burger-box__cream-board.png",
-      "alt": "Blank standard clamshell burger box, before printing",
-      "label": "Standard · ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "standard"
-      }
-    },
-    {
       "file": "repo:output/product-variants-v1/burger-box-square-135x135x70.png",
       "alt": "Large kraft clamshell burger box printed in one colour with the “FIELD” tomato-vine illustration",
-      "label": "Large · FIELD",
       "order": 1,
       "role": "hero",
       "match": {
@@ -778,47 +765,12 @@
     {
       "file": "02-branded/04-food-boxes/stack__burger-box-square.png",
       "alt": "Large white clamshell burger box printed with the bold blue “STACK” brand design",
-      "label": "Large · STACK",
       "order": 2,
       "role": "hero",
       "match": {
         "size": "large"
       },
       "optional": true
-    },
-    {
-      "file": "01-plates/04-food-boxes/burger-box-square__cream-board.png",
-      "alt": "Blank large clamshell burger box, before printing",
-      "label": "Large · ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "large"
-      }
-    },
-    {
-      "file": "repo:output/packaging-concepts-v1/burger-boxes.png",
-      "alt": "Three clamshell burger boxes side by side, each printed with a different brand design: kraft botanical, bold blue type and red stripes",
-      "label": "Print inspiration · three styles",
-      "order": 10,
-      "role": "inspiration",
-      "match": {}
-    },
-    {
-      "file": "02-branded/_other-concepts/bun-club__burger-box.png",
-      "alt": "Clamshell burger box printed with red stripes and the “bun club” burger character",
-      "label": "Print inspiration · bun club",
-      "order": 11,
-      "role": "inspiration",
-      "match": {}
-    },
-    {
-      "file": "02-branded/_other-concepts/stack-alt__burger-box-white.png",
-      "alt": "White clamshell burger box printed with bold blue “STACK” lettering and a yellow checker band",
-      "label": "Print inspiration · STACK",
-      "order": 12,
-      "role": "inspiration",
-      "match": {}
     }
   ],
   "enquiry": {

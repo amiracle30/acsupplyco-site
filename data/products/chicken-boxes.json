@@ -1520,7 +1520,6 @@
     {
       "file": "02-branded/04-food-boxes/peck__chicken-box-small.png",
       "alt": "Custom printed small chicken box with the “Peck” fried chicken brand design",
-      "label": "Small · Peck",
       "order": 1,
       "role": "hero",
       "match": {
@@ -1528,31 +1527,8 @@
       }
     },
     {
-      "file": "01-plates/04-food-boxes/chicken-box-small__kraft.png",
-      "alt": "Blank kraft small chicken box, before printing",
-      "label": "Small · Kraft, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "small",
-        "material": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/04-food-boxes/chicken-box-small__white-board.png",
-      "alt": "Blank white-board small chicken box, before printing",
-      "label": "Small · White, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "small",
-        "material": "white"
-      }
-    },
-    {
       "file": "02-branded/04-food-boxes/peck__chicken-box-medium.png",
       "alt": "Custom printed medium chicken box with the “Peck” fried chicken brand design",
-      "label": "Medium · Peck",
       "order": 1,
       "role": "hero",
       "match": {
@@ -1560,31 +1536,8 @@
       }
     },
     {
-      "file": "01-plates/04-food-boxes/chicken-box-medium__kraft.png",
-      "alt": "Blank kraft medium chicken box, before printing",
-      "label": "Medium · Kraft, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "medium",
-        "material": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/04-food-boxes/chicken-box-medium__white-board.png",
-      "alt": "Blank white-board medium chicken box, before printing",
-      "label": "Medium · White, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "medium",
-        "material": "white"
-      }
-    },
-    {
       "file": "02-branded/04-food-boxes/peck__chicken-box-square.png",
       "alt": "Custom printed square chicken box with the “Peck” fried chicken brand design",
-      "label": "Square · Peck",
       "order": 1,
       "role": "hero",
       "match": {
@@ -1592,31 +1545,8 @@
       }
     },
     {
-      "file": "01-plates/04-food-boxes/chicken-box-square__kraft.png",
-      "alt": "Blank kraft square chicken box, before printing",
-      "label": "Square · Kraft, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "square",
-        "material": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/04-food-boxes/chicken-box-square__white-board.png",
-      "alt": "Blank white-board square chicken box, before printing",
-      "label": "Square · White, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "square",
-        "material": "white"
-      }
-    },
-    {
       "file": "02-branded/04-food-boxes/peck__chicken-box-large.png",
       "alt": "Custom printed large chicken box with the “Peck” fried chicken brand design",
-      "label": "Large · Peck",
       "order": 1,
       "role": "hero",
       "match": {
@@ -1624,31 +1554,8 @@
       }
     },
     {
-      "file": "01-plates/04-food-boxes/chicken-box-large__kraft.png",
-      "alt": "Blank kraft large chicken box, before printing",
-      "label": "Large · Kraft, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "large",
-        "material": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/04-food-boxes/chicken-box-large__white-board.png",
-      "alt": "Blank white-board large chicken box, before printing",
-      "label": "Large · White, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "large",
-        "material": "white"
-      }
-    },
-    {
       "file": "02-branded/04-food-boxes/peck__chicken-bucket-with-handle.png",
       "alt": "Custom printed chicken bucket with handle with the “Peck” fried chicken brand design",
-      "label": "Bucket · Peck",
       "order": 1,
       "role": "hero",
       "match": {
@@ -1656,30 +1563,22 @@
       }
     },
     {
-      "file": "01-plates/04-food-boxes/chicken-bucket-with-handle__white-board.png",
-      "alt": "Blank white-board chicken bucket with handle, before printing",
-      "label": "Bucket · ready for your artwork",
-      "order": 5,
-      "role": "gallery",
+      "file": "02-branded/_other-concepts/roost__chicken-box-large.png",
+      "alt": "Large chicken box printed with a red rooster illustration",
+      "order": 2,
+      "role": "hero",
       "match": {
-        "size": "bucket"
+        "size": "large"
       }
     },
     {
-      "file": "02-branded/_other-concepts/roost__chicken-box-large.png",
-      "alt": "Chicken box printed with the “ROOST” rooster illustration brand design",
-      "label": "Print inspiration · ROOST",
-      "order": 10,
-      "role": "inspiration",
-      "match": {}
-    },
-    {
       "file": "02-branded/_other-concepts/coop__chicken-box-large.png",
-      "alt": "Chicken box printed with the “COOP” ink rooster brand design",
-      "label": "Print inspiration · COOP",
-      "order": 11,
-      "role": "inspiration",
-      "match": {}
+      "alt": "Large chicken box printed with a black ink rooster illustration",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "large"
+      }
     }
   ],
   "enquiry": {

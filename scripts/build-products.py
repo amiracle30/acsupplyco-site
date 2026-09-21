@@ -191,7 +191,7 @@ def web_images(record):
         size = manifest[stem]
         images.append({'src': f'{base}/{stem}.webp', 'jpg': f'{base}/{stem}.jpg', 'thumb': f'{base}/{stem}-thumb.webp',
                        'w': size['width'], 'h': size['height'], 'tw': size['thumb_width'], 'th': size['thumb_height'],
-                       'alt': image['alt'], 'label': image['label'], 'role': image['role'],
+                       'alt': image['alt'], 'role': image['role'],
                        'order': image['order'], 'match': image['match']})
     return images
 

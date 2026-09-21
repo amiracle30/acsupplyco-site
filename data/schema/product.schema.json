@@ -378,7 +378,6 @@
         "required": [
           "file",
           "alt",
-          "label",
           "order",
           "role",
           "match"
@@ -390,9 +389,6 @@
             "description": "Path relative to ~/Downloads/Product Images/, or repo:<path> for a master image kept in this repo."
           },
           "alt": {
-            "$ref": "#/$defs/text"
-          },
-          "label": {
             "$ref": "#/$defs/text"
           },
           "order": {
@@ -414,7 +410,8 @@
             "description": "Shot not delivered yet: skipped with a warning while the source file is missing, picked up automatically once it lands."
           }
         }
-      }
+      },
+      "description": "Custom-printed product shots only — no blank/plain product images and no generic inspiration shots on this site."
     },
     "enquiry": {
       "$ref": "#/$defs/enquiry"

@@ -714,7 +714,6 @@
     {
       "file": "02-branded/01-hot-cups/kettle__custom-6oz-double-wall-cup.png",
       "alt": "White 6 oz double wall paper cup printed with a minimalist “kettle” brand design",
-      "label": "6 oz · kettle",
       "order": 1,
       "role": "hero",
       "match": {
@@ -724,7 +723,6 @@
     {
       "file": "repo:output/product-variants-v1/coffee-cup-8oz-v2.png",
       "alt": "8 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
-      "label": "8 oz · FERN",
       "order": 1,
       "role": "hero",
       "match": {
@@ -734,7 +732,6 @@
     {
       "file": "repo:output/product-variants-v1/coffee-cup-12oz-v2.png",
       "alt": "12 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
-      "label": "12 oz · FERN",
       "order": 1,
       "role": "hero",
       "match": {
@@ -744,7 +741,6 @@
     {
       "file": "02-branded/01-hot-cups/M Coffee Roasters 12oz.png",
       "alt": "White 12 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
-      "label": "12 oz · M Coffee Roasters",
       "order": 2,
       "role": "hero",
       "match": {
@@ -754,7 +750,6 @@
     {
       "file": "repo:output/product-variants-v1/coffee-cup-16oz-v2.png",
       "alt": "16 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
-      "label": "16 oz · FERN",
       "order": 1,
       "role": "hero",
       "match": {
@@ -764,7 +759,6 @@
     {
       "file": "repo:assets/images/products/coffee-cup-16oz-rosa.png",
       "alt": "White 16 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
-      "label": "16 oz · ROSA",
       "order": 2,
       "role": "hero",
       "match": {
@@ -774,133 +768,12 @@
     {
       "file": "02-branded/01-hot-cups/orbit__custom-16oz-double-wall-cup.png",
       "alt": "16 oz double wall paper cup printed with the ORBIT brand design",
-      "label": "16 oz · ORBIT",
       "order": 3,
       "role": "hero",
       "match": {
         "size": "16oz"
       },
       "optional": true
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-6oz-double-wall-cup__white-board.png",
-      "alt": "Unprinted 6 oz double wall paper cup in white board",
-      "label": "6 oz · White board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "6oz",
-        "board": "white"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-6oz-double-wall-cup__kraft-board.png",
-      "alt": "Unprinted 6 oz double wall paper cup in kraft board",
-      "label": "6 oz · Kraft board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "6oz",
-        "board": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-8oz-double-wall-cup__white-board.png",
-      "alt": "Unprinted 8 oz double wall paper cup in white board",
-      "label": "8 oz · White board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "8oz",
-        "board": "white"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-8oz-double-wall-cup__kraft-board.png",
-      "alt": "Unprinted 8 oz double wall paper cup in kraft board",
-      "label": "8 oz · Kraft board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "8oz",
-        "board": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-12oz-double-wall-cup__white-board.png",
-      "alt": "Unprinted 12 oz double wall paper cup in white board",
-      "label": "12 oz · White board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "12oz",
-        "board": "white"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-12oz-double-wall-cup__kraft-board.png",
-      "alt": "Unprinted 12 oz double wall paper cup in kraft board",
-      "label": "12 oz · Kraft board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "12oz",
-        "board": "kraft"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-16oz-double-wall-cup__white-board.png",
-      "alt": "Unprinted 16 oz double wall paper cup in white board",
-      "label": "16 oz · White board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "16oz",
-        "board": "white"
-      }
-    },
-    {
-      "file": "01-plates/01-hot-cups/custom-16oz-double-wall-cup__kraft-board.png",
-      "alt": "Unprinted 16 oz double wall paper cup in kraft board",
-      "label": "16 oz · Kraft board, ready for your artwork",
-      "order": 5,
-      "role": "gallery",
-      "match": {
-        "size": "16oz",
-        "board": "kraft"
-      }
-    },
-    {
-      "file": "repo:assets/images/products/coffee-cups.png",
-      "alt": "Five double wall paper cups in a row, each printed with a different brand design: botanical, monogram, colour block, pattern and navy",
-      "label": "Print inspiration · five styles",
-      "order": 10,
-      "role": "inspiration",
-      "match": {}
-    },
-    {
-      "file": "02-branded/01-hot-cups/kettle__custom-6oz-double-wall-cup.png",
-      "alt": "White 6 oz double wall paper cup printed with a minimalist “kettle” brand design",
-      "label": "Print inspiration · kettle",
-      "order": 11,
-      "role": "inspiration",
-      "match": {}
-    },
-    {
-      "file": "02-branded/01-hot-cups/M Coffee Roasters 12oz.png",
-      "alt": "White 12 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
-      "label": "Print inspiration · M Coffee Roasters",
-      "order": 12,
-      "role": "inspiration",
-      "match": {}
-    },
-    {
-      "file": "repo:assets/images/products/coffee-cup-16oz-rosa.png",
-      "alt": "White 16 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
-      "label": "Print inspiration · ROSA",
-      "order": 13,
-      "role": "inspiration",
-      "match": {}
     }
   ],
   "enquiry": {
