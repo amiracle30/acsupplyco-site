@@ -1,0 +1,832 @@
+{
+  "id": "burger-boxes",
+  "slug": "burger-boxes",
+  "title": "Custom printed burger boxes",
+  "category": "takeaway-packaging",
+  "status": "preview",
+  "short_description": "Your burger. Your brand on the lid. Printed clamshell burger boxes in two sizes, on kraft or white board.",
+  "description": "A one-piece clamshell that closes with a tab and opens flat on the table. Choose the size, the number of print colours and the board, then put your brand on the box that lands in every customer’s hands.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1, 2 or 3 colour print",
+    "Two box sizes",
+    "Your own artwork"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen box, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Which size do I need?",
+      "a": "Standard is 120 × 120 × 70 mm and Large is 135 × 135 × 70 mm. If you are unsure, tell us your bun size and build height in the enquiry and we will advise."
+    },
+    {
+      "q": "Can the boxes be laminated?",
+      "a": "Gloss and matte lamination are available and are quoted on request. Select the finish you want and send us the configuration."
+    },
+    {
+      "q": "When will my boxes arrive?",
+      "a": "As a general guide, allow several weeks from order confirmation to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Burgers",
+    "unit": {
+      "one": "box",
+      "many": "boxes"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every box."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next box looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your box.",
+          "text": "Select your size, print colours, board and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, pack.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "Standard and Large"
+    },
+    {
+      "label": "Dimensions",
+      "value": "120 × 120 × 70 mm",
+      "applies_to": {
+        "size": "standard"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "135 × 135 × 70 mm",
+      "applies_to": {
+        "size": "large"
+      }
+    },
+    {
+      "label": "Format",
+      "value": "One-piece clamshell with tab closure"
+    },
+    {
+      "label": "Board",
+      "value": "Kraft",
+      "applies_to": {
+        "material": "kraft"
+      }
+    },
+    {
+      "label": "Board",
+      "value": "White",
+      "applies_to": {
+        "material": "white"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "3 colours",
+      "applies_to": {
+        "colours": "3"
+      }
+    },
+    {
+      "label": "Lamination",
+      "value": "Unlaminated",
+      "applies_to": {
+        "lamination": "none"
+      }
+    },
+    {
+      "label": "Lamination",
+      "value": "Gloss — quoted on request",
+      "applies_to": {
+        "lamination": "gloss"
+      }
+    },
+    {
+      "label": "Lamination",
+      "value": "Matte — quoted on request",
+      "applies_to": {
+        "lamination": "matte"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard",
+          "default": true
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.138"
+        },
+        {
+          "value": "3",
+          "label": "3 colours",
+          "mult": "1.207"
+        }
+      ]
+    },
+    {
+      "key": "material",
+      "label": "Board",
+      "values": [
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "default": true
+        },
+        {
+          "value": "white",
+          "label": "White",
+          "mult": "1.047"
+        }
+      ]
+    },
+    {
+      "key": "lamination",
+      "label": "Lamination",
+      "values": [
+        {
+          "value": "none",
+          "label": "None",
+          "default": true
+        },
+        {
+          "value": "gloss",
+          "label": "Gloss",
+          "note": "Gloss lamination is quoted on request."
+        },
+        {
+          "value": "matte",
+          "label": "Matte",
+          "note": "Matte lamination is quoted on request."
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "BGB-STD-1C-KFT-NL",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-standard"
+    },
+    {
+      "sku": "BGB-STD-2C-KFT-NL",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-standard"
+    },
+    {
+      "sku": "BGB-STD-3C-KFT-NL",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-standard"
+    },
+    {
+      "sku": "BGB-STD-1C-WHT-NL",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-standard"
+    },
+    {
+      "sku": "BGB-STD-2C-WHT-NL",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-standard"
+    },
+    {
+      "sku": "BGB-STD-3C-WHT-NL",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-standard"
+    },
+    {
+      "sku": "BGB-STD-1C-KFT-GL",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-2C-KFT-GL",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-3C-KFT-GL",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-1C-WHT-GL",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-2C-WHT-GL",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-3C-WHT-GL",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-1C-KFT-ML",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-2C-KFT-ML",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-3C-KFT-ML",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-1C-WHT-ML",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-2C-WHT-ML",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-STD-3C-WHT-ML",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-1C-KFT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-large"
+    },
+    {
+      "sku": "BGB-LRG-2C-KFT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-large"
+    },
+    {
+      "sku": "BGB-LRG-3C-KFT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-large"
+    },
+    {
+      "sku": "BGB-LRG-1C-WHT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-large"
+    },
+    {
+      "sku": "BGB-LRG-2C-WHT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-large"
+    },
+    {
+      "sku": "BGB-LRG-3C-WHT-NL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none"
+      },
+      "available": true,
+      "pricing_ref": "bgb-large"
+    },
+    {
+      "sku": "BGB-LRG-1C-KFT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-2C-KFT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-3C-KFT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-1C-WHT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-2C-WHT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-3C-WHT-GL",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "gloss"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-1C-KFT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-2C-KFT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-3C-KFT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-1C-WHT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-2C-WHT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "BGB-LRG-3C-WHT-ML",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "matte"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "bgb-standard",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.213"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.190"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.125"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.118"
+        }
+      ]
+    },
+    {
+      "ref": "bgb-large",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.217"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.210"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.130"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.125"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from order confirmation",
+    "starts": "order confirmation"
+  },
+  "images": [
+    {
+      "file": "repo:output/product-variants-v1/burger-box-120x120x70.png",
+      "alt": "Standard kraft clamshell burger box printed in one colour with the “FIELD” tomato-vine illustration",
+      "label": "Standard · FIELD",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "standard"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/stack__burger-box.png",
+      "alt": "Standard white clamshell burger box printed with the bold blue “STACK” brand design",
+      "label": "Standard · STACK",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "standard"
+      },
+      "optional": true
+    },
+    {
+      "file": "01-plates/04-food-boxes/burger-box__cream-board.png",
+      "alt": "Blank standard clamshell burger box, before printing",
+      "label": "Standard · ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "standard"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/burger-box-square-135x135x70.png",
+      "alt": "Large kraft clamshell burger box printed in one colour with the “FIELD” tomato-vine illustration",
+      "label": "Large · FIELD",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "large"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/stack__burger-box-square.png",
+      "alt": "Large white clamshell burger box printed with the bold blue “STACK” brand design",
+      "label": "Large · STACK",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "large"
+      },
+      "optional": true
+    },
+    {
+      "file": "01-plates/04-food-boxes/burger-box-square__cream-board.png",
+      "alt": "Blank large clamshell burger box, before printing",
+      "label": "Large · ready for your artwork",
+      "order": 5,
+      "role": "gallery",
+      "match": {
+        "size": "large"
+      }
+    },
+    {
+      "file": "repo:output/packaging-concepts-v1/burger-boxes.png",
+      "alt": "Three clamshell burger boxes side by side, each printed with a different brand design: kraft botanical, bold blue type and red stripes",
+      "label": "Print inspiration · three styles",
+      "order": 10,
+      "role": "inspiration",
+      "match": {}
+    },
+    {
+      "file": "02-branded/_other-concepts/bun-club__burger-box.png",
+      "alt": "Clamshell burger box printed with red stripes and the “bun club” burger character",
+      "label": "Print inspiration · bun club",
+      "order": 11,
+      "role": "inspiration",
+      "match": {}
+    },
+    {
+      "file": "02-branded/_other-concepts/stack-alt__burger-box-white.png",
+      "alt": "White clamshell burger box printed with bold blue “STACK” lettering and a yellow checker band",
+      "label": "Print inspiration · STACK",
+      "order": 12,
+      "role": "inspiration",
+      "match": {}
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Burger Boxes | AC Supply Co.",
+    "description": "Custom printed clamshell burger boxes in two sizes. 1–3 colour print on kraft or white board. Indicative trade prices online — request a quote.",
+    "canonical": "/takeaway-packaging/burger-boxes/"
+  }
+}
