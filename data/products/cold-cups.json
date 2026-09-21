@@ -34,7 +34,7 @@
     },
     {
       "q": "Can the cup be printed on both sides?",
-      "a": "Yes. Double-sided print is quoted on request — select it and send us the configuration with the quantity you need."
+      "a": "Yes. Choose “Double-sided” and the price updates — it adds a small amount per cup. Double-sided print is available on Standard lead time."
     },
     {
       "q": "When will my cups arrive?",
@@ -142,7 +142,7 @@
     },
     {
       "label": "Print",
-      "value": "Double-sided — quoted on request",
+      "value": "Double-sided",
       "applies_to": {
         "sides": "double"
       }
@@ -258,7 +258,7 @@
         {
           "value": "double",
           "label": "Double-sided",
-          "note": "Double-sided print is quoted on request."
+          "mult": "1.05"
         }
       ]
     },
@@ -585,10 +585,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-10oz"
     },
     {
       "sku": "CLC-10OZ-DS-2C-PET-NL-STD",
@@ -600,10 +598,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-10oz"
     },
     {
       "sku": "CLC-10OZ-DS-3C-PET-NL-STD",
@@ -615,10 +611,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-10oz"
     },
     {
       "sku": "CLC-10OZ-DS-1C-PET-LID-STD",
@@ -630,10 +624,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-10oz"
     },
     {
       "sku": "CLC-10OZ-DS-2C-PET-LID-STD",
@@ -645,10 +637,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-10oz"
     },
     {
       "sku": "CLC-10OZ-DS-3C-PET-LID-STD",
@@ -660,10 +650,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-10oz"
     },
     {
       "sku": "CLC-10OZ-DS-1C-RPET-NL-STD",
@@ -1113,10 +1101,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-12oz"
     },
     {
       "sku": "CLC-12OZ-DS-2C-PET-NL-STD",
@@ -1128,10 +1114,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-12oz"
     },
     {
       "sku": "CLC-12OZ-DS-3C-PET-NL-STD",
@@ -1143,10 +1127,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-12oz"
     },
     {
       "sku": "CLC-12OZ-DS-1C-PET-LID-STD",
@@ -1158,10 +1140,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-12oz"
     },
     {
       "sku": "CLC-12OZ-DS-2C-PET-LID-STD",
@@ -1173,10 +1153,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-12oz"
     },
     {
       "sku": "CLC-12OZ-DS-3C-PET-LID-STD",
@@ -1188,10 +1166,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-12oz"
     },
     {
       "sku": "CLC-12OZ-DS-1C-RPET-NL-STD",
@@ -1641,10 +1617,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-16oz"
     },
     {
       "sku": "CLC-16OZ-DS-2C-PET-NL-STD",
@@ -1656,10 +1630,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-16oz"
     },
     {
       "sku": "CLC-16OZ-DS-3C-PET-NL-STD",
@@ -1671,10 +1643,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-16oz"
     },
     {
       "sku": "CLC-16OZ-DS-1C-PET-LID-STD",
@@ -1686,10 +1656,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-16oz"
     },
     {
       "sku": "CLC-16OZ-DS-2C-PET-LID-STD",
@@ -1701,10 +1669,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-16oz"
     },
     {
       "sku": "CLC-16OZ-DS-3C-PET-LID-STD",
@@ -1716,10 +1682,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-16oz"
     },
     {
       "sku": "CLC-16OZ-DS-1C-RPET-NL-STD",
@@ -2169,10 +2133,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-20oz"
     },
     {
       "sku": "CLC-20OZ-DS-2C-PET-NL-STD",
@@ -2184,10 +2146,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-20oz"
     },
     {
       "sku": "CLC-20OZ-DS-3C-PET-NL-STD",
@@ -2199,10 +2159,8 @@
         "lid": "none",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-20oz"
     },
     {
       "sku": "CLC-20OZ-DS-1C-PET-LID-STD",
@@ -2214,10 +2172,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-20oz"
     },
     {
       "sku": "CLC-20OZ-DS-2C-PET-LID-STD",
@@ -2229,10 +2185,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-20oz"
     },
     {
       "sku": "CLC-20OZ-DS-3C-PET-LID-STD",
@@ -2244,10 +2198,8 @@
         "lid": "lid",
         "service": "standard"
       },
-      "available": false,
-      "enquiry": {
-        "mode": "quote_only"
-      }
+      "available": true,
+      "pricing_ref": "clc-20oz"
     },
     {
       "sku": "CLC-20OZ-DS-1C-RPET-NL-STD",
