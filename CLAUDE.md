@@ -76,7 +76,7 @@ Every page carries the same design tokens inline. Copy from an existing inner pa
 
 Fonts (loaded via Google Fonts `<link rel="stylesheet">` — preconnect alone is not enough):
 - `Inter Tight` (300–800) — all text
-- `JetBrains Mono` (400–500) — mono labels, tags, uppercase eyebrows
+- **No monospace font.** JetBrains Mono was removed site-wide on 2026-09-21 — labels, tags and uppercase eyebrows (including the `.mono` class, which keeps its name) are Inter Tight too. Don't reintroduce a second typeface or add it back to the Google Fonts link.
 
 Shared component classes across pages: `.announcement`, `.header` / `.header-inner` / `.logo` / `.nav`, `.btn` / `.btn-ghost` / `.btn-primary` / `.btn-accent` / `.btn-whatsapp`, `.breadcrumb`, `.container`, `.tag`, `.mono`, `footer` / `.footer-grid` / `.footer-col` / `.footer-bottom`.
 
@@ -113,7 +113,7 @@ Both logo files exist; do not delete either without also updating every referenc
 All inner pages share the same structure:
 1. `<head>` with consent+GTM block (first, before anything else), SEO meta, canonical, og tags, Schema JSON-LD, Google Fonts `<link rel="stylesheet">`, and the full inline `<style>` block
 2. `<body>` opens with the GTM noscript iframe
-3. `.announcement` bar (dark, JetBrains Mono, pulse dot on the left)
+3. `.announcement` bar (dark, Inter Tight, pulse dot on the left)
 4. Sticky `.header` with logo + `.nav` (Products → `/#products`, How ordering works → `/#ordering`, Why AC Supply Co → `/#how`, FAQ → `/faq/`, Contact → `/#contact`) + `.header-cta` (WhatsApp ghost + primary CTA)
 5. `.breadcrumb` bar
 6. Page hero — light background (`--bg`), tag eyebrow → `<h1>` → lede
