@@ -5,7 +5,7 @@
   "category": "catering-supplies",
   "status": "preview",
   "short_description": "The most-handled item on any table, printed with your logo. 30 cm napkins in white or recycled kraft, one or two colours.",
-  "description": "A 30 cm napkin printed in one or two colours — the item every customer touches. White or recycled kraft paper; 2-ply and 3-ply are quoted on request. Choose your options and send us your logo.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "description": "A 30 cm napkin printed in one or two colours — the item every customer touches. White or recycled kraft paper; 2-ply and 3-ply are quoted on request. Choose your options and send us your logo.\n\nMatch them to your [printed greaseproof paper](/catering-supplies/greaseproof-paper/) and [printed coasters](/catering-supplies/coasters-and-loyalty-cards/) so the whole table carries one artwork.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "1 or 2 colour print",
     "White or recycled kraft",
@@ -25,8 +25,8 @@
       "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
     },
     {
-      "q": "Why does the quantity start at 5,000?",
-      "a": "Napkins are printed on a reel, so the first price break is 5,000 and the best prices start at 30,000. If you need fewer, use “Request a custom quantity” and we will advise."
+      "q": "Why are napkin quantities higher than other items?",
+      "a": "Napkins are printed on a reel, so they are produced in long runs and the price per napkin falls sharply as quantity rises — the quantity options on this page show each price break. If you need fewer, use “Request a custom quantity” and we will advise."
     },
     {
       "q": "When will my napkins arrive?",
@@ -43,7 +43,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "A little more\nbehind every napkin."
+      "heading": "Printed napkins,\nwhite or kraft."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -68,7 +68,7 @@
     },
     "faq": {
       "eyebrow": "Good questions",
-      "heading": "Before your first order."
+      "heading": "Printed napkin questions,\nanswered."
     }
   },
   "specs": [
@@ -366,8 +366,8 @@
     "mode": "priced"
   },
   "seo": {
-    "title": "Custom Printed Napkins | AC Supply Co.",
-    "description": "Price up custom printed 30 cm napkins online: 1–2 colour print on white or recycled kraft, from 5,000. Indicative trade prices — request a quote.",
+    "title": "Custom Printed Branded Napkins | AC Supply Co.",
+    "description": "Custom printed 30 cm napkins with your logo: 1–2 colour print on white or recycled kraft tissue. See indicative trade prices online and request a quote.",
     "canonical": "/catering-supplies/branded-napkins/"
   }
 }

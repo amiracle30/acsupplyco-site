@@ -1,0 +1,3 @@
+# Product records are public JSON that duplicates page copy — keep them out of the index.
+/data/*
+  X-Robots-Tag: noindex

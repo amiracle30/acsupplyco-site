@@ -1,11 +1,11 @@
 {
   "id": "single-wall-cups",
-  "slug": "single-wall-cups",
+  "slug": "espresso-cups",
   "title": "Custom printed single wall espresso cups",
   "category": "coffee-cups",
   "status": "preview",
   "short_description": "A small cup with your name on it. Single wall 4 oz espresso cups, white board, one-colour print.",
-  "description": "A 4 oz single wall paper cup for espresso, macchiato and cortado — PE lined, white board, printed in one colour. Larger single wall sizes are quoted on request.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "description": "A 4 oz single wall paper cup for espresso, macchiato and cortado — PE lined, white board, printed in one colour. Larger single wall sizes are quoted on request.\n\nFor larger hot drinks we recommend [custom printed double wall coffee cups](/coffee-cups/double-wall-cups/), priced online in 6 to 16 oz.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "4 oz espresso size",
     "One-colour print",
@@ -43,7 +43,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "A little more\nbehind every cup."
+      "heading": "Printed espresso cups,\n4 oz single wall."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -68,7 +68,7 @@
     },
     "faq": {
       "eyebrow": "Good questions",
-      "heading": "Before your first order."
+      "heading": "Espresso cup questions,\nanswered."
     }
   },
   "specs": [
@@ -171,6 +171,6 @@
   "seo": {
     "title": "Custom Printed 4 oz Espresso Cups | AC Supply Co.",
     "description": "Price up custom printed 4 oz single wall espresso cups online: white board, one-colour print, PE lined. Indicative trade prices — request a quote.",
-    "canonical": "/coffee-cups/single-wall-cups/"
+    "canonical": "/coffee-cups/espresso-cups/"
   }
 }

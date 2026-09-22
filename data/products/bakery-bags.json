@@ -5,7 +5,7 @@
   "category": "bakery-packaging",
   "status": "preview",
   "short_description": "Your bread, wrapped in your name. Printed bread, baguette and pastry bags in kraft or white — the bag that leaves the counter with every sale.",
-  "description": "Three bags cover the bakery counter: a large bread bag, a long greaseproof baguette bag and a small greaseproof pastry bag for cookies and pastries. Choose the bag, one or two print colours and the paper, then put your name on every sale.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "description": "Three bags cover the bakery counter: a large bread bag, a long greaseproof baguette bag and a small greaseproof pastry bag for cookies and pastries. Choose the bag, one or two print colours and the paper, then put your name on every sale.\n\nBoxing cakes and pastries too? See our [custom printed cake and pastry boxes](/bakery-packaging/pastry-boxes/). For handled carriers, see [custom printed paper bags](/paper-bags/printed-paper-bags/), and seal any bag with [logo stickers](/catering-supplies/logo-stickers/).\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "1 or 2 colour print",
     "Greaseproof options",
@@ -25,8 +25,8 @@
       "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
     },
     {
-      "q": "Why does the pastry bag start at 5,000?",
-      "a": "Pastry bags are produced in larger runs than bread and baguette bags, so the first price break is higher. If you need fewer, use “Request a custom quantity” and we will advise."
+      "q": "Why are pastry bag quantities higher?",
+      "a": "Pastry bags are produced in longer runs than bread and baguette bags, so their first price break is higher — the quantity options on this page show where it starts. If you need fewer, use “Request a custom quantity” and we will advise."
     },
     {
       "q": "When will my bags arrive?",
@@ -43,7 +43,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "A little more\nbehind every bag."
+      "heading": "Printed bread, baguette\nand pastry bags."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -68,7 +68,7 @@
     },
     "faq": {
       "eyebrow": "Good questions",
-      "heading": "Before your first order."
+      "heading": "Bakery bag questions,\nanswered."
     }
   },
   "specs": [

@@ -4,7 +4,7 @@
   "title": "Custom printed tubs and soup containers",
   "category": "takeaway-packaging",
   "status": "preview",
-  "short_description": "Ice cream tubs, soup containers and dessert cups printed in full colour with your brand — with plain or branded lids.",
+  "short_description": "Ice cream tubs, soup containers and dessert cups printed in full colour with your brand — with or without a printed lid.",
   "description": "Six containers on one page: ice cream tubs and soup containers in 12 and 16 oz, and dessert cups in 8 and 12 oz — all full-colour printed so the artwork wraps the whole outside. Choose the container and the lid, then send us your artwork.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "Full-colour print",
@@ -26,7 +26,7 @@
     },
     {
       "q": "Why does a branded lid double the price?",
-      "a": "A printed paper lid is a second printed component with its own tooling, supplied one per tub. Choose “No lid” to price the tub alone, or “Plain lid” for an unprinted lid quoted on request."
+      "a": "A printed paper lid is a second printed component with its own tooling, supplied one per tub. Choose “No lid” to price the tub alone, or ask about other lid options in your enquiry."
     },
     {
       "q": "When will my tubs arrive?",
@@ -43,7 +43,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "A little more\nbehind every tub."
+      "heading": "Printed tubs, soup\nand dessert cups."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -68,7 +68,7 @@
     },
     "faq": {
       "eyebrow": "Good questions",
-      "heading": "Before your first order."
+      "heading": "Tub and soup container questions,\nanswered."
     }
   },
   "specs": [
@@ -96,7 +96,7 @@
     },
     {
       "label": "Lid",
-      "value": "Plain lid — quoted on request",
+      "value": "Standard lid — quoted on request",
       "applies_to": {
         "lid": "plain"
       }
@@ -154,8 +154,8 @@
         },
         {
           "value": "plain",
-          "label": "Plain lid",
-          "note": "Plain lids are quoted on request."
+          "label": "Standard lid",
+          "note": "Standard lids are quoted on request."
         }
       ]
     }

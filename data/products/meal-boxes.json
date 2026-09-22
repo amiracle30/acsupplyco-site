@@ -1,11 +1,11 @@
 {
   "id": "meal-boxes",
   "slug": "meal-boxes",
-  "title": "Custom printed meal and wrap boxes",
+  "title": "Custom printed takeaway and wrap boxes",
   "category": "takeaway-packaging",
   "status": "preview",
   "short_description": "Your lunch, boxed in your brand. Printed takeaway meal boxes and wrap boxes in 1–3 colours, on kraft or white board.",
-  "description": "A tuck-top meal box for sandwiches, salads and hot food, and a long wrap box for wraps and subs. Choose the box, the number of print colours and the board, then put your brand on every order.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "description": "Two boxes cover most food-to-go menus: a tuck-top takeaway meal box for sandwiches, salads and hot food, and a long tuck-end wrap box for wraps, subs and baguettes. Both are printed with your logo in one, two or three colours on kraft or white board; gloss and matte lamination are quoted on request.\n\nBuild the whole order around one artwork: line the box with [custom printed greaseproof paper](/catering-supplies/greaseproof-paper/), seal it with [logo stickers](/catering-supplies/logo-stickers/) and send it out in a [printed takeaway bag](/paper-bags/printed-paper-bags/). Serving burgers or fried chicken? See our [burger boxes](/takeaway-packaging/burger-boxes/) and [chicken boxes](/takeaway-packaging/chicken-boxes/).\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "1, 2 or 3 colour print",
     "Two box formats",
@@ -29,6 +29,10 @@
       "a": "Gloss and matte lamination are available and are quoted on request. Select the finish you want and send us the configuration."
     },
     {
+      "q": "Which box do I need?",
+      "a": "The takeaway meal box suits sandwiches, salads and hot meals; the wrap box is long and narrow for wraps, subs and baguettes. Tell us what you serve and we will advise."
+    },
+    {
       "q": "When will my boxes arrive?",
       "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
     }
@@ -43,7 +47,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "A little more\nbehind every box."
+      "heading": "Printed takeaway\nand wrap boxes."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -68,7 +72,7 @@
     },
     "faq": {
       "eyebrow": "Good questions",
-      "heading": "Before your first order."
+      "heading": "Takeaway box questions,\nanswered."
     }
   },
   "specs": [
@@ -749,8 +753,8 @@
     "mode": "priced"
   },
   "seo": {
-    "title": "Custom Printed Meal Boxes & Wrap Boxes | AC Supply Co.",
-    "description": "Price up custom printed takeaway meal boxes and wrap boxes online: 1–3 colour print on kraft or white board. Indicative trade prices — request a quote.",
+    "title": "Custom Printed Takeaway & Wrap Boxes | AC Supply Co.",
+    "description": "Custom printed takeaway meal boxes and wrap boxes with your logo, 1–3 colours on kraft or white board. See indicative trade prices and request a quote.",
     "canonical": "/takeaway-packaging/meal-boxes/"
   }
 }

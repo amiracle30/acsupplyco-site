@@ -1,11 +1,11 @@
 {
   "id": "pizza-boxes",
   "slug": "pizza-boxes",
-  "title": "Custom printed pizza boxes",
+  "title": "Custom printed pizza boxes, 9 and 12 inch",
   "category": "custom-pizza-boxes",
   "status": "preview",
   "short_description": "Your pizza. Your name on the lid. Printed pizza boxes in 9 and 12 inch, on kraft or white board.",
-  "description": "The box is the last thing your customer sees before the first slice — and it sits on their table for the whole meal. Choose the size, the number of print colours and the board, then make the lid yours.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "description": "The box is the last thing your customer sees before the first slice — and it sits on their table for the whole meal. Choose the size, the number of print colours and the board, then make the lid yours.\n\nNeed a different size or a full-wrap design? Read more about our [custom pizza boxes](/custom-pizza-boxes/) — sizes, artwork and approval. Finish the order with [printed greaseproof paper](/catering-supplies/greaseproof-paper/) and [branded napkins](/catering-supplies/branded-napkins/).\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "1, 2 or 3 colour print",
     "Kraft or white board",
@@ -47,7 +47,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "A little more\nbehind every box."
+      "heading": "Printed pizza boxes,\n9 and 12 inch."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -72,7 +72,7 @@
     },
     "faq": {
       "eyebrow": "Good questions",
-      "heading": "Before your first order."
+      "heading": "Pizza box questions,\nanswered."
     }
   },
   "specs": [
@@ -423,8 +423,8 @@
     "mode": "priced"
   },
   "seo": {
-    "title": "Custom Printed Pizza Boxes — Prices | AC Supply Co.",
-    "description": "Price up custom printed pizza boxes online: 9 and 12 inch, 1–3 colour print on kraft or white board. Indicative trade prices — request a quote.",
+    "title": "Custom Printed Pizza Boxes 9 & 12 Inch | AC Supply Co.",
+    "description": "Custom printed 9 and 12 inch pizza boxes with your logo, 1–3 colours on kraft or white board. See indicative trade prices per box and request a quote.",
     "canonical": "/custom-pizza-boxes/pizza-boxes/"
   }
 }
