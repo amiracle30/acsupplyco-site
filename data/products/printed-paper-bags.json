@@ -95,6 +95,13 @@
       }
     },
     {
+      "label": "Dimensions",
+      "value": "200 × 110 × 320 mm, 90 gsm kraft",
+      "applies_to": {
+        "style": "grab"
+      }
+    },
+    {
       "label": "Handles",
       "value": "Twisted paper handles",
       "applies_to": {
