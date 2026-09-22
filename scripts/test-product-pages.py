@@ -148,11 +148,26 @@ def test_record(browser, base, record):
               page.locator('#tiers .tier').count() == 0 and page.inner_text('#total') == 'Price on request'
               and '£0' not in page.inner_text('.configurator .order') and not page.is_hidden('#selection-note'))
         check('quote-only variant keeps every selection', selection(page, record) == quote_only['selection'])
-        page.click('.cta[data-quote]')
+        page.click('a[data-quote]')
         check('quote-only enquiry carries SKU and "To be quoted"',
               page.input_value('[name=variant_sku]') == quote_only['sku'] and page.input_value('[name=unit_estimate]') == 'To be quoted')
         page.click('#close-quote')
     check('no console errors (main flow)', not page.problems, '; '.join(page.problems[:3]))
+    page.close()
+
+    # -- add to quote → /quote/ → submit (basket lives in localStorage, so same page context)
+    page = open_page(browser, base, url)
+    page.click('.cta[data-add-quote]')
+    check('add to quote: confirmation and header count', 'Added to your quote' in page.inner_text('#added-note') and '(1)' in page.inner_text('.header-quote'))
+    page.goto(base + '/quote/', wait_until='load')
+    check('basket page lists the line with a price', page.locator('.line').count() == 1 and '£' in page.inner_text('#grand'))
+    sent = {}
+    page.route('https://api.web3forms.com/submit', lambda route: (sent.update(json.loads(route.request.post_data)), route.fulfill(status=200, content_type='application/json', body='{"success": true}')))
+    for name, value in [('name', 'Test Buyer'), ('business_name', 'Test Deli'), ('email', 'buyer@example.com'), ('phone', '07000000000'), ('delivery_postcode', 'E1 6AN')]:
+        page.fill(f'[name={name}]', value)
+    page.click('#cart-submit')
+    page.wait_for_url('**/thank-you/', timeout=5000)
+    check('basket submit: lines, total and JSON reach the form; basket cleared', record['title'] in sent.get('quote_lines', '') and sent.get('quote_total', '').endswith('ex VAT') and json.loads(sent.get('quote_json', '[]'))[0]['product_id'] == record['id'] and page.evaluate("localStorage.getItem('ac_quote')") == '[]')
     page.close()
 
     # -- invalid combination: drop one variant from the embedded data (needs two options with alternatives)
@@ -228,7 +243,7 @@ def keyboard_and_enquiry_checks(browser, base, url, record, options, first, othe
     current = selection(page, record)
     variant = next(v for v in record['variants'] if v['selection'] == current)
     qty = int(second_tier.get_attribute('data-quantity'))
-    page.click('.cta[data-quote]')
+    page.click('a[data-quote]')
     page.fill('[name=name]', 'Test Buyer')
     page.fill('[name=email]', 'Buyer@Example.com')
     page.fill('[name=phone]', '+44 7000 000000')

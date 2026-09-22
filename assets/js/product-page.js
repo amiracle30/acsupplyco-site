@@ -213,7 +213,34 @@
     dialog.showModal();
     (tier ? form.elements.name : qtyField).focus();
   }
-  document.querySelectorAll('[data-quote]').forEach(button => button.addEventListener('click', () => openQuote(false)));
+  document.querySelectorAll('[data-quote]').forEach(button => button.addEventListener('click', event => { event.preventDefault(); openQuote(false); }));
+
+  /* ---------- add to quote basket ---------- */
+  function currentLine() {
+    const variant = variantFor(selected);
+    const tier = tiersFor(variant).find(t => t.qty === quantity);
+    const priced = Boolean(tier && tier.unit !== null);
+    const sub = priced ? toPence(tier.qty, tier.unit) : null;
+    return {
+      product_id: data.id, product: data.title, sku: variant ? variant.sku : null, url: location.pathname,
+      options: data.options.map(o => ({ key: o.key, label: o.label, value: valueOf(o)?.label ?? selected[o.key] })),
+      qty: tier ? tier.qty : null, custom_qty: !tier, unit: priced ? money(tier.unit, 3) : null, unit_milli: priced ? tier.unit.toString() : null,
+      subtotal: priced ? money(sub, 2) : null, subtotal_pence: priced ? sub.toString() : null,
+      tiers: isPriced(variant) ? tiersFor(variant).map(t => ({ qty: t.qty, unit: t.unit === null ? null : t.unit.toString() })) : [],
+      unit_word: data.unit, lead_time: variant && variant.available ? (variant.lead_time || data.lead_time) : 'Confirmed with your quote',
+    };
+  }
+  document.querySelectorAll('[data-add-quote]').forEach(button => button.addEventListener('click', () => {
+    if (!window.acQuote) return openQuote(false);
+    const n = window.acQuote.add(currentLine());
+    const note = $('added-note');
+    note.innerHTML = '';
+    note.append(`Added to your quote — ${n} item${n === 1 ? '' : 's'}. `);
+    const link = document.createElement('a'); link.href = '/quote/'; link.textContent = 'Review and send your quote →'; note.append(link);
+    note.hidden = false;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'add_to_quote', product_id: data.id, variant_sku: currentLine().sku, qty: quantity });
+  }));
   $('custom-quantity').addEventListener('click', () => openQuote(true));
   $('close-quote').addEventListener('click', () => dialog.close());
 
