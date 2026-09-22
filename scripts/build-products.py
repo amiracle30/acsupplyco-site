@@ -273,6 +273,12 @@ def page_data(record, images, defaults):
     }
 
 
+NAV_SECTION = {'cold-cups': 'cold-cups', 'poke-bowls': 'bowls', 'tubs-and-soup-containers': 'bowls', 'bakery-bags': 'bags',
+               'pastry-boxes': 'boxes'}
+NAV_BY_CATEGORY = {'coffee-cups': 'hot-cups', 'takeaway-packaging': 'boxes', 'paper-bags': 'bags', 'bakery-packaging': '',
+                   'custom-pizza-boxes': 'boxes', 'catering-supplies': 'table-print'}
+
+
 def render(env, record):
     defaults = default_selection(record)
     images = web_images(record)
@@ -314,7 +320,8 @@ def render(env, record):
         {'@type': 'Question', 'name': f['q'], 'acceptedAnswer': {'@type': 'Answer', 'text': f['a']}} for f in record['faqs']]}
 
     return env.get_template('product.html').render(
-        p=record, copy=record['copy'], site=SITE, published=published, canonical=canonical, category_label=CATEGORIES[record['category']],
+        p=record, copy=record['copy'], site=SITE, published=published,
+        nav_section=NAV_SECTION.get(record['slug'], NAV_BY_CATEGORY[record['category']]), canonical=canonical, category_label=CATEGORIES[record['category']],
         hero=gallery[0], gallery=gallery, defaults=defaults,
         default_labels={o['key']: v['label'] for o, v in zip(record['options'], chosen)},
         default_note=' '.join(notes), tiers=tier_cards, order_rows=order_rows, total_text=total_text,

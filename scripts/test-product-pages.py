@@ -158,7 +158,7 @@ def test_record(browser, base, record):
     # -- add to quote → /quote/ → submit (basket lives in localStorage, so same page context)
     page = open_page(browser, base, url)
     page.click('.cta[data-add-quote]')
-    check('add to quote: confirmation and header count', 'Added to your quote' in page.inner_text('#added-note') and '(1)' in page.inner_text('.header-quote'))
+    check('add to quote: confirmation and header count', 'Added to your quote' in page.inner_text('#added-note') and '(1)' in page.inner_text('.hdr-quote'))
     page.goto(base + '/quote/', wait_until='load')
     check('basket page lists the line with a price', page.locator('.line').count() == 1 and '£' in page.inner_text('#grand'))
     sent = {}

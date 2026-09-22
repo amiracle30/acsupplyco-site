@@ -1,280 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!-- DROP-IN HEADER
+Paste the <style> into each page's <head>, the <header> at the start of <body>,
+and the <script> after the header. No build step or libraries are required.
+Set data-current on <header> to hot-cups, cold-cups, boxes, bowls, bags,
+table-print, all-products, ordering, why, guides, faq, contact, or quote; use "" for no selection.
+Keep the site's existing quote-basket.js to populate [data-quote-count].
+The mobile navigation is generated from the desktop links to keep both in sync.
+-->
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#0f1f3d">
-
-  <!-- Google Consent Mode v2 — defaults MUST come before GTM -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      analytics_storage: 'denied',
-      wait_for_update: 500
-    });
-    // Restore a previously saved consent choice BEFORE GTM loads.
-    // tracking.js is deferred, so its update lands in the dataLayer queue
-    // after the gtm.js event and is too late for consent-gated tags.
-    try {
-      var acConsent = localStorage.getItem('ac_consent');
-      if (acConsent === 'granted' || acConsent === 'denied') {
-        gtag('consent', 'update', {
-          ad_storage: acConsent,
-          ad_user_data: acConsent,
-          ad_personalization: acConsent,
-          analytics_storage: acConsent
-        });
-      }
-    } catch (e) {}
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MR747W4P');</script>
-  <!-- End Google Tag Manager -->
-
-  <title>Page Not Found | AC Supply Co.</title>
-  <meta name="robots" content="noindex, nofollow" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AC Supply Co. — drop-in header</title>
+<!-- Preview only: existing pages already load this font. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&amp;display=swap">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #FAFAF7;
-    --paper: #FFFFFF;
-    --cream: #F1ECE0;
-    --cream-deep: #E8E2D2;
-    --ink: #0F1F3D;
-    --ink-soft: #1F2D4D;
-    --muted: #5A6478;
-    --light: #8A92A3;
-    --border: #E5E1D8;
-    --border-strong: #C9C2B0;
-    --accent: #1F6B43;
-    --accent-deep: #164C30;
-    --accent-pale: #E8F0EA;
-    --whatsapp: #25D366;
-    --radius: 4px;
-    --maxw: 1280px;
-    --gutter: 32px;
-  }
-
-  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-  body {
-    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    font-size: 16px;
-    line-height: 1.5;
-    font-feature-settings: "ss01", "cv11";
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  a { color: inherit; }
-  img { display: block; max-width: 100%; }
-
-  .mono { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-feature-settings: "calt" 0; }
-  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-
-  /* ANNOUNCEMENT */
-  .announcement {
-    background: var(--ink);
-    color: rgba(255,255,255,0.85);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 12px;
-    letter-spacing: 0.02em;
-  }
-  .announcement-inner {
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 10px var(--gutter);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
-  }
-  .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
-  .announcement .pulse {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: #4ade80;
-    box-shadow: 0 0 0 0 rgba(74,222,128,0.6);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); }
-    70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); }
-    100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); }
-  }
-  .announcement a { color: white; text-decoration: none; font-weight: 500; border-bottom: 1px dashed rgba(255,255,255,0.4); padding-bottom: 1px; }
-
-  /* HEADER */
-  .header {
-    background: rgba(250,250,247,0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .header-inner {
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 0 var(--gutter);
-    height: 72px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 48px;
-  }
-  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .logo img { height: 52px; width: auto; }
-  .nav { display: flex; align-items: center; gap: 4px; justify-self: center; }
-  .nav a {
-    text-decoration: none;
-    color: var(--ink-soft);
-    font-size: 14px;
-    font-weight: 500;
-    padding: 8px 14px;
-    border-radius: var(--radius);
-    transition: background 0.15s, color 0.15s;
-  }
-  .nav a:hover { background: var(--cream); color: var(--ink); }
-  .header-cta { display: flex; align-items: center; gap: 10px; }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.01em;
-    padding: 11px 18px;
-    border-radius: var(--radius);
-    transition: all 0.15s;
-    border: 1px solid transparent;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--border-strong); }
-  .btn-ghost:hover { background: var(--ink); color: white; border-color: var(--ink); }
-  .btn-primary { background: var(--ink); color: white; border-color: var(--ink); }
-  .btn-primary:hover { background: var(--ink-soft); border-color: var(--ink-soft); }
-  .btn-accent { background: var(--accent); color: white; border-color: var(--accent); }
-  .btn-accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
-  .btn-lg { padding: 14px 22px; font-size: 14px; }
-
-  /* 404 CARD */
-  main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 72px var(--gutter);
-  }
-  .error-box {
-    background: var(--ink);
-    border-radius: var(--radius);
-    padding: 72px 56px;
-    max-width: 560px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .error-box::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 500px 300px at 50% 50%, rgba(31,107,67,0.18) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .error-code {
-    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
-    margin-bottom: 24px;
-    position: relative;
-  }
-  .error-box h1 {
-    font-size: clamp(28px, 3.6vw, 36px);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: white;
-    line-height: 1.2;
-    margin-bottom: 16px;
-    position: relative;
-  }
-  .error-box p {
-    font-size: 15.5px;
-    color: rgba(255,255,255,0.7);
-    line-height: 1.65;
-    margin: 0 auto 32px;
-    max-width: 420px;
-    position: relative;
-  }
-  .error-box .btn { position: relative; }
-  .error-box-actions {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .error-box .btn-ghost { color: white; border-color: rgba(255,255,255,0.4); }
-  .error-box .btn-ghost:hover { background: white; color: var(--ink); border-color: white; }
-
-  /* FOOTER */
-  footer {
-    background: var(--ink);
-    color: rgba(255,255,255,0.7);
-    padding: 56px 0 32px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .footer-inner {
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 0 var(--gutter);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
-    font-size: 11px;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.04em;
-  }
-  .footer-inner a { color: rgba(255,255,255,0.75); text-decoration: none; }
-  .footer-inner a:hover { color: white; }
-  .footer-links { display: flex; gap: 22px; }
-
-  @media (max-width: 720px) {
-    .header-inner { grid-template-columns: auto 1fr; gap: 16px; }
-    .nav { display: none; }
-    .error-box { padding: 56px 28px; }
-    .footer-inner { flex-direction: column; align-items: flex-start; }
-  }
-  @media (max-width: 480px) {
-    .announcement-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
-    .error-box-actions { flex-direction: column; }
-    .error-box-actions .btn { width: 100%; }
-  }
-</style>
-<style data-site-header>
 .hdr-root {
   --bg:#FAFAF7; --paper:#FFFFFF; --ink:#0F1F3D; --ink-soft:#1F2D4D;
   --muted:#5A6478; --border:#E5E1D8; --accent:#1F6B43;
@@ -399,14 +139,9 @@
   .hdr-panel-actions .hdr-primary { width:auto; padding:10px 16px; }
   .hdr-panel-actions .hdr-label { display:inline; }
 }
-.hdr-root details{border:0;padding:0;margin:0}.hdr-root summary{font-size:inherit}.hdr-root h2{font-size:18px;margin:0}.hdr-root ul{margin:0}.gallery{top:168px}
 </style>
 </head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR747W4P" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
+<body style="margin:0">
 <header class="hdr-root" data-current="">
 <div class="hdr-announcement"><div class="hdr-inner hdr-announcement-inner"><span class="hdr-announcement-text"><span class="hdr-dot" aria-hidden="true"></span>UK trade supply · Send us your packaging list and we'll quote against it</span><a href="/#contact">Request trade pricing →</a></div></div>
 <div class="hdr-inner hdr-top">
@@ -441,31 +176,101 @@
 <div class="hdr-panel-actions"><a class="hdr-primary" href="/#contact">Request a quote</a></div>
 </dialog>
 </header>
-<script src="/assets/js/site-header.js" defer></script>
-<main>
-  <div class="error-box">
-    <div class="error-code">Error / 404</div>
-    <h1>Page not found</h1>
-    <p>The page you're looking for doesn't exist. It may have moved, or the URL may be incorrect.</p>
-    <div class="error-box-actions">
-      <a href="/" class="btn btn-accent btn-lg">Back to homepage</a>
-      <a href="/#products" class="btn btn-ghost btn-lg">Browse products</a>
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <span>© 2026 AC Supply Co. · United Kingdom</span>
-    <div class="footer-links">
-      <a href="/privacy/">Privacy</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/#contact">Contact</a>
-    </div>
-  </div>
-</footer>
-
-<script src="/assets/js/quote-basket.js" defer></script>
-<script src="/assets/js/tracking.js" defer></script>
+<script>
+(() => {
+  const header = document.querySelector('.hdr-root');
+  if (!header || header.dataset.hdrReady) return;
+  header.dataset.hdrReady = 'true';
+  const panel = header.querySelector('.hdr-panel');
+  const toggle = header.querySelector('.hdr-toggle');
+  const mobile = header.querySelector('.hdr-mobile-nav');
+  const desktop = window.matchMedia('(min-width:801px)');
+  const setCurrent = () => {
+    header.querySelectorAll('[data-hdr-section]').forEach(link => {
+      if (link.dataset.hdrSection === header.dataset.current) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  header.querySelector('.hdr-quote').dataset.hdrSection = 'quote';
+  header.querySelector('#hdr-guides-menu a').dataset.hdrSection = 'guides';
+  // Keep the six category links navigable; their mobile summaries toggle separate accordions.
+  header.querySelectorAll('[data-hdr-mobile]').forEach(source => {
+    const details = document.createElement('details');
+    details.className = 'hdr-accordion';
+    const summary = document.createElement('summary');
+    const icon = source.querySelector('.hdr-icon');
+    if (icon) summary.append(icon.cloneNode(true));
+    summary.append(document.createTextNode(source.dataset.hdrMobile));
+    const list = document.createElement('ul');
+    list.className = 'hdr-mobile-list';
+    const category = source.querySelector('.hdr-category-link');
+    if (category) {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = category.getAttribute('href');
+      link.dataset.hdrSection = category.dataset.hdrSection;
+      link.textContent = 'View all ' + source.dataset.hdrMobile.toLowerCase();
+      item.append(link);
+      list.append(item);
+    }
+    source.querySelectorAll('.hdr-menu > li').forEach(item => list.append(item.cloneNode(true)));
+    details.append(summary, list);
+    // Categories first, then Industries and Guides.
+    if (category) mobile.insertBefore(details, mobile.querySelector('[data-hdr-secondary]'));
+    else { details.dataset.hdrSecondary = 'true'; mobile.append(details); }
+  });
+  header.querySelectorAll('.hdr-main > a').forEach(link => {
+    const copy = link.cloneNode(true);
+    copy.className = 'hdr-mobile-link';
+    mobile.append(copy);
+  });
+  setCurrent();
+  new MutationObserver(setCurrent).observe(header, { attributes:true, attributeFilter:['data-current'] });
+  header.querySelectorAll('.hdr-dropdown').forEach(dropdown => {
+    const trigger = dropdown.querySelector(':scope > button, :scope > a');
+    const open = () => {
+      dropdown.classList.remove('hdr-dismissed');
+      dropdown.classList.add('hdr-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    };
+    const close = () => {
+      dropdown.classList.remove('hdr-open');
+      dropdown.classList.add('hdr-dismissed');
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+    dropdown.addEventListener('pointerenter', event => { if (event.pointerType !== 'touch') open(); });
+    dropdown.addEventListener('pointerleave', () => { if (!dropdown.contains(document.activeElement)) close(); });
+    dropdown.addEventListener('focusin', open);
+    dropdown.addEventListener('focusout', event => { if (!dropdown.contains(event.relatedTarget)) close(); });
+    trigger.addEventListener('click', () => { if (trigger.tagName === 'BUTTON') open(); });
+    dropdown.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        trigger.focus();
+        close();
+      } else if (event.key === 'ArrowDown' && event.target === trigger) {
+        event.preventDefault();
+        open();
+        dropdown.querySelector('.hdr-menu a').focus();
+      }
+    });
+  });
+  let previousOverflow = '';
+  toggle.addEventListener('click', () => {
+    previousOverflow = document.body.style.overflow;
+    panel.showModal();
+    document.body.style.overflow = 'hidden';
+    toggle.setAttribute('aria-expanded', 'true');
+  });
+  header.querySelector('.hdr-close').addEventListener('click', () => panel.close());
+  panel.addEventListener('close', () => {
+    document.body.style.overflow = previousOverflow;
+    toggle.setAttribute('aria-expanded', 'false');
+    if (!desktop.matches) toggle.focus();
+  });
+  panel.addEventListener('click', event => { if (event.target.closest('a')) panel.close(); });
+  desktop.addEventListener('change', () => { if (desktop.matches && panel.open) panel.close(); });
+})();
+</script>
 </body>
 </html>
