@@ -1022,23 +1022,30 @@
     },
     {
       "file": "02-branded/04-food-boxes/miel__patisserie-box-medium.png",
-      "alt": "Medium patisserie box printed with the “Miel” brand design",
+      "alt": "Medium cream pastry box printed with a fine burgundy border, hexagon mark and “Miel · pâtisserie” wordmark",
       "order": 1,
       "role": "hero",
       "match": {
         "size": "medium"
-      },
-      "optional": true
+      }
     },
     {
       "file": "02-branded/04-food-boxes/miel__pastry-box-large.png",
-      "alt": "Large pastry box printed with the “Miel” brand design",
+      "alt": "Large cream pastry box printed with a burgundy rule and the “Miel” hexagon wordmark",
       "order": 1,
       "role": "hero",
       "match": {
         "size": "large"
-      },
-      "optional": true
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/side-street__pastry-box-large.png",
+      "alt": "Large kraft box printed with a sage-green hand-painted checkerboard and a “Side Street brunch” label",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "large"
+      }
     }
   ],
   "enquiry": {

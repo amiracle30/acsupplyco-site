@@ -4,5 +4,23 @@
     "thumb_height": 324,
     "thumb_width": 400,
     "width": 1393
+  },
+  "miel-pastry-box-large": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "miel-patisserie-box-medium": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "side-street-pastry-box-large": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
   }
 }
