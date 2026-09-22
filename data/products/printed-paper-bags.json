@@ -1109,6 +1109,69 @@
       "match": {
         "style": "takeaway"
       }
+    },
+    {
+      "file": "02-branded/05-bags/aegea__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "Kraft twisted-handle takeaway bag printed in one colour with an olive-branch illustration and the “Aegea” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "file": "repo:output/product-variants-v1/kraft-takeaway-bag-260x160x320.png",
+      "alt": "Kraft twisted-handle takeaway bag printed in one colour with the “HEARTH” bakery design",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/side-street__carrier-bag-medium-flat-handle.png",
+      "alt": "Flat-handle paper carrier bag printed with a hand-drawn checkerboard pattern and the “Side Street” name",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "carrier"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/halo__flat-handle-carrier-bag-wide-gusset.png",
+      "alt": "Wide-gusset kraft carrier bag printed with the retro “HALO” bagels design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "wide-gusset"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/halo__sos-grab-bag-small.png",
+      "alt": "Small kraft SOS grab bag printed with the retro “HALO” bagel design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "grab"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/halo__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "Kraft twisted-handle takeaway bag printed with the retro purple “HALO” bagel design",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "style": "takeaway"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/hearth__carrier-bag-medium-flat-handle.png",
+      "alt": "Medium flat-handle kraft carrier bag printed with the rustic “HEARTH” bakery wordmark",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "style": "carrier"
+      }
     }
   ],
   "enquiry": {
