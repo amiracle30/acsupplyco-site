@@ -26,7 +26,7 @@
     },
     {
       "q": "Which bag style should I choose?",
-      "a": "Twisted-handle takeaway bags suit hot food and meal orders. Flat-handle carriers are the classic retail and bakery bag, with the wide-gusset version for larger or boxed items. SOS grab bags have no handles and suit pastries, sandwiches and counter service. If you are unsure, tell us what goes in the bag and we will advise."
+      "a": "Twisted-handle takeaway bags suit hot food and meal orders. Flat-handle carriers are the classic retail and bakery bag; the wide-gusset twisted-handle carrier takes larger or boxed items. SOS grab bags have no handles and suit pastries, sandwiches and counter service. If you are unsure, tell us what goes in the bag and we will advise."
     },
     {
       "q": "Do you print other bag sizes?",
@@ -78,7 +78,7 @@
   "specs": [
     {
       "label": "Styles",
-      "value": "Twisted-handle takeaway, flat-handle carrier (medium and wide gusset), SOS grab bag"
+      "value": "Twisted-handle takeaway, flat-handle carrier, wide-gusset twisted-handle carrier, SOS grab bag"
     },
     {
       "label": "Dimensions",
@@ -124,7 +124,7 @@
     },
     {
       "label": "Handles",
-      "value": "Flat paper handles, wide gusset",
+      "value": "Twisted paper handles, wide gusset",
       "applies_to": {
         "style": "wide-gusset"
       }
@@ -213,7 +213,7 @@
         },
         {
           "value": "wide-gusset",
-          "label": "Flat handle carrier, wide gusset"
+          "label": "Twisted handle carrier, wide gusset"
         },
         {
           "value": "grab",
@@ -1202,7 +1202,7 @@
   },
   "seo": {
     "title": "Custom Printed Paper Bags with Your Logo | AC Supply Co.",
-    "description": "Custom printed paper bags with your logo: twisted-handle takeaway bags, flat-handle carriers and SOS grab bags on kraft or white, 1–4 colours. Get a quote.",
+    "description": "Custom printed paper bags with your logo: twisted-handle takeaway and wide-gusset bags, flat-handle carriers and SOS grab bags on kraft or white, 1–4 colours. Get a quote.",
     "canonical": "/paper-bags/printed-paper-bags/"
   }
 }
