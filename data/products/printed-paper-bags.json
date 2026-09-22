@@ -96,6 +96,13 @@
     },
     {
       "label": "Dimensions",
+      "value": "220 × 150 × 260 mm",
+      "applies_to": {
+        "style": "wide-gusset"
+      }
+    },
+    {
+      "label": "Dimensions",
       "value": "200 × 110 × 320 mm, 90 gsm kraft",
       "applies_to": {
         "style": "grab"
@@ -1079,6 +1086,15 @@
     "starts": "artwork approval"
   },
   "images": [
+    {
+      "file": "02-branded/05-bags/marlow__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "White twisted-handle paper takeaway bag with a deep green gusset, green rope handles and the “MARLOW” serif wordmark",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "style": "wide-gusset"
+      }
+    },
     {
       "file": "02-branded/05-bags/marlow__kraft-takeaway-bag-twisted-handle.png",
       "alt": "White twisted-handle paper takeaway bag with a deep green gusset, green rope handles and the “MARLOW” serif wordmark",
