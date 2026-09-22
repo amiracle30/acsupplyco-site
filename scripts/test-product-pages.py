@@ -54,7 +54,7 @@ def open_page(browser, base, url_path, mutate=None, width=1280):
             mutate(data)
             route.fulfill(body=body[:match.start(2)] + json.dumps(data).replace('<', '\\u003c') + body[match.end(2):],
                           content_type='text/html; charset=utf-8')
-        page.route(re.compile(r'/preview/[^/]+/(\?.*)?$'), rewrite)
+        page.route(re.compile(r'/[a-z-]+/[a-z-]+/(\?.*)?$'), rewrite)
     page.add_init_script("try { localStorage.setItem('ac_consent', 'denied'); } catch (e) {}")
     page.goto(base + url_path, wait_until='load')
     page.wait_for_selector('#tiers > *')
@@ -85,7 +85,8 @@ def selection(page, record):
 
 
 def test_record(browser, base, record):
-    slug, url = record['slug'], f'/preview/{record["slug"]}/'
+    slug = record['slug']
+    url = f'/preview/{slug}/' if record['status'] == 'preview' else f'/{record["category"]}/{slug}/'
     options = record['options']
     first = options[0]
     print(f'\n{slug}')
@@ -258,7 +259,7 @@ def keyboard_and_enquiry_checks(browser, base, url, record, options, first, othe
 
 def main():
     only = set(sys.argv[1:])  # optional slugs: test-product-pages.py cold-cups pizza-boxes
-    records = [r for _, r in load_records() if r['status'] == 'preview' and (not only or r['slug'] in only)]
+    records = [r for _, r in load_records() if r['status'] != 'draft' and (not only or r['slug'] in only)]
     server = serve()
     base = f'http://127.0.0.1:{server.server_address[1]}'
     with sync_playwright() as p:
