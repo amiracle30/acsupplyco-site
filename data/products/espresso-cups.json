@@ -30,7 +30,7 @@
     },
     {
       "q": "When will my cups arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Printed espresso cups are delivered in 4 weeks from artwork approval. We will confirm current availability and delivery timing with your quote."
     }
   ],
   "copy": {
@@ -131,14 +131,6 @@
       "vat": "ex",
       "tiers": [
         {
-          "qty": 1000,
-          "unit": "0.190"
-        },
-        {
-          "qty": 2500,
-          "unit": "0.120"
-        },
-        {
           "qty": 5000,
           "unit": "0.110"
         },
@@ -151,7 +143,7 @@
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "4 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [

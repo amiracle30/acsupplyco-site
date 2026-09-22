@@ -88,6 +88,13 @@
       }
     },
     {
+      "label": "Dimensions",
+      "value": "220 × 190 × 70 mm (medium) or 280 × 220 × 70 mm (large)",
+      "applies_to": {
+        "box": "meal"
+      }
+    },
+    {
       "label": "Format",
       "value": "Long tuck-end wrap box",
       "applies_to": {
