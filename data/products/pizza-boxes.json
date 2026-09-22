@@ -399,6 +399,24 @@
       "match": {
         "size": "9in"
       }
+    },
+    {
+      "file": "02-branded/04-food-boxes/forno__pizza-box-12in-v2.png",
+      "alt": "12 inch white pizza box printed in one colour with a line-drawn pizza slice and the “FORNO” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "12in"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/slice__pizza-box-12in.png",
+      "alt": "12 inch kraft pizza box printed in one colour with large black “slice” lettering",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "12in"
+      }
     }
   ],
   "enquiry": {
