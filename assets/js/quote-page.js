@@ -6,7 +6,7 @@
 (() => {
   'use strict';
   // Paste the Apps Script web-app URL here once deployed (see scripts/quote-sheet.gs). Empty = skip the sheet.
-  const QUOTE_SHEET_URL = '';
+  const QUOTE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzlZ-IOqdqGPw0rv8jKfiR04Hxprg5tkNdV7td41dFdaL1tkeGbuQEznBfUaGtOZQy1zQ/exec';
 
   const Q = window.acQuote;
   const $ = id => document.getElementById(id);
