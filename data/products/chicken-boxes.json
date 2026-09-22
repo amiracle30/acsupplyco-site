@@ -1579,6 +1579,42 @@
       "match": {
         "size": "large"
       }
+    },
+    {
+      "file": "02-branded/04-food-boxes/roost__chicken-box-small.png",
+      "alt": "Small kraft chicken box printed with a red rooster illustration and the “ROOST” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "small"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/roost__chicken-box-medium.png",
+      "alt": "Medium kraft chicken box printed with a red rooster illustration and the “ROOST” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "medium"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/roost__chicken-box-square.png",
+      "alt": "Square kraft chicken box printed with a red rooster illustration and the “ROOST” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "square"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/roost__chicken-box-bucket-with-handle.png",
+      "alt": "Kraft chicken bucket with carry handle printed with a red rooster illustration and the “ROOST” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "bucket"
+      }
     }
   ],
   "enquiry": {

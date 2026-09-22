@@ -750,8 +750,7 @@
       "role": "hero",
       "match": {
         "size": "standard"
-      },
-      "optional": true
+      }
     },
     {
       "file": "repo:output/product-variants-v1/burger-box-square-135x135x70.png",
@@ -769,8 +768,25 @@
       "role": "hero",
       "match": {
         "size": "large"
-      },
-      "optional": true
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/bun-club__burger-box.png",
+      "alt": "Standard cream clamshell burger box printed with red stripes and the “bun club” burger character",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "standard"
+      }
+    },
+    {
+      "file": "02-branded/04-food-boxes/bun-club__burger-box-square.png",
+      "alt": "Large cream clamshell burger box printed with red stripes and the “bun club” burger character",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "large"
+      }
     }
   ],
   "enquiry": {

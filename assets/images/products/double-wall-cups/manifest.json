@@ -23,13 +23,61 @@
     "thumb_width": 400,
     "width": 1536
   },
-  "kettle-custom-6oz-double-wall-cup": {
-    "height": 1129,
-    "thumb_height": 324,
+  "fern-custom-6oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
     "thumb_width": 400,
-    "width": 1393
+    "width": 1536
+  },
+  "kettle-custom-6oz-double-wall-cup-v2": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
   },
   "m-coffee-roasters-12oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "m-coffee-roasters-custom-16oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "m-coffee-roasters-custom-6oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "m-coffee-roasters-custom-8oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "orbit-custom-16oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "rosa-custom-12oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "rosa-custom-6oz-double-wall-cup": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "rosa-custom-8oz-double-wall-cup": {
     "height": 1024,
     "thumb_height": 267,
     "thumb_width": 400,

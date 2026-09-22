@@ -35,7 +35,31 @@
     "thumb_width": 400,
     "width": 1393
   },
+  "roost-chicken-box-bucket-with-handle": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
   "roost-chicken-box-large": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "roost-chicken-box-medium": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "roost-chicken-box-small": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "roost-chicken-box-square": {
     "height": 1024,
     "thumb_height": 267,
     "thumb_width": 400,

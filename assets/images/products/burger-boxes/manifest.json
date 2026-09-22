@@ -1,4 +1,16 @@
 {
+  "bun-club-burger-box": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "bun-club-burger-box-square": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
   "burger-box-120x120x70": {
     "height": 1024,
     "thumb_height": 267,
@@ -6,6 +18,18 @@
     "width": 1536
   },
   "burger-box-square-135x135x70": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "stack-burger-box": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "stack-burger-box-square": {
     "height": 1024,
     "thumb_height": 267,
     "thumb_width": 400,

@@ -712,15 +712,6 @@
   },
   "images": [
     {
-      "file": "02-branded/01-hot-cups/kettle__custom-6oz-double-wall-cup.png",
-      "alt": "White 6 oz double wall paper cup printed with a minimalist “kettle” brand design",
-      "order": 1,
-      "role": "hero",
-      "match": {
-        "size": "6oz"
-      }
-    },
-    {
       "file": "repo:output/product-variants-v1/coffee-cup-8oz-v2.png",
       "alt": "8 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
       "order": 1,
@@ -772,8 +763,79 @@
       "role": "hero",
       "match": {
         "size": "16oz"
-      },
-      "optional": true
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/rosa__custom-6oz-double-wall-cup.png",
+      "alt": "White 6 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "size": "6oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/rosa__custom-8oz-double-wall-cup.png",
+      "alt": "White 8 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "size": "8oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/rosa__custom-12oz-double-wall-cup.png",
+      "alt": "White 12 oz double wall paper cup printed with the ROSA terracotta coffee-bean pattern",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "size": "12oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/fern__custom-6oz-double-wall-cup.png",
+      "alt": "6 oz kraft double wall paper cup printed with the FERN green botanical coffee-plant design",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "6oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/m-coffee-roasters__custom-6oz-double-wall-cup.png",
+      "alt": "White 6 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "6oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/m-coffee-roasters__custom-8oz-double-wall-cup.png",
+      "alt": "White 8 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "8oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/m-coffee-roasters__custom-16oz-double-wall-cup.png",
+      "alt": "White 16 oz double wall paper cup printed with a large black serif “M” for a coffee roaster",
+      "order": 3,
+      "role": "hero",
+      "match": {
+        "size": "16oz"
+      }
+    },
+    {
+      "file": "02-branded/01-hot-cups/kettle__custom-6oz-double-wall-cup-v2.png",
+      "alt": "White 6 oz double wall paper cup printed with a minimalist “kettle” brand design",
+      "order": 4,
+      "role": "hero",
+      "match": {
+        "size": "6oz"
+      }
     }
   ],
   "enquiry": {

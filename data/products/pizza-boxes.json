@@ -390,6 +390,15 @@
       "match": {
         "size": "12in"
       }
+    },
+    {
+      "file": "02-branded/04-food-boxes/forno__pizza-box-9in-v2.png",
+      "alt": "9 inch white pizza box printed in one colour with a line-drawn pizza slice and the “FORNO” name",
+      "order": 2,
+      "role": "hero",
+      "match": {
+        "size": "9in"
+      }
     }
   ],
   "enquiry": {

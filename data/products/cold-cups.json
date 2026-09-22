@@ -2689,8 +2689,7 @@
       "role": "hero",
       "match": {
         "size": "16oz"
-      },
-      "optional": true
+      }
     },
     {
       "file": "02-branded/02-cold-cups/bolt__20oz-pet-cold-cup.png",
@@ -2699,6 +2698,34 @@
       "role": "hero",
       "match": {
         "size": "20oz"
+      }
+    },
+    {
+      "file": "02-branded/02-cold-cups/verde__10oz-pet-cold-cup.png",
+      "alt": "10 oz clear PET cold cup printed in one colour with a green mint-leaf illustration and the “VERDE” name",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "size": "10oz"
+      }
+    },
+    {
+      "file": "02-branded/02-cold-cups/verde__20oz-pet-cold-cup.png",
+      "alt": "20 oz clear PET cold cup printed in one colour with a green mint-leaf illustration and the “VERDE” name",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "size": "20oz"
+      }
+    },
+    {
+      "file": "02-branded/02-cold-cups/verde__12oz-pet-cold-cup-dome-lid.png",
+      "alt": "12 oz clear PET cold cup with a clear dome lid, printed with the green “VERDE” mint-leaf design",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "size": "12oz",
+        "lid": "lid"
       }
     }
   ],
