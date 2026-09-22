@@ -1073,17 +1073,28 @@
   },
   "images": [
     {
-      "file": "02-branded/05-bags/aegea__kraft-takeaway-bag-twisted-handle.png",
-      "alt": "Kraft twisted-handle takeaway bag printed in one colour with an olive-branch illustration and the “Aegea” name",
+      "file": "02-branded/05-bags/marlow__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "White twisted-handle paper takeaway bag with a deep green gusset, green rope handles and the “MARLOW” serif wordmark",
       "order": 1,
       "role": "hero",
       "match": {
-        "style": "takeaway"
+        "style": "takeaway",
+        "paper": "white"
       }
     },
     {
-      "file": "repo:output/product-variants-v1/kraft-takeaway-bag-260x160x320.png",
-      "alt": "Kraft twisted-handle takeaway bag printed in one colour with the “HEARTH” bakery design",
+      "file": "02-branded/05-bags/peck__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "Kraft twisted-handle takeaway bag printed with a large black “Peck” wordmark low across the face",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "style": "takeaway",
+        "paper": "kraft"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/marlow__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "White twisted-handle paper takeaway bag with a deep green gusset, green rope handles and the “MARLOW” serif wordmark",
       "order": 2,
       "role": "hero",
       "match": {
@@ -1091,30 +1102,12 @@
       }
     },
     {
-      "file": "02-branded/05-bags/side-street__carrier-bag-medium-flat-handle.png",
-      "alt": "Flat-handle paper carrier bag printed with a hand-drawn checkerboard pattern and the “Side Street” name",
-      "order": 1,
+      "file": "02-branded/05-bags/peck__kraft-takeaway-bag-twisted-handle.png",
+      "alt": "Kraft twisted-handle takeaway bag printed with a large black “Peck” wordmark low across the face",
+      "order": 2,
       "role": "hero",
       "match": {
-        "style": "carrier"
-      }
-    },
-    {
-      "file": "02-branded/05-bags/halo__flat-handle-carrier-bag-wide-gusset.png",
-      "alt": "Wide-gusset kraft carrier bag printed with the retro “HALO” bagels design",
-      "order": 1,
-      "role": "hero",
-      "match": {
-        "style": "wide-gusset"
-      }
-    },
-    {
-      "file": "02-branded/05-bags/halo__sos-grab-bag-small.png",
-      "alt": "Small kraft SOS grab bag printed with the retro “HALO” bagel design",
-      "order": 1,
-      "role": "hero",
-      "match": {
-        "style": "grab"
+        "style": "takeaway"
       }
     }
   ],
