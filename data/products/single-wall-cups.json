@@ -1,0 +1,176 @@
+{
+  "id": "single-wall-cups",
+  "slug": "single-wall-cups",
+  "title": "Custom printed single wall espresso cups",
+  "category": "coffee-cups",
+  "status": "preview",
+  "short_description": "A small cup with your name on it. Single wall 4 oz espresso cups, white board, one-colour print.",
+  "description": "A 4 oz single wall paper cup for espresso, macchiato and cortado — PE lined, white board, printed in one colour. Larger single wall sizes are quoted on request.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "4 oz espresso size",
+    "One-colour print",
+    "Recyclable PE lining"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Do you print larger single wall cups?",
+      "a": "Yes — 8, 12 and 16 oz single wall cups are available on request. For most cafés we recommend our double wall cups, which are priced online."
+    },
+    {
+      "q": "When will my cups arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Hot drinks",
+    "unit": {
+      "one": "cup",
+      "many": "cups"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every cup."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next espresso looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your cup.",
+          "text": "Select your size and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, pour.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Capacity",
+      "value": "4 oz"
+    },
+    {
+      "label": "Construction",
+      "value": "Single wall paper cup"
+    },
+    {
+      "label": "Board",
+      "value": "White"
+    },
+    {
+      "label": "Lining",
+      "value": "Recyclable PE"
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour"
+    },
+    {
+      "label": "Lids",
+      "value": "Quoted separately"
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "4oz",
+          "label": "4 oz",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "SWC-4OZ",
+      "selection": {
+        "size": "4oz"
+      },
+      "available": true,
+      "pricing_ref": "single-wall-cups-4oz"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "single-wall-cups-4oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.190"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.120"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.110"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.098"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/01-hot-cups/kettle__custom-4oz-single-wall-cup.png",
+      "alt": "White 4 oz single wall espresso cup printed with a minimalist “kettle” brand design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "4oz"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed 4 oz Espresso Cups | AC Supply Co.",
+    "description": "Price up custom printed 4 oz single wall espresso cups online: white board, one-colour print, PE lined. Indicative trade prices — request a quote.",
+    "canonical": "/coffee-cups/single-wall-cups/"
+  }
+}

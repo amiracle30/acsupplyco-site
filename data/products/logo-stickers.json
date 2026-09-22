@@ -1,0 +1,332 @@
+{
+  "id": "logo-stickers",
+  "slug": "logo-stickers",
+  "title": "Custom printed logo stickers",
+  "category": "catering-supplies",
+  "status": "preview",
+  "short_description": "Your logo on a sticker that seals bags, boxes and wraps. Round and rectangular logo stickers in gloss or matte.",
+  "description": "Three formats: 30 mm and 40 mm round, and a 100 × 60 mm rectangle. Stickers are the cheapest way to brand everything you already use — seal a bag, close a box, label a wrap. Choose the size and finish, then send us your logo.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "Full-colour print",
+    "Gloss or matte",
+    "Three formats"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Can I have a different shape or size?",
+      "a": "Yes — square and custom-cut stickers are available. Use “Request a custom quantity”, tell us the size and shape, and we will quote it."
+    },
+    {
+      "q": "When will my stickers arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Stickers",
+    "unit": {
+      "one": "sticker",
+      "many": "stickers"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every sticker."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next seal looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your sticker.",
+          "text": "Select your size, finish and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, stick.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Formats",
+      "value": "30 mm round, 40 mm round, 100 × 60 mm rectangle"
+    },
+    {
+      "label": "Size",
+      "value": "30 mm round",
+      "applies_to": {
+        "size": "30mm-round"
+      }
+    },
+    {
+      "label": "Size",
+      "value": "40 mm round",
+      "applies_to": {
+        "size": "40mm-round"
+      }
+    },
+    {
+      "label": "Size",
+      "value": "100 × 60 mm rectangle",
+      "applies_to": {
+        "size": "100x60mm"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "Full colour"
+    },
+    {
+      "label": "Finish",
+      "value": "Gloss",
+      "applies_to": {
+        "finish": "gloss"
+      }
+    },
+    {
+      "label": "Finish",
+      "value": "Matte, same price",
+      "applies_to": {
+        "finish": "matte"
+      }
+    },
+    {
+      "label": "Supplied",
+      "value": "On sheets"
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "30mm-round",
+          "label": "30 mm round",
+          "default": true
+        },
+        {
+          "value": "40mm-round",
+          "label": "40 mm round"
+        },
+        {
+          "value": "100x60mm",
+          "label": "100 × 60 mm rectangle"
+        }
+      ]
+    },
+    {
+      "key": "finish",
+      "label": "Finish",
+      "values": [
+        {
+          "value": "gloss",
+          "label": "Gloss",
+          "default": true
+        },
+        {
+          "value": "matte",
+          "label": "Matte"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "STK-R30-GLS",
+      "selection": {
+        "size": "30mm-round",
+        "finish": "gloss"
+      },
+      "available": true,
+      "pricing_ref": "logo-stickers-30mm-round"
+    },
+    {
+      "sku": "STK-R30-MAT",
+      "selection": {
+        "size": "30mm-round",
+        "finish": "matte"
+      },
+      "available": true,
+      "pricing_ref": "logo-stickers-30mm-round"
+    },
+    {
+      "sku": "STK-R40-GLS",
+      "selection": {
+        "size": "40mm-round",
+        "finish": "gloss"
+      },
+      "available": true,
+      "pricing_ref": "logo-stickers-40mm-round"
+    },
+    {
+      "sku": "STK-R40-MAT",
+      "selection": {
+        "size": "40mm-round",
+        "finish": "matte"
+      },
+      "available": true,
+      "pricing_ref": "logo-stickers-40mm-round"
+    },
+    {
+      "sku": "STK-X106-GLS",
+      "selection": {
+        "size": "100x60mm",
+        "finish": "gloss"
+      },
+      "available": true,
+      "pricing_ref": "logo-stickers-100x60mm"
+    },
+    {
+      "sku": "STK-X106-MAT",
+      "selection": {
+        "size": "100x60mm",
+        "finish": "matte"
+      },
+      "available": true,
+      "pricing_ref": "logo-stickers-100x60mm"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "logo-stickers-30mm-round",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.055"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.038"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.026"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.017"
+        }
+      ]
+    },
+    {
+      "ref": "logo-stickers-40mm-round",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.062"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.043"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.030"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.022"
+        }
+      ]
+    },
+    {
+      "ref": "logo-stickers-100x60mm",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.068"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.046"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.033"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.028"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/07-marketing-print/stack__logo-stickers-30mm-round.png",
+      "alt": "Sheet of 30 mm round stickers printed with the “STACK” burger logo",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "30mm-round"
+      }
+    },
+    {
+      "file": "02-branded/07-marketing-print/stack__logo-stickers-40mm-round.png",
+      "alt": "Sheet of 40 mm round stickers printed with the “STACK” burger logo",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "40mm-round"
+      }
+    },
+    {
+      "file": "02-branded/07-marketing-print/stack__logo-stickers-100x60mm-rectangle.png",
+      "alt": "Sheet of 100 × 60 mm rectangular stickers printed with the “STACK” burger logo",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "100x60mm"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Logo Stickers | AC Supply Co.",
+    "description": "Price up custom printed logo stickers online: 30 mm and 40 mm round or 100 × 60 mm rectangle, gloss or matte, full colour. Request a quote.",
+    "canonical": "/catering-supplies/logo-stickers/"
+  }
+}

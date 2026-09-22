@@ -1,0 +1,317 @@
+{
+  "id": "greaseproof-paper",
+  "slug": "greaseproof-paper",
+  "title": "Custom printed greaseproof paper",
+  "category": "catering-supplies",
+  "status": "preview",
+  "short_description": "Your logo on the paper that wraps the burger, lines the basket and dresses the board. 30 × 30 cm greaseproof sheets in kraft or white.",
+  "description": "A 30 × 30 cm greaseproof sheet printed in a repeat of your logo. Wrap sandwiches and burgers, line trays and boxes, or use it under a grazing board. Choose the print colours and the paper, then send us your artwork.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "Up to 4 colour print",
+    "Kraft or white",
+    "Food-safe greaseproof"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Do you do other sheet sizes?",
+      "a": "Yes — other sizes and rolls are available on request. Use “Request a custom quantity”, tell us the size, and we will quote it."
+    },
+    {
+      "q": "When will my sheets arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Greaseproof",
+    "unit": {
+      "one": "sheet",
+      "many": "sheets"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every sheet."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next wrap looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your sheet.",
+          "text": "Select your print colours, paper and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, wrap.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "30 × 30 cm"
+    },
+    {
+      "label": "Paper",
+      "value": "Kraft greaseproof",
+      "applies_to": {
+        "paper": "kraft"
+      }
+    },
+    {
+      "label": "Paper",
+      "value": "White greaseproof, same price",
+      "applies_to": {
+        "paper": "white"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "Black only",
+      "applies_to": {
+        "colours": "black"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "4 colours",
+      "applies_to": {
+        "colours": "4"
+      }
+    },
+    {
+      "label": "Food contact",
+      "value": "Food-safe inks"
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "black",
+          "label": "Black only",
+          "mult": "0.95"
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.137"
+        },
+        {
+          "value": "4",
+          "label": "4 colours",
+          "mult": "1.332"
+        }
+      ]
+    },
+    {
+      "key": "paper",
+      "label": "Paper",
+      "values": [
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "default": true
+        },
+        {
+          "value": "white",
+          "label": "White"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "GPP-1C-KFT",
+      "selection": {
+        "colours": "1",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-kraft"
+    },
+    {
+      "sku": "GPP-1C-WHT",
+      "selection": {
+        "colours": "1",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-white"
+    },
+    {
+      "sku": "GPP-BLK-KFT",
+      "selection": {
+        "colours": "black",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-kraft"
+    },
+    {
+      "sku": "GPP-BLK-WHT",
+      "selection": {
+        "colours": "black",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-white"
+    },
+    {
+      "sku": "GPP-2C-KFT",
+      "selection": {
+        "colours": "2",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-kraft"
+    },
+    {
+      "sku": "GPP-2C-WHT",
+      "selection": {
+        "colours": "2",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-white"
+    },
+    {
+      "sku": "GPP-4C-KFT",
+      "selection": {
+        "colours": "4",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-kraft"
+    },
+    {
+      "sku": "GPP-4C-WHT",
+      "selection": {
+        "colours": "4",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-white"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "greaseproof-paper-kraft",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.060"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.054"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.048"
+        },
+        {
+          "qty": 30000,
+          "unit": "0.042"
+        }
+      ]
+    },
+    {
+      "ref": "greaseproof-paper-white",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.060"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.054"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.048"
+        },
+        {
+          "qty": 30000,
+          "unit": "0.042"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/06-paper-napkins/corner-deli__greaseproof-sheets-30x30.png",
+      "alt": "Stack of white greaseproof sheets printed with a repeat of the navy “Corner Deli” logo",
+      "order": 1,
+      "role": "hero",
+      "match": {}
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Greaseproof Paper | AC Supply Co.",
+    "description": "Price up custom printed 30 × 30 cm greaseproof sheets online: 1–4 colour print on kraft or white, from 1,000. Indicative trade prices — request a quote.",
+    "canonical": "/catering-supplies/greaseproof-paper/"
+  }
+}

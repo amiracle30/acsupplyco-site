@@ -1,0 +1,558 @@
+{
+  "id": "tubs-and-soup-containers",
+  "slug": "tubs-and-soup-containers",
+  "title": "Custom printed tubs and soup containers",
+  "category": "takeaway-packaging",
+  "status": "preview",
+  "short_description": "Ice cream tubs, soup containers and dessert cups printed in full colour with your brand — with plain or branded lids.",
+  "description": "Six containers on one page: ice cream tubs and soup containers in 12 and 16 oz, and dessert cups in 8 and 12 oz — all full-colour printed so the artwork wraps the whole outside. Choose the container and the lid, then send us your artwork.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "Full-colour print",
+    "Six sizes",
+    "Branded lids available"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Why does a branded lid double the price?",
+      "a": "A printed paper lid is a second printed component with its own tooling, supplied one per tub. Choose “No lid” to price the tub alone, or “Plain lid” for an unprinted lid quoted on request."
+    },
+    {
+      "q": "When will my tubs arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Tubs",
+    "unit": {
+      "one": "tub",
+      "many": "tubs"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every tub."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next scoop looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your tub.",
+          "text": "Select your container, lid and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, fill.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Containers",
+      "value": "Ice cream tubs 12 / 16 oz, soup containers 12 / 16 oz, dessert cups 8 / 12 oz"
+    },
+    {
+      "label": "Printing",
+      "value": "Full colour"
+    },
+    {
+      "label": "Lid",
+      "value": "Not included",
+      "applies_to": {
+        "lid": "none"
+      }
+    },
+    {
+      "label": "Lid",
+      "value": "Printed paper lid included",
+      "applies_to": {
+        "lid": "branded"
+      }
+    },
+    {
+      "label": "Lid",
+      "value": "Plain lid — quoted on request",
+      "applies_to": {
+        "lid": "plain"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "container",
+      "label": "Container",
+      "values": [
+        {
+          "value": "tub-12oz",
+          "label": "Ice cream tub, 12 oz",
+          "default": true
+        },
+        {
+          "value": "tub-16oz",
+          "label": "Ice cream tub, 16 oz"
+        },
+        {
+          "value": "soup-12oz",
+          "label": "Soup container, 12 oz"
+        },
+        {
+          "value": "soup-16oz",
+          "label": "Soup container, 16 oz"
+        },
+        {
+          "value": "cup-8oz",
+          "label": "Dessert cup, 8 oz"
+        },
+        {
+          "value": "cup-12oz",
+          "label": "Dessert cup, 12 oz"
+        }
+      ]
+    },
+    {
+      "key": "lid",
+      "label": "Lid",
+      "values": [
+        {
+          "value": "none",
+          "label": "No lid",
+          "default": true
+        },
+        {
+          "value": "branded",
+          "label": "Branded lid",
+          "mult": "2.027"
+        },
+        {
+          "value": "plain",
+          "label": "Plain lid",
+          "note": "Plain lids are quoted on request."
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "TUB-T12-NL",
+      "selection": {
+        "container": "tub-12oz",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-tub-12oz"
+    },
+    {
+      "sku": "TUB-T12-BLD",
+      "selection": {
+        "container": "tub-12oz",
+        "lid": "branded"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-tub-12oz"
+    },
+    {
+      "sku": "TUB-T12-PLD",
+      "selection": {
+        "container": "tub-12oz",
+        "lid": "plain"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "TUB-T16-NL",
+      "selection": {
+        "container": "tub-16oz",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-tub-16oz"
+    },
+    {
+      "sku": "TUB-T16-BLD",
+      "selection": {
+        "container": "tub-16oz",
+        "lid": "branded"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-tub-16oz"
+    },
+    {
+      "sku": "TUB-T16-PLD",
+      "selection": {
+        "container": "tub-16oz",
+        "lid": "plain"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "TUB-S12-NL",
+      "selection": {
+        "container": "soup-12oz",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-soup-12oz"
+    },
+    {
+      "sku": "TUB-S12-BLD",
+      "selection": {
+        "container": "soup-12oz",
+        "lid": "branded"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-soup-12oz"
+    },
+    {
+      "sku": "TUB-S12-PLD",
+      "selection": {
+        "container": "soup-12oz",
+        "lid": "plain"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "TUB-S16-NL",
+      "selection": {
+        "container": "soup-16oz",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-soup-16oz"
+    },
+    {
+      "sku": "TUB-S16-BLD",
+      "selection": {
+        "container": "soup-16oz",
+        "lid": "branded"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-soup-16oz"
+    },
+    {
+      "sku": "TUB-S16-PLD",
+      "selection": {
+        "container": "soup-16oz",
+        "lid": "plain"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "TUB-C08-NL",
+      "selection": {
+        "container": "cup-8oz",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-cup-8oz"
+    },
+    {
+      "sku": "TUB-C08-BLD",
+      "selection": {
+        "container": "cup-8oz",
+        "lid": "branded"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-cup-8oz"
+    },
+    {
+      "sku": "TUB-C08-PLD",
+      "selection": {
+        "container": "cup-8oz",
+        "lid": "plain"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "TUB-C12-NL",
+      "selection": {
+        "container": "cup-12oz",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-cup-12oz"
+    },
+    {
+      "sku": "TUB-C12-BLD",
+      "selection": {
+        "container": "cup-12oz",
+        "lid": "branded"
+      },
+      "available": true,
+      "pricing_ref": "tubs-and-soup-containers-cup-12oz"
+    },
+    {
+      "sku": "TUB-C12-PLD",
+      "selection": {
+        "container": "cup-12oz",
+        "lid": "plain"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "tubs-and-soup-containers-tub-12oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.241"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.182"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.151"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.129"
+        }
+      ]
+    },
+    {
+      "ref": "tubs-and-soup-containers-tub-16oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.253"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.194"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.164"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.141"
+        }
+      ]
+    },
+    {
+      "ref": "tubs-and-soup-containers-soup-12oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.241"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.182"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.151"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.129"
+        }
+      ]
+    },
+    {
+      "ref": "tubs-and-soup-containers-soup-16oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.253"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.194"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.164"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.141"
+        }
+      ]
+    },
+    {
+      "ref": "tubs-and-soup-containers-cup-8oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.184"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.142"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.120"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.110"
+        }
+      ]
+    },
+    {
+      "ref": "tubs-and-soup-containers-cup-12oz",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.215"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.164"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.134"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.124"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/03-bowls-tubs/lido__ice-cream-tub-12oz.png",
+      "alt": "12 oz paper ice cream tub printed with the terracotta “LIDO” drip design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "container": "tub-12oz"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/lido__branded-lid-on-tub-12oz.png",
+      "alt": "12 oz “LIDO” ice cream tub with a printed paper lid",
+      "order": 0,
+      "role": "hero",
+      "match": {
+        "container": "tub-12oz",
+        "lid": "branded"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/lido__ice-cream-tub-16oz.png",
+      "alt": "16 oz paper ice cream tub printed with the terracotta “LIDO” drip design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "container": "tub-16oz"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/broth__soup-container-12oz.png",
+      "alt": "12 oz paper soup container printed with the navy “BROTH” steam-line design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "container": "soup-12oz"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/broth__soup-container-16oz.png",
+      "alt": "16 oz paper soup container printed with the navy “BROTH” steam-line design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "container": "soup-16oz"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/lido__dessert-cup-8oz.png",
+      "alt": "8 oz paper dessert cup printed with the terracotta “LIDO” drip design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "container": "cup-8oz"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/lido__dessert-cup-12oz.png",
+      "alt": "12 oz paper dessert cup printed with the terracotta “LIDO” drip design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "container": "cup-12oz"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Tubs & Soup Containers | AC Supply Co.",
+    "description": "Price up custom printed ice cream tubs, soup containers and dessert cups online: 8–16 oz, full-colour print, branded lids available. Request a quote.",
+    "canonical": "/takeaway-packaging/tubs-and-soup-containers/"
+  }
+}

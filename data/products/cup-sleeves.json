@@ -1,0 +1,209 @@
+{
+  "id": "cup-sleeves",
+  "slug": "cup-sleeves",
+  "title": "Custom printed cup sleeves",
+  "category": "coffee-cups",
+  "status": "preview",
+  "short_description": "Brand the cup you already use. Corrugated kraft cup sleeves printed with your logo — the lowest-cost way to put your name in every hand.",
+  "description": "A corrugated kraft sleeve that fits standard 8–16 oz hot cups. One-colour print on kraft keeps the cost down; two-colour and full-colour are quoted on request. If you buy plain cups, this is the quickest route to branded drinks.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "Fits 8–16 oz cups",
+    "One-colour print",
+    "Low cost per drink"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Do you supply the cups too?",
+      "a": "Yes — see our printed double wall cups. Sleeves are for businesses that use plain cups and want a printed touchpoint without switching cup supplier."
+    },
+    {
+      "q": "When will my sleeves arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Hot drinks",
+    "unit": {
+      "one": "sleeve",
+      "many": "sleeves"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every sleeve."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next coffee looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your sleeve.",
+          "text": "Select your print colours and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, pour.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Fits",
+      "value": "Standard 8, 12 and 16 oz hot cups"
+    },
+    {
+      "label": "Material",
+      "value": "Corrugated kraft board"
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours — quoted on request",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "Full colour — quoted on request",
+      "applies_to": {
+        "colours": "full"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "note": "Two-colour print is quoted on request."
+        },
+        {
+          "value": "full",
+          "label": "Full colour",
+          "note": "Full-colour print is quoted on request."
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "SLV-1C",
+      "selection": {
+        "colours": "1"
+      },
+      "available": true,
+      "pricing_ref": "cup-sleeves-1"
+    },
+    {
+      "sku": "SLV-2C",
+      "selection": {
+        "colours": "2"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "SLV-FC",
+      "selection": {
+        "colours": "full"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "cup-sleeves-1",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.075"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.062"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.052"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.045"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/01-hot-cups/fern__cup-sleeve.png",
+      "alt": "Corrugated kraft cup sleeve printed with the “FERN” botanical design, fitted on a plain white cup",
+      "order": 1,
+      "role": "hero",
+      "match": {}
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Cup Sleeves | AC Supply Co.",
+    "description": "Price up custom printed corrugated kraft cup sleeves online: one-colour print, fits 8–16 oz hot cups. Indicative trade prices — request a quote.",
+    "canonical": "/coffee-cups/cup-sleeves/"
+  }
+}

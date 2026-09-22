@@ -1,0 +1,421 @@
+{
+  "id": "bakery-bags",
+  "slug": "bakery-bags",
+  "title": "Custom printed bakery bags",
+  "category": "bakery-packaging",
+  "status": "preview",
+  "short_description": "Your bread, wrapped in your name. Printed bread, baguette and pastry bags in kraft or white — the bag that leaves the counter with every sale.",
+  "description": "Three bags cover the bakery counter: a large bread bag, a long greaseproof baguette bag and a small greaseproof pastry bag for cookies and pastries. Choose the bag, one or two print colours and the paper, then put your name on every sale.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1 or 2 colour print",
+    "Greaseproof options",
+    "Your own artwork"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Why does the pastry bag start at 5,000?",
+      "a": "Pastry bags are produced in larger runs than bread and baguette bags, so the first price break is higher. If you need fewer, use “Request a custom quantity” and we will advise."
+    },
+    {
+      "q": "When will my bags arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Bakery",
+    "unit": {
+      "one": "bag",
+      "many": "bags"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every bag."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next loaf looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your bag.",
+          "text": "Select your bag, print colours, paper and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, bake.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Bags",
+      "value": "Bread bag, baguette bag and pastry / cookie bag"
+    },
+    {
+      "label": "Dimensions",
+      "value": "12.75 × 6 × 4.5 in (324 × 152 × 114 mm)",
+      "applies_to": {
+        "bag": "bread"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "24 × 4.5 × 2.5 in (610 × 114 × 64 mm), greaseproof",
+      "applies_to": {
+        "bag": "baguette"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "7.5 × 5 in (190 × 127 mm), greaseproof",
+      "applies_to": {
+        "bag": "pastry"
+      }
+    },
+    {
+      "label": "Paper",
+      "value": "Kraft",
+      "applies_to": {
+        "paper": "kraft"
+      }
+    },
+    {
+      "label": "Paper",
+      "value": "White",
+      "applies_to": {
+        "paper": "white"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "bag",
+      "label": "Bag",
+      "values": [
+        {
+          "value": "bread",
+          "label": "Bread bag, large",
+          "default": true
+        },
+        {
+          "value": "baguette",
+          "label": "Baguette bag"
+        },
+        {
+          "value": "pastry",
+          "label": "Pastry / cookie bag"
+        }
+      ]
+    },
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.038"
+        }
+      ]
+    },
+    {
+      "key": "paper",
+      "label": "Paper",
+      "values": [
+        {
+          "value": "kraft",
+          "label": "Kraft",
+          "default": true
+        },
+        {
+          "value": "white",
+          "label": "White",
+          "mult": "1.078"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "BKB-BRD-1C-KFT",
+      "selection": {
+        "bag": "bread",
+        "colours": "1",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-bread"
+    },
+    {
+      "sku": "BKB-BRD-1C-WHT",
+      "selection": {
+        "bag": "bread",
+        "colours": "1",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-bread"
+    },
+    {
+      "sku": "BKB-BRD-2C-KFT",
+      "selection": {
+        "bag": "bread",
+        "colours": "2",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-bread"
+    },
+    {
+      "sku": "BKB-BRD-2C-WHT",
+      "selection": {
+        "bag": "bread",
+        "colours": "2",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-bread"
+    },
+    {
+      "sku": "BKB-BAG-1C-KFT",
+      "selection": {
+        "bag": "baguette",
+        "colours": "1",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-baguette"
+    },
+    {
+      "sku": "BKB-BAG-1C-WHT",
+      "selection": {
+        "bag": "baguette",
+        "colours": "1",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-baguette"
+    },
+    {
+      "sku": "BKB-BAG-2C-KFT",
+      "selection": {
+        "bag": "baguette",
+        "colours": "2",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-baguette"
+    },
+    {
+      "sku": "BKB-BAG-2C-WHT",
+      "selection": {
+        "bag": "baguette",
+        "colours": "2",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-baguette"
+    },
+    {
+      "sku": "BKB-PST-1C-KFT",
+      "selection": {
+        "bag": "pastry",
+        "colours": "1",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-pastry"
+    },
+    {
+      "sku": "BKB-PST-1C-WHT",
+      "selection": {
+        "bag": "pastry",
+        "colours": "1",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-pastry"
+    },
+    {
+      "sku": "BKB-PST-2C-KFT",
+      "selection": {
+        "bag": "pastry",
+        "colours": "2",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-pastry"
+    },
+    {
+      "sku": "BKB-PST-2C-WHT",
+      "selection": {
+        "bag": "pastry",
+        "colours": "2",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "bakery-bags-pastry"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "bakery-bags-bread",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.079"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.074"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.069"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.065"
+        }
+      ]
+    },
+    {
+      "ref": "bakery-bags-baguette",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.100"
+        },
+        {
+          "qty": 2500,
+          "unit": "0.094"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.088"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.083"
+        }
+      ]
+    },
+    {
+      "ref": "bakery-bags-pastry",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 5000,
+          "unit": "0.041"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.035"
+        },
+        {
+          "qty": 25000,
+          "unit": "0.029"
+        },
+        {
+          "qty": 50000,
+          "unit": "0.025"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/05-bags/hearth__bread-bag-large.png",
+      "alt": "Large kraft bread bag printed with the rustic “HEARTH” bakery wordmark",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "bag": "bread"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/hearth__baguette-bag.png",
+      "alt": "Long kraft greaseproof baguette bag printed with the “HEARTH” bakery wordmark",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "bag": "baguette"
+      }
+    },
+    {
+      "file": "02-branded/05-bags/molten__pastry-cookie-bag.png",
+      "alt": "Small kraft greaseproof pastry bag printed with the “MOLTEN” cookie design",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "bag": "pastry"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Bakery Bags | AC Supply Co.",
+    "description": "Price up custom printed bakery bags online: bread bags, greaseproof baguette bags and pastry bags in kraft or white, 1–2 colour print. Request a quote.",
+    "canonical": "/bakery-packaging/bakery-bags/"
+  }
+}

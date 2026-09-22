@@ -1,0 +1,373 @@
+{
+  "id": "branded-napkins",
+  "slug": "branded-napkins",
+  "title": "Custom printed napkins",
+  "category": "catering-supplies",
+  "status": "preview",
+  "short_description": "The most-handled item on any table, printed with your logo. 30 cm napkins in white or recycled kraft, one or two colours.",
+  "description": "A 30 cm napkin printed in one or two colours — the item every customer touches. White or recycled kraft paper; 2-ply and 3-ply are quoted on request. Choose your options and send us your logo.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "1 or 2 colour print",
+    "White or recycled kraft",
+    "High-volume pricing"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Why does the quantity start at 5,000?",
+      "a": "Napkins are printed on a reel, so the first price break is 5,000 and the best prices start at 30,000. If you need fewer, use “Request a custom quantity” and we will advise."
+    },
+    {
+      "q": "When will my napkins arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Napkins",
+    "unit": {
+      "one": "napkin",
+      "many": "napkins"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every napkin."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next table looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your napkin.",
+          "text": "Select your print colours, material, ply and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, serve.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "30 × 30 cm"
+    },
+    {
+      "label": "Material",
+      "value": "White tissue",
+      "applies_to": {
+        "material": "white"
+      }
+    },
+    {
+      "label": "Material",
+      "value": "Recycled kraft tissue",
+      "applies_to": {
+        "material": "kraft"
+      }
+    },
+    {
+      "label": "Ply",
+      "value": "1-ply",
+      "applies_to": {
+        "ply": "1"
+      }
+    },
+    {
+      "label": "Ply",
+      "value": "2-ply — quoted on request",
+      "applies_to": {
+        "ply": "2"
+      }
+    },
+    {
+      "label": "Ply",
+      "value": "3-ply — quoted on request",
+      "applies_to": {
+        "ply": "3"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "1 colour",
+      "applies_to": {
+        "colours": "1"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "colours",
+      "label": "Print colours",
+      "values": [
+        {
+          "value": "1",
+          "label": "1 colour",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2 colours",
+          "mult": "1.073"
+        }
+      ]
+    },
+    {
+      "key": "material",
+      "label": "Material",
+      "values": [
+        {
+          "value": "white",
+          "label": "White",
+          "default": true
+        },
+        {
+          "value": "kraft",
+          "label": "Recycled kraft",
+          "mult": "1.027"
+        }
+      ]
+    },
+    {
+      "key": "ply",
+      "label": "Ply",
+      "values": [
+        {
+          "value": "1",
+          "label": "1-ply",
+          "default": true
+        },
+        {
+          "value": "2",
+          "label": "2-ply",
+          "note": "2-ply napkins are quoted on request."
+        },
+        {
+          "value": "3",
+          "label": "3-ply",
+          "note": "3-ply napkins are quoted on request."
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "NPK-1-WHT-1",
+      "selection": {
+        "colours": "1",
+        "material": "white",
+        "ply": "1"
+      },
+      "available": true,
+      "pricing_ref": "branded-napkins-1"
+    },
+    {
+      "sku": "NPK-1-WHT-2",
+      "selection": {
+        "colours": "1",
+        "material": "white",
+        "ply": "2"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-1-WHT-3",
+      "selection": {
+        "colours": "1",
+        "material": "white",
+        "ply": "3"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-1-KFT-1",
+      "selection": {
+        "colours": "1",
+        "material": "kraft",
+        "ply": "1"
+      },
+      "available": true,
+      "pricing_ref": "branded-napkins-1"
+    },
+    {
+      "sku": "NPK-1-KFT-2",
+      "selection": {
+        "colours": "1",
+        "material": "kraft",
+        "ply": "2"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-1-KFT-3",
+      "selection": {
+        "colours": "1",
+        "material": "kraft",
+        "ply": "3"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-2-WHT-1",
+      "selection": {
+        "colours": "2",
+        "material": "white",
+        "ply": "1"
+      },
+      "available": true,
+      "pricing_ref": "branded-napkins-1"
+    },
+    {
+      "sku": "NPK-2-WHT-2",
+      "selection": {
+        "colours": "2",
+        "material": "white",
+        "ply": "2"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-2-WHT-3",
+      "selection": {
+        "colours": "2",
+        "material": "white",
+        "ply": "3"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-2-KFT-1",
+      "selection": {
+        "colours": "2",
+        "material": "kraft",
+        "ply": "1"
+      },
+      "available": true,
+      "pricing_ref": "branded-napkins-1"
+    },
+    {
+      "sku": "NPK-2-KFT-2",
+      "selection": {
+        "colours": "2",
+        "material": "kraft",
+        "ply": "2"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    },
+    {
+      "sku": "NPK-2-KFT-3",
+      "selection": {
+        "colours": "2",
+        "material": "kraft",
+        "ply": "3"
+      },
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "branded-napkins-1",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 5000,
+          "unit": "0.034"
+        },
+        {
+          "qty": 30000,
+          "unit": "0.030"
+        },
+        {
+          "qty": 60000,
+          "unit": "0.027"
+        },
+        {
+          "qty": 120000,
+          "unit": "0.025"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/06-paper-napkins/halo__branded-napkins-30cm.png",
+      "alt": "Stack of white 30 cm napkins printed with the purple “HALO” logo",
+      "order": 1,
+      "role": "hero",
+      "match": {}
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Napkins | AC Supply Co.",
+    "description": "Price up custom printed 30 cm napkins online: 1–2 colour print on white or recycled kraft, from 5,000. Indicative trade prices — request a quote.",
+    "canonical": "/catering-supplies/branded-napkins/"
+  }
+}

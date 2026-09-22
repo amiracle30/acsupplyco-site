@@ -102,11 +102,16 @@ def test_record(browser, base, record):
 
     # -- size switch changes hero
     before = page.get_attribute('#hero-image', 'src')
-    other = next(v['value'] for v in first['values'] if not v.get('default'))
-    choose(page, first['key'], other)
+    other = next((v['value'] for v in first['values'] if not v.get('default')), None)
+    if other is None:
+        check('single-value first option: hero renders', page.evaluate("document.getElementById('hero-image').naturalWidth > 0"))
+    else:
+        choose(page, first['key'], other)
     manifest = json.loads((ROOT / 'assets/images/products' / slug / 'manifest.json').read_text())
     has_own_shot = any(i['match'].get(first['key']) == other and web_name(i['file']) in manifest for i in record['images'])
-    if has_own_shot:
+    if other is None:
+        pass
+    elif has_own_shot:
         check('switching the first option changes the hero image', page.get_attribute('#hero-image', 'src') != before)
     else:
         check('no shot for that option yet: hero falls back to a family image instead of going blank',
@@ -149,8 +154,17 @@ def test_record(browser, base, record):
     check('no console errors (main flow)', not page.problems, '; '.join(page.problems[:3]))
     page.close()
 
-    # -- invalid combination: drop one variant from the embedded data
-    second = options[1]
+    # -- invalid combination: drop one variant from the embedded data (needs two options with alternatives)
+    multi = [o for o in options if len(o['values']) > 1]
+    if len(multi) < 2 or other is None:
+        print('  skip  invalid-combination checks (page has fewer than two multi-value options)')
+    else:
+        invalid_combination_checks(browser, base, url, record, options, first, other, multi[1] if multi[0] is first else multi[0])
+
+    keyboard_and_enquiry_checks(browser, base, url, record, options, first, other)
+
+
+def invalid_combination_checks(browser, base, url, record, options, first, other, second):
     gone = {o['key']: next(v['value'] for v in o['values'] if v.get('default')) for o in options}
     gone[first['key']], gone[second['key']] = other, next(v['value'] for v in second['values'] if not v.get('default'))
 
@@ -171,6 +185,8 @@ def test_record(browser, base, record):
           and page.inner_text('#total') == 'Price on request')
     page.close()
 
+
+def keyboard_and_enquiry_checks(browser, base, url, record, options, first, other):
     # -- POA tier
     def poa(data):
         for tiers in data['pricing'].values():
@@ -185,10 +201,13 @@ def test_record(browser, base, record):
 
     # -- keyboard operation
     page = open_page(browser, base, url)
-    target = next(v['value'] for v in first['values'] if not v.get('default'))
-    page.focus(f'[data-option="{first["key"]}"][data-value="{target}"]')
-    page.keyboard.press('Enter')
-    check('keyboard: Enter selects an option button', pressed(page, first['key'], target))
+    if other is not None:
+        page.focus(f'[data-option="{first["key"]}"][data-value="{other}"]')
+        page.keyboard.press('Enter')
+        check('keyboard: Enter selects an option button', pressed(page, first['key'], other))
+        if page.locator('#tiers .tier').count() < 2:  # that value is quote-only: go back to the priced default
+            page.close()
+            page = open_page(browser, base, url)
     page.locator('#tiers .tier').nth(1).focus()
     page.keyboard.press('Space')
     second_tier = page.locator('#tiers .tier').nth(1)

@@ -1,0 +1,390 @@
+{
+  "id": "poke-bowls",
+  "slug": "poke-bowls",
+  "title": "Custom printed poke and salad bowls",
+  "category": "takeaway-packaging",
+  "status": "preview",
+  "short_description": "Your açaí, poke or salad — in a bowl that carries your brand. Full-colour printed paper bowls in four sizes, with or without a clear lid.",
+  "description": "Three round bowls and a rectangular salad bowl, all printed in full colour so the artwork wraps the whole outside. Choose the size and whether you need clear lids, then send us your artwork.\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "benefits": [
+    "Full-colour print",
+    "Four bowl sizes",
+    "Clear lids available"
+  ],
+  "faqs": [
+    {
+      "q": "Can I use my own design?",
+      "a": "Yes. Share your logo or print-ready artwork when requesting a quote. We will confirm the artwork requirements for your chosen item, and you approve a digital proof before anything is printed."
+    },
+    {
+      "q": "What if my artwork is not ready?",
+      "a": "You can request a quote first and share your artwork later. Tell us what you have in mind and we can discuss the next steps."
+    },
+    {
+      "q": "Are the prices shown final?",
+      "a": "The prices on this page are indicative and exclude VAT, which is added at 20%. Your digital proof and print plates are included, and delivery is free to a single UK mainland address. We confirm everything in a written quote before you commit."
+    },
+    {
+      "q": "Why do lids add so much?",
+      "a": "Clear bowl lids are a separate moulded part supplied with every bowl, so they carry their own cost. Choose “With clear lid” to see the price with lids included, or “No lid” if you already have a lid supply."
+    },
+    {
+      "q": "When will my bowls arrive?",
+      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+    }
+  ],
+  "copy": {
+    "eyebrow": "Custom printed / Bowls",
+    "unit": {
+      "one": "bowl",
+      "many": "bowls"
+    },
+    "image_label": "Made for your brand",
+    "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
+    "details": {
+      "eyebrow": "The details",
+      "heading": "A little more\nbehind every bowl."
+    },
+    "process": {
+      "eyebrow": "From idea to first order",
+      "heading": "Your next bowl looks good.",
+      "steps": [
+        {
+          "eyebrow": "01 / Make it yours",
+          "title": "Choose your bowl.",
+          "text": "Select your size, lid and quantity. We’ll confirm the details and your trade quote."
+        },
+        {
+          "eyebrow": "02 / Add your character",
+          "title": "Share your artwork.",
+          "text": "Send us your logo or design. We’ll agree the print requirements and send a digital proof before production."
+        },
+        {
+          "eyebrow": "03 / Ready to serve",
+          "title": "Approve, print, serve.",
+          "text": "Once the artwork is approved, we’ll confirm the production and delivery schedule."
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Good questions",
+      "heading": "Before your first order."
+    }
+  },
+  "specs": [
+    {
+      "label": "Sizes",
+      "value": "500 ml, 750 ml and 1000 ml round; 650 ml rectangular"
+    },
+    {
+      "label": "Capacity",
+      "value": "500 ml, round",
+      "applies_to": {
+        "size": "500ml"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "750 ml, round",
+      "applies_to": {
+        "size": "750ml"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "1000 ml, round",
+      "applies_to": {
+        "size": "1000ml"
+      }
+    },
+    {
+      "label": "Capacity",
+      "value": "650 ml, rectangular",
+      "applies_to": {
+        "size": "650ml-rect"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "Full colour"
+    },
+    {
+      "label": "Lid",
+      "value": "Not included",
+      "applies_to": {
+        "lid": "none"
+      }
+    },
+    {
+      "label": "Lid",
+      "value": "Clear lid included",
+      "applies_to": {
+        "lid": "clear"
+      }
+    },
+    {
+      "label": "Proof and print plates",
+      "value": "Included"
+    }
+  ],
+  "options": [
+    {
+      "key": "size",
+      "label": "Size",
+      "values": [
+        {
+          "value": "500ml",
+          "label": "500 ml round",
+          "default": true
+        },
+        {
+          "value": "750ml",
+          "label": "750 ml round"
+        },
+        {
+          "value": "1000ml",
+          "label": "1000 ml round"
+        },
+        {
+          "value": "650ml-rect",
+          "label": "650 ml rectangular"
+        }
+      ]
+    },
+    {
+      "key": "lid",
+      "label": "Lid",
+      "values": [
+        {
+          "value": "none",
+          "label": "No lid",
+          "default": true
+        },
+        {
+          "value": "clear",
+          "label": "With clear lid",
+          "mult": "1.65"
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "sku": "PKB-500-NL",
+      "selection": {
+        "size": "500ml",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-500ml"
+    },
+    {
+      "sku": "PKB-500-LID",
+      "selection": {
+        "size": "500ml",
+        "lid": "clear"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-500ml"
+    },
+    {
+      "sku": "PKB-750-NL",
+      "selection": {
+        "size": "750ml",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-750ml"
+    },
+    {
+      "sku": "PKB-750-LID",
+      "selection": {
+        "size": "750ml",
+        "lid": "clear"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-750ml"
+    },
+    {
+      "sku": "PKB-1000-NL",
+      "selection": {
+        "size": "1000ml",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-1000ml"
+    },
+    {
+      "sku": "PKB-1000-LID",
+      "selection": {
+        "size": "1000ml",
+        "lid": "clear"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-1000ml"
+    },
+    {
+      "sku": "PKB-650R-NL",
+      "selection": {
+        "size": "650ml-rect",
+        "lid": "none"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-650ml-rect"
+    },
+    {
+      "sku": "PKB-650R-LID",
+      "selection": {
+        "size": "650ml-rect",
+        "lid": "clear"
+      },
+      "available": true,
+      "pricing_ref": "poke-bowls-650ml-rect"
+    }
+  ],
+  "pricing": [
+    {
+      "ref": "poke-bowls-500ml",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.168"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.157"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.146"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.130"
+        }
+      ]
+    },
+    {
+      "ref": "poke-bowls-750ml",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.175"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.163"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.152"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.136"
+        }
+      ]
+    },
+    {
+      "ref": "poke-bowls-1000ml",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.182"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.170"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.158"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.141"
+        }
+      ]
+    },
+    {
+      "ref": "poke-bowls-650ml-rect",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 2500,
+          "unit": "0.163"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.151"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.143"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.137"
+        }
+      ]
+    }
+  ],
+  "charges": [],
+  "lead_time": {
+    "text": "Allow several weeks from artwork approval",
+    "starts": "artwork approval"
+  },
+  "images": [
+    {
+      "file": "02-branded/03-bowls-tubs/sora__acai-poke-bowl-500ml.png",
+      "alt": "500 ml round paper bowl printed with the indigo “SŌRA” wave pattern",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "500ml"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/sora__acai-poke-bowl-750ml.png",
+      "alt": "750 ml round paper bowl printed with the indigo “SŌRA” wave pattern",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "750ml"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/ripe__acai-poke-bowl-1000ml.png",
+      "alt": "1000 ml round paper bowl printed with the “Ripe” berry pattern",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "1000ml"
+      }
+    },
+    {
+      "file": "02-branded/03-bowls-tubs/sora__rectangular-salad-bowl-650ml.png",
+      "alt": "650 ml rectangular paper salad bowl printed with the indigo “SŌRA” wave pattern",
+      "order": 1,
+      "role": "hero",
+      "match": {
+        "size": "650ml-rect"
+      }
+    }
+  ],
+  "enquiry": {
+    "mode": "priced"
+  },
+  "seo": {
+    "title": "Custom Printed Poke & Salad Bowls | AC Supply Co.",
+    "description": "Price up custom printed poke, açaí and salad bowls online: 500–1000 ml round and 650 ml rectangular, full-colour print, clear lids available. Request a quote.",
+    "canonical": "/takeaway-packaging/poke-bowls/"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "broth-soup-container-12oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "broth-soup-container-16oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "lido-branded-lid-on-tub-12oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "lido-dessert-cup-12oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "lido-dessert-cup-8oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "lido-ice-cream-tub-12oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  },
+  "lido-ice-cream-tub-16oz": {
+    "height": 1024,
+    "thumb_height": 267,
+    "thumb_width": 400,
+    "width": 1536
+  }
+}
