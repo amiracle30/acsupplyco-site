@@ -100,7 +100,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -116,13 +116,13 @@
   body { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; color: var(--ink); background: var(--bg); font-size: 16px; line-height: 1.5; }
   a { color: inherit; }
   img { display: block; max-width: 100%; }
-  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .mono { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
-  .tag { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+  .tag { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
 
   .announcement { background: var(--ink); color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 12px; letter-spacing: 0.02em; }
-  .announcement-inner { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .announcement-inner { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
   .announcement .pulse { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74,222,128,0.6); animation: pulse 2s infinite; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
@@ -152,15 +152,15 @@
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .footer-brand img { height: 56px; margin-bottom: 24px; filter: brightness(0) invert(1); opacity: 0.9; }
   .footer-brand p { font-size: 14px; max-width: 360px; line-height: 1.6; color: rgba(255,255,255,0.55); }
-  .footer-col h5 { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500; }
+  .footer-col h5 { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500; }
   .footer-col a, .footer-col span { display: block; font-size: 14px; color: rgba(255,255,255,0.75); text-decoration: none; margin-bottom: 10px; transition: color 0.15s; }
   .footer-col a:hover { color: white; }
-  .footer-bottom { margin-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; }
+  .footer-bottom { margin-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; }
   .footer-bottom .right { display: flex; gap: 24px; }
   .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
   .footer-bottom a:hover { color: white; }
 
-  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.04em; }
+  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 12px; color: var(--muted); font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; letter-spacing: 0.04em; }
   .breadcrumb-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: flex; align-items: center; gap: 8px; }
   .breadcrumb a { color: var(--muted); text-decoration: none; }
   .breadcrumb a:hover { color: var(--ink); }
@@ -178,11 +178,11 @@
   .detail-copy h2 { font-size: clamp(28px, 3.5vw, 42px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 600; margin-bottom: 20px; }
   .detail-copy p { font-size: 15px; line-height: 1.7; color: var(--muted); margin-bottom: 16px; }
   .detail-copy a { color: var(--accent); text-decoration: underline; font-weight: 500; }
-  .detail-list-head { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px; font-weight: 500; }
+  .detail-list-head { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px; font-weight: 500; }
   .detail-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
   .detail-list li { font-size: 14.5px; color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; line-height: 1.4; }
   .detail-list li:first-child { border-top: 1px solid var(--border); }
-  .detail-list li::before { content: '—'; color: var(--accent); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; flex-shrink: 0; }
+  .detail-list li::before { content: '—'; color: var(--accent); font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; flex-shrink: 0; }
 
   .variants-section { padding: 80px 0; border-bottom: 1px solid var(--border); background: var(--paper); }
   .variants-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
@@ -193,8 +193,11 @@
   .variant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .variant-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; transition: border-color 0.2s, transform 0.2s; }
   .variant-card:hover { border-color: var(--ink); transform: translateY(-2px); }
-  .variant-card-num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 16px; }
+  .variant-card-num { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 16px; }
   .variant-card h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.012em; margin-bottom: 10px; color: var(--ink); }
+  .variant-card h4 a { color: inherit; text-decoration: none; }
+  .variant-card h4 a:hover { color: var(--accent); }
+  .variant-card p a, .detail-copy p a, .cluster-inner p a { color: var(--accent); text-decoration: underline; font-weight: 500; }
   .variant-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
   .variant-card.accent { background: var(--accent-pale); border-color: rgba(31,107,67,0.25); }
   .variant-card.accent h4 { color: var(--accent-deep); }
@@ -226,7 +229,7 @@
   .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .related-card { background: var(--paper); padding: 32px 28px; text-decoration: none; display: flex; flex-direction: column; gap: 10px; transition: background 0.15s; }
   .related-card:hover { background: var(--cream); }
-  .related-card-num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
+  .related-card-num { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
   .related-card h4 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
   .related-card p { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
   .related-card .arrow { font-size: 13px; color: var(--light); margin-top: 4px; }
@@ -335,7 +338,7 @@
   <div class="detail-grid">
     <div class="detail-copy">
       <h2>Paper Bags for Trade Buyers</h2>
-      <p>AC Supply Co. supplies wholesale paper bags to UK cafés, bakeries, delis, and retail businesses at genuine trade prices. Whether you need plain kraft bags, white bags, or custom printed bags with your logo, we supply at wholesale pricing without unnecessary complexity.</p>
+      <p>AC Supply Co. supplies wholesale paper bags to UK cafés, bakeries, delis, and retail businesses at genuine trade prices. Whether you need kraft bags, white bags or carrier bags, we print them with your logo at wholesale pricing without unnecessary complexity.</p>
       <p>We supply a full range of paper bags including flat-bottom bags, twisted handle bags, and standard carry bags in a range of sizes. Custom printed bags with your branding are also available — <a href="/custom-branded-packaging/">see our custom packaging page</a> for details.</p>
       <p>To request pricing or discuss your requirements, contact us directly via the form or WhatsApp.</p>
     </div>
@@ -383,13 +386,13 @@
       </div>
       <div class="variant-card">
         <div class="variant-card-num">04</div>
-        <h4>Twisted Handle Bags</h4>
+        <h4><a href="/paper-bags/printed-paper-bags/">Twisted Handle Bags</a></h4>
         <p>Paper bags with twisted paper handles. A premium look suitable for retail, boutiques, and food-to-go operations.</p>
       </div>
       <div class="variant-card">
         <div class="variant-card-num">05</div>
-        <h4>Custom Printed Bags</h4>
-        <p>Paper bags printed with your logo or brand design. Available in a range of sizes and styles — contact us to discuss minimum quantities.</p>
+        <h4><a href="/paper-bags/printed-paper-bags/">Custom Printed Bags</a></h4>
+        <p>Paper bags printed with your logo or brand design. <a href="/paper-bags/printed-paper-bags/">Price twisted-handle, flat-handle and SOS bags online</a>.</p>
       </div>
       <div class="variant-card accent">
         <div class="variant-card-num">—</div>
@@ -405,7 +408,7 @@
   <div class="custom-band-inner">
     <div>
       <h2>Custom Printed Paper Bags for Your Business</h2>
-      <p>Your logo on every bag you hand to a customer. We source custom printed paper bags for UK businesses — from independent cafés to small retail chains.</p>
+      <p>Your logo on every bag you hand to a customer. We source <a href="/paper-bags/printed-paper-bags/">custom printed paper bags</a> for UK businesses — from independent cafés to small retail chains.</p>
     </div>
     <div class="custom-band-actions">
       <a href="/custom-branded-packaging/" class="btn btn-primary">View Custom Packaging</a>
@@ -419,17 +422,17 @@
   <div class="cluster-inner">
 
     <h2>Kraft Paper Bags for Cafés &amp; Bakeries</h2>
-    <p>Kraft paper bags are the workhorse of café, bakery and food-to-go operations across the UK — natural brown or bleached white, from small snack sizes through to takeaway carrier sizes with handles. We supply plain kraft bags in bulk at wholesale prices, and can arrange <a href="/custom-branded-packaging/">custom printed kraft bags with your logo</a> where volumes justify a print run.</p>
-    <p>Common trade uses: pastries, sandwiches, cakes and traybakes, bread, muffins, deli sides, hot food-to-go and retail pack-out. Available with or without gussets, plain or with handles, and with greaseproof lining for hot and greasy items.</p>
+    <p>Kraft paper bags are the workhorse of café, bakery and food-to-go operations across the UK — natural brown or bleached white, from small snack sizes through to takeaway carrier sizes with handles. We supply <a href="/custom-branded-packaging/">custom printed kraft bags with your logo</a> in bulk at wholesale prices.</p>
+    <p>Common trade uses: pastries, sandwiches, cakes and traybakes, bread, muffins, deli sides, hot food-to-go and retail pack-out. Available with or without gussets, with or without handles, and with greaseproof lining for hot and greasy items.</p>
 
     <h2>Brown Paper Bags for Trade Buyers</h2>
-    <p>Traditional brown paper bags in a range of sizes and gauges. Suitable for deli counters, market stalls, greengrocers, sweet shops and any business that wants a natural, unbranded look. Available flat or gusseted, with or without handles — including brown paper carrier bags for takeaway.</p>
+    <p>Traditional brown paper bags in a range of sizes and gauges. Suitable for deli counters, market stalls, greengrocers, sweet shops and any business that wants a natural look with its own branding. Available flat or gusseted, with or without handles — including brown paper carrier bags for takeaway.</p>
 
     <h2>Paper Carrier Bags with Handles</h2>
     <p>Paper carrier bags with twisted paper or flat handles — a premium alternative to plastic carriers that customers actively prefer. We supply UK retailers, boutiques, cafés and takeaways with paper carrier bags in a range of sizes. Custom printed carrier bags with your brand are also available on request.</p>
 
     <h2>Greaseproof &amp; Bakery Paper Bags</h2>
-    <p>Greaseproof-lined paper bags for hot food, pastries and anything that needs to stay grease- and moisture-resistant on the counter. Standard for bakeries, sandwich bars, hot food-to-go and street food operators. We also supply dry-waxed and PE-lined variants where the menu needs specific liquid resistance.</p>
+    <p>Greaseproof-lined paper bags for hot food, pastries and anything that needs to stay grease- and moisture-resistant on the counter — see our <a href="/bakery-packaging/bakery-bags/">printed bread, baguette and pastry bags</a> and <a href="/catering-supplies/greaseproof-paper/">printed greaseproof paper</a>. Standard for bakeries, sandwich bars, hot food-to-go and street food operators. We also supply dry-waxed and PE-lined variants where the menu needs specific liquid resistance.</p>
   </div>
 </div>
 

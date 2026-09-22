@@ -100,7 +100,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -128,11 +128,11 @@
   body { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; color: var(--ink); background: var(--bg); font-size: 16px; line-height: 1.5; }
   a { color: inherit; }
   img { display: block; max-width: 100%; }
-  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .mono { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
   .tag {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.06em;
@@ -159,7 +159,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
   }
   .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
   .announcement .pulse {
@@ -229,7 +229,7 @@
   .footer-brand img { height: 56px; margin-bottom: 24px; filter: brightness(0) invert(1); opacity: 0.9; }
   .footer-brand p { font-size: 14px; max-width: 360px; line-height: 1.6; color: rgba(255,255,255,0.55); }
   .footer-col h5 {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
     color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500;
   }
@@ -240,7 +240,7 @@
   .footer-col a:hover { color: white; }
   .footer-bottom {
     margin-top: 32px; display: flex; justify-content: space-between; align-items: center;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em;
   }
   .footer-bottom .right { display: flex; gap: 24px; }
@@ -254,7 +254,7 @@
     padding: 12px 0;
     font-size: 12px;
     color: var(--muted);
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     letter-spacing: 0.04em;
   }
   .breadcrumb-inner {
@@ -296,7 +296,7 @@
   .detail-copy p { font-size: 15px; line-height: 1.7; color: var(--muted); margin-bottom: 16px; }
   .detail-copy a { color: var(--accent); text-decoration: underline; font-weight: 500; }
   .detail-list-head {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
     color: var(--accent); margin-bottom: 16px; font-weight: 500;
   }
@@ -309,7 +309,7 @@
   .detail-list li:first-child { border-top: 1px solid var(--border); }
   .detail-list li::before {
     content: '—'; color: var(--accent);
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 11px; flex-shrink: 0;
   }
 
@@ -335,13 +335,16 @@
   }
   .variant-card:hover { border-color: var(--ink); transform: translateY(-2px); }
   .variant-card-num {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 16px;
   }
   .variant-card h4 {
     font-size: 17px; font-weight: 600; letter-spacing: -0.012em;
     margin-bottom: 10px; color: var(--ink);
   }
+  .variant-card h4 a { color: inherit; text-decoration: none; }
+  .variant-card h4 a:hover { color: var(--accent); }
+  .variant-card p a, .detail-copy p a, .cluster-inner p a { color: var(--accent); text-decoration: underline; font-weight: 500; }
   .variant-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
   .variant-card.accent {
     background: var(--accent-pale); border-color: rgba(31,107,67,0.25);
@@ -410,7 +413,7 @@
   }
   .related-card:hover { background: var(--cream); }
   .related-card-num {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-family: 'Inter Tight', -apple-system, system-ui, sans-serif;
     font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent);
   }
   .related-card h4 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
@@ -554,12 +557,12 @@
     <div class="variant-grid">
       <div class="variant-card">
         <div class="variant-card-num">01</div>
-        <h4>Single-Wall Cups</h4>
-        <p>Standard disposable cups suitable for hot drinks. Lightweight and cost-effective for high-volume use. Available in 8oz, 12oz, and 16oz.</p>
+        <h4><a href="/coffee-cups/espresso-cups/">Single-Wall Espresso Cups</a></h4>
+        <p>4 oz single wall cups printed with your logo — for espresso, cortado and macchiato. Priced online; larger single wall sizes are quoted on request.</p>
       </div>
       <div class="variant-card">
         <div class="variant-card-num">02</div>
-        <h4>Double-Wall Cups</h4>
+        <h4><a href="/coffee-cups/double-wall-cups/">Double-Wall Cups</a></h4>
         <p>Insulated cups that keep drinks hot without a sleeve. Suitable for cafés where presentation and customer comfort matter.</p>
       </div>
       <div class="variant-card">
@@ -569,13 +572,13 @@
       </div>
       <div class="variant-card">
         <div class="variant-card-num">04</div>
-        <h4>Cup Sleeves</h4>
+        <h4><a href="/coffee-cups/cup-sleeves/">Cup Sleeves</a></h4>
         <p>Kraft and custom-print sleeves for single-wall cups. A cost-effective way to brand your cups without full custom print.</p>
       </div>
       <div class="variant-card">
         <div class="variant-card-num">05</div>
-        <h4>Custom Printed Cups</h4>
-        <p>Cups printed with your logo or brand design. Available for cafés and businesses of all sizes — usually with you in under a month from artwork approval. Contact us to discuss minimum quantities.</p>
+        <h4><a href="/coffee-cups/double-wall-cups/">Custom Printed Cups</a></h4>
+        <p>Cups printed with your logo or brand design. Available for cafés and businesses of all sizes — usually with you in under a month from artwork approval. Price <a href="/coffee-cups/double-wall-cups/">double wall cups</a> and <a href="/coffee-cups/cold-cups/">clear cold cups</a> online.</p>
       </div>
       <div class="variant-card accent">
         <div class="variant-card-num">—</div>
@@ -591,17 +594,17 @@
   <div class="cluster-inner">
 
     <h2>Recyclable Coffee Cups for UK Cafés</h2>
-    <p>Recyclable coffee cups are the workhorse of most UK cafés — the practical, cost-effective option that most councils and closed-loop schemes can now process. We supply recyclable single- and double-wall coffee cups in bulk at wholesale prices, in the standard 8oz, 12oz and 16oz sizes, plain or custom printed.</p>
+    <p>Recyclable coffee cups are the workhorse of most UK cafés — the practical, cost-effective option that most councils and closed-loop schemes can now process. We supply recyclable single- and double-wall coffee cups in bulk at wholesale prices, in the standard 8oz, 12oz and 16oz sizes, custom printed with your branding.</p>
     <p>Choosing between recyclable and compostable? The real answer isn't "one is better" — it depends on how your cups leave your premises and what your bin scheme actually processes. We've written a plain-English guide: <a href="/guides/compostable-vs-recyclable-coffee-cups/">Compostable vs Recyclable Coffee Cups — a UK café guide</a>.</p>
 
     <h2>Compostable Coffee Cups for UK Cafés</h2>
-    <p>Compostable coffee cups — typically PLA-lined instead of standard PE-lined — are the option most independents reach for when sustainability is a customer-facing brand promise. We supply compostable coffee cups in bulk at trade prices, in the standard sizes, plain or custom branded. Important trade-buyer caveat: compostable cups only actually compost in industrial composting conditions, not home compost bins, so they only realise their claim if your cups end up in a food-waste stream that accepts them. Ask us if you want help thinking through this before switching.</p>
+    <p>Compostable coffee cups — typically PLA-lined instead of standard PE-lined — are the option most independents reach for when sustainability is a customer-facing brand promise. We supply compostable coffee cups in bulk at trade prices, in the standard sizes, custom printed with your branding. Important trade-buyer caveat: compostable cups only actually compost in industrial composting conditions, not home compost bins, so they only realise their claim if your cups end up in a food-waste stream that accepts them. Ask us if you want help thinking through this before switching.</p>
 
     <h2>Branded Coffee Cups for Cafés &amp; Coffee Shops</h2>
-    <p>Branded coffee cups turn every takeaway into a moving billboard. We source branded coffee cups for UK businesses at bulk trade prices — from independent single-site cafés through to small chains and coffee shop groups. Options: single-wall or double-wall base cup, full-wrap print or sleeve print, standard sizes. As with any printed product, branded cups carry a higher minimum order than plain stock — <a href="/#contact">tell us your volume</a> and we'll advise honestly on what's realistic. Once your artwork is approved, printed cups are usually with you in under a month.</p>
+    <p>Branded coffee cups turn every takeaway into a moving billboard. We source branded coffee cups for UK businesses at bulk trade prices — from independent single-site cafés through to small chains and coffee shop groups. Options: single-wall or double-wall base cup, full-wrap print or sleeve print, standard sizes. Branded cups are a production run, so there's a minimum order per design and size — <a href="/#contact">tell us your volume</a> and we'll advise honestly on what's realistic. Once your artwork is approved, printed cups are usually with you in under a month.</p>
 
     <h2>Espresso Cups &amp; Small-Format Disposable Cups</h2>
-    <p>Disposable espresso cups (typically 4oz) for cortado, macchiato, espresso and small-format serves. Sit in the range alongside 8/12/16oz drink cups. Bulk trade supply — get in touch with your menu format and we'll quote the right sizes.</p>
+    <p><a href="/coffee-cups/espresso-cups/">Printed espresso cups</a> (4oz) for cortado, macchiato, espresso and small-format serves. Sit in the range alongside 8/12/16oz drink cups. Bulk trade supply — get in touch with your menu format and we'll quote the right sizes.</p>
 
     <h2>UK Coffee Cup Wholesaler — Direct Trade Supply</h2>
     <p>AC Supply Co. operates as a UK coffee cup wholesaler — direct trade supply, no storefront, no counter. If you're buying disposable coffee cups in volume — hundreds a week upwards — you're in the right place. UK-wide delivery, one contact for the whole order, straight-forward trade pricing. Send us your requirements via the <a href="/#contact">contact form</a> or WhatsApp.</p>
@@ -613,7 +616,7 @@
   <div class="custom-band-inner">
     <div>
       <h2>Custom Printed Coffee Cups for Your Business</h2>
-      <p>Your logo on every cup you serve. We source custom printed coffee cups for UK businesses — from independent cafés to small chains. Branding options include full wrap print and sleeve print.</p>
+      <p>Your logo on every cup you serve. We source <a href="/coffee-cups/double-wall-cups/">custom printed double wall coffee cups</a> for UK businesses — from independent cafés to small chains. Branding options include full wrap print and sleeve print.</p>
     </div>
     <div class="custom-band-actions">
       <a href="/custom-branded-packaging/" class="btn btn-primary">View Custom Packaging</a>

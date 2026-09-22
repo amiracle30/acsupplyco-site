@@ -100,7 +100,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -116,13 +116,13 @@
   body { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; color: var(--ink); background: var(--bg); font-size: 16px; line-height: 1.5; }
   a { color: inherit; }
   img { display: block; max-width: 100%; }
-  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .mono { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
-  .tag { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+  .tag { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
 
   .announcement { background: var(--ink); color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 12px; letter-spacing: 0.02em; }
-  .announcement-inner { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .announcement-inner { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
   .announcement .pulse { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74,222,128,0.6); animation: pulse 2s infinite; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
@@ -152,15 +152,15 @@
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .footer-brand img { height: 56px; margin-bottom: 24px; filter: brightness(0) invert(1); opacity: 0.9; }
   .footer-brand p { font-size: 14px; max-width: 360px; line-height: 1.6; color: rgba(255,255,255,0.55); }
-  .footer-col h5 { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500; }
+  .footer-col h5 { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500; }
   .footer-col a, .footer-col span { display: block; font-size: 14px; color: rgba(255,255,255,0.75); text-decoration: none; margin-bottom: 10px; transition: color 0.15s; }
   .footer-col a:hover { color: white; }
-  .footer-bottom { margin-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; }
+  .footer-bottom { margin-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; }
   .footer-bottom .right { display: flex; gap: 24px; }
   .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
   .footer-bottom a:hover { color: white; }
 
-  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.04em; }
+  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 12px; color: var(--muted); font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; letter-spacing: 0.04em; }
   .breadcrumb-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: flex; align-items: center; gap: 8px; }
   .breadcrumb a { color: var(--muted); text-decoration: none; }
   .breadcrumb a:hover { color: var(--ink); }
@@ -178,11 +178,11 @@
   .detail-copy h2 { font-size: clamp(28px, 3.5vw, 42px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 600; margin-bottom: 20px; }
   .detail-copy p { font-size: 15px; line-height: 1.7; color: var(--muted); margin-bottom: 16px; }
   .detail-copy a { color: var(--accent); text-decoration: underline; font-weight: 500; }
-  .detail-list-head { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px; font-weight: 500; }
+  .detail-list-head { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px; font-weight: 500; }
   .detail-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
   .detail-list li { font-size: 14.5px; color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; line-height: 1.4; }
   .detail-list li:first-child { border-top: 1px solid var(--border); }
-  .detail-list li::before { content: '—'; color: var(--accent); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; flex-shrink: 0; }
+  .detail-list li::before { content: '—'; color: var(--accent); font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; flex-shrink: 0; }
 
   .variants-section { padding: 80px 0; border-bottom: 1px solid var(--border); background: var(--paper); }
   .variants-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
@@ -193,8 +193,11 @@
   .variant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .variant-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; transition: border-color 0.2s, transform 0.2s; }
   .variant-card:hover { border-color: var(--ink); transform: translateY(-2px); }
-  .variant-card-num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 16px; }
+  .variant-card-num { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 16px; }
   .variant-card h4 { font-size: 17px; font-weight: 600; letter-spacing: -0.012em; margin-bottom: 10px; color: var(--ink); }
+  .variant-card h4 a { color: inherit; text-decoration: none; }
+  .variant-card h4 a:hover { color: var(--accent); }
+  .variant-card p a, .detail-copy p a, .cluster-inner p a { color: var(--accent); text-decoration: underline; font-weight: 500; }
   .variant-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
   .variant-card.accent { background: var(--accent-pale); border-color: rgba(31,107,67,0.25); }
   .variant-card.accent h4 { color: var(--accent-deep); }
@@ -226,7 +229,7 @@
   .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .related-card { background: var(--paper); padding: 32px 28px; text-decoration: none; display: flex; flex-direction: column; gap: 10px; transition: background 0.15s; }
   .related-card:hover { background: var(--cream); }
-  .related-card-num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
+  .related-card-num { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); }
   .related-card h4 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
   .related-card p { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
   .related-card .arrow { font-size: 13px; color: var(--light); margin-top: 4px; }
@@ -326,7 +329,7 @@
     <div class="detail-copy">
       <h2>Food Packaging Wholesale for UK Trade Buyers</h2>
       <p>AC Supply Co. is a UK food packaging supplier working with restaurants, takeaways, caterers and hospitality operators at genuine wholesale prices — from single-site independents through to multi-outlet groups. Trade pricing without unnecessary complexity.</p>
-      <p>We source across the full range of food packaging: hot food containers, cold food packaging, food-to-go boxes, sauce pots, catering trays and utensils. Pizzerias and delivery kitchens can also order <a href="/custom-pizza-boxes/">custom printed pizza boxes</a> in plain stock or full-wrap artwork. Custom printed packaging with your branding is also available — <a href="/custom-branded-packaging/">see our custom packaging page</a> for details.</p>
+      <p>We source across the full range of food packaging: hot food containers, cold food packaging, food-to-go boxes, sauce pots, catering trays and utensils. Pizzerias and delivery kitchens can also order <a href="/custom-pizza-boxes/pizza-boxes/">custom printed pizza boxes</a> in one-colour or full-wrap artwork. Custom printed packaging with your branding is also available — <a href="/custom-branded-packaging/">see our custom packaging page</a> for details.</p>
       <p>To request pricing or discuss your requirements, contact us directly via the form or WhatsApp.</p>
     </div>
     <div>
@@ -335,7 +338,7 @@
         <li>Takeaway packaging for hot and cold food</li>
         <li>Single-use catering packaging for food service</li>
         <li>Food containers and takeaway boxes</li>
-        <li>Plain and custom printed options available</li>
+        <li>Custom printed with your logo and artwork</li>
         <li>Bulk trade orders and regular supply available</li>
         <li>Contact us to discuss your specific requirements</li>
       </ul>
@@ -368,7 +371,7 @@
       <div class="variant-card">
         <div class="variant-card-num">03</div>
         <h4>Custom Printed Options</h4>
-        <p>Takeaway packaging with your logo or brand print. Available on request — contact us to discuss print options and minimum quantities.</p>
+        <p>Takeaway packaging with your logo or brand print — price <a href="/takeaway-packaging/chicken-boxes/">chicken boxes</a>, <a href="/takeaway-packaging/burger-boxes/">burger boxes</a>, <a href="/takeaway-packaging/meal-boxes/">takeaway and wrap boxes</a>, <a href="/takeaway-packaging/poke-bowls/">poke bowls</a> and <a href="/takeaway-packaging/tubs-and-soup-containers/">tubs and soup containers</a> online.</p>
       </div>
       <div class="variant-card accent">
         <div class="variant-card-num">—</div>
@@ -384,7 +387,7 @@
   <div class="custom-band-inner">
     <div>
       <h2>Custom Printed Food Packaging for Your Business</h2>
-      <p>Your branding on your food packaging — from takeaway boxes and pizza sleeves to sauce pot lids and catering trays. We source custom printed food packaging for UK trade buyers, independents through to multi-outlet groups.</p>
+      <p>Your branding on your food packaging — from <a href="/takeaway-packaging/meal-boxes/">takeaway boxes</a> and pizza sleeves to sauce pot lids and catering trays. Line them with <a href="/catering-supplies/greaseproof-paper/">printed greaseproof paper</a> and send them out in <a href="/paper-bags/printed-paper-bags/">printed takeaway bags</a>. We source custom printed food packaging for UK trade buyers, independents through to multi-outlet groups.</p>
     </div>
     <div class="custom-band-actions">
       <a href="/custom-branded-packaging/" class="btn btn-primary">View Custom Packaging</a>

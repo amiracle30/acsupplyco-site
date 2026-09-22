@@ -76,7 +76,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -92,13 +92,13 @@
   body { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; color: var(--ink); background: var(--bg); font-size: 16px; line-height: 1.5; }
   a { color: inherit; }
   img { display: block; max-width: 100%; }
-  .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .mono { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
-  .tag { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
+  .tag { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 8px; }
 
   .announcement { background: var(--ink); color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 12px; letter-spacing: 0.02em; }
-  .announcement-inner { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .announcement-inner { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--gutter); display: flex; align-items: center; justify-content: space-between; gap: 24px; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; }
   .announcement-inner .left { display: flex; align-items: center; gap: 14px; }
   .announcement .pulse { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74,222,128,0.6); animation: pulse 2s infinite; }
   @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
@@ -132,14 +132,14 @@
   .contact-form-head p { color: var(--muted); font-size: 14.5px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
   .form-row.single { grid-template-columns: 1fr; }
-  .field label { display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .field label { display: block; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
   .field label .req { color: var(--accent); }
   .field input, .field select, .field textarea { width: 100%; font-family: 'Inter Tight', sans-serif; font-size: 14.5px; color: var(--ink); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; transition: border-color 0.15s, box-shadow 0.15s; outline: none; }
   .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--ink); box-shadow: 0 0 0 3px rgba(15,31,61,0.08); }
   .field textarea { resize: vertical; min-height: 90px; }
   .form-submit { margin-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .form-submit .btn { padding: 14px 24px; font-size: 14px; }
-  .form-fineprint { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--light); letter-spacing: 0.04em; }
+  .form-fineprint { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; color: var(--light); letter-spacing: 0.04em; }
 
   /* Full requirements form (Google Form) CTA card — sits in the contact side panel */
   .fullform-card { margin-top: 16px; padding: 18px; background: var(--accent-pale); border: 1px solid rgba(31,107,67,0.2); border-radius: var(--radius); }
@@ -152,24 +152,24 @@
   .contact-side { padding: 44px 40px; background: var(--cream); display: flex; flex-direction: column; gap: 24px; }
   .contact-side-head .tag { margin-bottom: 16px; }
   .contact-side h4 { font-size: 22px; font-weight: 600; letter-spacing: -0.018em; margin-bottom: 4px; }
-  .contact-side .role { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+  .contact-side .role { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
   .contact-channels { display: flex; flex-direction: column; gap: 12px; }
   .channel { display: grid; grid-template-columns: 36px 1fr auto; gap: 14px; align-items: center; padding: 14px 16px; background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: inherit; transition: border-color 0.15s, transform 0.15s; }
   .channel:hover { border-color: var(--ink); transform: translateX(2px); }
   .channel-icon { width: 36px; height: 36px; border-radius: 6px; background: var(--cream-deep); display: flex; align-items: center; justify-content: center; color: var(--ink); }
   .channel-icon.wa { background: #d4f5e0; color: #128c40; }
-  .channel-label { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px; }
+  .channel-label { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px; }
   .channel-value { font-size: 14.5px; font-weight: 500; letter-spacing: -0.005em; }
-  .channel-arrow { color: var(--light); font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; }
+  .channel-arrow { color: var(--light); font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 13px; }
   .qr-card { background: var(--paper); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: center; }
   .qr-card img { width: 96px; height: 96px; border-radius: 4px; }
   .qr-card .qr-text { display: flex; flex-direction: column; gap: 4px; }
-  .qr-card .qr-text .label { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .qr-card .qr-text .label { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
   .qr-card .qr-text strong { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
   .qr-card .qr-text small { font-size: 12px; color: var(--muted); }
 
   /* Page sections */
-  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.04em; }
+  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 12px; color: var(--muted); font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; letter-spacing: 0.04em; }
   .breadcrumb-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); display: flex; align-items: center; gap: 8px; }
   .breadcrumb a { color: var(--muted); text-decoration: none; }
   .breadcrumb a:hover { color: var(--ink); }
@@ -191,7 +191,7 @@
   .product-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .product-strip-card { background: var(--paper); padding: 32px 28px; text-decoration: none; display: flex; flex-direction: column; gap: 10px; transition: background 0.15s; }
   .product-strip-card:hover { background: var(--cream); }
-  .product-strip-card-num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; }
+  .product-strip-card-num { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 10.5px; color: var(--accent); letter-spacing: 0.06em; }
   .product-strip-card h4 { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
   .product-strip-card p { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
   .product-strip-card .arrow { font-size: 13px; color: var(--light); margin-top: 4px; }
@@ -200,10 +200,10 @@
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .footer-brand img { height: 56px; margin-bottom: 24px; filter: brightness(0) invert(1); opacity: 0.9; }
   .footer-brand p { font-size: 14px; max-width: 360px; line-height: 1.6; color: rgba(255,255,255,0.55); }
-  .footer-col h5 { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500; }
+  .footer-col h5 { font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); margin-bottom: 18px; font-weight: 500; }
   .footer-col a, .footer-col span { display: block; font-size: 14px; color: rgba(255,255,255,0.75); text-decoration: none; margin-bottom: 10px; transition: color 0.15s; }
   .footer-col a:hover { color: white; }
-  .footer-bottom { margin-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; }
+  .footer-bottom { margin-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter Tight', -apple-system, system-ui, sans-serif; font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em; }
   .footer-bottom .right { display: flex; gap: 24px; }
   .footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
   .footer-bottom a:hover { color: white; }
