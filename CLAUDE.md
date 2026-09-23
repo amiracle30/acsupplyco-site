@@ -17,7 +17,7 @@ Static HTML website for AC Supply Co. — a UK wholesale packaging supplier. Dep
 - Pure static HTML — no npm, no build step, no compilation
 - **Every page** (homepage and inner pages) is self-contained: full inline `<style>` block using the new design tokens, plus a Google Fonts `<link rel="stylesheet">` in `<head>`
 - `/assets/css/main.css` exists but is **legacy and unused** — do not link new pages against it
-- Shared JS lives in `/assets/js/tracking.js` (consent banner + click tracking) and is included on every page; form-specific JS is inline on the two pages with quote forms
+- Shared JS lives in `/assets/js/tracking.js` (consent banner + click tracking) and is included on every page; form-specific JS is inline on the two pages with Web3Forms quote forms (`contact/`, `custom-branded-packaging/`)
 - Deployed directly from this folder root via Cloudflare Pages
 
 ## Folder Structure
@@ -82,10 +82,12 @@ Shared component classes across pages: `.announcement`, `.header` / `.header-inn
 
 ## Quote Forms
 
-`index.html`, `contact/index.html`, and `custom-branded-packaging/index.html` each contain a quote form using Web3Forms:
+`contact/index.html` and `custom-branded-packaging/index.html` each contain a quote form using Web3Forms:
 - Access key: `2ef0136f-1971-4072-8c61-e9450526b3ad` — do not change
 - POSTs to `https://api.web3forms.com/submit` via JavaScript fetch
 - On success, redirects to `/thank-you/`
+
+The homepage has no quote form (removed 2026-09-23). Its `#contact` section, the target of the site-wide `/#contact` links, is a closing CTA pointing to `/quote/`, WhatsApp, phone and email. Homepage product-tile prices come from `/assets/js/home-products.js`, which reads `data/products/*.json` with the same exact-decimal maths as `product-page.js`.
 
 ## Image Paths
 
@@ -162,11 +164,11 @@ Client-side tracking is centralised through one Google Tag Manager container. Si
 
 | Event | Where | Parameters |
 |---|---|---|
-| `generate_lead` | Quote-form success on `index.html`, `contact/index.html`, `custom-branded-packaging/index.html`, and the quote dialog on every generated product page (`assets/js/product-page.js`) | `form_id` (`home` \| `contact` \| `custom` \| `product`), `lead_type: 'quote_request'`, `user_email`, `user_phone`; product pages add `product_id` |
+| `generate_lead` | Quote-form success on `contact/index.html`, `custom-branded-packaging/index.html`, the quote dialog on every generated product page (`assets/js/product-page.js`), and the quote-basket submit on `/quote/` (`assets/js/quote-page.js`) | `form_id` (`contact` \| `custom` \| `product` \| `cart`), `lead_type: 'quote_request'`, `user_email`, `user_phone`; product pages add `product_id` |
 | `contact_whatsapp` | Delegated click on any `wa.me/…` link (all pages) | `link_url`, `page_path` |
 | `contact_phone` | Delegated click on any `tel:` link (all pages) | `link_url`, `page_path` |
 | `contact_email` | Delegated click on any `mailto:` link (all pages) | `link_url`, `page_path` |
-| `google_form_click` | Delegated click on any `[data-gform]` link or `docs.google.com/forms` URL — the "full packaging requirements" Google Form links on `index.html`, `contact/index.html`, `thank-you/index.html` | `link_url`, `page_path` |
+| `google_form_click` | Delegated click on any `[data-gform]` link or `docs.google.com/forms` URL — the "full packaging requirements" Google Form links on `contact/index.html`, `thank-you/index.html` | `link_url`, `page_path` |
 | `cookie_consent_update` | Banner accept/reject | `consent_action` (`accept` \| `reject`) |
 
 ### Rules when adding tracking
