@@ -4,8 +4,8 @@
   "title": "Custom printed greaseproof paper",
   "category": "catering-supplies",
   "status": "published",
-  "short_description": "Your logo on the paper that wraps the burger, lines the basket and dresses the board. 30 × 30 cm greaseproof sheets in kraft or white.",
-  "description": "A 30 × 30 cm greaseproof sheet printed in a repeat of your logo. Wrap sandwiches and burgers, line trays and boxes, or use it under a grazing board. Choose the print colours and the paper, then send us your artwork.\n\nUse it to line our [printed burger boxes](/takeaway-packaging/burger-boxes/) and [chicken boxes](/takeaway-packaging/chicken-boxes/), or pair it with [printed bakery bags](/bakery-packaging/bakery-bags/).\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
+  "short_description": "Your logo on the paper that wraps the burger, lines the basket and dresses the board. Greaseproof sheets in 25 × 25 cm, A4 or 30 × 30 cm, in kraft or white.",
+  "description": "A greaseproof sheet — 25 × 25 cm, A4 or 30 × 30 cm — printed in a repeat of your logo. Wrap sandwiches and burgers, line trays and boxes, or use it under a grazing board. Choose the size, print colours and paper, then send us your artwork.\n\nUse it to line our [printed burger boxes](/takeaway-packaging/burger-boxes/) and [chicken boxes](/takeaway-packaging/chicken-boxes/), or pair it with [printed bakery bags](/bakery-packaging/bakery-bags/).\n\nYour digital proof and print plates are included in the price. Final specifications are confirmed with your written quote.",
   "benefits": [
     "Up to 4 colour print",
     "Kraft or white",
@@ -26,7 +26,7 @@
     },
     {
       "q": "Do you do other sheet sizes?",
-      "a": "Yes — other sizes and rolls are available on request. Use “Request a custom quantity”, tell us the size, and we will quote it."
+      "a": "Three sizes are priced online: 25 × 25 cm, A4 and 30 × 30 cm. Other sizes and rolls are available on request — use “Request a custom quantity”, tell us the size, and we will quote it."
     },
     {
       "q": "When will my sheets arrive?",
@@ -43,7 +43,7 @@
     "gallery_caption": "Illustrative design concepts. Artwork, colours and construction are confirmed with your quote.",
     "details": {
       "eyebrow": "The details",
-      "heading": "Printed greaseproof,\n30 × 30 cm sheets."
+      "heading": "Printed greaseproof,\nthree sheet sizes."
     },
     "process": {
       "eyebrow": "From idea to first order",
@@ -52,7 +52,7 @@
         {
           "eyebrow": "01 / Make it yours",
           "title": "Choose your sheet.",
-          "text": "Select your print colours, paper and quantity. We’ll confirm the details and your trade quote."
+          "text": "Select your size, print colours, paper and quantity. We’ll confirm the details and your trade quote."
         },
         {
           "eyebrow": "02 / Add your character",
@@ -74,7 +74,24 @@
   "specs": [
     {
       "label": "Size",
-      "value": "30 × 30 cm"
+      "value": "25 × 25 cm",
+      "applies_to": {
+        "size": "250"
+      }
+    },
+    {
+      "label": "Size",
+      "value": "A4 · 210 × 297 mm",
+      "applies_to": {
+        "size": "a4"
+      }
+    },
+    {
+      "label": "Size",
+      "value": "30 × 30 cm",
+      "applies_to": {
+        "size": "300"
+      }
     },
     {
       "label": "Paper",
@@ -85,7 +102,7 @@
     },
     {
       "label": "Paper",
-      "value": "White greaseproof, same price",
+      "value": "White greaseproof",
       "applies_to": {
         "paper": "white"
       }
@@ -129,6 +146,25 @@
   ],
   "options": [
     {
+      "key": "size",
+      "label": "Sheet size",
+      "values": [
+        {
+          "value": "250",
+          "label": "25 × 25 cm"
+        },
+        {
+          "value": "a4",
+          "label": "A4 · 21 × 29.7 cm"
+        },
+        {
+          "value": "300",
+          "label": "30 × 30 cm",
+          "default": true
+        }
+      ]
+    },
+    {
       "key": "colours",
       "label": "Print colours",
       "values": [
@@ -139,18 +175,15 @@
         },
         {
           "value": "black",
-          "label": "Black only",
-          "mult": "0.95"
+          "label": "Black only"
         },
         {
           "value": "2",
-          "label": "2 colours",
-          "mult": "1.137"
+          "label": "2 colours"
         },
         {
           "value": "4",
-          "label": "4 colours",
-          "mult": "1.332"
+          "label": "4 colours"
         }
       ]
     },
@@ -172,124 +205,852 @@
   ],
   "variants": [
     {
-      "sku": "GPP-1C-KFT",
+      "sku": "GPP-250-1C-KFT",
       "selection": {
+        "size": "250",
         "colours": "1",
         "paper": "kraft"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-kraft"
+      "pricing_ref": "greaseproof-paper-250-kraft-1c"
+    },
+    {
+      "sku": "GPP-250-1C-WHT",
+      "selection": {
+        "size": "250",
+        "colours": "1",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-white-1c"
+    },
+    {
+      "sku": "GPP-250-BLK-KFT",
+      "selection": {
+        "size": "250",
+        "colours": "black",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-kraft-black"
+    },
+    {
+      "sku": "GPP-250-BLK-WHT",
+      "selection": {
+        "size": "250",
+        "colours": "black",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-white-black"
+    },
+    {
+      "sku": "GPP-250-2C-KFT",
+      "selection": {
+        "size": "250",
+        "colours": "2",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-kraft-2c"
+    },
+    {
+      "sku": "GPP-250-2C-WHT",
+      "selection": {
+        "size": "250",
+        "colours": "2",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-white-2c"
+    },
+    {
+      "sku": "GPP-250-4C-KFT",
+      "selection": {
+        "size": "250",
+        "colours": "4",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-kraft-4c"
+    },
+    {
+      "sku": "GPP-250-4C-WHT",
+      "selection": {
+        "size": "250",
+        "colours": "4",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-250-white-4c"
+    },
+    {
+      "sku": "GPP-A4-1C-KFT",
+      "selection": {
+        "size": "a4",
+        "colours": "1",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-kraft-1c"
+    },
+    {
+      "sku": "GPP-A4-1C-WHT",
+      "selection": {
+        "size": "a4",
+        "colours": "1",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-white-1c"
+    },
+    {
+      "sku": "GPP-A4-BLK-KFT",
+      "selection": {
+        "size": "a4",
+        "colours": "black",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-kraft-black"
+    },
+    {
+      "sku": "GPP-A4-BLK-WHT",
+      "selection": {
+        "size": "a4",
+        "colours": "black",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-white-black"
+    },
+    {
+      "sku": "GPP-A4-2C-KFT",
+      "selection": {
+        "size": "a4",
+        "colours": "2",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-kraft-2c"
+    },
+    {
+      "sku": "GPP-A4-2C-WHT",
+      "selection": {
+        "size": "a4",
+        "colours": "2",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-white-2c"
+    },
+    {
+      "sku": "GPP-A4-4C-KFT",
+      "selection": {
+        "size": "a4",
+        "colours": "4",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-kraft-4c"
+    },
+    {
+      "sku": "GPP-A4-4C-WHT",
+      "selection": {
+        "size": "a4",
+        "colours": "4",
+        "paper": "white"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-a4-white-4c"
+    },
+    {
+      "sku": "GPP-1C-KFT",
+      "selection": {
+        "size": "300",
+        "colours": "1",
+        "paper": "kraft"
+      },
+      "available": true,
+      "pricing_ref": "greaseproof-paper-kraft-1c"
     },
     {
       "sku": "GPP-1C-WHT",
       "selection": {
+        "size": "300",
         "colours": "1",
         "paper": "white"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-white"
+      "pricing_ref": "greaseproof-paper-white-1c"
     },
     {
       "sku": "GPP-BLK-KFT",
       "selection": {
+        "size": "300",
         "colours": "black",
         "paper": "kraft"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-kraft"
+      "pricing_ref": "greaseproof-paper-kraft-black"
     },
     {
       "sku": "GPP-BLK-WHT",
       "selection": {
+        "size": "300",
         "colours": "black",
         "paper": "white"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-white"
+      "pricing_ref": "greaseproof-paper-white-black"
     },
     {
       "sku": "GPP-2C-KFT",
       "selection": {
+        "size": "300",
         "colours": "2",
         "paper": "kraft"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-kraft"
+      "pricing_ref": "greaseproof-paper-kraft-2c"
     },
     {
       "sku": "GPP-2C-WHT",
       "selection": {
+        "size": "300",
         "colours": "2",
         "paper": "white"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-white"
+      "pricing_ref": "greaseproof-paper-white-2c"
     },
     {
       "sku": "GPP-4C-KFT",
       "selection": {
+        "size": "300",
         "colours": "4",
         "paper": "kraft"
       },
-      "available": true,
-      "pricing_ref": "greaseproof-paper-kraft"
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
     },
     {
       "sku": "GPP-4C-WHT",
       "selection": {
+        "size": "300",
         "colours": "4",
         "paper": "white"
       },
       "available": true,
-      "pricing_ref": "greaseproof-paper-white"
+      "pricing_ref": "greaseproof-paper-white-4c"
     }
   ],
   "pricing": [
     {
-      "ref": "greaseproof-paper-kraft",
+      "ref": "greaseproof-paper-250-kraft-1c",
       "currency": "GBP",
       "vat": "ex",
       "tiers": [
         {
           "qty": 1000,
-          "unit": "0.060"
+          "unit": "0.123"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.086"
         },
         {
           "qty": 5000,
-          "unit": "0.054"
+          "unit": "0.062"
         },
         {
           "qty": 10000,
-          "unit": "0.048"
+          "unit": "0.041"
         },
         {
-          "qty": 30000,
-          "unit": "0.042"
+          "qty": 20000,
+          "unit": "0.032"
         }
-      ]
+      ],
+      "apply_multipliers": false
     },
     {
-      "ref": "greaseproof-paper-white",
+      "ref": "greaseproof-paper-250-white-1c",
       "currency": "GBP",
       "vat": "ex",
       "tiers": [
         {
           "qty": 1000,
-          "unit": "0.060"
+          "unit": "0.112"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.085"
         },
         {
           "qty": 5000,
-          "unit": "0.054"
+          "unit": "0.062"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.041"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.032"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-250-kraft-black",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.123"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.056"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.039"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.031"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-250-white-black",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.112"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.079"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.056"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.039"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.031"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-250-kraft-2c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.186"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.111"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.074"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.048"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-250-white-2c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.168"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.111"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.074"
         },
         {
           "qty": 10000,
           "unit": "0.048"
         },
         {
-          "qty": 30000,
-          "unit": "0.042"
+          "qty": 20000,
+          "unit": "0.036"
         }
-      ]
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-250-kraft-4c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.239"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.144"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.084"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-250-white-4c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.218"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.144"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.084"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.054"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-kraft-1c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.123"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.086"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.062"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.041"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.032"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-white-1c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.112"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.085"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.062"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.041"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.032"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-kraft-black",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.123"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.056"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.039"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.031"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-white-black",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.112"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.079"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.056"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.039"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.031"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-kraft-2c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.186"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.111"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.074"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.048"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-white-2c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.168"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.111"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.074"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.048"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.036"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-kraft-4c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.239"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.144"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.084"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-a4-white-4c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.218"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.144"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.084"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.054"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-kraft-1c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.170"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.125"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.082"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.065"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.061"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-white-1c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.170"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.125"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.082"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.065"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.061"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-kraft-black",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.156"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.113"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.078"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.063"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.061"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-white-black",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.154"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.113"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.078"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.063"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.061"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-kraft-2c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.225"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.148"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.096"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.076"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.067"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-white-2c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.223"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.148"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.096"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.072"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.066"
+        }
+      ],
+      "apply_multipliers": false
+    },
+    {
+      "ref": "greaseproof-paper-white-4c",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.288"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.169"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.109"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.089"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.079"
+        }
+      ],
+      "apply_multipliers": false
     }
   ],
   "charges": [],
@@ -311,7 +1072,7 @@
   },
   "seo": {
     "title": "Custom Printed Greaseproof Paper | AC Supply Co.",
-    "description": "Custom printed 30 × 30 cm greaseproof paper with your logo: 1–4 colour print on kraft or white. See indicative trade prices online and request a quote.",
+    "description": "Custom printed greaseproof paper with your logo: 25 × 25 cm, A4 or 30 × 30 cm sheets, 1–4 colour print on kraft or white. See indicative trade prices online.",
     "canonical": "/catering-supplies/greaseproof-paper/"
   }
 }
