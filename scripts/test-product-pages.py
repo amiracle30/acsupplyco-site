@@ -131,6 +131,11 @@ def test_record(browser, base, record):
             mismatches.append(f'{variant["sku"]}: tiers {shown}')
         for tier in entry['tiers']:
             page.click(f'[data-quantity="{tier["qty"]}"]')
+            if tier['unit'] is None:  # a real POA rung: no price, never £0
+                cards += 1
+                if 'POA' not in page.inner_text(f'[data-quantity="{tier["qty"]}"]') or page.inner_text('#total') != 'Price on request':
+                    mismatches.append(f'{variant["sku"]} @{tier["qty"]}: POA rung shows a price')
+                continue
             unit = unit_price(tier['unit'], mults)
             want_unit, want_total = gbp(unit, 3), gbp(subtotal(tier['qty'], unit) + sum(Decimal(c['amount']) for c in record['charges']), 2)
             rows, total = page.inner_text('#order-rows'), page.inner_text('#total')
@@ -253,12 +258,18 @@ def keyboard_and_enquiry_checks(browser, base, url, record, options, first, othe
     mults = [] if entry.get('apply_multipliers') is False else [v['mult'] for o in options for v in o['values'] if v['value'] == current[o['key']] and v.get('mult')]
     unit = unit_price(next(t['unit'] for t in entry['tiers'] if t['qty'] == qty), mults)
     labels = [next(v['label'] for v in o['values'] if v['value'] == current[o['key']]) for o in options]
-    check('enquiry payload: product_id, variant_sku, options, qty, estimates, indicative note',
-          sent.get('product_id') == record['id'] and sent.get('variant_sku') == variant['sku']
-          and all(label in sent.get('selected_options', '') for label in labels)
-          and sent.get('qty') == f'{qty:,}' and gbp(unit, 3) in sent.get('unit_estimate', '')
-          and sent.get('subtotal_estimate') == gbp(subtotal(qty, unit), 2) and 'indicative' in sent.get('price_note', '')
-          and sent.get('access_key') == '2ef0136f-1971-4072-8c61-e9450526b3ad', json.dumps(sent)[:300])
+    if unit is None:  # the rung under test is POA: estimates must say so, never a price
+        check('enquiry payload: product_id, variant_sku, options, qty, POA estimates, indicative note',
+              sent.get('product_id') == record['id'] and sent.get('variant_sku') == variant['sku']
+              and sent.get('qty') == f'{qty:,}' and sent.get('unit_estimate') == 'To be quoted'
+              and sent.get('subtotal_estimate') == 'To be quoted' and 'indicative' in sent.get('price_note', ''), json.dumps(sent)[:300])
+    else:
+        check('enquiry payload: product_id, variant_sku, options, qty, estimates, indicative note',
+              sent.get('product_id') == record['id'] and sent.get('variant_sku') == variant['sku']
+              and all(label in sent.get('selected_options', '') for label in labels)
+              and sent.get('qty') == f'{qty:,}' and gbp(unit, 3) in sent.get('unit_estimate', '')
+              and sent.get('subtotal_estimate') == gbp(subtotal(qty, unit), 2) and 'indicative' in sent.get('price_note', '')
+              and sent.get('access_key') == '2ef0136f-1971-4072-8c61-e9450526b3ad', json.dumps(sent)[:300])
     check('no console errors (keyboard + enquiry flow)', not page.problems, '; '.join(page.problems[:3]))
     page.close()
 

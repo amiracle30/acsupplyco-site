@@ -34,7 +34,7 @@
     },
     {
       "q": "When will my bags arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Standard bags are delivered 6–8 weeks from artwork approval. Express is 4 weeks from artwork approval on the sizes and quantities shown when you select it. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -84,28 +84,48 @@
       "label": "Dimensions",
       "value": "260 × 160 × 320 mm",
       "applies_to": {
-        "style": "takeaway"
+        "style": "takeaway",
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "250 × 120 × 310 mm (Express)",
+      "applies_to": {
+        "style": "takeaway",
+        "service": "express"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "320 × 210 × 330 mm (Express)",
+      "applies_to": {
+        "style": "carrier",
+        "service": "express"
       }
     },
     {
       "label": "Dimensions",
       "value": "300 × 250 × 140 mm",
       "applies_to": {
-        "style": "carrier"
+        "style": "carrier",
+        "service": "standard"
       }
     },
     {
       "label": "Dimensions",
       "value": "220 × 150 × 260 mm",
       "applies_to": {
-        "style": "wide-gusset"
+        "style": "wide-gusset",
+        "service": "standard"
       }
     },
     {
       "label": "Dimensions",
       "value": "200 × 110 × 320 mm, 90 gsm kraft",
       "applies_to": {
-        "style": "grab"
+        "style": "grab",
+        "service": "standard"
       }
     },
     {
@@ -195,6 +215,20 @@
     {
       "label": "Proof and print plates",
       "value": "Included"
+    },
+    {
+      "label": "Lead time",
+      "value": "6–8 weeks from artwork approval",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Lead time",
+      "value": "4 weeks from artwork approval",
+      "applies_to": {
+        "service": "express"
+      }
     }
   ],
   "options": [
@@ -278,6 +312,22 @@
           "mult": "1.034"
         }
       ]
+    },
+    {
+      "key": "service",
+      "label": "Lead time",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard · 6–8 weeks",
+          "default": true
+        },
+        {
+          "value": "express",
+          "label": "Express · 4 weeks",
+          "note": "Express is available on the twisted-handle takeaway bag and the flat-handle carrier, kraft, single-sided."
+        }
+      ]
     }
   ],
   "variants": [
@@ -287,7 +337,8 @@
         "style": "takeaway",
         "colours": "1",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -298,7 +349,8 @@
         "style": "takeaway",
         "colours": "2",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -309,7 +361,8 @@
         "style": "takeaway",
         "colours": "3",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -320,7 +373,8 @@
         "style": "takeaway",
         "colours": "4",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -331,7 +385,8 @@
         "style": "takeaway",
         "colours": "1",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -342,7 +397,8 @@
         "style": "takeaway",
         "colours": "2",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -353,7 +409,8 @@
         "style": "takeaway",
         "colours": "3",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -364,7 +421,8 @@
         "style": "takeaway",
         "colours": "4",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -375,7 +433,8 @@
         "style": "takeaway",
         "colours": "1",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -386,7 +445,8 @@
         "style": "takeaway",
         "colours": "2",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -397,7 +457,8 @@
         "style": "takeaway",
         "colours": "3",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -408,7 +469,8 @@
         "style": "takeaway",
         "colours": "4",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -419,7 +481,8 @@
         "style": "takeaway",
         "colours": "1",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -430,7 +493,8 @@
         "style": "takeaway",
         "colours": "2",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -441,7 +505,8 @@
         "style": "takeaway",
         "colours": "3",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -452,7 +517,8 @@
         "style": "takeaway",
         "colours": "4",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-takeaway"
@@ -463,7 +529,8 @@
         "style": "carrier",
         "colours": "1",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -474,7 +541,8 @@
         "style": "carrier",
         "colours": "2",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -485,7 +553,8 @@
         "style": "carrier",
         "colours": "3",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -496,7 +565,8 @@
         "style": "carrier",
         "colours": "4",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -507,7 +577,8 @@
         "style": "carrier",
         "colours": "1",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -518,7 +589,8 @@
         "style": "carrier",
         "colours": "2",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -529,7 +601,8 @@
         "style": "carrier",
         "colours": "3",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -540,7 +613,8 @@
         "style": "carrier",
         "colours": "4",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -551,7 +625,8 @@
         "style": "carrier",
         "colours": "1",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -562,7 +637,8 @@
         "style": "carrier",
         "colours": "2",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -573,7 +649,8 @@
         "style": "carrier",
         "colours": "3",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -584,7 +661,8 @@
         "style": "carrier",
         "colours": "4",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -595,7 +673,8 @@
         "style": "carrier",
         "colours": "1",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -606,7 +685,8 @@
         "style": "carrier",
         "colours": "2",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -617,7 +697,8 @@
         "style": "carrier",
         "colours": "3",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -628,7 +709,8 @@
         "style": "carrier",
         "colours": "4",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-carrier"
@@ -639,7 +721,8 @@
         "style": "wide-gusset",
         "colours": "1",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -650,7 +733,8 @@
         "style": "wide-gusset",
         "colours": "2",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -661,7 +745,8 @@
         "style": "wide-gusset",
         "colours": "3",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -672,7 +757,8 @@
         "style": "wide-gusset",
         "colours": "4",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -683,7 +769,8 @@
         "style": "wide-gusset",
         "colours": "1",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -694,7 +781,8 @@
         "style": "wide-gusset",
         "colours": "2",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -705,7 +793,8 @@
         "style": "wide-gusset",
         "colours": "3",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -716,7 +805,8 @@
         "style": "wide-gusset",
         "colours": "4",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -727,7 +817,8 @@
         "style": "wide-gusset",
         "colours": "1",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -738,7 +829,8 @@
         "style": "wide-gusset",
         "colours": "2",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -749,7 +841,8 @@
         "style": "wide-gusset",
         "colours": "3",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -760,7 +853,8 @@
         "style": "wide-gusset",
         "colours": "4",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -771,7 +865,8 @@
         "style": "wide-gusset",
         "colours": "1",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -782,7 +877,8 @@
         "style": "wide-gusset",
         "colours": "2",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -793,7 +889,8 @@
         "style": "wide-gusset",
         "colours": "3",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -804,7 +901,8 @@
         "style": "wide-gusset",
         "colours": "4",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-wide-gusset"
@@ -815,7 +913,8 @@
         "style": "grab",
         "colours": "1",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -826,7 +925,8 @@
         "style": "grab",
         "colours": "2",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -837,7 +937,8 @@
         "style": "grab",
         "colours": "3",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -848,7 +949,8 @@
         "style": "grab",
         "colours": "4",
         "sides": "single",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -859,7 +961,8 @@
         "style": "grab",
         "colours": "1",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -870,7 +973,8 @@
         "style": "grab",
         "colours": "2",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -881,7 +985,8 @@
         "style": "grab",
         "colours": "3",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -892,7 +997,8 @@
         "style": "grab",
         "colours": "4",
         "sides": "single",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -903,7 +1009,8 @@
         "style": "grab",
         "colours": "1",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -914,7 +1021,8 @@
         "style": "grab",
         "colours": "2",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -925,7 +1033,8 @@
         "style": "grab",
         "colours": "3",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -936,7 +1045,8 @@
         "style": "grab",
         "colours": "4",
         "sides": "double",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -947,7 +1057,8 @@
         "style": "grab",
         "colours": "1",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -958,7 +1069,8 @@
         "style": "grab",
         "colours": "2",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -969,7 +1081,8 @@
         "style": "grab",
         "colours": "3",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
@@ -980,10 +1093,139 @@
         "style": "grab",
         "colours": "4",
         "sides": "double",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pbg-grab"
+    },
+    {
+      "sku": "PBG-TWL-1C-SS-KFT-EXP",
+      "selection": {
+        "style": "takeaway",
+        "colours": "1",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-takeaway-express"
+    },
+    {
+      "sku": "PBG-TWL-2C-SS-KFT-EXP",
+      "selection": {
+        "style": "takeaway",
+        "colours": "2",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-takeaway-express"
+    },
+    {
+      "sku": "PBG-TWL-3C-SS-KFT-EXP",
+      "selection": {
+        "style": "takeaway",
+        "colours": "3",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-takeaway-express"
+    },
+    {
+      "sku": "PBG-TWL-4C-SS-KFT-EXP",
+      "selection": {
+        "style": "takeaway",
+        "colours": "4",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-takeaway-express"
+    },
+    {
+      "sku": "PBG-FHM-1C-SS-KFT-EXP",
+      "selection": {
+        "style": "carrier",
+        "colours": "1",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-carrier-express"
+    },
+    {
+      "sku": "PBG-FHM-2C-SS-KFT-EXP",
+      "selection": {
+        "style": "carrier",
+        "colours": "2",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-carrier-express"
+    },
+    {
+      "sku": "PBG-FHM-3C-SS-KFT-EXP",
+      "selection": {
+        "style": "carrier",
+        "colours": "3",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-carrier-express"
+    },
+    {
+      "sku": "PBG-FHM-4C-SS-KFT-EXP",
+      "selection": {
+        "style": "carrier",
+        "colours": "4",
+        "sides": "single",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pbg-carrier-express"
     }
   ],
   "pricing": [
@@ -993,20 +1235,12 @@
       "vat": "ex",
       "tiers": [
         {
-          "qty": 1000,
-          "unit": "0.405"
-        },
-        {
-          "qty": 2500,
-          "unit": "0.337"
-        },
-        {
           "qty": 5000,
-          "unit": "0.321"
+          "unit": "0.307"
         },
         {
           "qty": 10000,
-          "unit": "0.245"
+          "unit": "0.221"
         }
       ]
     },
@@ -1016,20 +1250,12 @@
       "vat": "ex",
       "tiers": [
         {
-          "qty": 1000,
-          "unit": "0.359"
-        },
-        {
-          "qty": 2500,
-          "unit": "0.299"
-        },
-        {
           "qty": 5000,
           "unit": "0.285"
         },
         {
           "qty": 10000,
-          "unit": "0.185"
+          "unit": "0.175"
         }
       ]
     },
@@ -1078,11 +1304,37 @@
           "unit": "0.155"
         }
       ]
+    },
+    {
+      "ref": "pbg-takeaway-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.387"
+        }
+      ]
+    },
+    {
+      "ref": "pbg-carrier-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.407"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.381"
+        }
+      ]
     }
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "Standard: 6–8 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [

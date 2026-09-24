@@ -30,7 +30,7 @@
     },
     {
       "q": "When will my napkins arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Standard napkins are delivered 6–8 weeks from artwork approval. Express is 4 weeks from artwork approval on the sizes and quantities shown when you select it. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -74,7 +74,25 @@
   "specs": [
     {
       "label": "Size",
-      "value": "30 × 30 cm"
+      "value": "30 × 30 cm",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Size",
+      "value": "33 × 33 cm (Express)",
+      "applies_to": {
+        "service": "express"
+      }
+    },
+    {
+      "label": "Ply",
+      "value": "2-ply",
+      "applies_to": {
+        "ply": "2",
+        "service": "express"
+      }
     },
     {
       "label": "Material",
@@ -101,7 +119,8 @@
       "label": "Ply",
       "value": "2-ply — quoted on request",
       "applies_to": {
-        "ply": "2"
+        "ply": "2",
+        "service": "standard"
       }
     },
     {
@@ -128,6 +147,20 @@
     {
       "label": "Proof and print plates",
       "value": "Included"
+    },
+    {
+      "label": "Lead time",
+      "value": "6–8 weeks from artwork approval",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Lead time",
+      "value": "4 weeks from artwork approval",
+      "applies_to": {
+        "service": "express"
+      }
     }
   ],
   "options": [
@@ -183,6 +216,22 @@
           "note": "3-ply napkins are quoted on request."
         }
       ]
+    },
+    {
+      "key": "service",
+      "label": "Lead time",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard · 6–8 weeks",
+          "default": true
+        },
+        {
+          "value": "express",
+          "label": "Express · 4 weeks",
+          "note": "Express is a 33 × 33 cm 2-ply napkin, from 12,000."
+        }
+      ]
     }
   ],
   "variants": [
@@ -191,7 +240,8 @@
       "selection": {
         "colours": "1",
         "material": "white",
-        "ply": "1"
+        "ply": "1",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "branded-napkins-1"
@@ -201,7 +251,8 @@
       "selection": {
         "colours": "1",
         "material": "white",
-        "ply": "2"
+        "ply": "2",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -213,7 +264,8 @@
       "selection": {
         "colours": "1",
         "material": "white",
-        "ply": "3"
+        "ply": "3",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -225,7 +277,8 @@
       "selection": {
         "colours": "1",
         "material": "kraft",
-        "ply": "1"
+        "ply": "1",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "branded-napkins-1"
@@ -235,7 +288,8 @@
       "selection": {
         "colours": "1",
         "material": "kraft",
-        "ply": "2"
+        "ply": "2",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -247,7 +301,8 @@
       "selection": {
         "colours": "1",
         "material": "kraft",
-        "ply": "3"
+        "ply": "3",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -259,7 +314,8 @@
       "selection": {
         "colours": "2",
         "material": "white",
-        "ply": "1"
+        "ply": "1",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "branded-napkins-1"
@@ -269,7 +325,8 @@
       "selection": {
         "colours": "2",
         "material": "white",
-        "ply": "2"
+        "ply": "2",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -281,7 +338,8 @@
       "selection": {
         "colours": "2",
         "material": "white",
-        "ply": "3"
+        "ply": "3",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -293,7 +351,8 @@
       "selection": {
         "colours": "2",
         "material": "kraft",
-        "ply": "1"
+        "ply": "1",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "branded-napkins-1"
@@ -303,7 +362,8 @@
       "selection": {
         "colours": "2",
         "material": "kraft",
-        "ply": "2"
+        "ply": "2",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -315,12 +375,73 @@
       "selection": {
         "colours": "2",
         "material": "kraft",
-        "ply": "3"
+        "ply": "3",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
         "mode": "quote_only"
       }
+    },
+    {
+      "sku": "NPK-1-WHT-2-EXP",
+      "selection": {
+        "colours": "1",
+        "material": "white",
+        "ply": "2",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "branded-napkins-2-express"
+    },
+    {
+      "sku": "NPK-1-KFT-2-EXP",
+      "selection": {
+        "colours": "1",
+        "material": "kraft",
+        "ply": "2",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "branded-napkins-2-express"
+    },
+    {
+      "sku": "NPK-2-WHT-2-EXP",
+      "selection": {
+        "colours": "2",
+        "material": "white",
+        "ply": "2",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "branded-napkins-2-express"
+    },
+    {
+      "sku": "NPK-2-KFT-2-EXP",
+      "selection": {
+        "colours": "2",
+        "material": "kraft",
+        "ply": "2",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "branded-napkins-2-express"
     }
   ],
   "pricing": [
@@ -334,15 +455,38 @@
           "unit": "0.034"
         },
         {
+          "qty": 10000,
+          "unit": "0.029"
+        },
+        {
           "qty": 30000,
-          "unit": "0.030"
+          "unit": "0.025"
         },
         {
           "qty": 60000,
-          "unit": "0.027"
+          "unit": "0.025"
+        }
+      ]
+    },
+    {
+      "ref": "branded-napkins-2-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 12000,
+          "unit": "0.029"
         },
         {
-          "qty": 120000,
+          "qty": 24000,
+          "unit": "0.026"
+        },
+        {
+          "qty": 36000,
+          "unit": "0.025"
+        },
+        {
+          "qty": 48000,
           "unit": "0.025"
         }
       ]
@@ -350,7 +494,7 @@
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "Standard: 6–8 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [

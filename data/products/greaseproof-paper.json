@@ -30,7 +30,7 @@
     },
     {
       "q": "When will my sheets arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Printed greaseproof sheets are delivered in 4 weeks from artwork approval. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -1055,7 +1055,7 @@
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "4 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [

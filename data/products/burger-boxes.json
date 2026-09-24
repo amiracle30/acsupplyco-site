@@ -34,7 +34,7 @@
     },
     {
       "q": "When will my boxes arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Standard boxes are delivered 6–8 weeks from artwork approval. Express is 4 weeks from artwork approval on the sizes and quantities shown when you select it. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -84,14 +84,32 @@
       "label": "Dimensions",
       "value": "120 × 120 × 70 mm",
       "applies_to": {
-        "size": "standard"
+        "size": "standard",
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "123 × 114 × 84 mm (Express)",
+      "applies_to": {
+        "size": "standard",
+        "service": "express"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "144 × 134 × 84 mm (Express)",
+      "applies_to": {
+        "size": "large",
+        "service": "express"
       }
     },
     {
       "label": "Dimensions",
       "value": "135 × 135 × 70 mm",
       "applies_to": {
-        "size": "large"
+        "size": "large",
+        "service": "standard"
       }
     },
     {
@@ -157,6 +175,20 @@
     {
       "label": "Proof and print plates",
       "value": "Included"
+    },
+    {
+      "label": "Lead time",
+      "value": "6–8 weeks from artwork approval",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Lead time",
+      "value": "4 weeks from artwork approval",
+      "applies_to": {
+        "service": "express"
+      }
     }
   ],
   "options": [
@@ -232,6 +264,22 @@
           "note": "Matte lamination is quoted on request."
         }
       ]
+    },
+    {
+      "key": "service",
+      "label": "Lead time",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard · 6–8 weeks",
+          "default": true
+        },
+        {
+          "value": "express",
+          "label": "Express · 4 weeks",
+          "note": "Express is available unlaminated, from 3,000 boxes."
+        }
+      ]
     }
   ],
   "variants": [
@@ -241,7 +289,8 @@
         "size": "standard",
         "colours": "1",
         "material": "kraft",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-standard"
@@ -252,7 +301,8 @@
         "size": "standard",
         "colours": "2",
         "material": "kraft",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-standard"
@@ -263,7 +313,8 @@
         "size": "standard",
         "colours": "3",
         "material": "kraft",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-standard"
@@ -274,7 +325,8 @@
         "size": "standard",
         "colours": "1",
         "material": "white",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-standard"
@@ -285,7 +337,8 @@
         "size": "standard",
         "colours": "2",
         "material": "white",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-standard"
@@ -296,7 +349,8 @@
         "size": "standard",
         "colours": "3",
         "material": "white",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-standard"
@@ -307,7 +361,8 @@
         "size": "standard",
         "colours": "1",
         "material": "kraft",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -320,7 +375,8 @@
         "size": "standard",
         "colours": "2",
         "material": "kraft",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -333,7 +389,8 @@
         "size": "standard",
         "colours": "3",
         "material": "kraft",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -346,7 +403,8 @@
         "size": "standard",
         "colours": "1",
         "material": "white",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -359,7 +417,8 @@
         "size": "standard",
         "colours": "2",
         "material": "white",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -372,7 +431,8 @@
         "size": "standard",
         "colours": "3",
         "material": "white",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -385,7 +445,8 @@
         "size": "standard",
         "colours": "1",
         "material": "kraft",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -398,7 +459,8 @@
         "size": "standard",
         "colours": "2",
         "material": "kraft",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -411,7 +473,8 @@
         "size": "standard",
         "colours": "3",
         "material": "kraft",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -424,7 +487,8 @@
         "size": "standard",
         "colours": "1",
         "material": "white",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -437,7 +501,8 @@
         "size": "standard",
         "colours": "2",
         "material": "white",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -450,7 +515,8 @@
         "size": "standard",
         "colours": "3",
         "material": "white",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -463,7 +529,8 @@
         "size": "large",
         "colours": "1",
         "material": "kraft",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-large"
@@ -474,7 +541,8 @@
         "size": "large",
         "colours": "2",
         "material": "kraft",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-large"
@@ -485,7 +553,8 @@
         "size": "large",
         "colours": "3",
         "material": "kraft",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-large"
@@ -496,7 +565,8 @@
         "size": "large",
         "colours": "1",
         "material": "white",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-large"
@@ -507,7 +577,8 @@
         "size": "large",
         "colours": "2",
         "material": "white",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-large"
@@ -518,7 +589,8 @@
         "size": "large",
         "colours": "3",
         "material": "white",
-        "lamination": "none"
+        "lamination": "none",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bgb-large"
@@ -529,7 +601,8 @@
         "size": "large",
         "colours": "1",
         "material": "kraft",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -542,7 +615,8 @@
         "size": "large",
         "colours": "2",
         "material": "kraft",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -555,7 +629,8 @@
         "size": "large",
         "colours": "3",
         "material": "kraft",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -568,7 +643,8 @@
         "size": "large",
         "colours": "1",
         "material": "white",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -581,7 +657,8 @@
         "size": "large",
         "colours": "2",
         "material": "white",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -594,7 +671,8 @@
         "size": "large",
         "colours": "3",
         "material": "white",
-        "lamination": "gloss"
+        "lamination": "gloss",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -607,7 +685,8 @@
         "size": "large",
         "colours": "1",
         "material": "kraft",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -620,7 +699,8 @@
         "size": "large",
         "colours": "2",
         "material": "kraft",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -633,7 +713,8 @@
         "size": "large",
         "colours": "3",
         "material": "kraft",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -646,7 +727,8 @@
         "size": "large",
         "colours": "1",
         "material": "white",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -659,7 +741,8 @@
         "size": "large",
         "colours": "2",
         "material": "white",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -672,12 +755,205 @@
         "size": "large",
         "colours": "3",
         "material": "white",
-        "lamination": "matte"
+        "lamination": "matte",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
         "mode": "quote_only"
       }
+    },
+    {
+      "sku": "BGB-STD-1C-KFT-NL-EXP",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-standard-express"
+    },
+    {
+      "sku": "BGB-STD-2C-KFT-NL-EXP",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-standard-express"
+    },
+    {
+      "sku": "BGB-STD-3C-KFT-NL-EXP",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-standard-express"
+    },
+    {
+      "sku": "BGB-STD-1C-WHT-NL-EXP",
+      "selection": {
+        "size": "standard",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-standard-express"
+    },
+    {
+      "sku": "BGB-STD-2C-WHT-NL-EXP",
+      "selection": {
+        "size": "standard",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-standard-express"
+    },
+    {
+      "sku": "BGB-STD-3C-WHT-NL-EXP",
+      "selection": {
+        "size": "standard",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-standard-express"
+    },
+    {
+      "sku": "BGB-LRG-1C-KFT-NL-EXP",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "kraft",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-large-express"
+    },
+    {
+      "sku": "BGB-LRG-2C-KFT-NL-EXP",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "kraft",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-large-express"
+    },
+    {
+      "sku": "BGB-LRG-3C-KFT-NL-EXP",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "kraft",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-large-express"
+    },
+    {
+      "sku": "BGB-LRG-1C-WHT-NL-EXP",
+      "selection": {
+        "size": "large",
+        "colours": "1",
+        "material": "white",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-large-express"
+    },
+    {
+      "sku": "BGB-LRG-2C-WHT-NL-EXP",
+      "selection": {
+        "size": "large",
+        "colours": "2",
+        "material": "white",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-large-express"
+    },
+    {
+      "sku": "BGB-LRG-3C-WHT-NL-EXP",
+      "selection": {
+        "size": "large",
+        "colours": "3",
+        "material": "white",
+        "lamination": "none",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bgb-large-express"
     }
   ],
   "pricing": [
@@ -686,10 +962,6 @@
       "currency": "GBP",
       "vat": "ex",
       "tiers": [
-        {
-          "qty": 2500,
-          "unit": "0.213"
-        },
         {
           "qty": 5000,
           "unit": "0.190"
@@ -710,10 +982,6 @@
       "vat": "ex",
       "tiers": [
         {
-          "qty": 2500,
-          "unit": "0.217"
-        },
-        {
           "qty": 5000,
           "unit": "0.210"
         },
@@ -726,11 +994,57 @@
           "unit": "0.125"
         }
       ]
+    },
+    {
+      "ref": "bgb-standard-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 3000,
+          "unit": "0.361"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.327"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.241"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.198"
+        }
+      ]
+    },
+    {
+      "ref": "bgb-large-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 3000,
+          "unit": "0.433"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.392"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.289"
+        },
+        {
+          "qty": 20000,
+          "unit": "0.237"
+        }
+      ]
     }
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "Standard: 6–8 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [

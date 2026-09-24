@@ -203,8 +203,10 @@
         "size": "100x60mm",
         "finish": "gloss"
       },
-      "available": true,
-      "pricing_ref": "logo-stickers-100x60mm"
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
     },
     {
       "sku": "STK-X106-MAT",
@@ -212,8 +214,10 @@
         "size": "100x60mm",
         "finish": "matte"
       },
-      "available": true,
-      "pricing_ref": "logo-stickers-100x60mm"
+      "available": false,
+      "enquiry": {
+        "mode": "quote_only"
+      }
     }
   ],
   "pricing": [
@@ -224,19 +228,19 @@
       "tiers": [
         {
           "qty": 1000,
-          "unit": "0.055"
+          "unit": "0.083"
         },
         {
           "qty": 2500,
-          "unit": "0.038"
+          "unit": "0.050"
         },
         {
           "qty": 5000,
-          "unit": "0.026"
+          "unit": null
         },
         {
           "qty": 10000,
-          "unit": "0.017"
+          "unit": null
         }
       ]
     },
@@ -247,42 +251,19 @@
       "tiers": [
         {
           "qty": 1000,
-          "unit": "0.062"
+          "unit": "0.092"
         },
         {
           "qty": 2500,
-          "unit": "0.043"
+          "unit": null
         },
         {
           "qty": 5000,
-          "unit": "0.030"
+          "unit": null
         },
         {
           "qty": 10000,
-          "unit": "0.022"
-        }
-      ]
-    },
-    {
-      "ref": "logo-stickers-100x60mm",
-      "currency": "GBP",
-      "vat": "ex",
-      "tiers": [
-        {
-          "qty": 1000,
-          "unit": "0.068"
-        },
-        {
-          "qty": 2500,
-          "unit": "0.046"
-        },
-        {
-          "qty": 5000,
-          "unit": "0.033"
-        },
-        {
-          "qty": 10000,
-          "unit": "0.028"
+          "unit": null
         }
       ]
     }

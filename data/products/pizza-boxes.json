@@ -34,7 +34,7 @@
     },
     {
       "q": "When will my boxes arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Standard boxes are delivered 6–8 weeks from artwork approval. Express is 4 weeks from artwork approval on the sizes and quantities shown when you select it. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -84,14 +84,32 @@
       "label": "Dimensions",
       "value": "230 × 230 × 40 mm",
       "applies_to": {
-        "size": "9in"
+        "size": "9in",
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "260 × 260 × 40 mm (Express)",
+      "applies_to": {
+        "size": "9in",
+        "service": "express"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "300 × 300 × 40 mm (Express)",
+      "applies_to": {
+        "size": "12in",
+        "service": "express"
       }
     },
     {
       "label": "Dimensions",
       "value": "305 × 305 × 40 mm",
       "applies_to": {
-        "size": "12in"
+        "size": "12in",
+        "service": "standard"
       }
     },
     {
@@ -132,6 +150,20 @@
     {
       "label": "Proof and print plates",
       "value": "Included"
+    },
+    {
+      "label": "Lead time",
+      "value": "6–8 weeks from artwork approval",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Lead time",
+      "value": "4 weeks from artwork approval",
+      "applies_to": {
+        "service": "express"
+      }
     }
   ],
   "options": [
@@ -186,6 +218,22 @@
           "mult": "1.118"
         }
       ]
+    },
+    {
+      "key": "service",
+      "label": "Lead time",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard · 6–8 weeks",
+          "default": true
+        },
+        {
+          "value": "express",
+          "label": "Express · 4 weeks",
+          "note": "Express is digitally printed: 9 inch up to 5,000 boxes, 12 inch up to 2,000."
+        }
+      ]
     }
   ],
   "variants": [
@@ -194,7 +242,8 @@
       "selection": {
         "size": "9in",
         "colours": "1",
-        "board": "kraft"
+        "board": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-9in"
@@ -204,7 +253,8 @@
       "selection": {
         "size": "9in",
         "colours": "2",
-        "board": "kraft"
+        "board": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-9in"
@@ -214,7 +264,8 @@
       "selection": {
         "size": "9in",
         "colours": "3",
-        "board": "kraft"
+        "board": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-9in"
@@ -224,7 +275,8 @@
       "selection": {
         "size": "9in",
         "colours": "1",
-        "board": "white"
+        "board": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-9in"
@@ -234,7 +286,8 @@
       "selection": {
         "size": "9in",
         "colours": "2",
-        "board": "white"
+        "board": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-9in"
@@ -244,7 +297,8 @@
       "selection": {
         "size": "9in",
         "colours": "3",
-        "board": "white"
+        "board": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-9in"
@@ -254,7 +308,8 @@
       "selection": {
         "size": "12in",
         "colours": "1",
-        "board": "kraft"
+        "board": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-12in"
@@ -264,7 +319,8 @@
       "selection": {
         "size": "12in",
         "colours": "2",
-        "board": "kraft"
+        "board": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-12in"
@@ -274,7 +330,8 @@
       "selection": {
         "size": "12in",
         "colours": "3",
-        "board": "kraft"
+        "board": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-12in"
@@ -284,7 +341,8 @@
       "selection": {
         "size": "12in",
         "colours": "1",
-        "board": "white"
+        "board": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-12in"
@@ -294,7 +352,8 @@
       "selection": {
         "size": "12in",
         "colours": "2",
-        "board": "white"
+        "board": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-12in"
@@ -304,10 +363,191 @@
       "selection": {
         "size": "12in",
         "colours": "3",
-        "board": "white"
+        "board": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "pzb-12in"
+    },
+    {
+      "sku": "PZB-09-1C-KFT-EXP",
+      "selection": {
+        "size": "9in",
+        "colours": "1",
+        "board": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-9in-express"
+    },
+    {
+      "sku": "PZB-09-2C-KFT-EXP",
+      "selection": {
+        "size": "9in",
+        "colours": "2",
+        "board": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-9in-express"
+    },
+    {
+      "sku": "PZB-09-3C-KFT-EXP",
+      "selection": {
+        "size": "9in",
+        "colours": "3",
+        "board": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-9in-express"
+    },
+    {
+      "sku": "PZB-09-1C-WHT-EXP",
+      "selection": {
+        "size": "9in",
+        "colours": "1",
+        "board": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-9in-express"
+    },
+    {
+      "sku": "PZB-09-2C-WHT-EXP",
+      "selection": {
+        "size": "9in",
+        "colours": "2",
+        "board": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-9in-express"
+    },
+    {
+      "sku": "PZB-09-3C-WHT-EXP",
+      "selection": {
+        "size": "9in",
+        "colours": "3",
+        "board": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-9in-express"
+    },
+    {
+      "sku": "PZB-12-1C-KFT-EXP",
+      "selection": {
+        "size": "12in",
+        "colours": "1",
+        "board": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-12in-express"
+    },
+    {
+      "sku": "PZB-12-2C-KFT-EXP",
+      "selection": {
+        "size": "12in",
+        "colours": "2",
+        "board": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-12in-express"
+    },
+    {
+      "sku": "PZB-12-3C-KFT-EXP",
+      "selection": {
+        "size": "12in",
+        "colours": "3",
+        "board": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-12in-express"
+    },
+    {
+      "sku": "PZB-12-1C-WHT-EXP",
+      "selection": {
+        "size": "12in",
+        "colours": "1",
+        "board": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-12in-express"
+    },
+    {
+      "sku": "PZB-12-2C-WHT-EXP",
+      "selection": {
+        "size": "12in",
+        "colours": "2",
+        "board": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-12in-express"
+    },
+    {
+      "sku": "PZB-12-3C-WHT-EXP",
+      "selection": {
+        "size": "12in",
+        "colours": "3",
+        "board": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "pzb-12in-express"
     }
   ],
   "pricing": [
@@ -317,20 +557,12 @@
       "vat": "ex",
       "tiers": [
         {
-          "qty": 2500,
-          "unit": "0.493"
-        },
-        {
-          "qty": 5000,
-          "unit": "0.440"
-        },
-        {
           "qty": 10000,
-          "unit": "0.290"
+          "unit": "0.238"
         },
         {
           "qty": 20000,
-          "unit": "0.280"
+          "unit": "0.238"
         }
       ]
     },
@@ -340,27 +572,53 @@
       "vat": "ex",
       "tiers": [
         {
-          "qty": 2500,
-          "unit": "0.750"
-        },
-        {
-          "qty": 5000,
-          "unit": "0.670"
-        },
-        {
           "qty": 10000,
-          "unit": "0.420"
+          "unit": "0.288"
         },
         {
           "qty": 20000,
-          "unit": "0.400"
+          "unit": "0.288"
+        }
+      ]
+    },
+    {
+      "ref": "pzb-9in-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.547"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.505"
+        },
+        {
+          "qty": 5000,
+          "unit": "0.458"
+        }
+      ]
+    },
+    {
+      "ref": "pzb-12in-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 1000,
+          "unit": "0.611"
+        },
+        {
+          "qty": 2000,
+          "unit": "0.564"
         }
       ]
     }
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "Standard: 6–8 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [

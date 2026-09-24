@@ -30,7 +30,7 @@
     },
     {
       "q": "When will my bags arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Standard bags are delivered 6–8 weeks from artwork approval. Express is 4 weeks from artwork approval on the sizes and quantities shown when you select it. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -80,21 +80,48 @@
       "label": "Dimensions",
       "value": "12.75 × 6 × 4.5 in (324 × 152 × 114 mm)",
       "applies_to": {
-        "bag": "bread"
+        "bag": "bread",
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "200 × 80 × 330 mm (Express)",
+      "applies_to": {
+        "bag": "bread",
+        "service": "express"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "120 × 55 × 590 mm (Express)",
+      "applies_to": {
+        "bag": "baguette",
+        "service": "express"
+      }
+    },
+    {
+      "label": "Dimensions",
+      "value": "120 × 60 × 190 mm (Express)",
+      "applies_to": {
+        "bag": "pastry",
+        "service": "express"
       }
     },
     {
       "label": "Dimensions",
       "value": "24 × 4.5 × 2.5 in (610 × 114 × 64 mm), greaseproof",
       "applies_to": {
-        "bag": "baguette"
+        "bag": "baguette",
+        "service": "standard"
       }
     },
     {
       "label": "Dimensions",
       "value": "7.5 × 5 in (190 × 127 mm), greaseproof",
       "applies_to": {
-        "bag": "pastry"
+        "bag": "pastry",
+        "service": "standard"
       }
     },
     {
@@ -128,6 +155,20 @@
     {
       "label": "Proof and print plates",
       "value": "Included"
+    },
+    {
+      "label": "Lead time",
+      "value": "6–8 weeks from artwork approval",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Lead time",
+      "value": "4 weeks from artwork approval",
+      "applies_to": {
+        "service": "express"
+      }
     }
   ],
   "options": [
@@ -181,6 +222,22 @@
           "mult": "1.078"
         }
       ]
+    },
+    {
+      "key": "service",
+      "label": "Lead time",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard · 6–8 weeks",
+          "default": true
+        },
+        {
+          "value": "express",
+          "label": "Express · 4 weeks",
+          "note": "Express is available from 5,000 bags."
+        }
+      ]
     }
   ],
   "variants": [
@@ -189,7 +246,8 @@
       "selection": {
         "bag": "bread",
         "colours": "1",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-bread"
@@ -199,7 +257,8 @@
       "selection": {
         "bag": "bread",
         "colours": "1",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-bread"
@@ -209,7 +268,8 @@
       "selection": {
         "bag": "bread",
         "colours": "2",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-bread"
@@ -219,7 +279,8 @@
       "selection": {
         "bag": "bread",
         "colours": "2",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-bread"
@@ -229,7 +290,8 @@
       "selection": {
         "bag": "baguette",
         "colours": "1",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-baguette"
@@ -239,7 +301,8 @@
       "selection": {
         "bag": "baguette",
         "colours": "1",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-baguette"
@@ -249,7 +312,8 @@
       "selection": {
         "bag": "baguette",
         "colours": "2",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-baguette"
@@ -259,7 +323,8 @@
       "selection": {
         "bag": "baguette",
         "colours": "2",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-baguette"
@@ -269,7 +334,8 @@
       "selection": {
         "bag": "pastry",
         "colours": "1",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-pastry"
@@ -279,7 +345,8 @@
       "selection": {
         "bag": "pastry",
         "colours": "1",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-pastry"
@@ -289,7 +356,8 @@
       "selection": {
         "bag": "pastry",
         "colours": "2",
-        "paper": "kraft"
+        "paper": "kraft",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-pastry"
@@ -299,10 +367,191 @@
       "selection": {
         "bag": "pastry",
         "colours": "2",
-        "paper": "white"
+        "paper": "white",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "bakery-bags-pastry"
+    },
+    {
+      "sku": "BKB-BRD-1C-KFT-EXP",
+      "selection": {
+        "bag": "bread",
+        "colours": "1",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-bread-express"
+    },
+    {
+      "sku": "BKB-BRD-1C-WHT-EXP",
+      "selection": {
+        "bag": "bread",
+        "colours": "1",
+        "paper": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-bread-express"
+    },
+    {
+      "sku": "BKB-BRD-2C-KFT-EXP",
+      "selection": {
+        "bag": "bread",
+        "colours": "2",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-bread-express"
+    },
+    {
+      "sku": "BKB-BRD-2C-WHT-EXP",
+      "selection": {
+        "bag": "bread",
+        "colours": "2",
+        "paper": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-bread-express"
+    },
+    {
+      "sku": "BKB-BAG-1C-KFT-EXP",
+      "selection": {
+        "bag": "baguette",
+        "colours": "1",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-baguette-express"
+    },
+    {
+      "sku": "BKB-BAG-1C-WHT-EXP",
+      "selection": {
+        "bag": "baguette",
+        "colours": "1",
+        "paper": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-baguette-express"
+    },
+    {
+      "sku": "BKB-BAG-2C-KFT-EXP",
+      "selection": {
+        "bag": "baguette",
+        "colours": "2",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-baguette-express"
+    },
+    {
+      "sku": "BKB-BAG-2C-WHT-EXP",
+      "selection": {
+        "bag": "baguette",
+        "colours": "2",
+        "paper": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-baguette-express"
+    },
+    {
+      "sku": "BKB-PST-1C-KFT-EXP",
+      "selection": {
+        "bag": "pastry",
+        "colours": "1",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-pastry-express"
+    },
+    {
+      "sku": "BKB-PST-1C-WHT-EXP",
+      "selection": {
+        "bag": "pastry",
+        "colours": "1",
+        "paper": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-pastry-express"
+    },
+    {
+      "sku": "BKB-PST-2C-KFT-EXP",
+      "selection": {
+        "bag": "pastry",
+        "colours": "2",
+        "paper": "kraft",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-pastry-express"
+    },
+    {
+      "sku": "BKB-PST-2C-WHT-EXP",
+      "selection": {
+        "bag": "pastry",
+        "colours": "2",
+        "paper": "white",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "bakery-bags-pastry-express"
     }
   ],
   "pricing": [
@@ -371,6 +620,59 @@
         },
         {
           "qty": 50000,
+          "unit": "0.022"
+        }
+      ]
+    },
+    {
+      "ref": "bakery-bags-bread-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 5000,
+          "unit": "0.184"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.138"
+        }
+      ]
+    },
+    {
+      "ref": "bakery-bags-baguette-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 5000,
+          "unit": "0.204"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.153"
+        }
+      ]
+    },
+    {
+      "ref": "bakery-bags-pastry-express",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 5000,
+          "unit": "0.095"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.071"
+        },
+        {
+          "qty": 25000,
+          "unit": "0.045"
+        },
+        {
+          "qty": 50000,
           "unit": "0.025"
         }
       ]
@@ -378,7 +680,7 @@
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "Standard: 6–8 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [
