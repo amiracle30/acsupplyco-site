@@ -179,12 +179,15 @@
     quantityNote = '';
     render();
     document.querySelector(`[data-quantity="${quantity}"]`)?.focus();
+    const line = currentLine();
+    window.acTrack('select_quantity', { product_id: data.id, variant_sku: line.sku || undefined, tier_qty: quantity, value: window.acLineValue(line), currency: 'GBP' });
   });
 
   /* ---------- enquiry ---------- */
   const dialog = $('quote-dialog');
   const form = $('product-quote-form');
   const qtyField = $('quote-qty');
+  let checkoutStarted = false;
   function openQuote(customQuantity) {
     const variant = variantFor(selected);
     const tier = customQuantity ? null : tiersFor(variant).find(t => t.qty === quantity);
@@ -211,6 +214,11 @@
     ].filter(Boolean).join('\n');
     $('quote-error').hidden = true;
     dialog.showModal();
+    if (!checkoutStarted) {
+      checkoutStarted = true;
+      const line = currentLine();
+      window.acTrack('begin_checkout', { form_id: 'product', ecommerce: { currency: 'GBP', value: window.acLineValue(line), items: [window.acItem(line)] } });
+    }
     (tier ? form.elements.name : qtyField).focus();
   }
   document.querySelectorAll('[data-quote]').forEach(button => button.addEventListener('click', event => { event.preventDefault(); openQuote(false); }));
@@ -222,7 +230,7 @@
     const priced = Boolean(tier && tier.unit !== null);
     const sub = priced ? toPence(tier.qty, tier.unit) : null;
     return {
-      product_id: data.id, product: data.title, sku: variant ? variant.sku : null, url: location.pathname,
+      product_id: data.id, product: data.title, category: data.category, sku: variant ? variant.sku : null, url: location.pathname,
       options: data.options.map(o => ({ key: o.key, label: o.label, value: valueOf(o)?.label ?? selected[o.key] })),
       qty: tier ? tier.qty : null, custom_qty: !tier, unit: priced ? money(tier.unit, 3) : null, unit_milli: priced ? tier.unit.toString() : null,
       subtotal: priced ? money(sub, 2) : null, subtotal_pence: priced ? sub.toString() : null,
@@ -238,10 +246,13 @@
     note.append(`Added to your quote — ${n} item${n === 1 ? '' : 's'}. `);
     const link = document.createElement('a'); link.href = '/quote/'; link.textContent = 'Review and send your quote →'; note.append(link);
     note.hidden = false;
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'add_to_quote', product_id: data.id, variant_sku: currentLine().sku, qty: quantity });
+    const line = currentLine();
+    window.acTrack('add_to_cart', { ecommerce: { currency: 'GBP', value: window.acLineValue(line), items: [window.acItem(line)] } });
   }));
-  $('custom-quantity').addEventListener('click', () => openQuote(true));
+  $('custom-quantity').addEventListener('click', () => {
+    window.acTrack('request_custom_quantity', { product_id: data.id, variant_sku: variantFor(selected)?.sku });
+    openQuote(true);
+  });
   $('close-quote').addEventListener('click', () => dialog.close());
 
   // Same Web3Forms endpoint, generate_lead event and 400ms redirect delay as the site's other quote forms.
@@ -259,18 +270,22 @@
         body: JSON.stringify(obj)
       });
       const result = await response.json();
-      if (!result.success) throw new Error('failed');
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'generate_lead',
+      if (!result.success) throw new Error('rejected');
+      // A custom-quantity request is unpriced, so its value is 0 whatever tier is selected behind it.
+      const line = qtyField.readOnly ? currentLine() : { ...currentLine(), qty: null, unit_milli: null, subtotal_pence: null };
+      const value = window.acLineValue(line);
+      window.acTrack('generate_lead', {
         form_id: 'product',
         lead_type: 'quote_request',
         product_id: data.id,
+        value, currency: 'GBP',
         user_email: (obj.email || '').trim().toLowerCase(),
-        user_phone: (obj.phone || '').replace(/[^\d+]/g, '')
+        user_phone: (obj.phone || '').replace(/[^\d+]/g, ''),
+        ecommerce: { currency: 'GBP', value, items: [window.acItem(line)] }
       });
       setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
     } catch (err) {
+      window.acTrack('form_error', { form_id: 'product', error_type: err.message === 'rejected' ? 'rejected' : 'network' });
       const error = $('quote-error');
       error.hidden = false;
       error.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
@@ -281,4 +296,8 @@
   });
 
   render();
+  document.addEventListener('DOMContentLoaded', () => {
+    const line = currentLine();
+    window.acTrack('view_item', { ecommerce: { currency: 'GBP', value: window.acLineValue(line), items: [window.acItem(line)] } });
+  });
 })();

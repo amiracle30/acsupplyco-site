@@ -68,6 +68,56 @@
   }
 })();
 
+// ---- Funnel / ecommerce helpers ----
+// Product and quote scripts load before this file, so they call acTrack from
+// DOMContentLoaded or user actions — never at parse time.
+// Event names follow GA4's ecommerce set; prices here are analytics-only floats,
+// the pages themselves still price with exact decimals.
+window.acTrack = function (event, params) {
+  window.dataLayer = window.dataLayer || [];
+  if (params && params.ecommerce) window.dataLayer.push({ ecommerce: null });
+  window.dataLayer.push(Object.assign({ event: event }, params));
+};
+// A quote-basket line (see quote-basket.js) → a GA4 item.
+window.acItem = function (line, index) {
+  var item = {
+    item_id: line.product_id,
+    item_name: line.product,
+    item_category: line.category,
+    item_variant: line.sku || undefined,
+    quantity: line.qty || 1,
+    price: line.unit_milli ? Number(line.unit_milli) / 1000 : 0
+  };
+  if (index !== undefined) item.index = index;
+  return item;
+};
+window.acLineValue = function (line) {
+  return line.subtotal_pence ? Number(line.subtotal_pence) / 100 : 0;
+};
+
+// ---- Product-tile clicks (homepage + category pages) → select_item ----
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-product] a[href], a.variant-card[href]');
+    if (!a) return;
+    var tile = a.closest('[data-product]') || a;
+    var path = new URL(a.href, location.href).pathname.split('/').filter(Boolean);
+    var list = location.pathname === '/' ? 'home' : location.pathname.split('/').filter(Boolean)[0];
+    var tiles = Array.prototype.slice.call(document.querySelectorAll('[data-product], a.variant-card'));
+    var heading = tile.querySelector('h3');
+    window.acTrack('select_item', { ecommerce: {
+      item_list_id: list,
+      item_list_name: list,
+      items: [{
+        item_id: tile.getAttribute('data-item-id') || tile.getAttribute('data-product') || path[1],
+        item_name: heading ? heading.textContent.trim() : undefined,
+        item_category: path[0],
+        index: tiles.indexOf(tile)
+      }]
+    } });
+  }, true);
+})();
+
 // ---- Contact-click tracking (WhatsApp / phone / email) ----
 (function () {
   document.addEventListener('click', function (e) {

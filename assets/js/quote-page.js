@@ -45,15 +45,18 @@
         el('small', {}, line.unit ? `${line.unit} / ${unit.one} · ${qtyLabel}` : qtyLabel));
       const actions = el('div', { class: 'line-actions' });
       if (line.tiers.length) {
-        const select = el('select', { 'aria-label': 'Quantity', onchange: e => { const v = e.target.value; if (v === 'custom') { Q.update(line.id, reprice(line, null)); } else { Q.update(line.id, reprice(line, Number(v))); } render(); } });
+        const select = el('select', { 'aria-label': 'Quantity', onchange: e => { const v = e.target.value; const next = reprice(line, v === 'custom' ? null : Number(v)); Q.update(line.id, next); trackQty(line, next); render(); } });
         line.tiers.forEach(t => select.append(el('option', { value: t.qty, ...(t.qty === line.qty ? { selected: '' } : {}) }, `${grouped(String(t.qty))} ${unit.many}`)));
         select.append(el('option', { value: 'custom', ...(line.custom_qty ? { selected: '' } : {}) }, 'Custom quantity…'));
         actions.append(el('label', {}, 'Quantity ', select));
       }
       if (line.custom_qty) {
-        actions.append(el('input', { type: 'text', inputmode: 'numeric', placeholder: `How many ${unit.many}?`, value: line.qty || '', 'aria-label': 'Custom quantity', onchange: e => { const n = parseInt(e.target.value.replace(/[^0-9]/g, ''), 10); Q.update(line.id, { qty: n || null }); render(); } }));
+        actions.append(el('input', { type: 'text', inputmode: 'numeric', placeholder: `How many ${unit.many}?`, value: line.qty || '', 'aria-label': 'Custom quantity', onchange: e => { const n = parseInt(e.target.value.replace(/[^0-9]/g, ''), 10); Q.update(line.id, { qty: n || null }); trackQty(line, { ...line, qty: n || null }); render(); } }));
       }
-      actions.append(el('button', { type: 'button', onclick: () => { Q.remove(line.id); render(); } }, 'Remove'));
+      actions.append(el('button', { type: 'button', onclick: () => {
+        window.acTrack('remove_from_cart', { ecommerce: { currency: 'GBP', value: window.acLineValue(line), items: [window.acItem(line)] } });
+        Q.remove(line.id); render();
+      } }, 'Remove'));
       box.append(el('div', { class: 'line' },
         el('div', {},
           el('h2', {}, el('a', { href: line.url }, line.product)),
@@ -66,6 +69,18 @@
     $('grand').textContent = total === null ? 'To be quoted' : Q.money(total);
     $('grand-note').textContent = unpriced && total !== null ? `plus ${unpriced} item${unpriced === 1 ? '' : 's'} to be quoted` : '';
   }
+
+  function trackQty(before, after) {
+    window.acTrack('update_cart_qty', {
+      product_id: before.product_id, variant_sku: before.sku || undefined,
+      previous_qty: before.qty || 'custom', new_qty: after.custom_qty && !after.qty ? 'custom' : after.qty,
+      value: window.acLineValue(after), currency: 'GBP'
+    });
+  }
+  const cartEvent = lines => {
+    const total = Q.totalPence();
+    return { currency: 'GBP', value: total === null ? 0 : Number(total) / 100, items: lines.map((l, i) => window.acItem(l, i)) };
+  };
 
   function summary(lines) {
     return lines.map((l, i) => {
@@ -91,21 +106,23 @@
         method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(obj)
       });
       const result = await response.json();
-      if (!result.success) throw new Error('failed');
+      if (!result.success) throw new Error('rejected');
       if (QUOTE_SHEET_URL) {
         // Fire-and-forget: the sheet is a copy, the email above is the record. Apps Script needs text/plain + no-cors.
         fetch(QUOTE_SHEET_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
           body: JSON.stringify({ ...obj, lines, submitted: new Date().toISOString() }) }).catch(() => {});
       }
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'generate_lead', form_id: 'cart', lead_type: 'quote_request',
-        value: total === null ? 0 : Number(total) / 100, currency: 'GBP', items: lines.length,
-        user_email: (obj.email || '').trim().toLowerCase(), user_phone: (obj.phone || '').replace(/[^\d+]/g, '')
+      const ecommerce = cartEvent(lines);
+      window.acTrack('generate_lead', {
+        form_id: 'cart', lead_type: 'quote_request',
+        value: ecommerce.value, currency: 'GBP', item_count: lines.length,
+        user_email: (obj.email || '').trim().toLowerCase(), user_phone: (obj.phone || '').replace(/[^\d+]/g, ''),
+        ecommerce
       });
       Q.clear();
       setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
     } catch (err) {
+      window.acTrack('form_error', { form_id: 'cart', error_type: err.message === 'rejected' ? 'rejected' : 'network' });
       const error = $('cart-error');
       error.hidden = false;
       error.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
@@ -114,5 +131,14 @@
     }
   });
 
+  // First touch on any field in the send form = the buyer has started checking out.
+  $('cart-form').addEventListener('focusin', () => {
+    window.acTrack('begin_checkout', { form_id: 'cart', ecommerce: cartEvent(Q.lines()) });
+  }, { once: true });
+
   render();
+  document.addEventListener('DOMContentLoaded', () => {
+    const lines = Q.lines();
+    if (lines.length) window.acTrack('view_cart', { ecommerce: cartEvent(lines) });
+  });
 })();

@@ -678,11 +678,13 @@
         });
         setTimeout(function () { window.location.href = '/thank-you/'; }, 400);
       } else {
+        window.acTrack('form_error', { form_id: 'contact', error_type: 'rejected' });
         msg.style.display = 'block';
         msg.style.color = 'var(--accent)';
         msg.textContent = 'Something went wrong. Please try again or email us at sales@acsupplyco.co.uk';
       }
     } catch (err) {
+      window.acTrack('form_error', { form_id: 'contact', error_type: 'network' });
       msg.style.display = 'block';
       msg.style.color = 'var(--accent)';
       msg.textContent = 'Something went wrong. Please try again or email us at sales@acsupplyco.co.uk';

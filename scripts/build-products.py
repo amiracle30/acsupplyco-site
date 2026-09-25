@@ -255,7 +255,7 @@ def price_table(record, chosen):
 def page_data(record, images, defaults):
     """The JSON the page ships. Built field by field — a whitelist — so nothing internal can ride along."""
     return {
-        'id': record['id'], 'title': record['title'], 'unit': record['copy']['unit'],
+        'id': record['id'], 'title': record['title'], 'category': record['category'], 'unit': record['copy']['unit'],
         'options': [{'key': o['key'], 'label': o['label'],
                      'values': [{k: v[k] for k in ('value', 'label', 'mult', 'note') if k in v} for v in o['values']]}
                     for o in record['options']],
@@ -398,7 +398,7 @@ def update_listings(records):
 def category_block(products, category):
     """Product cards for a category page, in that page's own variants-section / variant-card components."""
     cards = ''.join(
-        f'      <a class="variant-card" href="{html.escape(r["seo"]["canonical"])}">\n'
+        f'      <a class="variant-card" href="{html.escape(r["seo"]["canonical"])}" data-item-id="{html.escape(r["id"])}">\n'
         f'        <div class="variant-card-num">{i:02}</div>\n'
         f'        <h3>{html.escape(r["title"])}</h3>\n'
         f'        <p>{html.escape(r["short_description"])}</p>\n'
