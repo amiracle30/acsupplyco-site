@@ -30,7 +30,7 @@
     },
     {
       "q": "When will my sleeves arrive?",
-      "a": "As a general guide, allow several weeks from artwork approval to delivery. We will confirm current timing with your quote."
+      "a": "Standard sleeves are delivered 8–9 weeks from artwork approval. Express is 4 weeks from artwork approval for 1,000 or 2,500 sleeves. We confirm timing with your written quote."
     }
   ],
   "copy": {
@@ -91,7 +91,16 @@
       "label": "Printing",
       "value": "2 colours — quoted on request",
       "applies_to": {
-        "colours": "2"
+        "colours": "2",
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Printing",
+      "value": "2 colours",
+      "applies_to": {
+        "colours": "2",
+        "service": "express"
       }
     },
     {
@@ -104,6 +113,20 @@
     {
       "label": "Proof and print plates",
       "value": "Included"
+    },
+    {
+      "label": "Lead time",
+      "value": "8–9 weeks from artwork approval",
+      "applies_to": {
+        "service": "standard"
+      }
+    },
+    {
+      "label": "Lead time",
+      "value": "4 weeks from artwork approval",
+      "applies_to": {
+        "service": "express"
+      }
     }
   ],
   "options": [
@@ -119,12 +142,28 @@
         {
           "value": "2",
           "label": "2 colours",
-          "note": "Two-colour print is quoted on request."
+          "note": "Two-colour print is priced on Express; on Standard it is quoted on request."
         },
         {
           "value": "full",
           "label": "Full colour",
           "note": "Full-colour print is quoted on request."
+        }
+      ]
+    },
+    {
+      "key": "service",
+      "label": "Lead time",
+      "values": [
+        {
+          "value": "standard",
+          "label": "Standard · 8–9 weeks",
+          "default": true
+        },
+        {
+          "value": "express",
+          "label": "Express · 4 weeks",
+          "note": "Express covers 1,000 and 2,500 sleeves in 1 or 2 colours."
         }
       ]
     }
@@ -133,7 +172,8 @@
     {
       "sku": "SLV-1C",
       "selection": {
-        "colours": "1"
+        "colours": "1",
+        "service": "standard"
       },
       "available": true,
       "pricing_ref": "cup-sleeves-1"
@@ -141,7 +181,8 @@
     {
       "sku": "SLV-2C",
       "selection": {
-        "colours": "2"
+        "colours": "2",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
@@ -151,17 +192,59 @@
     {
       "sku": "SLV-FC",
       "selection": {
-        "colours": "full"
+        "colours": "full",
+        "service": "standard"
       },
       "available": false,
       "enquiry": {
         "mode": "quote_only"
       }
+    },
+    {
+      "sku": "SLV-1C-EXP",
+      "selection": {
+        "colours": "1",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "cup-sleeves-express"
+    },
+    {
+      "sku": "SLV-2C-EXP",
+      "selection": {
+        "colours": "2",
+        "service": "express"
+      },
+      "available": true,
+      "lead_time": {
+        "text": "Express: 4 weeks from artwork approval",
+        "starts": "artwork approval"
+      },
+      "pricing_ref": "cup-sleeves-express"
     }
   ],
   "pricing": [
     {
       "ref": "cup-sleeves-1",
+      "currency": "GBP",
+      "vat": "ex",
+      "tiers": [
+        {
+          "qty": 5000,
+          "unit": "0.123"
+        },
+        {
+          "qty": 10000,
+          "unit": "0.104"
+        }
+      ]
+    },
+    {
+      "ref": "cup-sleeves-express",
       "currency": "GBP",
       "vat": "ex",
       "tiers": [
@@ -172,21 +255,13 @@
         {
           "qty": 2500,
           "unit": "0.161"
-        },
-        {
-          "qty": 5000,
-          "unit": "0.123"
-        },
-        {
-          "qty": 10000,
-          "unit": "0.104"
         }
       ]
     }
   ],
   "charges": [],
   "lead_time": {
-    "text": "Allow several weeks from artwork approval",
+    "text": "Standard: 8–9 weeks from artwork approval",
     "starts": "artwork approval"
   },
   "images": [
