@@ -272,12 +272,12 @@
         {
           "value": "3",
           "label": "3 colours",
-          "mult": "1.13"
+          "mult": "1.04"
         },
         {
           "value": "4",
           "label": "4 colours",
-          "mult": "1.159"
+          "mult": "1.05"
         }
       ]
     },
@@ -293,7 +293,7 @@
         {
           "value": "double",
           "label": "Double-sided",
-          "mult": "1.172"
+          "mult": "1.05"
         }
       ]
     },
@@ -1255,7 +1255,7 @@
         },
         {
           "qty": 10000,
-          "unit": "0.175"
+          "unit": "0.169"
         }
       ]
     },

@@ -168,7 +168,7 @@
     },
     {
       "label": "Board",
-      "value": "White",
+      "value": "White, same price",
       "applies_to": {
         "material": "white"
       }
@@ -182,14 +182,14 @@
     },
     {
       "label": "Printing",
-      "value": "2 colours",
+      "value": "2 colours, same price",
       "applies_to": {
         "colours": "2"
       }
     },
     {
       "label": "Printing",
-      "value": "3 colours",
+      "value": "3 colours, same price",
       "applies_to": {
         "colours": "3"
       }
@@ -273,13 +273,11 @@
         },
         {
           "value": "2",
-          "label": "2 colours",
-          "mult": "1.138"
+          "label": "2 colours"
         },
         {
           "value": "3",
-          "label": "3 colours",
-          "mult": "1.207"
+          "label": "3 colours"
         }
       ]
     },
@@ -294,8 +292,7 @@
         },
         {
           "value": "white",
-          "label": "White",
-          "mult": "1.047"
+          "label": "White"
         }
       ]
     },
