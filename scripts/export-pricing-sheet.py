@@ -3,6 +3,7 @@
 
     python3 scripts/export-pricing-sheet.py               # → ~/Downloads/Product Images/_data/AC_Supply_Pricing.xlsx
     python3 scripts/export-pricing-sheet.py out.xlsx      # somewhere else (never inside the repo)
+    python3 scripts/export-pricing-sheet.py --compare a2e8084   # add Was / Change columns and a Changes tab vs that commit
 
 Generated, one-way: data/products/*.json stays the single editable store. Change a
 price there, run build-products.py, then re-run this. The workbook carries the
@@ -11,9 +12,13 @@ OUTSIDE the repo — the repo root is what Cloudflare serves.
 
 Tabs: Read me · Summary (one row per product) · Prices (every variant × tier, exactly as
 the site shows it) · Costs & margins (supplier-costed ladders from data/private/*.json).
+With --compare REF: Prices gains Was £ / Change / vs-REF columns and a Changes tab lists every
+price changed, added or removed since the data/products/*.json at that git ref.
 """
 import importlib.util
+import json
 import re
+import subprocess
 import sys
 from datetime import date
 from decimal import Decimal
@@ -106,11 +111,33 @@ def cost_rows(record):
     return rows
 
 
+def old_prices(ref):
+    """{(slug, sku, qty): (unit, product title, variant label)} as the site showed them at git ref."""
+    git = lambda *a: subprocess.run(['git', '-C', str(ROOT), *a], capture_output=True, text=True, check=True).stdout
+    out = {}
+    for path in git('ls-tree', '--name-only', ref, 'data/products/').split():
+        record = json.loads(git('show', f'{ref}:{path}'))
+        for variant in record['variants']:
+            for qty, unit in build.priced_tiers(record, variant, variant['selection']):
+                if unit is not None:
+                    out[(record['slug'], variant['sku'], qty)] = (unit, record['title'], variant_label(record, variant['selection']))
+    return out
+
+
 def main():
-    out = Path(sys.argv[1]).expanduser().resolve() if len(sys.argv) > 1 else DEFAULT_OUT
+    args = sys.argv[1:]
+    compare = None
+    if '--compare' in args:
+        i = args.index('--compare'); compare = args[i + 1]; del args[i:i + 2]
+    out = Path(args[0]).expanduser().resolve() if args else DEFAULT_OUT
     if ROOT.resolve() in out.parents:
         raise BuildError(f'{out} is inside the repo, which is publicly served — this sheet holds costs and margins; write it elsewhere')
     records = [r for _, r in load_records()]
+    was = old_prices(compare) if compare else {}
+    if compare:
+        label = subprocess.run(['git', '-C', str(ROOT), 'log', '-1', '--format=%cd', '--date=format:%d %b %Y', compare], capture_output=True, text=True).stdout.strip()
+        vs = f'vs {label}'
+    seen, poa = set(), set()
 
     wb = Workbook()
     readme = wb.active
@@ -118,8 +145,8 @@ def main():
 
     # ---- Prices: one row per variant × tier ----
     prices = sheet(wb, 'Prices', ['Product', 'Slug', 'Status', 'SKU', 'Variant', 'Availability', 'Qty', 'Unit £ (ex VAT)', 'Order total £ (ex VAT)',
-                                  'Pricing ref', 'Variant count', 'Page'],
-                   [30, 22, 11, 26, 44, 13, 10, 14, 16, 30, 8, 52])
+                                  'Pricing ref', 'Variant count', 'Page'] + (['Was £ (ex VAT)', 'Change', vs] if compare else []),
+                   [30, 22, 11, 26, 44, 13, 10, 14, 16, 30, 8, 52] + ([14, 10, 12] if compare else []))
     row = 1
     for record in records:
         url = page_url(record)
@@ -138,11 +165,20 @@ def main():
                                qty, float(unit) if unit is not None else ('POA' if qty else None),
                                f'=IF(ISNUMBER(H{row}),ROUND(G{row}*H{row},2),"")',
                                variant.get('pricing_ref', ''), 1 if i == 0 else 0, url])
+                if compare:
+                    old = was.get((record['slug'], variant['sku'], qty)) if unit is not None else None
+                    (seen if unit is not None else poa).add((record['slug'], variant['sku'], qty))
+                    state = '' if unit is None else 'New' if old is None else 'Same' if old[0] == unit else 'Up' if unit > old[0] else 'Down'
+                    prices.cell(row=row, column=13, value=float(old[0]) if old else None).number_format = UNIT_FMT
+                    prices.cell(row=row, column=14, value=f'=IF(AND(ISNUMBER(H{row}),ISNUMBER(M{row})),H{row}/M{row}-1,"")').number_format = PCT_FMT
+                    prices.cell(row=row, column=15, value=state)
+                    for col in (13, 14, 15):
+                        prices.cell(row=row, column=col).font = INPUT if col == 13 else BODY
                 style_row(prices, row, [BODY] * 6 + [INPUT, INPUT, BODY, BODY, BODY, BODY])
                 prices.cell(row=row, column=7).number_format = '#,##0'
                 prices.cell(row=row, column=8).number_format = UNIT_FMT
                 prices.cell(row=row, column=9).number_format = MONEY_FMT
-    prices.auto_filter.ref = f'A1:L{row}'
+    prices.auto_filter.ref = f'A1:{"O" if compare else "L"}{row}'
     prices.column_dimensions['K'].hidden = True  # helper: 1 on each variant's first row, counted by Summary
     last = row
 
@@ -193,6 +229,37 @@ def main():
     costs['D1'].comment = Comment('Trade cost per unit — from data/private/<slug>.json (internal.express_costing).', 'export')
     costs['G1'].comment = Comment('Minimum margin on sale — from data/private/<slug>.json (internal.express_costing).', 'export')
 
+    # ---- Changes: every price changed, added or removed since --compare ----
+    if compare:
+        ch = wb.create_sheet('Changes')
+        lines = []
+        for r in range(2, last + 1):
+            state = prices.cell(row=r, column=15).value
+            if state in ('Up', 'Down', 'New'):
+                lines.append((prices.cell(row=r, column=1).value, prices.cell(row=r, column=4).value, prices.cell(row=r, column=5).value,
+                              prices.cell(row=r, column=7).value, prices.cell(row=r, column=13).value, prices.cell(row=r, column=8).value, state))
+        for (slug, sku, qty), (unit, title, var) in was.items():
+            if (slug, sku, qty) not in seen:
+                lines.append((title, sku, var, qty, float(unit), None, 'Now POA' if (slug, sku, qty) in poa else 'Removed'))
+        order = {'Up': 0, 'Down': 1, 'New': 2, 'Removed': 3, 'Now POA': 4}
+        first, end = 5, len(lines) + 4
+        for i, state in enumerate(order):  # counts above the table
+            ch.cell(row=1, column=1 + i * 2, value=state).font = BOLD
+            ch.cell(row=1, column=2 + i * 2, value=f'=COUNTIF($H${first}:$H${end},"{state}")').font = BODY
+        ch.cell(row=2, column=1, value=f'Every site price changed, added or removed {vs} (git {compare}). Removed = that option × quantity is no longer offered; Now POA = still listed, price on request.').font = BODY
+        for c, (head, width) in enumerate(zip(['Product', 'SKU', 'Variant', 'Qty', 'Was £', 'Now £', 'Change', 'What happened'], [30, 28, 48, 10, 12, 12, 10, 14]), 1):
+            cell = ch.cell(row=4, column=c, value=head); cell.font, cell.fill = HEAD, HEAD_FILL
+            ch.column_dimensions[get_column_letter(c)].width = width
+        for n, (title, sku, var, qty, old, new, state) in enumerate(sorted(lines, key=lambda l: (l[0], order[l[6]], l[1], l[3])), first):
+            for c, v in enumerate([title, sku, var, qty, old, new, f'=IF(AND(ISNUMBER(E{n}),ISNUMBER(F{n})),F{n}/E{n}-1,"")', state], 1):
+                ch.cell(row=n, column=c, value=v)
+            style_row(ch, n, [BODY, BODY, BODY, INPUT, INPUT, INPUT, BODY, BODY])
+            ch.cell(row=n, column=4).number_format = '#,##0'
+            for c in (5, 6): ch.cell(row=n, column=c).number_format = UNIT_FMT
+            ch.cell(row=n, column=7).number_format = PCT_FMT
+        ch.freeze_panes = f'A{first}'
+        ch.auto_filter.ref = f'A4:H{end}'
+
     # ---- Read me ----
     notes = [
         ('AC Supply Co — central pricing sheet', BOLD),
@@ -205,6 +272,7 @@ def main():
         ('Summary: one row per product with counts, price range, tiers, pricing source and review date.', BODY),
         ('Costs & margins: every ladder priced from a supplier cost sheet. Margin = (sell − cost) ÷ sell.', BODY),
         ('Blue text = values copied from the records; black = formulas.', BODY),
+        *([(f'Changes: every price changed, added or removed {vs}. Prices also shows the old price (Was £) and the % change on each row.', BODY)] if compare else []),
         ('', BODY),
         ('PRIVATE: contains supplier costs and margins. Never put this file in the website repo or send it to customers.', BOLD),
     ]
