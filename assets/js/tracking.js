@@ -27,6 +27,8 @@
     apply(choice);
     var b = document.getElementById('ac-consent');
     if (b) b.remove();
+    // Consent-gated tags missed this page's earlier events; let the page resend them.
+    if (choice === 'granted' && typeof window.acOnConsent === 'function') window.acOnConsent();
   }
 
   function showBanner() {

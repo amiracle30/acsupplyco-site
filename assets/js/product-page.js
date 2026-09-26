@@ -296,8 +296,9 @@
   });
 
   render();
-  document.addEventListener('DOMContentLoaded', () => {
-    const line = currentLine();
-    window.acTrack('view_item', { ecommerce: { currency: 'GBP', value: window.acLineValue(line), items: [window.acItem(line)] } });
-  });
+  const viewItem = () => { const line = currentLine(); return { currency: 'GBP', value: window.acLineValue(line), items: [window.acItem(line)] }; };
+  document.addEventListener('DOMContentLoaded', () => window.acTrack('view_item', { ecommerce: viewItem() }));
+  // Accepting cookies here: Meta's ViewContent was blocked at load, so resend it under a
+  // name GA4 doesn't listen for (GA4 already counted this view_item without cookies).
+  window.acOnConsent = () => window.acTrack('view_item_consented', { ecommerce: viewItem() });
 })();
