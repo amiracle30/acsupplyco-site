@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /thank-you/
 
-Sitemap: https://acsupplyco.co.uk/sitemap.xml
+Sitemap: https://packagedproper.co.uk/sitemap.xml

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://acsupplyco.co.uk/data/schema/product.schema.json",
-  "title": "AC Supply Co. product family record",
+  "$id": "https://packagedproper.co.uk/data/schema/product.schema.json",
+  "title": "Packaged Proper product family record",
   "description": "One record per product family. The template owns presentation; the record owns every word of product content. Commercially sensitive fields (sources, review dates, minimums, notes) live in the gitignored companion data/private/<slug>.json, never here — this file is publicly served. Cross-field rules (SKU uniqueness, tier ordering, image files, leak checks) are asserted by scripts/build-products.py --check.",
   "type": "object",
   "additionalProperties": false,

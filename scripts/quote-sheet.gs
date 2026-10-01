@@ -1,11 +1,11 @@
 /**
- * AC Supply Co — quote request receiver (Google Apps Script)
+ * Packaged Proper — quote request receiver (Google Apps Script)
  *
  * Appends one row per quote request to the "Quotes" sheet and emails a summary.
  * Contains no secrets: the web-app URL is the only thing that connects it to the site.
  *
  * SET-UP (about three minutes)
- * 1. Create a Google Sheet called "AC Supply — Quote requests". Extensions → Apps Script.
+ * 1. Create a Google Sheet called "Packaged Proper — Quote requests". Extensions → Apps Script.
  *    Delete the sample code, paste this file, save.
  * 2. Deploy → New deployment → type "Web app" → Execute as: Me → Who has access: Anyone → Deploy.
  *    Approve the permissions (it needs Sheets + Gmail send for your own account only).
@@ -16,7 +16,7 @@
  * whenever you change this script; the URL stays the same.
  */
 var SHEET_NAME = 'Quotes';
-var NOTIFY = 'sales@acsupplyco.co.uk';
+var NOTIFY = 'sales@packagedproper.co.uk';
 
 function doPost(e) {
   var data = JSON.parse(e.postData.contents);

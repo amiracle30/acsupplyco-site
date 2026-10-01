@@ -1,15 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="10" fill="#0F1F3D"/>
-  <rect x="0" y="48" width="64" height="16" rx="0" fill="#1F6B43" opacity="0.6"/>
-  <rect x="0" y="52" width="64" height="12" rx="0" fill="#1F6B43" opacity="0.4"/>
-  <text
-    x="32"
-    y="40"
-    font-family="'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif"
-    font-size="28"
-    font-weight="700"
-    fill="white"
-    text-anchor="middle"
-    letter-spacing="-1"
-  >AC</text>
+  <rect width="64" height="64" rx="12" fill="#FBF8F2"/>
+  <g transform="translate(5.5 1.5)">
+    <polygon points="3.40,11.17 23.56,1.23 52.56,14.03 33.77,23.42" fill="#112E56"/>
+    <polygon points="1.63,13.21 21.79,21.11 21.79,62.09 1.63,53.11" fill="#941A2D"/>
+    <polygon points="35.13,24.92 53.79,15.66 53.79,37.99 35.13,47.80" fill="#941A2D"/>
+    <polygon points="23.69,37.31 32.95,28.60 33.09,48.34 23.97,51.06" fill="#112E56"/>
+  </g>
 </svg>

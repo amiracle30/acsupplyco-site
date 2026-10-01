@@ -11,14 +11,14 @@ The mobile navigation is generated from the desktop links to keep both in sync.
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AC Supply Co. — drop-in header</title>
+<title>Packaged Proper — drop-in header</title>
 <!-- Preview only: existing pages already load this font. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&amp;display=swap">
 <style>
 .hdr-root {
-  --bg:#FAFAF7; --paper:#FFFFFF; --ink:#0F1F3D; --ink-soft:#1F2D4D;
-  --muted:#5A6478; --border:#E5E1D8; --accent:#1F6B43;
-  --accent-deep:#164C30; --accent-pale:#E8F0EA; --whatsapp:#25D366; --radius:4px;
+  --bg:#FBF8F2; --paper:#FFFFFF; --ink:#112E56; --ink-soft:#243B5E;
+  --muted:#5A6478; --border:#E7E0D3; --accent:#941A2D;
+  --accent-deep:#6E1221; --accent-pale:#F6E7E9; --whatsapp:#25D366; --radius:4px;
   position:sticky; top:0; z-index:1000; background:var(--bg); color:var(--ink);
   border-bottom:1px solid var(--border); font-family:'Inter Tight',-apple-system,system-ui,sans-serif;
   font-size:14px; line-height:1.5; isolation:isolate;
@@ -35,7 +35,7 @@ The mobile navigation is generated from the desktop links to keep both in sync.
 .hdr-inner { max-width:1280px; margin:0 auto; padding:0 32px; }
 .hdr-top { height:72px; display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:32px; }
 .hdr-logo { display:flex; align-items:center; flex-shrink:0; }
-.hdr-logo img { display:block; height:52px; width:auto; max-width:150px; object-fit:contain; }
+.hdr-logo img { display:block; height:46px; width:auto; max-width:190px; object-fit:contain; }
 .hdr-main, .hdr-actions { display:flex; align-items:center; white-space:nowrap; }
 .hdr-main { justify-self:center; gap:4px; }
 .hdr-main > a { padding:8px 14px; font-size:14px; font-weight:500; color:var(--ink-soft); border-radius:var(--radius); }
@@ -53,10 +53,10 @@ The mobile navigation is generated from the desktop links to keep both in sync.
 .hdr-quote .hdr-icon { width:20px; height:20px; }
 .hdr-quote [data-quote-count]:not(:empty) { position:absolute; top:-4px; right:-5px; padding:1px 4px; border-radius:10px; background:var(--ink); color:var(--paper); font-size:10px; line-height:16px; }
 .hdr-quote [data-quote-count]:empty { display:none; }
-.hdr-root .hdr-primary { background:var(--ink); border-color:var(--ink); color:var(--paper); }
-.hdr-root .hdr-primary:hover { background:var(--ink-soft); border-color:var(--ink-soft); }
+.hdr-root .hdr-primary { background:var(--accent); border-color:var(--accent); color:var(--paper); }
+.hdr-root .hdr-primary:hover { background:var(--accent-deep); border-color:var(--accent-deep); color:var(--paper); }
 .hdr-root .hdr-quote:hover { background:var(--accent-pale); }
-.hdr-whatsapp { border-color:#C9C2B0; gap:8px; }
+.hdr-whatsapp { border-color:#CBC1AE; gap:8px; }
 .hdr-root .hdr-whatsapp:hover { border-color:var(--ink); background:var(--ink); color:var(--paper); }
 .hdr-icon { display:block; flex-shrink:0; width:16px; height:16px; }
 .hdr-primary .hdr-icon { display:none; }
@@ -93,7 +93,7 @@ The mobile navigation is generated from the desktop links to keep both in sync.
   .hdr-category-row { gap:16px; }
   .hdr-resources { gap:12px; }
   .hdr-category-link { gap:5px; font-size:13px; }
-  .hdr-logo img { max-width:110px; }
+  .hdr-logo img { max-width:140px; }
   .hdr-quote, .hdr-whatsapp, .hdr-primary { padding:6px; }
   .hdr-whatsapp .hdr-label { display:none; }
   .hdr-inner { padding-right:24px; padding-left:24px; }
@@ -102,7 +102,7 @@ The mobile navigation is generated from the desktop links to keep both in sync.
   .hdr-inner { padding:0 12px; }
   .hdr-top { display:flex; height:68px; gap:8px; }
   .hdr-announcement { padding:8px 0; font-size:11px; }
-  .hdr-logo img { width:86px; max-width:100%; height:36px; }
+  .hdr-logo img { width:auto; max-width:100%; height:36px; }
   .hdr-main, .hdr-utility, .hdr-categories { display:none; }
   .hdr-actions { gap:6px; min-width:0; }
   .hdr-quote, .hdr-whatsapp, .hdr-primary { min-height:40px; padding:6px; }
@@ -146,11 +146,11 @@ The mobile navigation is generated from the desktop links to keep both in sync.
 <header class="hdr-root" data-current="">
 <div class="hdr-announcement" role="region" aria-label="Introductory offer"><p class="hdr-visually-hidden">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</p><div class="hdr-marquee" aria-hidden="true"><div class="hdr-marquee-track"><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span><span class="hdr-marquee-item">INTRODUCTORY OFFER: GET 20% OFF YOUR FIRST ORDER WITH US!</span></div></div></div>
 <div class="hdr-inner hdr-top">
-<a class="hdr-logo" href="/"><img src="/assets/images/acsupplycologotransparant.png" alt="AC Supply Co." height="52"></a>
+<a class="hdr-logo" href="/"><img src="/assets/images/packaged-proper-logo.png" alt="Packaged Proper" height="46"></a>
 <nav class="hdr-main" aria-label="Main navigation">
 <a href="/#products" data-hdr-section="all-products">Products</a>
 <a href="/#ordering" data-hdr-section="ordering">How ordering works</a>
-<a href="/#how" data-hdr-section="why">Why AC Supply Co</a>
+<a href="/#how" data-hdr-section="why">Why Packaged Proper</a>
 <a href="/faq/" data-hdr-section="faq">FAQ</a>
 <a href="/#contact" data-hdr-section="contact">Contact</a>
 </nav>
@@ -171,7 +171,7 @@ The mobile navigation is generated from the desktop links to keep both in sync.
 <div class="hdr-resources"><div class="hdr-dropdown" data-hdr-mobile="Industries"><button class="hdr-trigger" type="button" aria-expanded="false" aria-controls="hdr-industries-menu">Industries <span aria-hidden="true">▾</span></button><ul class="hdr-menu" id="hdr-industries-menu"><li><a href="/coffee-cups/">Cafés &amp; coffee shops</a></li><li><a href="/takeaway-packaging/">Takeaways &amp; delivery</a></li><li><a href="/bakery-packaging/">Bakeries</a></li><li><a href="/custom-pizza-boxes/">Pizzerias</a></li><li><a href="/catering-supplies/">Caterers &amp; events</a></li></ul></div><div class="hdr-dropdown" data-hdr-mobile="Guides"><button class="hdr-trigger" type="button" aria-expanded="false" aria-controls="hdr-guides-menu">Guides <span aria-hidden="true">▾</span></button><ul class="hdr-menu" id="hdr-guides-menu"><li><a href="/guides/">All guides</a></li><li><a href="/guides/compostable-vs-recyclable-coffee-cups/">Compostable vs recyclable coffee cups</a></li></ul></div></div>
 </div></nav>
 <dialog class="hdr-panel" id="hdr-mobile-panel" aria-labelledby="hdr-panel-title">
-<div class="hdr-panel-head"><h2 class="hdr-panel-title" id="hdr-panel-title">Explore AC Supply Co.</h2>
+<div class="hdr-panel-head"><h2 class="hdr-panel-title" id="hdr-panel-title">Explore Packaged Proper</h2>
 <button class="hdr-close" type="button" aria-label="Close navigation" autofocus><svg class="hdr-icon" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
 <nav class="hdr-mobile-nav" aria-label="Mobile navigation"></nav>
 <div class="hdr-panel-actions"><a class="hdr-primary" href="/#contact">Request a quote</a></div>

@@ -262,7 +262,7 @@ def main():
 
     # ---- Read me ----
     notes = [
-        ('AC Supply Co — central pricing sheet', BOLD),
+        ('Packaged Proper — central pricing sheet', BOLD),
         (f'Generated {date.today():%d %B %Y} by scripts/export-pricing-sheet.py from data/products/*.json + data/private/*.json.', BODY),
         ('', BODY),
         ('Do not edit prices here — this file is overwritten on every export.', BOLD),

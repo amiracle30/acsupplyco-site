@@ -16,7 +16,7 @@ PRIVATE_SCHEMA_PATH = ROOT / 'data/schema/product-private.schema.json'
 PRIVATE_PRICING_KEYS = ('min_qty', 'increment', 'source', 'review_date')
 IMAGES_DIR = ROOT / 'assets/images/products'
 IMAGE_SOURCE = Path.home() / 'Downloads/Product Images'
-SITE = 'https://acsupplyco.co.uk'
+SITE = 'https://packagedproper.co.uk'
 
 # Existing site sections a product can belong to, with the breadcrumb label.
 CATEGORIES = {

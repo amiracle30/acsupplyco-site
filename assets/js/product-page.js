@@ -288,7 +288,7 @@
       window.acTrack('form_error', { form_id: 'product', error_type: err.message === 'rejected' ? 'rejected' : 'network' });
       const error = $('quote-error');
       error.hidden = false;
-      error.textContent = 'Something went wrong — please email sales@acsupplyco.co.uk directly.';
+      error.textContent = 'Something went wrong — please email sales@packagedproper.co.uk directly.';
     } finally {
       submit.disabled = false;
       submit.innerHTML = label;
