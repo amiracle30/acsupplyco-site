@@ -19,11 +19,12 @@
       analytics_storage: 'denied',
       wait_for_update: 500
     });
-    // Restore a previously saved consent choice BEFORE GTM loads.
+    // Restore a previously saved consent choice BEFORE GTM loads (shared cookie first, so a
+    // choice made on any packagedproper.co.uk subdomain counts; then this site's localStorage).
     // tracking.js is deferred, so its update lands in the dataLayer queue
     // after the gtm.js event and is too late for consent-gated tags.
     try {
-      var acConsent = localStorage.getItem('ac_consent');
+      var acConsent = (document.cookie.match(/(?:^|; )ac_consent=(granted|denied)/) || [])[1] || localStorage.getItem('ac_consent');
       if (acConsent === 'granted' || acConsent === 'denied') {
         gtag('consent', 'update', {
           ad_storage: acConsent,
@@ -612,7 +613,7 @@
   <div class="legal-hero-inner">
     <h1>Privacy &amp; Cookies</h1>
     <p class="lede">How we handle personal data collected through this website, what cookies we use, and how to control them. Written for UK GDPR and PECR.</p>
-    <span class="updated">Last updated: 4 July 2026</span>
+    <span class="updated">Last updated: 11 October 2026</span>
   </div>
 </div>
 
@@ -654,7 +655,7 @@
   <p>We do not sell your data. We do not share it with any other third parties.</p>
 
   <h2>Cookies and tracking</h2>
-  <p>When you first visit the site you'll see a cookie banner with two options: <strong>Accept</strong> or <strong>Reject</strong>. Nothing except strictly-necessary storage is set until you make a choice. You can change your choice at any time by clearing your browser storage for this site — the banner will reappear.</p>
+  <p>When you first visit the site you'll see a cookie banner with two options: <strong>Accept</strong> or <strong>Reject</strong>. Nothing except strictly-necessary storage is set until you make a choice. Your choice applies across packagedproper.co.uk and its subdomains, so you're only asked once. You can change it at any time by clearing your browser's cookies and site data for packagedproper.co.uk — the banner will reappear.</p>
 
   <h3>What runs by default (no consent required)</h3>
   <table>
@@ -663,9 +664,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><code>ac_consent</code> (localStorage)</td>
-        <td>Remembers your cookie-banner choice so we don't show it every visit.</td>
-        <td>Persistent until you clear it.</td>
+        <td><code>ac_consent</code> (cookie and localStorage)</td>
+        <td>Remembers your cookie-banner choice so we don't show it every visit, on this site and its subdomains.</td>
+        <td>Cookie: 12 months from your last visit. localStorage: until you clear it.</td>
       </tr>
     </tbody>
   </table>
@@ -696,7 +697,7 @@
   </table>
 
   <div class="legal-callout">
-    <p><strong>Changing your mind:</strong> to withdraw consent, clear your browser storage for <code>packagedproper.co.uk</code> — the banner will reappear and you can choose again. In most browsers: DevTools → Application → Local Storage → delete the entry, or use the site-data controls in browser settings.</p>
+    <p><strong>Changing your mind:</strong> to withdraw consent, clear your browser's cookies and site data for <code>packagedproper.co.uk</code> — the banner will reappear and you can choose again. In most browsers this is in the site-data controls in browser settings.</p>
   </div>
 
   <h2>How long we keep data</h2>

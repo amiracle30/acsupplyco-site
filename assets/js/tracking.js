@@ -6,8 +6,18 @@
 (function () {
   function gtag(){ window.dataLayer = window.dataLayer || []; window.dataLayer.push(arguments); }
   var KEY = 'ac_consent';
-  var saved = null;
-  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  // The choice lives in a cookie on .packagedproper.co.uk so every subdomain shares it
+  // (localStorage is per-host), with a localStorage copy kept for pages that only read that.
+  var m = document.cookie.match(/(?:^|; )ac_consent=(granted|denied)/);
+  var saved = m ? m[1] : null;
+  if (!saved) try { saved = localStorage.getItem(KEY); } catch (e) {}
+
+  function persist(choice) {
+    var shared = /(^|\.)packagedproper\.co\.uk$/.test(location.hostname) ? '; Domain=packagedproper.co.uk' : '';
+    document.cookie = KEY + '=' + choice + shared + '; Path=/; Max-Age=31536000; SameSite=Lax'
+      + (location.protocol === 'https:' ? '; Secure' : '');
+    try { localStorage.setItem(KEY, choice); } catch (e) {}
+  }
 
   function apply(state) {
     gtag('consent', 'update', {
@@ -23,7 +33,7 @@
   }
 
   function decide(choice) {
-    try { localStorage.setItem(KEY, choice); } catch (e) {}
+    persist(choice);
     apply(choice);
     var b = document.getElementById('ac-consent');
     if (b) b.remove();
@@ -64,6 +74,7 @@
   }
 
   if (saved === 'granted' || saved === 'denied') {
+    persist(saved); // copies an older localStorage-only choice into the shared cookie, and renews it
     apply(saved);
   } else {
     showBanner();
